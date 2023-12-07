@@ -1,0 +1,30 @@
+name: Flutter CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'beta'
+      - run: flutter pub get
+      - run: flutter format --set-exit-if-changed .
+      - run: flutter analyze .
+      - run: flutter build apk
+      - uses: actions/upload-artifact@v2
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+
+      # Add a step to update README with the release APK link
+      - name: Update README
+        run: echo -e "\n[Download Release APK](https://github.com/${{ github.repository }}/raw/master/build/app/outputs/flutter-apk/app-release.apk)" >> README.md
