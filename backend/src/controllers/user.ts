@@ -271,8 +271,6 @@ const sendOtp = async ({ email }, res) => {
       html: verificationHTML(otp),
     };
 
-    console.log("fine till this point 1");
-
     const salt = await bcrypt.genSalt();
     const hashedOtp = await bcrypt.hash(otp, salt);
     const newOtp = new Otp({
@@ -282,14 +280,9 @@ const sendOtp = async ({ email }, res) => {
       expiresAt: Date.now() + 300000,
     });
 
-    console.log("fine till this point 2");
-
     const savedOTP = await newOtp.save();
-    console.log("fine till this point 3");
-    console.log(mailOptions);
 
     const result = await transporter.sendMail(mailOptions);
-    console.log("fine till this point 4");
 
     let baseResponse = new BaseResponse();
     baseResponse.success = true;
