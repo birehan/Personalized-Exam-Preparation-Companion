@@ -249,6 +249,7 @@ const forgotPassSendOtpVerification = async (req, res, next) => {
 
 //OTP verification setup via Email
 const sendOtp = async ({ email }, res) => {
+  console.log("hi there send otp called");
   email.trim();
 
   if (email == "" || !email) {
