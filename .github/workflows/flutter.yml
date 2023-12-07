@@ -19,6 +19,11 @@ jobs:
           channel: 'beta'
       - name: Change directory to mobile
         run: cd mobile
+      - name: Print current working directory
+        run: |
+          echo "Current working directory: $(pwd)"
+          ls   # Print the list of files and directories in the current directory
+
       - run: flutter pub get
       - run: flutter format --set-exit-if-changed .
       - run: flutter analyze .
