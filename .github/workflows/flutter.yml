@@ -17,12 +17,13 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'beta'
+          version: '3.10.2'  # Update to the Flutter version you are using
+
       - name: Change directory to 'mobile' and run commands
         run: |
           cd mobile
-          # All your other commands go here
           flutter pub get
-          flutter format --set-exit-if-changed .
+          flutter format .
           flutter analyze .
           flutter build apk
 
