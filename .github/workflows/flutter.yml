@@ -17,20 +17,21 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'beta'
-      - name: Change directory to mobile
-        run: cd /home/runner/work/Personalized-Exam-Preparation-Companion/Personalized-Exam-Preparation-Companion/mobile
-      - name: Print current working directory
+      - name: Change directory to 'mobile' and run commands
         run: |
-          echo "Current working directory: $(pwd)"
+          cd mobile
+          # All your other commands go here
+          flutter pub get
+          flutter format --set-exit-if-changed .
+          flutter analyze .
+          flutter build apk
 
-      - run: flutter pub get
-      - run: flutter format --set-exit-if-changed .
-      - run: flutter analyze .
-      - run: flutter build apk
-      - uses: actions/upload-artifact@v2
-        with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          # Upload artifact
+          flutter build apk
+          uses: actions/upload-artifact@v2
+          with:
+            name: release-apk
+            path: build/app/outputs/flutter-apk/app-release.apk
 
       # Add a step to update README with the release APK link
       - name: Update README
