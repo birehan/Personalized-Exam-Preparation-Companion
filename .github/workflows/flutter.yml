@@ -23,7 +23,6 @@ jobs:
         run: |
           cd mobile
           flutter pub get
-          flutter format .
           flutter analyze .
           flutter build apk
 
