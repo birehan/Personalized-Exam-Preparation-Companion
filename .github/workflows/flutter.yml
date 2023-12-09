@@ -1,4 +1,4 @@
-name: Build and Release
+name: Upload APK to GitHub Releases
 
 on:
   push:
@@ -6,37 +6,17 @@ on:
       - main
 
 jobs:
-  release:
+  upload:
     runs-on: ubuntu-latest
-    needs: build
+
     steps:
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Upload APK to Releases
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-
-      - name: Upload APK
-        id: upload-release-asset
-        uses: actions/upload-artifact@v2
-        with:
-          name: app-release
-          path: mobile/build/app/outputs/flutter-apk/app-release.apk
-
-      - name: Set Release Asset URL
-        run: echo "::set-output name=asset_url::${{ steps.upload-release-asset.outputs.artifact_url }}"
-
-      - name: Update Release Description
-        run: echo "APK Download: ${{ steps.upload-release-asset.outputs.artifact_url }}" > $GITHUB_EVENT_PATH
-
-      - name: Update Release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-          body: ${{ readFile(github.event_path) }}
+          files: |
+            mobile/build/app/outputs/flutter-apk/app-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
