@@ -31,33 +31,15 @@ jobs:
           flutter build apk
           ls -R build/app/outputs/flutter-apk/
 
+          # Commit and push changes
+          git config user.name "GitHub Actions"
+          git config user.email "birehananteneh4@gmail.com"
+          git add build/app/outputs/flutter-apk/app-release.apk
+          git commit -m "Add built APK"
+          git push
+
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
           name: app-release
           path: mobile/build/app/outputs/flutter-apk/app-release.apk
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Download APK
-        uses: actions/download-artifact@v2
-        with:
-          name: app-release
-          path: mobile/build/app/outputs/flutter-apk/
-
-      - name: List files in flutter-apk folder
-        run: |
-          ls -R /github/workspace/mobile/build/app/outputs/flutter-apk/
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Commit and push changes
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "birehananteneh4@gmail.com"
-          git add /github/workspace/mobile/build/app/outputs/flutter-apk/app-release.apk
-          git commit -m "Add built APK"
-          git push
