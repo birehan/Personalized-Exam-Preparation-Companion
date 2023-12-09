@@ -31,12 +31,12 @@ jobs:
           flutter build apk
           ls -R build/app/outputs/flutter-apk/
 
-          # Commit and push changes
+          # Commit and push changes using Personal Access Token (PAT)
           git config user.name "GitHub Actions"
           git config user.email "birehananteneh4@gmail.com"
           git add build/app/outputs/flutter-apk/app-release.apk
           git commit -m "Add built APK"
-          git push
+          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
 
       - name: Upload APK
         uses: actions/upload-artifact@v2
