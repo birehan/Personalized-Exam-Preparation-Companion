@@ -39,7 +39,7 @@ jobs:
           tag_name: v1.0.0
           release_name: Release v1.0.0
           body: Release notes for version 1.0.0
-          overwrite: true  # This will overwrite the release if it already exists
+          allowUpdates: true
 
       - name: Upload APK to Releases
         id: upload-release-asset
