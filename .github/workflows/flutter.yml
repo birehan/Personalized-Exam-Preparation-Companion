@@ -1,4 +1,4 @@
-name: Upload APK to GitHub Releases
+name: Flutter CI
 
 on:
   push:
@@ -6,51 +6,14 @@ on:
       - main
 
 jobs:
-  upload:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Git
+      - name: Update README with APK link
         run: |
-          git config --global user.email "birehananteneh4@gmail.com"
-          git config --global user.name "GitHub Actions"
-
-      - name: Check if Tag Exists
-        id: check_tag
-        run: git tag -l v1.0.0
-
-      - name: Create Git Tag
-        if: steps.check_tag.outputs.stdout == ''
-        run: git tag -a v1.0.0 -m "Release v1.0.0"  # Replace with the desired version number and release message
-
-      - name: Push Git Tag
-        if: steps.check_tag.outputs.stdout == ''
-        run: git push --force origin v1.0.0  # Replace with the desired version number
-
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v1.0.0
-          release_name: Release v1.0.0
-          body: Release notes for version 1.0.0
-          allowUpdates: true
-
-      - name: Upload APK to Releases
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: mobile/build/app/outputs/flutter-apk/app-release.apk
-          asset_name: app-release.apk
-          asset_content_type: application/vnd.android.package-archive
-
-      - name: Display Asset Link
-        run: echo "Download the APK [here](https://github.com/${{ github.repository }}/releases/download/v1.0.0/app-release.apk)"
+          echo "Download the latest APK [here](https://github.com/${{ github.repository }}/raw/main/mobile/build/app/outputs/flutter-apk/app-release.apk)" >> README.md
+          git config user.name "GitHub Actions"
+          git config user.email "birehananteneh4@gmail.com"
+          git add README.md
+          git commit -m "Update README with APK link"
+          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
