@@ -30,23 +30,11 @@ jobs:
         if: steps.check_tag.outputs.stdout == ''
         run: git push --force origin v1.0.0  # Replace with the desired version number
 
-      - name: Create GitHub Release
-        id: create_release
-        if: steps.check_tag.outputs.stdout == ''
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v1.0.0  # Replace with the desired version number
-          release_name: Release v1.0.0  # Replace with the desired release name
-          body: Release notes for version 1.0.0  # Replace with release notes
-
       - name: Upload APK to Releases
-        uses: softprops/action-gh-release@v1
-        if: steps.check_tag.outputs.stdout == ''
+        uses: actions/upload-artifact@v2
         with:
-          files: |
-            mobile/build/app/outputs/flutter-apk/app-release.apk
-          tag_name: v1.0.0  # Ensure this matches the tag created earlier
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: app-release
+          path: mobile/build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Display Artifact Link
+        run: echo "Download the APK [here](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/mobile/build/app/outputs/flutter-apk/app-release.apk)"
