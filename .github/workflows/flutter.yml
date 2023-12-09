@@ -39,4 +39,4 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-          body: ${{ github.event_path }}
+          body: ${{ readFile(github.event_path) }}
