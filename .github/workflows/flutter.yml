@@ -30,6 +30,16 @@ jobs:
         if: steps.check_tag.outputs.stdout == ''
         run: git push --force origin v1.0.0  # Replace with the desired version number
 
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v1.0.0
+          release_name: Release v1.0.0
+          body: Release notes for version 1.0.0
+
       - name: Upload APK to Releases
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
