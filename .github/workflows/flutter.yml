@@ -37,15 +37,7 @@ jobs:
           git add build/app/outputs/flutter-apk/app-release.apk
           git commit -m "Add built APK"
           git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-
-          # Update README with APK link
-          echo "Download the latest APK [here](https://github.com/${{ github.repository }}/raw/main/mobile/build/app/outputs/flutter-apk/app-release.apk)" >> ../README.md
-          git config user.name "GitHub Actions"
-          git config user.email "birehananteneh4@gmail.com"
-          git add ../README.md
-          git commit -m "Update README with APK link"
-          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-
+          
           # Update repository description with APK link
           API_URL="https://api.github.com/repos/${{ github.repository }}"
           APK_LINK="Download the latest APK [here](https://github.com/${{ github.repository }}/raw/main/mobile/build/app/outputs/flutter-apk/app-release.apk)"
