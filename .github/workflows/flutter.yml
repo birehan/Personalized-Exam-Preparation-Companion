@@ -30,7 +30,7 @@ jobs:
         run: echo "::set-output name=asset_url::${{ steps.upload-release-asset.outputs.artifact_url }}"
 
       - name: Update Release Description
-        run: echo "APK Download: ${{ steps.upload-release-asset.outputs.artifact_url }}" >> $GITHUB_EVENT_PATH
+        run: echo "APK Download: ${{ steps.upload-release-asset.outputs.artifact_url }}" > $GITHUB_EVENT_PATH
 
       - name: Update Release
         uses: actions/create-release@v1
