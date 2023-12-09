@@ -38,9 +38,9 @@ jobs:
           git commit -m "Add built APK"
           git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v2
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: app-release
-          path: mobile/build/app/outputs/flutter-apk/app-release.apk
-
+          files: mobile/build/app/outputs/flutter-apk/app-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
