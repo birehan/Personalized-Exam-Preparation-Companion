@@ -43,3 +43,4 @@ jobs:
         with:
           name: app-release
           path: mobile/build/app/outputs/flutter-apk/app-release.apk
+
