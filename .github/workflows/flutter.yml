@@ -13,8 +13,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set Tag
-        run: echo "TAG=main-$(git log --format=%h -1)" >> $GITHUB_ENV
+      - name: Set up Git
+        run: git config --global user.email "you@example.com" && git config --global user.name "GitHub Actions"
+
+      - name: Create Git Tag
+        run: git tag -a v1.0.0 -m "Release v1.0.0"  # Replace with the desired version number and release message
+
+      - name: Push Git Tag
+        run: git push origin v1.0.0  # Replace with the desired version number
 
       - name: Upload APK to Releases
         uses: softprops/action-gh-release@v1
@@ -23,4 +29,3 @@ jobs:
             mobile/build/app/outputs/flutter-apk/app-release.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: ${{ env.TAG }}
