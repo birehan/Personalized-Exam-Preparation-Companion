@@ -38,9 +38,35 @@ jobs:
           git commit -m "Add built APK"
           git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
 
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+      - name: Create Git tag
+        run: git tag -a v1.0.0 -m "Version 1.0.0"
+        if: github.ref == 'refs/heads/main'  # Run this only for the main branch
+
+      - name: Push Git tag
+        run: git push origin v1.0.0
+        if: github.ref == 'refs/heads/main'  # Run this only for the main branch
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
         with:
-          files: mobile/build/app/outputs/flutter-apk/app-release.apk
+          name: app-release
+          path: mobile/build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
+        with:
+          tag_name: v1.0.0  # Replace with the desired version number
+          release_name: Release v1.0.0  # Replace with the desired release name
+          body: Release notes for version 1.0.0  # Replace with release notes
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: mobile/build/app/outputs/flutter-apk/app-release.apk
+          asset_name: app-release.apk
+          asset_content_type: application/vnd.android.package-archive
