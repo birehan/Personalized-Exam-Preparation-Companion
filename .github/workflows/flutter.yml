@@ -50,3 +50,4 @@ jobs:
           tag_name: v1.0.0  # Ensure this matches the tag created earlier
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
