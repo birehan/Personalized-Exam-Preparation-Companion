@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
-import Otp, { IOtp } from "../models/otp";
+import Otp from "../models/otp";
 import { BaseResponse } from "../types/baseResponse";
 import nodemailer from "nodemailer";
 import bcrypt from "bcrypt";
@@ -13,7 +13,6 @@ import User, {
 import configs from "../config/configs";
 import { verificationHTML } from "../types/staticContent";
 import axios from "axios";
-import { isEmailOrPhoneNumber } from "../services/helpers";
 
 const jwtSecret = configs.JWT_SECRET;
 import { google } from "googleapis";
@@ -206,15 +205,7 @@ const sendOtpVerification = async (req, res, next) => {
       throw Error("Empty email/Phone_number details are not allowed!");
     }
 
-    //check if email_phone is phone or email
-    const result = isEmailOrPhoneNumber(email_phone);
-    if (result === "Phone Number") {
-      return await sendOTPSMS({ phoneNumber: email_phone }, res);
-    } else if (result === "Email") {
-      return await sendOtp({ email: email_phone }, res);
-    } else {
-      throw Error("Email/Phone_number sent is invalid!");
-    }
+    return await sendOtp({ email: email_phone }, res);
   } catch (error) {
     next(error);
   }
@@ -225,23 +216,14 @@ const forgotPassSendOtpVerification = async (req, res, next) => {
     const { email_phone } = req.body;
 
     if (!email_phone) {
-      throw Error("Empty email/Phone_number details are not allowed!");
+      throw Error("Empty email details are not allowed!");
     }
     const foundUser = await User.findOne({ email_phone }).lean().exec();
 
     if (!foundUser) {
       throw Error("No user acccount created with that credential");
     }
-
-    //check if email_phone is phone or email
-    const result = isEmailOrPhoneNumber(email_phone);
-    if (result === "Phone Number") {
-      return await sendOTPSMS({ phoneNumber: email_phone }, res);
-    } else if (result === "Email") {
-      return await sendOtp({ email: email_phone }, res);
-    } else {
-      throw Error("Email/Phone_number sent is invalid!");
-    }
+    return await sendOtp({ email: email_phone }, res);
   } catch (error) {
     next(error);
   }
@@ -249,7 +231,6 @@ const forgotPassSendOtpVerification = async (req, res, next) => {
 
 //OTP verification setup via Email
 const sendOtp = async ({ email }, res) => {
-  console.log("hi there send otp called");
   email.trim();
 
   if (email == "" || !email) {
@@ -362,22 +343,13 @@ const sendOTPSMS = async ({ phoneNumber }, res) => {
 
 //resend verification
 const resendOtpVerification = async (req, res, next) => {
-  const { email_phone } = req.body;
   try {
     const { email_phone } = req.body;
     if (!email_phone) {
-      throw Error("Empty email/Phone_number details are not allowed!");
+      throw Error("Empty email details are not allowed!");
     }
 
-    //check if email_phone is phone or email
-    const result = isEmailOrPhoneNumber(email_phone);
-    if (result === "Phone Number") {
-      return await sendOTPSMS({ phoneNumber: email_phone }, res);
-    } else if (result === "Email") {
-      return await sendOtp({ email: email_phone }, res);
-    } else {
-      throw Error("Email/Phone_number sent is invalid!");
-    }
+    return await sendOtp({ email: email_phone }, res);
   } catch (error) {
     next(error);
   }
