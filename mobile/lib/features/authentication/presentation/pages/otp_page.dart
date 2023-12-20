@@ -136,7 +136,7 @@ class _OTPPageState extends State<OTPPage> {
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
         } else if (state is SignupState && state.status == AuthStatus.loaded) {
-          OnboardingQuestionPagesRoute().go(context);
+          // OnboardingQuestionPagesRoute().go(context);
           // context.go(AppRoutes.questionOnboardingPages);
         }
       },

@@ -9,6 +9,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../core/core.dart';
 import '../../../../core/widgets/noInternet.dart';
 import '../../../features.dart';
+import '../widgets/updated_header_widget.dart';
 
 class UpdatedHomePage extends StatefulWidget {
   final VoidCallback navigateToSettings;
@@ -28,7 +29,6 @@ class _UpdatedHomePageState extends State<UpdatedHomePage> {
     super.initState();
     context.read<GetUserBloc>().add(GetUserCredentialEvent());
     // context.read<MyMocksBloc>().add(GetMyMocksEvent());
-    context.read<HomeBloc>().add(GetHomeEvent());
   }
 
   @override
@@ -52,38 +52,6 @@ class _UpdatedHomePageState extends State<UpdatedHomePage> {
             child: Column(
               children: [
                 const UpdatedHeaderWidget(),
-                BlocBuilder<HomeBloc, HomeState>(
-                  builder: (context, state) {
-                    if (state is GetHomeState &&
-                        state.status == HomeStatus.error &&
-                        state.failure is NetworkFailure) {
-                      return NoInternet(
-                        reloadCallback: () {
-                          context.read<HomeBloc>().add(GetHomeEvent());
-                        },
-                      );
-                    } else {
-                      return Column(
-                        children: [
-                          SizedBox(height: 4.h),
-                          TakeLessonCard(width: width, height: height),
-                          SizedBox(height: 4.h),
-                          BlocBuilder<GetUserBloc, GetUserState>(
-                            builder: (context, state) {
-                              if (state is GetUserCredentialState &&
-                                  state.status == GetUserStatus.loaded) {
-                                return RecommendedMocksWidget(
-                                  stream: state.userCredential!.department!,
-                                );
-                              }
-                              return Container();
-                            },
-                          ),
-                        ],
-                      );
-                    }
-                  },
-                ),
               ],
             ),
           ),

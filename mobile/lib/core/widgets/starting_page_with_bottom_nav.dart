@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../features/features.dart';
+import '../../features/home/presentation/pages/updated_home_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -51,9 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
         onPageChanged: _onPageChanged,
         children: [
           UpdatedHomePage(navigateToSettings: _navigateToSettings),
-          const MyCoursesPage(),
-          const ExamsPage(),
-          const BookmarksPage()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

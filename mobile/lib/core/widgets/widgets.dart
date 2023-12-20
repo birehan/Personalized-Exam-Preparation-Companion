@@ -5,6 +5,4 @@ export 'text_form_field.dart';
 export 'x_icon.dart';
 export 'empty_list_widget.dart';
 export 'starting_page_with_bottom_nav.dart';
-export 'learning_quiz_mode_alert_dialog.dart';
 export 'floating_options.dart';
-export 'user_progress_indicator_widget.dart';
