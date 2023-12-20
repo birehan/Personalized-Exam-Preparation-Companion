@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">443488801728-dvgen5fpma1vli9m95ll7k0mg9k65mm4.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">443488801728</string>
+    <string name="google_api_key" translatable="false">AIzaSyAIKM1OKDVyoL1BCuc2nmPyDFy1o_Q5IfM</string>
+    <string name="google_app_id" translatable="false">1:443488801728:android:d33d04107a2cb9d3d1ae25</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAIKM1OKDVyoL1BCuc2nmPyDFy1o_Q5IfM</string>
+    <string name="google_storage_bucket" translatable="false">skillbridge-a947f.appspot.com</string>
+    <string name="project_id" translatable="false">skillbridge-a947f</string>
+</resources>

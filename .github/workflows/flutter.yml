@@ -1,0 +1,44 @@
+name: Build Flutter APK
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: "12.x"
+          distribution: "adopt"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "beta"
+          version: "3.10.2" # Update to the Flutter version you are using
+
+      - name: Build APK
+        run: |
+          cd mobile
+          flutter pub get
+          flutter build apk
+          ls -R build/app/outputs/flutter-apk/
+
+          # Commit and push changes using Personal Access Token (PAT)
+          git config user.name "GitHub Actions"
+          git config user.email "birehananteneh4@gmail.com"
+          git add build/app/outputs/flutter-apk/app-release.apk
+          git commit -m "Add built APK"
+          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+
+          # Update repository description with APK link
+          API_URL="https://api.github.com/repos/${{ github.repository }}"
+          APK_LINK="https://github.com/${{ github.repository }}/raw/main/mobile/build/app/outputs/flutter-apk/app-release.apk"
+          curl -X PATCH -H "Authorization: token ${{ secrets.PAT }}" -d "{\"homepage\":\"${APK_LINK}\"}" $API_URL
