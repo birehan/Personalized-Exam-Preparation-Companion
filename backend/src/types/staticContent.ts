@@ -1,5 +1,5 @@
 export const verificationHTML = (otp) => {
-    return `
+  return `
       <html>
         <head>
           <style>
@@ -55,23 +55,22 @@ export const verificationHTML = (otp) => {
         </head>
         <body>
           <div class="header">
-            <h1>SkillBridge Account Verification</h1>
+            <h1>Exam Preparation Companion Account Verification</h1>
           </div>
   
           <div class="content">
             <p>Hello,</p>
-            <p>Thank you for signing up with SkillBridge. To verify your account and complete the signup process, please use the following verification code:</p>
+            <p>Thank you for signing up with Exam Preparation Companion. To verify your account and complete the signup process, please use the following verification code:</p>
             <h3>${otp}</h3>
             <p><strong>This verification code is valid for 5 minutes.</strong> Please enter it on the verification page to proceed.</p>
-            <p>If you did not sign up for a SkillBridge account, please ignore this email.</p>
+            <p>If you did not sign up for a Exam Preparation Companion account, please ignore this email.</p>
           </div>
   
           <div class="footer">
             <p>Best regards,</p>
-            <p>SkillBridge Team</p>
+            <p>Exam Preparation Companion Team</p>
           </div>
         </body>
       </html>
     `;
-  }
-  
+};
