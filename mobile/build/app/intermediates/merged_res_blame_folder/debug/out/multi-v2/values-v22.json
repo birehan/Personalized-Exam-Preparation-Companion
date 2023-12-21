@@ -4,7 +4,7 @@
             "outputFile": "com.example.skill_bridge_mobile.app-mergeDebugResources-36:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/home/babi/.gradle/caches/transforms-3/dec9cd7863317f1731e08b0a8d981225/transformed/appcompat-1.3.0/res/values-v22/values-v22.xml",
+                    "source": "/Users/tesfaye/.gradle/caches/transforms-3/dec9cd7863317f1731e08b0a8d981225/transformed/appcompat-1.3.0/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

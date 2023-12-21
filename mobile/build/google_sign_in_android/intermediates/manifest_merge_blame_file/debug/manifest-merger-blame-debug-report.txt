@@ -4,12 +4,12 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="16"
-6-->/home/babi/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml
+6-->/Users/tesfaye/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="16" />
-7-->/home/babi/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml
+7-->/Users/tesfaye/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml
 8
 9    <uses-permission android:name="android.permission.INTERNET" />
-9-->/home/babi/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml:4:3-64
-9-->/home/babi/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml:4:20-62
+9-->/Users/tesfaye/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml:4:3-64
+9-->/Users/tesfaye/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/android/src/main/AndroidManifest.xml:4:20-62
 10
 11</manifest>

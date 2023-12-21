@@ -135,7 +135,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   );
                 },
                 obscureText: !_passwordVisible,
-                cursorColor: const Color(0xFF18786A),
+                cursorColor: const Color(0xFF0072FF),
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -143,7 +143,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF18786A),
+                      color: Color(0xFF0072FF),
                       width: 2,
                     ),
                   ),
@@ -157,7 +157,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       _passwordVisible
                           ? Icons.visibility
                           : Icons.visibility_off,
-                      color: const Color(0xFF18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                   ),
                 ),
@@ -185,7 +185,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   );
                 },
                 obscureText: !_confirmPasswordVisible,
-                cursorColor: const Color(0xFF18786A),
+                cursorColor: const Color(0xFF0072FF),
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -193,7 +193,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF18786A),
+                      color: Color(0xFF0072FF),
                       width: 2,
                     ),
                   ),
@@ -207,7 +207,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       _confirmPasswordVisible
                           ? Icons.visibility
                           : Icons.visibility_off,
-                      color: const Color(0xFF18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                   ),
                 ),
@@ -227,7 +227,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         return ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            backgroundColor: const Color(0xFF18786A),
+                            backgroundColor: const Color(0xFF0072FF),
                             padding: const EdgeInsets.symmetric(
                               vertical: 10,
                               horizontal: 4,

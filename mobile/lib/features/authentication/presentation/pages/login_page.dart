@@ -119,18 +119,6 @@ class _LoginPageState extends State<LoginPage> {
                         alignment: Alignment.center,
                         child: Image.asset(
                           'assets/images/logo_3.png',
-                          width: 60,
-                          height: 60,
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'SKILLBRIDGE',
-                          style: GoogleFonts.poppins(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w600,
-                          ),
                         ),
                       ),
                       const SizedBox(height: 48),
@@ -139,17 +127,9 @@ class _LoginPageState extends State<LoginPage> {
                         style: GoogleFonts.poppins(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF1A7A6C),
+                          color: const Color(0xFF0072FF),
                         ),
                       ),
-                      // Text(
-                      //   'Hello again, you\'ve been missed!',
-                      //   style: GoogleFonts.poppins(
-                      //     fontSize: 13,
-                      //     fontWeight: FontWeight.w500,
-                      //     color: const Color(0xFFA3A2B1),
-                      //   ),
-                      // ),
                       const SizedBox(height: 32),
                       Text(
                         'Email or Phone number',
@@ -167,7 +147,7 @@ class _LoginPageState extends State<LoginPage> {
                         validator: (emailOrPhoneNumber) {
                           return validateEmailOrPhoneNumber(emailOrPhoneNumber);
                         },
-                        cursorColor: const Color(0xFF18786A),
+                        cursorColor: const Color(0xFF0072FF),
                         decoration: const InputDecoration(
                           contentPadding:
                               EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -175,7 +155,7 @@ class _LoginPageState extends State<LoginPage> {
                           border: OutlineInputBorder(),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF18786A),
+                              color: Color(0xFF0072FF),
                               width: 2,
                             ),
                           ),
@@ -204,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                           return validatePassword(password);
                         },
                         obscureText: !_passwordVisible,
-                        cursorColor: const Color(0xFF18786A),
+                        cursorColor: const Color(0xFF0072FF),
                         decoration: InputDecoration(
                           contentPadding: const EdgeInsets.symmetric(
                               vertical: 6, horizontal: 12),
@@ -212,7 +192,7 @@ class _LoginPageState extends State<LoginPage> {
                           border: const OutlineInputBorder(),
                           focusedBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF18786A),
+                              color: Color(0xFF0072FF),
                               width: 2,
                             ),
                           ),
@@ -226,7 +206,7 @@ class _LoginPageState extends State<LoginPage> {
                               _passwordVisible
                                   ? Icons.visibility
                                   : Icons.visibility_off,
-                              color: const Color(0xFF18786A),
+                              color: const Color(0xFF0072FF),
                             ),
                           ),
                         ),
@@ -246,23 +226,23 @@ class _LoginPageState extends State<LoginPage> {
                         child: Row(
                           children: [
                             Container(),
-                            // CustomCheckBox(
-                            //   isChecked: _rememberMe,
-                            //   onTap: () {
-                            //     setState(() {
-                            //       _rememberMe = !_rememberMe;
-                            //     });
-                            //   },
-                            // ),
-                            // const SizedBox(width: 8),
-                            // Text(
-                            //   'Remember Me',
-                            //   style: GoogleFonts.poppins(
-                            //     fontSize: 14,
-                            //     fontWeight: FontWeight.w500,
-                            //     color: const Color(0xFF363636),
-                            //   ),
-                            // ),
+                            CustomCheckBox(
+                              isChecked: _rememberMe,
+                              onTap: () {
+                                setState(() {
+                                  _rememberMe = !_rememberMe;
+                                });
+                              },
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              'Remember Me',
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: const Color(0xFF363636),
+                              ),
+                            ),
                             const Spacer(),
                             InkWell(
                               onTap: () {
@@ -293,7 +273,7 @@ class _LoginPageState extends State<LoginPage> {
                                 }
                               },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF18786A),
+                                backgroundColor: const Color(0xFF0072FF),
                                 foregroundColor: const Color(0xFFFFFFFF),
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 16, vertical: 12),
@@ -401,7 +381,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: GoogleFonts.poppins(
                           fontSize: 13,
                           fontWeight: FontWeight.w700,
-                          color: const Color(0xFF18786A),
+                          color: const Color(0xFF0072FF),
                         ),
                       ),
                     )
