@@ -249,7 +249,7 @@ const sendOtp = async ({ email }, res) => {
     const mailOptions = {
       from: configs.EMAIL,
       to: email,
-      subject: "SkillBridge Account Verification",
+      subject: "PrepGenie Account Verification",
       html: verificationHTML(otp),
     };
 
@@ -303,7 +303,7 @@ const sendOTPSMS = async ({ phoneNumber }, res) => {
     const otp = `${Math.floor(100000 + Math.random() * 900000)}`;
 
     //setup mail options
-    const message = `This is from SkillBridge. Your verification code is: ${otp}. It will expire in 5 Mins! Thank You!`;
+    const message = `This is from Prep. Your verification code is: ${otp}. It will expire in 5 Mins! Thank You!`;
 
     const salt = await bcrypt.genSalt();
     const hashedOtp = await bcrypt.hash(otp, salt);
