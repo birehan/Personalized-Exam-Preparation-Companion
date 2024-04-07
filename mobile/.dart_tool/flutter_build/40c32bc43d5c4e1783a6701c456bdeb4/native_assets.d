@@ -1,0 +1,1 @@
+ C:\\Users\\Gizaw\\Desktop\\Personalized-Exam-Preparation-Companion\\mobile\\.dart_tool\\flutter_build\\40c32bc43d5c4e1783a6701c456bdeb4\\native_assets.yaml: 
