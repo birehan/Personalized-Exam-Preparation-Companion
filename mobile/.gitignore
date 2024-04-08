@@ -2,6 +2,9 @@
 # See https://github.com/flutter/flutter/issues/128635 for more context.
 
 # Miscellaneous
+*.dart_tool
+/dart_tool
+
 *.class
 *.lock
 *.log
