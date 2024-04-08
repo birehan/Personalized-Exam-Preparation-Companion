@@ -11,10 +11,18 @@ class UsersLeaderboardInitial extends UsersLeaderboardState {}
 
 class UsersLeaderboardLoadingState extends UsersLeaderboardState {}
 
-class UsersLeaderboardLoadedState extends UsersLeaderboardState {
-  final List<UserLeaderboardEntity> topUsers;
+class UsersLeaderboardNextPageLoadingState extends UsersLeaderboardState {
+  final Leaderboard previousLeaderboard;
 
-  const UsersLeaderboardLoadedState({required this.topUsers});
+  const UsersLeaderboardNextPageLoadingState({required this.previousLeaderboard});
+}
+
+class UsersLeaderboardLoadedState extends UsersLeaderboardState {
+  final Leaderboard topUsers;
+
+  const UsersLeaderboardLoadedState({
+    required this.topUsers,
+  });
   @override
   List<Object> get props => [topUsers];
 }

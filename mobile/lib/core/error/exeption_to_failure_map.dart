@@ -1,13 +1,27 @@
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
+import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
+import 'package:skill_bridge_mobile/injection_container.dart';
+
 import 'exception.dart';
 import 'failure.dart';
 
-Failure mapExceptionToFailure(dynamic e) {
+final hiveBoxes = serviceLocator<HiveBoxes>();
+Future<Failure> mapExceptionToFailure(dynamic e) async {
+  const FlutterSecureStorage flutterSecureStorage = FlutterSecureStorage();
   if (e is ServerException) {
     return ServerFailure();
+  } else if (e is AuthenticationException) {
+    await flutterSecureStorage.delete(key: authenticationKey);
+    await hiveBoxes.clearHiveBoxes();
+
+    return AuthenticationFailure(errorMessage: 'Token invalid or expired');
   } else if (e is UnauthorizedRequestException) {
     return UnauthorizedRequestFailure();
   } else if (e is CacheException) {
     return CacheFailure();
+  } else if (e is AuthenticationException) {
+    return AuthenticationFailure(errorMessage: e.errorMessage);
   } else {
     return AnonymousFailure();
   }

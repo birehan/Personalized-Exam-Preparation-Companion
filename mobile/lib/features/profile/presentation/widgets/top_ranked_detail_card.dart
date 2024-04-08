@@ -7,12 +7,13 @@ class TopRankedDetail extends StatelessWidget {
       {super.key,
       required this.diameter,
       required this.color,
+      required this.userId,
       required this.badgeDiameter,
       required this.rank,
       required this.imageUrl,
       required this.name,
       required this.point});
-
+  final String userId;
   final double diameter;
   final Color color;
   final double badgeDiameter;
@@ -26,6 +27,7 @@ class TopRankedDetail extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         TopRankedProfiles(
+            userId: userId,
             diameter: diameter,
             color: color,
             badgeDiameter: badgeDiameter,
@@ -37,11 +39,12 @@ class TopRankedDetail extends StatelessWidget {
           child: Text(
             name,
             textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 16,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w600,
-                color: Colors.black.withOpacity(.7)),
+            style: const TextStyle(
+              fontSize: 16,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+            ),
             overflow: TextOverflow.ellipsis,
           ),
         ),
@@ -49,14 +52,21 @@ class TopRankedDetail extends StatelessWidget {
         Text(
           point.toString(),
           style: const TextStyle(
-            fontSize: 30,
+            fontSize: 28,
             fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
         SizedBox(height: .5.h),
-        const Text('points',
-            style: TextStyle(fontSize: 16, fontFamily: 'Poppins'))
+        const Text(
+          'points',
+          style: TextStyle(
+            fontSize: 16,
+            fontFamily: 'Poppins',
+            color: Colors.white,
+          ),
+        )
       ],
     );
   }

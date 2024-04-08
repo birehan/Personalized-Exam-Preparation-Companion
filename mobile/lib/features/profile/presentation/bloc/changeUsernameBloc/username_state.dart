@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:skill_bridge_mobile/core/error/failure.dart';
 import 'package:skill_bridge_mobile/features/profile/domain/entities/entities.dart';
 
 abstract class UsernameState extends Equatable {
@@ -22,12 +23,14 @@ class Loaded extends UsernameState {
 
 class Loading extends UsernameState {}
 
-class AvatarChangeLoading extends UsernameState {}
+class ProfileUpdateOnProgress extends UsernameState {}
 
-class FailedState extends UsernameState {
+class UpdateProfileFailedState extends UsernameState {
   final String errorMessage;
+  final Failure failureType;
 
-  const FailedState({required this.errorMessage});
+  const UpdateProfileFailedState(
+      {required this.errorMessage, required this.failureType});
 }
 
-class UserAvatartChnagedState extends UsernameState {}
+class UserProfileUpdatedState extends UsernameState {}

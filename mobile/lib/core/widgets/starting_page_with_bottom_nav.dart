@@ -1,23 +1,34 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'dart:math';
 
+import 'package:circle_nav_bar/circle_nav_bar.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:skill_bridge_mobile/core/constants/app_images.dart';
+import 'package:skill_bridge_mobile/core/widgets/coming_soon_page.dart';
+import 'package:skill_bridge_mobile/core/widgets/doubleback.dart';
+import 'package:skill_bridge_mobile/core/widgets/dragable.dart';
+import 'package:skill_bridge_mobile/features/contest/presentation/pages/contests_main_page.dart';
 import '../../features/features.dart';
-import '../../features/home/presentation/pages/updated_home_page.dart';
+import '../core.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
+  const MyHomePage({super.key, this.index});
+  final String? index;
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   late PageController _pageController;
-  int _currentIndex = 0;
+  late int _currentIndex;
 
+  final bool _isDragging = false;
   @override
   void initState() {
     super.initState();
+    _currentIndex = widget.index != null ? int.parse(widget.index!) : 2;
     _pageController = PageController(initialPage: _currentIndex);
   }
 
@@ -46,65 +57,124 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: _onPageChanged,
-        children: [
-          UpdatedHomePage(navigateToSettings: _navigateToSettings),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        selectedLabelStyle: GoogleFonts.poppins(
-          fontSize: 15,
-          fontWeight: FontWeight.w600,
+    return DoubleBack(
+      message: 'double click to exit the app',
+      child: Scaffold(
+        body: Stack(
+          children: [
+            PageView(
+              controller: _pageController,
+              onPageChanged: _onPageChanged,
+              physics: const NeverScrollableScrollPhysics(),
+              children: const [
+                ContestsMainPage(),
+                // ComingSoonPage(),
+                MyCoursesPage(),
+                DynamicHomePage(),
+                ExamsPage(),
+                UserLeaderboardPage(),
+              ],
+            ),
+          ],
         ),
-        unselectedLabelStyle: GoogleFonts.poppins(
-          fontSize: 14,
-          fontWeight: FontWeight.w500,
-        ),
-        selectedItemColor: const Color(0xFF18786A),
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
+        bottomNavigationBar: CircleNavBar(
+          activeIcons: const [
+            ActiveBttomNavWidget(icon: contestIcon),
+            ActiveBttomNavWidget(icon: courseIcon),
+            ActiveBttomNavWidget(icon: homeIcon),
+            ActiveBttomNavWidget(icon: examsIcon),
+            ActiveBttomNavWidget(icon: leaderboardIcon),
+          ],
+          inactiveIcons: [
+            BottomNavCard(
+                icon: contestIcon, text: AppLocalizations.of(context)!.contest),
+            BottomNavCard(
+                icon: courseIcon, text: AppLocalizations.of(context)!.courses),
+            BottomNavCard(
+                icon: homeIcon, text: AppLocalizations.of(context)!.home),
+            BottomNavCard(
+                icon: examsIcon, text: AppLocalizations.of(context)!.exams),
+            BottomNavCard(
+                icon: leaderboardIcon,
+                text: AppLocalizations.of(context)!.leaderboard),
+          ],
+          color: Colors.white,
+          height: 8.h,
+          circleWidth: 8.h,
+          activeIndex: _currentIndex,
+          onTap: (index) {
             _currentIndex = index;
-            _pageController.animateToPage(
-              index,
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut,
-            );
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            activeIcon: Icon(Icons.home, color: Color(0xFF18786A)),
-            label: 'Home',
+            _pageController.jumpToPage(_currentIndex);
+          },
+          cornerRadius: const BorderRadius.only(
+            topLeft: Radius.circular(8),
+            topRight: Radius.circular(8),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            activeIcon: Icon(Icons.book, color: Color(0xFF18786A)),
-            label: 'Courses',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.task_outlined),
-            activeIcon: Icon(
-              Icons.task_outlined,
-              color: Color(0xFF18786A),
-            ),
-            label: 'Exams',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark_outline),
-            activeIcon: Icon(
-              Icons.bookmark_outline,
-              color: Color(0xFF18786A),
-            ),
-            label: 'Bookmarks',
-          ),
-        ],
+          // shadowColor: const Color(0xff18786a),
+
+          // elevation: 1,
+          circleColor: const Color(0xff18786a),
+          circleShadowColor: const Color(0xff18786a).withOpacity(.5),
+        ),
       ),
+    );
+  }
+}
+
+class ActiveBttomNavWidget extends StatelessWidget {
+  final String icon;
+
+  const ActiveBttomNavWidget({
+    super.key,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 2.h,
+      padding: const EdgeInsets.all(1),
+      child: SvgPicture.asset(
+        icon,
+        fit: BoxFit.scaleDown,
+        color: Colors.white,
+      ),
+    );
+  }
+}
+
+class BottomNavCard extends StatelessWidget {
+  final String icon;
+  final String text;
+  const BottomNavCard({
+    super.key,
+    required this.icon,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          height: 2.75.h,
+          padding: const EdgeInsets.all(1),
+          child: SvgPicture.asset(
+            icon,
+            fit: BoxFit.scaleDown,
+            color: Colors.black.withOpacity(.7),
+          ),
+        ),
+        SizedBox(height: .5.h),
+        Text(
+          text,
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.black.withOpacity(.7),
+          ),
+        ),
+      ],
     );
   }
 }

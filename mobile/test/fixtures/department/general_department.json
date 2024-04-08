@@ -1,0 +1,15 @@
+{
+    "_id": "id",
+    "name": "name",
+    "isForListing": false,
+    "description": "description",
+    "departments": [
+        {
+            "_id": "id",
+            "name": "name",
+            "description": "description",
+            "noOfCourses": 5,
+            "generalDepartmentId": "id"
+        }
+    ]
+}

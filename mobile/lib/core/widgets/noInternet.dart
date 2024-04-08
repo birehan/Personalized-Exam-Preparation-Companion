@@ -6,47 +6,61 @@ class NoInternet extends StatelessWidget {
   const NoInternet({
     super.key,
     required this.reloadCallback,
+    this.setColor = false,
   });
   final Function() reloadCallback;
+  final bool setColor;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(height: 10.h),
-        const Icon(
-          Icons.signal_wifi_connected_no_internet_4,
-          size: 32,
-        ),
-        SizedBox(height: 2.h),
-        Text(
-          'No Internet, Check your connection!',
-          style: GoogleFonts.poppins(
-            fontSize: 15,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        SizedBox(height: 2.h),
-        InkWell(
-          onTap: reloadCallback,
-          borderRadius: BorderRadius.circular(2.h),
-          splashColor: const Color(0xff18786A).withOpacity(.1),
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: .7.h, horizontal: 4.w),
-            decoration: BoxDecoration(
-                border: Border.all(
-                  color: const Color(0xff18786a),
-                ),
-                borderRadius: BorderRadius.circular(2.h)),
-            child: const Text(
-              'retry',
-              style: TextStyle(
-                  fontSize: 18,
-                  fontFamily: 'Poppins',
-                  color: Color(0xff18786a)),
+        Column(
+          children: [
+            SizedBox(height: 10.h),
+            Icon(
+              Icons.signal_wifi_connected_no_internet_4,
+              size: 32,
+              color: setColor ? Colors.white : Colors.black,
             ),
-          ),
-        )
+            SizedBox(height: 2.h),
+            Text(
+              'Check your internet connection and try again.',
+              style: GoogleFonts.poppins(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: setColor ? Colors.white : Colors.black,
+              ),
+            ),
+            SizedBox(height: 2.h),
+            InkWell(
+              onTap: () {
+                reloadCallback();
+              },
+              borderRadius: BorderRadius.circular(2.h),
+              splashColor: const Color(0xff18786A).withOpacity(.1),
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: .7.h, horizontal: 4.w),
+                decoration: BoxDecoration(
+                  color: setColor ? Colors.white : Colors.transparent,
+                  border: Border.all(
+                    color: setColor ? Colors.white : const Color(0xff18786a),
+                  ),
+                  borderRadius: BorderRadius.circular(2.h),
+                ),
+                child: Text(
+                  'retry',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontFamily: 'Poppins',
+                    color: setColor ? Colors.black : const Color(0xff18786a),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ],
     );
   }

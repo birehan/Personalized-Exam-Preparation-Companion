@@ -1,0 +1,7 @@
+{
+    "_id": "id",
+    "name": "name",
+    "description": "description",
+    "noOfCourses": 5,
+    "generalDepartmentId": "id"
+}

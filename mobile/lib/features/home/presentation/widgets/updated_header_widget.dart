@@ -46,7 +46,7 @@ class UpdatedHeaderWidget extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  ProfilePageRoute().go(context);
+                  UpdatedProfilePageRoute().go(context);
                 },
                 child: Stack(
                   children: [
