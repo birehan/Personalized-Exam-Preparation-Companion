@@ -67,8 +67,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '443488801728',
     projectId: 'skillbridge-a947f',
     storageBucket: 'skillbridge-a947f.appspot.com',
-    androidClientId: '443488801728-ctlhjv76mqvio5kgjoia6cvop22dhsgk.apps.googleusercontent.com',
-    iosClientId: '443488801728-tflv1dlbl7odsghpju4gfi8aocnpmok0.apps.googleusercontent.com',
+    androidClientId:
+        '443488801728-ctlhjv76mqvio5kgjoia6cvop22dhsgk.apps.googleusercontent.com',
+    iosClientId:
+        '443488801728-tflv1dlbl7odsghpju4gfi8aocnpmok0.apps.googleusercontent.com',
     iosBundleId: 'com.example.skillBridgeMobile',
   );
 
@@ -78,8 +80,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '443488801728',
     projectId: 'skillbridge-a947f',
     storageBucket: 'skillbridge-a947f.appspot.com',
-    androidClientId: '443488801728-ctlhjv76mqvio5kgjoia6cvop22dhsgk.apps.googleusercontent.com',
-    iosClientId: '443488801728-tflv1dlbl7odsghpju4gfi8aocnpmok0.apps.googleusercontent.com',
+    androidClientId:
+        '443488801728-ctlhjv76mqvio5kgjoia6cvop22dhsgk.apps.googleusercontent.com',
+    iosClientId:
+        '443488801728-tflv1dlbl7odsghpju4gfi8aocnpmok0.apps.googleusercontent.com',
     iosBundleId: 'com.example.skillBridgeMobile',
   );
 }
