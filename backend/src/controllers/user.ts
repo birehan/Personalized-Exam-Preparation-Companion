@@ -625,7 +625,7 @@ const logoutUser = async (req, res, next) => {
     return res
       .cookie("jwt", "", { maxAge: 1 })
       .header("token", "")
-      .status(201)
+      .status(200)
       .json({ ...baseResponse })
       .end();
   } catch (error) {
