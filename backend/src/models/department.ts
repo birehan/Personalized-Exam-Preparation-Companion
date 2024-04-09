@@ -4,6 +4,7 @@ export interface IDepartment extends Document {
   //   id: Schema.Types.ObjectId;
   description: String;
   name: String;
+  noOfCourses: Number;
 }
 
 const DepartmentSchema: Schema<IDepartment> = new Schema(
