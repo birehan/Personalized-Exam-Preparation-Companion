@@ -17,6 +17,11 @@ const DepartmentSchema: Schema<IDepartment> = new Schema(
       required: false,
       default: "",
     },
+    noOfCourses: {
+      type: Number,
+      required: false,
+      default: 0
+    },
   },
   {
     timestamps: {
