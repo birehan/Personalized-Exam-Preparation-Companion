@@ -16,6 +16,8 @@ app.use(expressupload());
 app.use(cors());
 
 app.use("/api/v1/user", routes.userRouter);
+app.use("/api/v1/department", routes.departmentRouter);
+
 
 app.get("/", (req, res) => {
   let baseResponse = new BaseResponse();
