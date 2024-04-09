@@ -7,28 +7,16 @@ const router = Router();
 
 router.post("/sendOTPCode", UserControllers.sendOtpVerification);
 router.post("/reSendOTPCode", UserControllers.resendOtpVerification);
-router.post(
-  "/sendOTPCodeForgotPass",
-  UserControllers.forgotPassSendOtpVerification
-);
+router.post( "/sendOTPCodeForgotPass", UserControllers.forgotPassSendOtpVerification);
 
 router.post("/signup", UserControllers.userSignup);
 router.post("/login", UserControllers.userLogin);
 router.get("/logout", isAuthenticated, UserControllers.logoutUser);
 
-router.post(
-  "/userChangePassword",
-  isAuthenticated,
-  UserControllers.changePassword
-);
-router.post("/forgotPassVerifyOTP", UserControllers.userForgotPassVerifyOTP);
-router.post("/forgotChangePassword", UserControllers.forgotChangePassword);
-router.put(
-  "/updateProfile",
-  isAuthenticated,
-  uploader,
-  UserControllers.updateProfile
-);
+router.put( "/userChangePassword", isAuthenticated, UserControllers.changePassword);
+router.put("/forgotPassVerifyOTP", UserControllers.userForgotPassVerifyOTP);
+router.put("/forgotChangePassword", UserControllers.forgotChangePassword);
+router.put( "/updateProfile", isAuthenticated, uploader, UserControllers.updateProfile);
 
 router.get("/currentUser", isAuthenticated, UserControllers.currentUser);
 router.get("/home", isAuthenticated, UserControllers.userHomePage);

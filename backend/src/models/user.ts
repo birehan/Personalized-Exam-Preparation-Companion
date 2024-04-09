@@ -11,6 +11,8 @@ export interface IUserDocument extends Document {
   avatar: Schema.Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
+  department: Schema.Types.ObjectId;
+  grade: Number;
 }
 
 interface UserModel extends Model<IUserDocument> {
@@ -58,6 +60,15 @@ const UserSchema: Schema<IUserDocument, UserModel> = new Schema(
     resetToken: {
       type: String,
       default: "",
+    },
+    department: {
+      type: Schema.Types.ObjectId,
+      ref:'Department',
+      default: null
+    },
+    grade: {
+      type: Number,
+      default: 12
     },
   },
   {
@@ -121,12 +132,16 @@ export const userValidation = Joi.object({
   password: Joi.string().min(6).required().trim(),
   resetToken: Joi.string().default(""),
   avatar: Joi.string().hex().length(24).default(null),
+  department: Joi.string().hex().length(24).trim().default(null),
+  grade: Joi.number(),
 });
 
 export const updateUserValidation = Joi.object({
   firstName: Joi.string().trim(),
   lastName: Joi.string().trim(),
   avatar: Joi.string().hex().length(24).optional(),
+  department: Joi.string().hex().length(24).trim(),
+  grade: Joi.number(),
 });
 
 export default User;
