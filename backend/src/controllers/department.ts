@@ -7,14 +7,16 @@ const createDepartment = async (req: Request, res: Response, next: NextFunction)
     try {
         const {
             description, name,
-            noOfCourses
+            noOfCourses,generalDepartmentId
         } = req.body;
 
-        const userInput = { description, name, noOfCourses }
+        const userInput = { description, name, noOfCourses}
 
         const { error, value } = departmentValidator(userInput,"post");
 
         if (error) throw error
+        
+   
 
         const department = new Department({...value});
 
@@ -79,14 +81,15 @@ const updateDepartment = async (req: Request, res: Response, next: NextFunction)
 
         const {
             description, name,
-            noOfCourses
+            noOfCourses, generalDepartmentId
         } = req.body;
 
-        let updateObject = { description, name, noOfCourses }
+        let updateObject = { description, name, noOfCourses}
 
         for (const key in updateObject){
             if (!updateObject[key]) delete updateObject[key]
         }
+  
 
         const { error, value } = departmentValidator(updateObject,"put");
 
