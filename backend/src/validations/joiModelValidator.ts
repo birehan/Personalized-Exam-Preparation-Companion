@@ -10,7 +10,6 @@ export const departmentValidator = (department, requestType: string) => {
       description: Joi.string(),
       name: Joi.string().alter(requiredRule),
       noOfCourses: Joi.number(),
-      generalDepartmentId:Joi.string().hex().length(24).alter(requiredRule)
     });
     return schema.tailor(requestType).validate(department, { abortEarly: false });
   };
