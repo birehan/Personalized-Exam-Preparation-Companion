@@ -90,23 +90,23 @@ class _OnboardingPagesState extends State<OnboardingPages> {
       OnboardingWidget(
         index: 1,
         indicators: indicators,
-        title: 'Prep Smarter with PrepGenie',
-        description: 'PrepGenie offers summarized content and tailored exam features to boost your performance like never before.',
+        title: 'Personalized Quizzes',
+        description: 'Tailor your study experience with personalized quizzes',
         onNext: onNext,
       ),
       OnboardingWidget(
         index: 2,
         indicators: indicators,
-        title: 'Mock Exams for Success',
+        title: 'Model Exams for Success',
         description:
-            'Online tutoring that trains skills according to their talents in a flexible methodology',
+            'Access to a collection of previous year exams with their explanations.',
         onNext: onNext,
       ),
     ];
 
     return Scaffold(
       body: Container(
-        color: const Color(0xFF0072FF),
+        color: const Color(0xFF18786A),
         child: Stack(
           children: [
             Image.asset('assets/images/background_lines.png'),

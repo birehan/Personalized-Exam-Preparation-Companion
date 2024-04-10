@@ -1,0 +1,16 @@
+import 'package:equatable/equatable.dart';
+import '../../../features.dart';
+import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
+
+class Leaderboard extends Equatable {
+  final List<UserLeaderboardEntity> userLeaderboardEntities;
+  final UserLeaderboardRank? userRank;
+
+  const Leaderboard({
+    required this.userLeaderboardEntities,
+    required this.userRank,
+  });
+
+  @override
+  List<Object?> get props => [userLeaderboardEntities, userRank];
+}

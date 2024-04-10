@@ -3,19 +3,20 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:skill_bridge_mobile/core/core.dart';
 import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
 
-class ChangeUserAvatarUsecase extends UseCase<void, AvatarChangeParams> {
+class UpdateUserProfileUsecase extends UseCase<void, ProfileUpdateParams> {
   final ProfileRepositories profileRepositories;
 
-  ChangeUserAvatarUsecase({required this.profileRepositories});
+  UpdateUserProfileUsecase({required this.profileRepositories});
   @override
-  Future<Either<Failure, void>> call(AvatarChangeParams params) async {
-    return profileRepositories.updateUserAvatar(params.imagePath);
+  Future<Either<Failure, void>> call(ProfileUpdateParams params) async {
+    return profileRepositories.updateProfile(params.updateEntity);
   }
 }
 
-class AvatarChangeParams {
-  final File imagePath;
+class ProfileUpdateParams {
+  final ProfileUpdateEntity updateEntity;
 
-  AvatarChangeParams({required this.imagePath});
+  ProfileUpdateParams({required this.updateEntity});
 }

@@ -1,5 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide UserCredential;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:get_it/get_it.dart';
 
 // import 'package:flutter/material.dart';
 
@@ -40,18 +42,17 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
           password: password,
         );
 
+        print(userCredentialModel.profileAvatar);
+
         if (rememberMe) {
           await localDatasource.cacheAuthenticationCredential(
             userCredentialModel: userCredentialModel,
           );
+          print(userCredentialModel.profileAvatar);
         }
         return Right(userCredentialModel);
-      } on AuthenticationException catch (e) {
-        return Left(AuthenticationFailure(errorMessage: e.errorMessage));
-      } on ServerException {
-        return Left(ServerFailure());
-      } on CacheException {
-        return Left(CacheFailure());
+      } catch (e) {
+        return Left(await mapExceptionToFailure(e));
       }
     }
     return Left(NetworkFailure());
@@ -239,5 +240,33 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
       }
     }
     return Left(NetworkFailure());
+  }
+
+  @override
+  Future<Either<Failure, Unit>> deleteDeviceToken() async {
+    if (await networkInfo.isConnected) {
+      try {
+        await remoteDatasource.deleteDeviceToken();
+        return const Right(unit);
+      } on ServerException {
+        return Left(ServerFailure());
+      }
+    } else {
+      return Left(NetworkFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, Unit>> storeDeviceToken() async {
+    if (await networkInfo.isConnected) {
+      try {
+        await remoteDatasource.storeDeviceToken();
+        return const Right(unit);
+      } on ServerException {
+        return Left(ServerFailure());
+      }
+    } else {
+      return Left(NetworkFailure());
+    }
   }
 }

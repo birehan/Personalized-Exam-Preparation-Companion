@@ -7,5 +7,9 @@ abstract class UserProfileEvent extends Equatable {
   List<Object> get props => [];
 }
 
+class GetUserProfile extends UserProfileEvent {
+  final bool isRefreshed;
+  final String? userId;
 
-class GetUserProfile extends UserProfileEvent {}
+  GetUserProfile({required this.isRefreshed, this.userId});
+}

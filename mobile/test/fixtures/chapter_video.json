@@ -1,0 +1,21 @@
+{"chapter": {
+    "_id": "65a0f6a3938f09b54fca2b17",
+    "name": "ACID-BASE EQUILIBRIA",
+    "description": "NONE",
+    "summary": "NONE",
+    "order": 1,
+    "courseId": "65a0f2a1938f09b54fca2b10",
+    "noOfSubChapters": 5
+},
+"videoContents": [
+    {
+        "_id": "65e196cad8f0965397904a25",
+        "link": "https://www.youtube.com/watch?v=oIt9d9MuA74",
+        "title": "Grade 12 Chemistry Unit 1: Arrhenius concept of acids and bases",
+        "thumbnail": "https://i.ytimg.com/vi/oIt9d9MuA74/default.jpg",
+        "duration": "26:07",
+        "order": 1,
+        "chapterId": "65a0f6a3938f09b54fca2b17",
+        "courseId": "65a0f2a1938f09b54fca2b10"
+    }]
+}

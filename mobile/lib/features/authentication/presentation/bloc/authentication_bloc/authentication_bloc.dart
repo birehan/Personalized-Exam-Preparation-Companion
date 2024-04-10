@@ -163,9 +163,16 @@ class AuthenticationBloc
   void _onChangePassword(
       ChangePasswordEvent event, Emitter<AuthenticationState> emit) async {
     emit(const ChangePasswordState(status: AuthStatus.loading));
+
+    String? phoneNumber;
+
+    if (validatePhoneNumber(event.emailOrPhoneNumber) == null) {
+      phoneNumber = phoneNumberConverter(event.emailOrPhoneNumber);
+    }
+
     final failureOrChangePassword = await changePasswordUsecase(
       ChangePasswordParams(
-        emailOrPhoneNumber: event.emailOrPhoneNumber,
+        emailOrPhoneNumber: phoneNumber ?? event.emailOrPhoneNumber,
         newPassword: event.newPassword,
         confirmPassword: event.confirmPassword,
         otp: event.otp,
@@ -232,9 +239,16 @@ class AuthenticationBloc
     Emitter<AuthenticationState> emit,
   ) async {
     emit(const ResendOtpVerificationState(status: AuthStatus.loading));
+
+    String? phoneNumber;
+
+    if (validatePhoneNumber(event.emailOrPhoneNumber) == null) {
+      phoneNumber = phoneNumberConverter(event.emailOrPhoneNumber);
+    }
+
     final failureOrOtp = await resendOtpVerificationUsecase(
       ResendOtpVerificationParams(
-        emailOrPhoneNumber: event.emailOrPhoneNumber,
+        emailOrPhoneNumber: phoneNumber ?? event.emailOrPhoneNumber,
       ),
     );
     emit(_eitherOtpOrError(failureOrOtp));

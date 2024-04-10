@@ -111,7 +111,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               ),
               const SizedBox(height: 8),
               Text(
-                'Enter the email associated with your account and we will send an OTP code so that you can reset your password',
+                'Enter the email or phone number associated with your account and we will send an OTP code so that you can reset your password',
                 style: GoogleFonts.poppins(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -132,7 +132,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 validator: (emailOrPhoneNumber) {
                   return validateEmailOrPhoneNumber(emailOrPhoneNumber);
                 },
-                cursorColor: const Color(0xFF0072FF),
+                cursorColor: const Color(0xFF18786A),
                 decoration: const InputDecoration(
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -140,7 +140,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   border: OutlineInputBorder(),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF0072FF),
+                      color: Color(0xFF18786A),
                       width: 2,
                     ),
                   ),
@@ -158,7 +158,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: const Color(0xFF0072FF),
+                        backgroundColor: const Color(0xFF18786A),
                         padding: const EdgeInsets.symmetric(
                           vertical: 10,
                           horizontal: 4,

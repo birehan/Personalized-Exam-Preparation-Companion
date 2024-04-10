@@ -5,12 +5,14 @@ class FloatingOptions extends StatelessWidget {
   final Function() flagCallback;
   final Function() chatCallback;
   final bool hideChat;
+  final Color? color;
 
   const FloatingOptions({
     super.key,
     required this.flagCallback,
     required this.chatCallback,
     required this.hideChat,
+    this.color,
   });
 
   @override
@@ -22,7 +24,7 @@ class FloatingOptions extends StatelessWidget {
       childPadding: const EdgeInsets.all(2),
       iconTheme: const IconThemeData(color: Colors.white),
       spaceBetweenChildren: 5,
-      backgroundColor: const Color(0xff1A7A6C),
+      backgroundColor: color ?? const Color(0xff1A7A6C),
       elevation: 1,
       children: [
         if (!hideChat)

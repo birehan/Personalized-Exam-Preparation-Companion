@@ -37,3 +37,5 @@ class AuthenticationException implements Exception {
 
   final String errorMessage;
 }
+
+class DeviceTokenNotFoundException implements Exception {}

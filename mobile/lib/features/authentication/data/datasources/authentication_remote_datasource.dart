@@ -1,5 +1,9 @@
 import 'dart:convert';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:get_it/get_it.dart';
+
 import '../../../../core/core.dart';
 
 import '../../../../core/constants/app_keys.dart';
@@ -33,11 +37,16 @@ abstract class AuthenticationRemoteDatasource {
   Future<void> sendOtpVerification(String emailOrPhoneNumber);
   Future<void> resendOtpVerification(String emailOrPhoneNumber);
   Future<UserCredentialModel> getUser();
+
+  Future<void> storeDeviceToken();
+  Future<void> deleteDeviceToken();
 }
 
 class AuthenticationRemoteDatasourceImpl
     extends AuthenticationRemoteDatasource {
   final http.Client client;
+  // Define the usersDeviceTokenCollection getter
+  String get usersDeviceTokenCollection => 'usersDeviceTokenCollection';
 
   AuthenticationRemoteDatasourceImpl({
     required this.client,
@@ -49,30 +58,33 @@ class AuthenticationRemoteDatasourceImpl
   }
 
   @override
-  Future<UserCredentialModel> login({
-    required String emailOrPhoneNumber,
-    required String password,
-  }) async {
-    final response = await client.post(
-      Uri.parse('$baseUrl/user/login'),
-      body: json.encode({
-        'email_phone': emailOrPhoneNumber,
-        'password': password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    );
-
-    if (response.statusCode == 200) {
-      final responseJson = json.decode(response.body)['data'];
-
-      return UserCredentialModel.fromJson(responseJson);
-    } else {
-      final errorMessage = json.decode(response.body)['message'];
-      throw AuthenticationException(
-        errorMessage: errorMessage,
+  Future<UserCredentialModel> login(
+      {required String emailOrPhoneNumber, required String password}) async {
+    try {
+      final response = await client.post(
+        Uri.parse('$baseUrl/user/login'),
+        body: json.encode({
+          'email_phone': emailOrPhoneNumber,
+          'password': password,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
       );
+
+      if (response.statusCode == 200) {
+        final responseJson = json.decode(response.body)['data'];
+        print(responseJson);
+        return UserCredentialModel.fromJson(responseJson);
+      } else {
+        final errorMessage = json.decode(response.body)['message'];
+        throw AuthenticationException(
+          errorMessage: errorMessage,
+        );
+      }
+    } catch (e) {
+      print(e);
+      rethrow;
     }
   }
 
@@ -102,11 +114,6 @@ class AuthenticationRemoteDatasourceImpl
 
   @override
   Future<void> sendOtpVerification(String emailOrPhoneNumber) async {
-    print("url: ");
-    print('$baseUrl/user/sendOTPCode');
-    print("email");
-    print(emailOrPhoneNumber);
-
     final response = await client.post(
       Uri.parse('$baseUrl/user/sendOTPCode'),
       body: json.encode({
@@ -120,8 +127,6 @@ class AuthenticationRemoteDatasourceImpl
     if (response.statusCode == 201) {
       return;
     }
-    print(response.statusCode);
-    print("failed");
     final errorMessage = json.decode(response.body)['message'];
     throw AuthenticationException(errorMessage: errorMessage);
   }
@@ -205,5 +210,52 @@ class AuthenticationRemoteDatasourceImpl
     }
     final errorMessage = json.decode(response.body)['message'];
     throw AuthenticationException(errorMessage: errorMessage);
+  }
+
+  @override
+  Future<void> deleteDeviceToken() async {
+    try {
+      final userCredential = await AuthenticationLocalDatasourceImpl(
+        flutterSecureStorage: GetIt.instance.get<FlutterSecureStorage>(),
+      ).getUserCredential();
+
+      final userId = userCredential.id;
+
+      return await FirebaseFirestore.instance
+          .collection(usersDeviceTokenCollection)
+          .doc(userId)
+          .delete();
+    } catch (e) {
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<void> storeDeviceToken() async {
+    try {
+      final userCredential = await AuthenticationLocalDatasourceImpl(
+        flutterSecureStorage: GetIt.instance.get<FlutterSecureStorage>(),
+      ).getUserCredential();
+
+      final userId = userCredential.id;
+
+      final deviceToken = await NotificationService().getToken();
+
+      if (deviceToken == null) {
+        throw DeviceTokenNotFoundException();
+      }
+
+      return await FirebaseFirestore.instance
+          .collection(usersDeviceTokenCollection)
+          .doc(userId)
+          .set(
+        {
+          "user_id": userId,
+          "device_token": deviceToken,
+        },
+      );
+    } catch (e) {
+      throw ServerException();
+    }
   }
 }

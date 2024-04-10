@@ -7,4 +7,8 @@ class UsersLeaderboardEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class GetTopUsersEvent extends UsersLeaderboardEvent {}
+class GetTopUsersEvent extends UsersLeaderboardEvent {
+  final int pageNumber;
+
+  const GetTopUsersEvent({required this.pageNumber});
+}

@@ -11,10 +11,12 @@ class LearningQuizModeEvent extends AlertDialogEvent {
   const LearningQuizModeEvent({
     required this.examId,
     required this.questionMode,
+    this.questionNumber,
   });
 
   final String examId;
   final QuestionMode questionMode;
+  final int? questionNumber;
 
   @override
   List<Object> get props => [examId, questionMode];

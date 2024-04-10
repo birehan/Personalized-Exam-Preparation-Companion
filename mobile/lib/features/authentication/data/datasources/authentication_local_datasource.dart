@@ -31,7 +31,12 @@ class AuthenticationLocalDatasourceImpl extends AuthenticationLocalDatasource {
   Future<void> cacheAuthenticationCredential({
     required UserCredentialModel userCredentialModel,
   }) {
-    String? stringfiedJson = json.encode(userCredentialModel);
+    String? stringfiedJson = json.encode(
+      userCredentialModel.toJson(
+        userCredentialModel,
+      ),
+    );
+    final profileAvatar = json.decode(stringfiedJson);
     return flutterSecureStorage.write(
       key: authenticationKey,
       value: stringfiedJson,
@@ -90,7 +95,8 @@ class AuthenticationLocalDatasourceImpl extends AuthenticationLocalDatasource {
         department: updatedUserCredntialInformation.department,
         departmentId: updatedUserCredntialInformation.departmentId,
       );
-      String? stringfiedJson = json.encode(userCredentialModel);
+      String? stringfiedJson =
+          json.encode(userCredentialModel.toJson(userCredentialModel));
 
       await flutterSecureStorage.write(
         key: authenticationKey,

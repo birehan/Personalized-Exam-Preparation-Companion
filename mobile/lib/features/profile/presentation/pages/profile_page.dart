@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
@@ -8,8 +9,10 @@ import 'package:go_router/go_router.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:skill_bridge_mobile/core/bloc/tokenSession/token_session_bloc.dart';
 import 'package:skill_bridge_mobile/core/core.dart';
 import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
 import 'package:skill_bridge_mobile/features/features.dart';
@@ -42,7 +45,8 @@ class _ProfilePageState extends State<ProfilePage> {
   void initState() {
     super.initState();
     // context.read<UserProfileBloc>().add(GetUserProfile());
-    BlocProvider.of<UserProfileBloc>(context).add(GetUserProfile());
+    BlocProvider.of<UserProfileBloc>(context)
+        .add(GetUserProfile(isRefreshed: false));
   }
 
   File? _image;
@@ -147,8 +151,8 @@ class _ProfilePageState extends State<ProfilePage> {
                               color: Colors.white, fontFamily: 'Poppins'),
                         ),
                         onPressed: () {
-                          context.read<UsernameBloc>().add(
-                              UserAvatarChangedEvent(imagePath: uploadedImage));
+                          // context.read<UsernameBloc>().add(
+                          //     UpdateProfileEvent(imagePath: uploadedImage));
                           Navigator.pop(context);
                         },
                       ),
@@ -161,33 +165,41 @@ class _ProfilePageState extends State<ProfilePage> {
         });
   }
 
+  void navigateToLogin(Completer<void> completer, BuildContext context) async {
+    await completer.future;
+    // ignore: use_build_context_synchronously
+    LoginPageRoute().go(context);
+  }
+
+  final NetworkInfo networkInfo =
+      NetworkInfoImpl(internetConnectionChecker: InternetConnectionChecker());
   @override
   Widget build(BuildContext context) {
     final Finalwidth = MediaQuery.of(context).size.width;
     final Finalheight = MediaQuery.of(context).size.height;
 
-    return BlocListener<UsernameBloc, UsernameState>(
-      listener: (context, state) {
-        if (state is Loaded || state is UserAvatartChnagedState) {
-          context.read<UserProfileBloc>().add(GetUserProfile());
-          context.read<GetUserBloc>().add(GetUserCredentialEvent());
-        }
-      },
+    return MultiBlocListener(
+      listeners: [
+        BlocListener<UsernameBloc, UsernameState>(
+          listener: (context, state) {
+            if (state is Loaded || state is UserProfileUpdatedState) {
+              context
+                  .read<UserProfileBloc>()
+                  .add(GetUserProfile(isRefreshed: true));
+              context.read<GetUserBloc>().add(GetUserCredentialEvent());
+            }
+          },
+        ),
+        BlocListener<TokenSessionBloc, TokenSessionState>(
+          listener: (context, state) {
+            if (state is TokenSessionExpiredState) {
+              LoginPageRoute().go(context);
+            }
+          },
+        ),
+      ],
       child: Scaffold(
           backgroundColor: const Color(0xFFFCFCFC),
-          // appBar: AppBar(
-          //   centerTitle: true,
-          //   elevation: 0,
-          //   backgroundColor: const Color(0xFFC3EED3).withOpacity(.6),
-          //   title: Text(
-          //     'Profile',
-          //     style: GoogleFonts.poppins(
-          //         color: const Color(0xFF2E2C2C),
-          //         fontSize: 20,
-          //         fontWeight: FontWeight.w600,
-          //         height: 1.75),
-          //   ),
-          // ),
           body: BlocBuilder<UserProfileBloc, UserProfileState>(
             builder: (context, state) {
               if (state is ProfileEmpty) {
@@ -198,300 +210,332 @@ class _ProfilePageState extends State<ProfilePage> {
                 return _profilePageShimmer();
               } else if (state is ProfileLoaded) {
                 // return _profilePageShimmer();
-                return SingleChildScrollView(
-                    child: Stack(
-                  children: [
-                    Container(
-                      height: 44.h,
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [
-                              Color(0xFFC3EED3),
-                              Color(0xffE1ECE9),
-                            ],
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter),
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(40),
-                            bottomRight: Radius.circular(40)),
-                      ),
-                    ),
-                    Column(
-                      children: [
-                        SizedBox(height: 1.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                                onPressed: () {
-                                  context.pop();
-                                },
-                                icon: const Icon(Icons.arrow_back)),
-                            Text(
-                              'Profile',
-                              style: GoogleFonts.poppins(
-                                  color: const Color(0xFF2E2C2C),
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  height: 1.75),
+                return RefreshIndicator(
+                  onRefresh: () async {
+                    if (await networkInfo.isConnected) {
+                      BlocProvider.of<UserProfileBloc>(context)
+                          .add(GetUserProfile(isRefreshed: true));
+                      return;
+                    }
+                    ScaffoldMessenger.of(context).removeCurrentSnackBar();
+                    const snackBar =
+                        SnackBar(content: Text('you are not connected'));
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                  child: SingleChildScrollView(
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      child: Stack(
+                        children: [
+                          Container(
+                            height: 44.h,
+                            decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                  colors: [
+                                    Color(0xFFC3EED3),
+                                    Color(0xffE1ECE9),
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter),
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(40),
+                                  bottomRight: Radius.circular(40)),
                             ),
-                            IconButton(
-                                onPressed: () {},
-                                icon: const Icon(Icons.abc,
-                                    color: Colors.transparent))
-                          ],
-                        ),
-                        SizedBox(height: 2.h),
-                        Stack(children: [
-                          Center(
-                            child: ClipOval(
-                                child: Container(
-                              color: Colors.black26,
-                              child: Image(
-                                width: 129.0,
-                                height: 129.0,
-                                fit: BoxFit
-                                    .cover, // You can use BoxFit to control how the image is fitted inside the circle
-                                image: CachedNetworkImageProvider(
-                                  state.userProfile.profileImage,
+                          ),
+                          Column(
+                            children: [
+                              SizedBox(height: 1.h),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  IconButton(
+                                      onPressed: () {
+                                        context.pop();
+                                      },
+                                      icon: const Icon(Icons.arrow_back)),
+                                  Text(
+                                    'Profile',
+                                    style: GoogleFonts.poppins(
+                                        color: const Color(0xFF2E2C2C),
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                        height: 1.75),
+                                  ),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.abc,
+                                          color: Colors.transparent))
+                                ],
+                              ),
+                              SizedBox(height: 2.h),
+                              Stack(children: [
+                                Center(
+                                  child: ClipOval(
+                                      child: Container(
+                                    color: Colors.black26,
+                                    child: Image(
+                                      width: 129.0,
+                                      height: 129.0,
+                                      fit: BoxFit
+                                          .cover, // You can use BoxFit to control how the image is fitted inside the circle
+                                      image: CachedNetworkImageProvider(
+                                        state.userProfile.profileImage,
+                                      ),
+                                    ),
+                                  )),
                                 ),
-                              ),
-                            )),
-                          ),
-                          Center(
-                            child: BlocBuilder<UsernameBloc, UsernameState>(
-                              builder: (context, state) {
-                                if (state is AvatarChangeLoading) {
-                                  return const CustomProgressIndicator(
-                                    size: 34,
-                                  );
-                                }
-                                return const SizedBox();
-                              },
-                            ),
-                          ),
-                          Positioned(
-                            top: 96,
-                            left: 235,
-                            child: GestureDetector(
-                              onTap: () {
-                                chooseOption();
-                              },
-                              child: Image.asset(
-                                'assets/images/edit_Icon.png', // Replace with your local asset path for the edit icon
-                                width: 30.89, // Set the width of the edit icon
-                                height: 30.8, // Set the height of the edit icon
-                              ),
-                            ),
-                          ),
-                        ]),
-                        SizedBox(height: 2.h),
-                        Text(
-                          "${state.userProfile.firstName} ${state.userProfile.lastName}",
-                          style: GoogleFonts.poppins(
-                              color: const Color(0xFF1C1B1B),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              height: 1.5),
-                        ),
-                        SizedBox(height: .5.h),
-                        Text(
-                          state.userProfile.email,
-                          style: GoogleFonts.poppins(
-                              color: const Color(0xFF343434),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.italic,
-                              height: 1.5),
-                        ),
-                        SizedBox(height: 3.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Container(
-                              padding: EdgeInsets.all(2.h),
-                              height: 18.h,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 12,
-                                    color: Colors.black.withOpacity(0.05),
-                                  )
-                                ],
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                        child: SingleRecordCard(
-                                            imagePath:
-                                                'assets/images/profile_page_Books_Emoji.png',
-                                            number: state
-                                                .userProfile.topicsCompleted,
-                                            text: 'Topics Completed'),
-                                      ),
-                                      Expanded(
-                                        child: SingleRecordCard(
-                                            imagePath:
-                                                'assets/images/profile_page_Test_Passed.png',
-                                            number: state
-                                                .userProfile.questionsSolved,
-                                            text: 'Questions Solved'),
-                                      ),
-                                    ],
+                                Center(
+                                  child:
+                                      BlocBuilder<UsernameBloc, UsernameState>(
+                                    builder: (context, state) {
+                                      if (state is ProfileUpdateOnProgress) {
+                                        return const CustomProgressIndicator(
+                                          size: 34,
+                                        );
+                                      }
+                                      return const SizedBox();
+                                    },
                                   ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                        child: SingleRecordCard(
-                                            imagePath:
-                                                'assets/images/profile_page_Literature.png',
-                                            number: state
-                                                .userProfile.chaptersCompleted,
-                                            text: 'Chapters Completed'),
-                                      ),
-                                      Expanded(
-                                        child: SingleRecordCard(
-                                            imagePath:
-                                                'assets/images/StarFilled.png',
-                                            number:
-                                                state.userProfile.totalScore,
-                                            text: 'points'),
-                                      ),
-                                    ],
+                                ),
+                                Positioned(
+                                  top: 96,
+                                  left: 235,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      chooseOption();
+                                    },
+                                    child: Image.asset(
+                                      'assets/images/edit_Icon.png', // Replace with your local asset path for the edit icon
+                                      width:
+                                          30.89, // Set the width of the edit icon
+                                      height:
+                                          30.8, // Set the height of the edit icon
+                                    ),
                                   ),
-                                ],
+                                ),
+                              ]),
+                              SizedBox(height: 2.h),
+                              Text(
+                                "${state.userProfile.firstName} ${state.userProfile.lastName}",
+                                style: GoogleFonts.poppins(
+                                    color: const Color(0xFF1C1B1B),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    height: 1.5),
                               ),
-                            )),
-                        SizedBox(height: 2.h),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 8.w,
-                          ),
-                          child: InkWell(
-                            onTap: () {
-                              context
-                                  .read<UsersLeaderboardBloc>()
-                                  .add(GetTopUsersEvent());
-                              UserLeaderboardPageRoute(UserLeaderboardEntity(
-                                      firstName: state.userProfile.firstName,
-                                      lastName: state.userProfile.lastName,
-                                      overallRank: state.userProfile.rank,
-                                      overallPoints:
-                                          state.userProfile.totalScore,
-                                      userAvatar:
-                                          state.userProfile.profileImage))
-                                  .go(context);
-                            },
-                            child: Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 2.h, horizontal: 4.w),
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 12,
-                                    color: Colors.black.withOpacity(0.05),
-                                  )
-                                ],
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.white,
+                              SizedBox(height: .5.h),
+                              Text(
+                                state.userProfile.email,
+                                style: GoogleFonts.poppins(
+                                    color: const Color(0xFF343434),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w300,
+                                    fontStyle: FontStyle.italic,
+                                    height: 1.5),
                               ),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    height: 6.h,
-                                    width: 7.w,
-                                    'assets/images/Trophy.png',
-                                    fit: BoxFit.cover,
-                                  ),
-                                  SizedBox(
-                                    height: 8.h,
+                              SizedBox(height: 3.h),
+                              Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 8.w),
+                                  child: Container(
+                                    padding: EdgeInsets.all(2.h),
+                                    height: 18.h,
+                                    decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 12,
+                                          color: Colors.black.withOpacity(0.05),
+                                        )
+                                      ],
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
                                     child: Column(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                          MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        Text(
-                                          'Currently  ranked at ${state.userProfile.rank}',
-                                          style: const TextStyle(
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w600),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Expanded(
+                                              child: SingleRecordCard(
+                                                  imagePath:
+                                                      'assets/images/profile_page_Books_Emoji.png',
+                                                  number: state.userProfile
+                                                      .topicsCompleted,
+                                                  text: 'Topics Completed'),
+                                            ),
+                                            Expanded(
+                                              child: SingleRecordCard(
+                                                  imagePath:
+                                                      'assets/images/profile_page_Test_Passed.png',
+                                                  number: state.userProfile
+                                                      .questionsSolved,
+                                                  text: 'Questions Solved'),
+                                            ),
+                                          ],
                                         ),
-                                        const Text(
-                                          'Checkout the leaderboard',
-                                          style: TextStyle(
-                                              color: Color(0xff18786a),
-                                              fontFamily: 'Poppins',
-                                              decoration:
-                                                  TextDecoration.underline),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Expanded(
+                                              child: SingleRecordCard(
+                                                  imagePath:
+                                                      'assets/images/profile_page_Literature.png',
+                                                  number: state.userProfile
+                                                      .chaptersCompleted,
+                                                  text: 'Chapters Completed'),
+                                            ),
+                                            Expanded(
+                                              child: SingleRecordCard(
+                                                  imagePath:
+                                                      'assets/images/StarFilled.png',
+                                                  number: state
+                                                      .userProfile.totalScore,
+                                                  text: 'points'),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                              SizedBox(height: 2.h),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8.w,
+                                ),
+                                child: InkWell(
+                                  onTap: () {
+                                    context
+                                        .read<UsersLeaderboardBloc>()
+                                        .add(GetTopUsersEvent(pageNumber: 1));
+                                    // UserLeaderboardPageRoute(
+                                    //         UserLeaderboardEntity(
+                                    //             firstName:
+                                    //                 state.userProfile.firstName,
+                                    //             lastName:
+                                    //                 state.userProfile.lastName,
+                                    //             overallRank:
+                                    //                 state.userProfile.rank,
+                                    //             overallPoints: state
+                                    //                 .userProfile.totalScore,
+                                    //             userAvatar: state
+                                    //                 .userProfile.profileImage))
+                                    //     .go(context);
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 2.h, horizontal: 4.w),
+                                    decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 12,
+                                          color: Colors.black.withOpacity(0.05),
                                         )
+                                      ],
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.white,
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Image.asset(
+                                          height: 6.h,
+                                          width: 7.w,
+                                          'assets/images/Trophy.png',
+                                          fit: BoxFit.cover,
+                                        ),
+                                        SizedBox(
+                                          height: 8.h,
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                'Currently  ranked at ${state.userProfile.rank}',
+                                                style: const TextStyle(
+                                                    fontFamily: 'Poppins',
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              ),
+                                              const Text(
+                                                'Checkout the leaderboard',
+                                                style: TextStyle(
+                                                    color: Color(0xff18786a),
+                                                    fontFamily: 'Poppins',
+                                                    decoration: TextDecoration
+                                                        .underline),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                        const Icon(Icons.arrow_forward)
                                       ],
                                     ),
                                   ),
-                                  const Icon(Icons.arrow_forward)
-                                ],
+                                ),
                               ),
-                            ),
+                              SizedBox(height: 3.h),
+                              const SizedBox(
+                                height: 180,
+                                child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      AccountComponent(
+                                        imageAssetPath:
+                                            'assets/images/profile_page_account_icon.png',
+                                        title: 'Change Username',
+                                        arrowHead:
+                                            'assets/images/arrowHead.png',
+                                        customWidget: ChangeUsernameDialog(),
+                                        icon: Icon(
+                                          Icons.chevron_right,
+                                        ),
+                                      ),
+                                      AccountComponent(
+                                        imageAssetPath:
+                                            'assets/images/profile_page_lock_icon.png',
+                                        title: 'Change Password\t',
+                                        arrowHead:
+                                            'assets/images/arrowHead.png',
+                                        customWidget: ChangePasswordDialog(),
+                                        icon: Icon(
+                                          Icons.chevron_right,
+                                        ),
+                                      ),
+                                      AccountComponent(
+                                        imageAssetPath:
+                                            'assets/images/profile_page_logout_icon.png',
+                                        title: 'Logout',
+                                        arrowHead: 'assets/images/empty.png',
+                                        customWidget: Placeholder(),
+                                      ),
+                                    ]),
+                              ),
+                              SizedBox(height: Finalheight / 18),
+                            ],
                           ),
-                        ),
-                        SizedBox(height: 3.h),
-                        const SizedBox(
-                          height: 180,
-                          child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                AccountComponent(
-                                  imageAssetPath:
-                                      'assets/images/profile_page_account_icon.png',
-                                  title: 'Change Username',
-                                  arrowHead: 'assets/images/arrowHead.png',
-                                  customWidget: ChangeUsernameDialog(),
-                                  icon: Icon(
-                                    Icons.chevron_right,
-                                  ),
-                                ),
-                                AccountComponent(
-                                  imageAssetPath:
-                                      'assets/images/profile_page_lock_icon.png',
-                                  title: 'Change Password\t',
-                                  arrowHead: 'assets/images/arrowHead.png',
-                                  customWidget: ChangePasswordDialog(),
-                                  icon: Icon(
-                                    Icons.chevron_right,
-                                  ),
-                                ),
-                                AccountComponent(
-                                  imageAssetPath:
-                                      'assets/images/profile_page_logout_icon.png',
-                                  title: 'Logout',
-                                  arrowHead: 'assets/images/empty.png',
-                                  customWidget: Placeholder(),
-                                ),
-                              ]),
-                        ),
-                        SizedBox(height: Finalheight / 18),
-                      ],
-                    ),
-                  ],
-                ));
-              } else if (state is ProfileFailedState &&
-                  state.failure is NetworkFailure) {
-                return NoInternet(
-                  reloadCallback: () {
-                    BlocProvider.of<UserProfileBloc>(context)
-                        .add(GetUserProfile());
-                  },
+                        ],
+                      )),
                 );
+              } else if (state is ProfileFailedState) {
+                if (state.failure is NetworkFailure) {
+                  return NoInternet(
+                    reloadCallback: () {
+                      BlocProvider.of<UserProfileBloc>(context)
+                          .add(GetUserProfile(isRefreshed: true));
+                    },
+                  );
+                } else if (state.failure is AuthenticationFailure) {
+                  return const Center(child: SessionExpireAlert());
+                }
+                return const Center(child: Text('Unkown Error happend'));
               } else {
                 return const MessageDisplay(
                     message: 'Could not find Profile' //should be errorMessage
