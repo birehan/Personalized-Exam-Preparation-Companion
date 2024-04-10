@@ -1,0 +1,10 @@
+{
+    "_id": "65409f8955ae50031e35169f",
+    "name": "SAT Entrance Exam 1",
+    "userId": "6539339b0d8e1130915dc74d",
+    "courseId": "6539339b0d8e1130915dc74d",
+    "chapters": ["635981f6e40f61599e000064","635981f6e40f61599e000064"],
+    "questions": ["653cb1f54535227899808924"],
+    "score": 5,
+    "completed": true
+}

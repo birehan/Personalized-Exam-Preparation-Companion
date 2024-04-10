@@ -26,7 +26,7 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
         title: Text(
           'Change Username',
           style: GoogleFonts.poppins(
-            color: Color(0xFF000000),
+            color: const Color(0xFF000000),
             fontSize: 20,
             fontWeight: FontWeight.w500,
             height: 1.2,
@@ -44,7 +44,7 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                     child: Text(
                       'Enter your new username',
                       style: GoogleFonts.poppins(
-                        color: Color(0xFF777777),
+                        color: const Color(0xFF777777),
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                         height: 1.4,
@@ -53,13 +53,13 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 28,
                   ),
                   Text(
                     'First Name',
                     style: GoogleFonts.poppins(
-                      color: Color(0xFF363636),
+                      color: const Color(0xFF363636),
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       height: 1,
@@ -67,33 +67,33 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 13,
                   ),
-                  Container(
+                  SizedBox(
                     width: 293, // Width in pixels
                     height: 50,
 
                     child: TextField(
                       controller: controllerfirstname,
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color(0xFFC4C4C4),
                               width: 1), // Border color
                           borderRadius:
                               BorderRadius.circular(8), // Border radius
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 87, 87, 87),
                               width: 1), // Border color
                           borderRadius:
                               BorderRadius.circular(8), // Border radius
                         ),
                         hintText: 'Enter firstname',
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           color: Color(0xFFA3A3A3),
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -106,13 +106,13 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                       },
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 28,
                   ),
                   Text(
                     'Last Name',
                     style: GoogleFonts.poppins(
-                      color: Color(0xFF363636),
+                      color: const Color(0xFF363636),
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       height: 1,
@@ -120,33 +120,33 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 13,
                   ),
-                  Container(
+                  SizedBox(
                     width: 293, // Width in pixels
                     height: 50,
 
                     child: TextField(
                       controller: controllerlastname,
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color(0xFFC4C4C4),
                               width: 1), // Border color
                           borderRadius:
                               BorderRadius.circular(8), // Border radius
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 87, 87, 87),
                               width: 1), // Border color
                           borderRadius:
                               BorderRadius.circular(8), // Border radius
                         ),
                         hintText: 'Enter lastname',
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           color: Color(0xFFA3A3A3),
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -159,35 +159,36 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                       },
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 38,
                   ),
                   Center(
                     child: Text(
-                        errorMessage,
-                        style: TextStyle(
-                          color: Color(0xFFFF0000),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                          height: 1,
-                        ),
+                      errorMessage,
+                      style: const TextStyle(
+                        color: Color(0xFFFF0000),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                        height: 1,
                       ),
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   InkWell(
                     onTap: () {
                       print('change usernametapped');
                       if (firstname != '' && lastname != '') {
-    
-                          BlocProvider.of<UsernameBloc>(context).add(PostChangeUsername(firstname: firstname, lastname: lastname));
-                          Navigator.pop(context);
-                      }
-                      else {
-                          setState(() {
-                            errorMessage = "Please insert correct First Name and Last Name";
-                          });
+                        BlocProvider.of<UsernameBloc>(context).add(
+                            PostChangeUsername(
+                                firstname: firstname, lastname: lastname));
+                        Navigator.pop(context);
+                      } else {
+                        setState(() {
+                          errorMessage =
+                              "Please insert correct First Name and Last Name";
+                        });
                       }
                     },
                     child: Container(
@@ -196,8 +197,8 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
                                 12), // Set the border-radius
-                            color: Color(0xFF1A7A6C)),
-                        child: Center(
+                            color: const Color(0xFF1A7A6C)),
+                        child: const Center(
                           child: Text(
                             'Reset Username',
                             style: TextStyle(

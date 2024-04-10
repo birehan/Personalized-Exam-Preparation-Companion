@@ -1,6 +1,9 @@
-String getScoreMessage(double score) {
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+String getScoreMessage(double score, BuildContext context) {
   if (score == 100) {
-    return 'Congratulations for getting all the answers';
+    return 'Congratulations for getting all the answers'; //! this has to be changed
   } else if (score >= 90) {
     return "Congratulations! You scored an excellent result!";
   } else if (score >= 80) {
@@ -10,6 +13,6 @@ String getScoreMessage(double score) {
   } else if (score >= 60) {
     return "You did decently. Keep practicing to improve!";
   } else {
-    return "You need to work harder to improve your score.";
+    return AppLocalizations.of(context)!.keep_practicing_text;
   }
 }

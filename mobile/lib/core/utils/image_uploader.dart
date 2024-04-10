@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/services.dart';
-import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImageUploader {
@@ -21,18 +20,18 @@ class ImageUploader {
   }
 
   // this is for image cropper
-  Future<File?> _cropImage({required File imageFile}) async {
-    CroppedFile? croppedImage = await ImageCropper().cropImage(
-        compressFormat: ImageCompressFormat.png,
-        sourcePath: imageFile.path,
-        aspectRatio: const CropAspectRatio(
-          ratioX: 1,
-          ratioY: 1,
-        ));
-    if (croppedImage == null) {
-      print('cropped image is null');
-      return null;
-    }
-    return File(croppedImage.path);
-  }
+  // Future<File?> _cropImage({required File imageFile}) async {
+  //   CroppedFile? croppedImage = await ImageCropper().cropImage(
+  //       compressFormat: ImageCompressFormat.png,
+  //       sourcePath: imageFile.path,
+  //       aspectRatio: const CropAspectRatio(
+  //         ratioX: 1,
+  //         ratioY: 1,
+  //       ));
+  //   if (croppedImage == null) {
+  //     print('cropped image is null');
+  //     return null;
+  //   }
+  //   return File(croppedImage.path);
+  // }
 }

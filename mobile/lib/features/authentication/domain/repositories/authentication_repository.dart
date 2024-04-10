@@ -42,4 +42,8 @@ abstract class AuthenticationRepository {
   Future<Either<Failure, User?>> signInWithGoogle();
   Future<Either<Failure, Unit>> logoutWithGoogle();
   Future<Either<Failure, bool>> isAuthenticatedWithGoogle();
+
+  // Firestore
+  Future<Either<Failure, void>> storeDeviceToken();
+  Future<Either<Failure, void>> deleteDeviceToken();
 }

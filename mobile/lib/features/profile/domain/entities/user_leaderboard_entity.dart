@@ -6,15 +6,29 @@ class UserLeaderboardEntity extends Equatable {
   final int overallRank;
   final int overallPoints;
   final String userAvatar;
+  final int maxStreak;
+  final int contestAttended;
+  final String userId;
 
-  const UserLeaderboardEntity(
-      {required this.firstName,
-      required this.overallRank,
-      required this.overallPoints,
-      required this.userAvatar,
-      required this.lastName});
+  const UserLeaderboardEntity({
+    required this.firstName,
+    required this.overallRank,
+    required this.overallPoints,
+    required this.userAvatar,
+    required this.lastName,
+    required this.maxStreak,
+    required this.contestAttended,
+    required this.userId,
+  });
+
   @override
-  // TODO: implement props
-  List<Object?> get props =>
-      [firstName, lastName, overallPoints, overallRank, userAvatar];
+  List<Object?> get props => [
+        firstName,
+        lastName,
+        overallPoints,
+        overallRank,
+        userAvatar,
+        maxStreak,
+        contestAttended
+      ];
 }

@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:443488801728:android:d33d04107a2cb9d3d1ae25",
         "android_client_info": {
-          "package_name": "com.example.skill_bridge_mobile"
+          "package_name": "academy.skillbridge.skill_bridge_mobile"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "443488801728-ctlhjv76mqvio5kgjoia6cvop22dhsgk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.skill_bridge_mobile",
+            "package_name": "academy.skillbridge.skill_bridge_mobile",
             "certificate_hash": "a73c7753daec7db44aa567880e31a83687a1834b"
           }
         },

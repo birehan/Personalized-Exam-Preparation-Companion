@@ -110,7 +110,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               ),
               const SizedBox(height: 8),
               Text(
-                'Your new password must be different from the previous used passwords',
+                'Set a secure password for your account. Ensure both entries match before submitting',
                 style: GoogleFonts.poppins(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -135,7 +135,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   );
                 },
                 obscureText: !_passwordVisible,
-                cursorColor: const Color(0xFF0072FF),
+                cursorColor: const Color(0xFF18786A),
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -143,7 +143,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF0072FF),
+                      color: Color(0xFF18786A),
                       width: 2,
                     ),
                   ),
@@ -157,7 +157,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       _passwordVisible
                           ? Icons.visibility
                           : Icons.visibility_off,
-                      color: const Color(0xFF0072FF),
+                      color: const Color(0xFF18786A),
                     ),
                   ),
                 ),
@@ -185,7 +185,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   );
                 },
                 obscureText: !_confirmPasswordVisible,
-                cursorColor: const Color(0xFF0072FF),
+                cursorColor: const Color(0xFF18786A),
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -193,7 +193,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF0072FF),
+                      color: Color(0xFF18786A),
                       width: 2,
                     ),
                   ),
@@ -207,7 +207,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       _confirmPasswordVisible
                           ? Icons.visibility
                           : Icons.visibility_off,
-                      color: const Color(0xFF0072FF),
+                      color: const Color(0xFF18786A),
                     ),
                   ),
                 ),
@@ -227,7 +227,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         return ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            backgroundColor: const Color(0xFF0072FF),
+                            backgroundColor: const Color(0xFF18786A),
                             padding: const EdgeInsets.symmetric(
                               vertical: 10,
                               horizontal: 4,

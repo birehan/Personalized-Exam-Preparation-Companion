@@ -1,4 +1,4 @@
-# Personalized Exam Preparation Companion
+# skill_bridge_mobile
 
 A new Flutter project.
 

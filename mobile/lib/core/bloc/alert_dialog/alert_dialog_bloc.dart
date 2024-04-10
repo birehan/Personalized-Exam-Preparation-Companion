@@ -16,10 +16,10 @@ class AlertDialogBloc extends Bloc<AlertDialogEvent, AlertDialogState> {
     emit(const LearningQuizModeState(status: AlertDialogStatus.loading));
     emit(
       LearningQuizModeState(
-        status: AlertDialogStatus.loaded,
-        examId: event.examId,
-        questionMode: event.questionMode,
-      ),
+          status: AlertDialogStatus.loaded,
+          examId: event.examId,
+          questionMode: event.questionMode,
+          questionNumber: event.questionNumber),
     );
   }
 }
