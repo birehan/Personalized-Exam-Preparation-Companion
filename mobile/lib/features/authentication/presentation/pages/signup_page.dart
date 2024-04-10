@@ -130,7 +130,7 @@ class _SignupPageState extends State<SignupPage> {
                     Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'SKILLBRIDGE',
+                        'PrepGenie',
                         style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.w600,

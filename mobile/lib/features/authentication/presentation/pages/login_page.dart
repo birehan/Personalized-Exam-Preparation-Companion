@@ -111,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                     Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'SKILLBRIDGE',
+                        'PrepGenie',
                         style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
@@ -233,7 +233,7 @@ class _LoginPageState extends State<LoginPage> {
                                 .add(SignInWithGoogleEvent());
                           },
                           icon: const Icon(Icons.login),
-                          label: const Text('Sign up with Google.'),
+                          label: const Text('Sign up with Google'),
                         ),
                       ],
                     ),

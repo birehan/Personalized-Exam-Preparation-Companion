@@ -40,7 +40,7 @@ class ChatAppBarWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'SkillBridge AI Bot',
+                        'PrepGenie AI Bot',
                         style: GoogleFonts.poppins(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
@@ -48,7 +48,7 @@ class ChatAppBarWidget extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'How can I assist you today?',
+                        'How can I help you today?',
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.poppins(

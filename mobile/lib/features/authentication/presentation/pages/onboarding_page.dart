@@ -82,7 +82,7 @@ class _OnboardingPagesState extends State<OnboardingPages> {
       OnboardingWidget(
         index: 0,
         indicators: indicators,
-        title: 'Welcome to SkillBridge',
+        title: 'Welcome to PrepGenie',
         description:
             'Discover a comprehensive exam preparation tool that helps you ace your university entrance exams',
         onNext: onNext,
