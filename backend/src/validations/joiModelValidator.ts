@@ -42,3 +42,16 @@ export const chapterValidator = (chapter, requestType: string) => {
   });
   return schema.tailor(requestType).validate(chapter, { abortEarly: false });
 };
+
+// Validator for subChapter model
+export const subChapterValidator = (subChapter, requestType: string) => {
+  const schema = Joi.object({
+    _id: Joi.forbidden(),
+    name: Joi.string().alter(requiredRule),
+    contents: Joi.array(),
+    chapterId: Joi.string().hex().length(24).alter(requiredRule),
+    adminApproval: Joi.boolean(),
+    order: Joi.number()
+  });
+  return schema.tailor(requestType).validate(subChapter, { abortEarly: false });
+};
