@@ -4,8 +4,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/bloc/tokenSession/token_session_bloc.dart';
-import 'package:skill_bridge_mobile/core/routes/go_routes.dart';
+import 'package:prepgenie/core/bloc/tokenSession/token_session_bloc.dart';
+import 'package:prepgenie/core/routes/go_routes.dart';
 
 class SessionExpireAlert extends StatelessWidget {
   const SessionExpireAlert({

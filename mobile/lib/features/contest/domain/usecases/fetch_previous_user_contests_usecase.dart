@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/core.dart';
 
 import '../../../features.dart';
 

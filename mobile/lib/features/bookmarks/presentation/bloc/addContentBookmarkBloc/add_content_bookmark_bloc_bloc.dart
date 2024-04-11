@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
+import 'package:prepgenie/features/bookmarks/domain/domain.dart';
 
 import '../../../../../core/error/failure.dart';
 

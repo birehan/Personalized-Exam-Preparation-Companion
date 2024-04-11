@@ -25,11 +25,11 @@
 // TODO: Replace the following code with the above commented one once the backend integration finished!
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/department_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_school_info_usecase.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/profile/domain/entities/department_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/school_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prepgenie/features/profile/domain/usecases/get_school_info_usecase.dart';
 
 part 'school_event.dart';
 part 'school_state.dart';

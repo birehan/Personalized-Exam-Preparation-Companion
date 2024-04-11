@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/bookmarks/domain/domain.dart';
 
 part 'bookmarks_bloc_event.dart';
 part 'bookmarks_bloc_state.dart';

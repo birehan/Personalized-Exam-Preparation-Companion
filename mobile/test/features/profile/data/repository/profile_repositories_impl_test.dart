@@ -5,16 +5,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hive/hive.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/error/exception.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/core/network/network.dart';
-import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
-import 'package:skill_bridge_mobile/features/authentication/authentication.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/mock_exam.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/user_profile_model.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/core/error/exception.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/core/network/network.dart';
+import 'package:prepgenie/core/utils/hive_boxes.dart';
+import 'package:prepgenie/features/authentication/authentication.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/mock_exam/mock_exam.dart';
+import 'package:prepgenie/features/profile/data/models/user_profile_model.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_leaderboard_entity.dart';
 
 import 'profile_repositories_impl_test.mocks.dart';
 

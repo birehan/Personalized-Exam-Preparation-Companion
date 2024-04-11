@@ -6,8 +6,8 @@
 import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/core.dart' as _i4;
-import 'package:skill_bridge_mobile/features/features.dart' as _i2;
+import 'package:prepgenie/core/core.dart' as _i4;
+import 'package:prepgenie/features/features.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

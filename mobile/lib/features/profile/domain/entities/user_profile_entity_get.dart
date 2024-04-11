@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/consistency_entity.dart';
 
 class UserProfile extends Equatable {
   final String email;

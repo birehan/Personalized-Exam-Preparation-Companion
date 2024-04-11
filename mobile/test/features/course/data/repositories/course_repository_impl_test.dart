@@ -3,11 +3,11 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/core/network/network.dart';
-import 'package:skill_bridge_mobile/features/chapter/domain/entities/sub_chapters_list.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/course_image.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/core/network/network.dart';
+import 'package:prepgenie/features/chapter/domain/entities/sub_chapters_list.dart';
+import 'package:prepgenie/features/course/domain/entities/course_image.dart';
+import 'package:prepgenie/features/features.dart';
 
 import 'course_repository_impl_test.mocks.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/core.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 // import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 

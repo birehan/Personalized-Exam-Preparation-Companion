@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/widgets/message_input_field_for_generalchat.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/widgets/message_widget__loading.dart';
+import 'package:prepgenie/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
+import 'package:prepgenie/features/question/presentation/widgets/message_input_field_for_generalchat.dart';
+import 'package:prepgenie/features/question/presentation/widgets/message_widget__loading.dart';
 import '../widgets/message_widget.dart';
 
 import '../../../features.dart';

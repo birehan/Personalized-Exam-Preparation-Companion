@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/change_password_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/change_password_usercase.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
+import 'package:prepgenie/features/profile/domain/entities/change_password_entity.dart';
+import 'package:prepgenie/features/profile/domain/usecases/change_password_usercase.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
 import '../../../../../core/error/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:meta/meta.dart';

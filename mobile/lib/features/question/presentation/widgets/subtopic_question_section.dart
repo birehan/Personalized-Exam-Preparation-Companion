@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown_widget/markdown_widget.dart';
-import 'package:skill_bridge_mobile/core/constants/app_enums.dart';
-import 'package:skill_bridge_mobile/core/markdown/latex.dart';
-import 'package:skill_bridge_mobile/core/widgets/flag_button.dart';
-import 'package:skill_bridge_mobile/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+import 'package:prepgenie/core/constants/app_enums.dart';
+import 'package:prepgenie/core/markdown/latex.dart';
+import 'package:prepgenie/core/widgets/flag_button.dart';
+import 'package:prepgenie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 import '../../../features.dart';
 

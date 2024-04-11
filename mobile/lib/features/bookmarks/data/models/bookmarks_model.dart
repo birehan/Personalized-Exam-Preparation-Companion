@@ -1,6 +1,6 @@
-import 'package:skill_bridge_mobile/features/bookmarks/data/models/content_bookmarks_model.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/data/models/question_bookmarks_model.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
+import 'package:prepgenie/features/bookmarks/data/models/content_bookmarks_model.dart';
+import 'package:prepgenie/features/bookmarks/data/models/question_bookmarks_model.dart';
+import 'package:prepgenie/features/bookmarks/domain/domain.dart';
 
 class BookmarksModel extends Bookmarks {
   const BookmarksModel({

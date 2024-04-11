@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/domain/entities/mock.dart' as mocks;
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/mock_exam/domain/entities/mock.dart' as mocks;
 
 import 'add_mock_to_user_mocks_usecase_test.mocks.dart';
 

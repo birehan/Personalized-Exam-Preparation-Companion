@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:skill_bridge_mobile/features/course/data/datasources/courses_local_data_sources.dart';
+import 'package:prepgenie/features/course/data/datasources/courses_local_data_sources.dart';
 
 import '../../../../core/constants/app_keys.dart';
 import '../../../../core/core.dart';

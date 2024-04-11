@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/core.dart';
 
 class LeaderboardListCard extends StatelessWidget {
   const LeaderboardListCard({

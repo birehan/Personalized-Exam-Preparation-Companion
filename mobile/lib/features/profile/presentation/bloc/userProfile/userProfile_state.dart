@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_profile_entity_get.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_profile_entity_get.dart';
 
 
 

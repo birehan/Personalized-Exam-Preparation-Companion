@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/bloc/tokenSession/token_session_bloc.dart';
+import 'package:prepgenie/core/bloc/tokenSession/token_session_bloc.dart';
 
 import '../../../../core/core.dart';
 import '../../../../core/widgets/noInternet.dart';

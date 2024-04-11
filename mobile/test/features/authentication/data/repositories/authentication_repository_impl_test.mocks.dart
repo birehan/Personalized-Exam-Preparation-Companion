@@ -7,8 +7,8 @@ import 'dart:async' as _i4;
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/core.dart' as _i5;
-import 'package:skill_bridge_mobile/features/authentication/authentication.dart'
+import 'package:prepgenie/core/core.dart' as _i5;
+import 'package:prepgenie/features/authentication/authentication.dart'
     as _i2;
 
 // ignore_for_file: type=lint

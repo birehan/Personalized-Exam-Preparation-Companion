@@ -1,6 +1,6 @@
-import 'package:skill_bridge_mobile/features/profile/domain/entities/department_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prepgenie/features/profile/domain/entities/department_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/school_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/school_info_enitity.dart';
 
 class SchoolDepartmentModel extends SchoolDepartmentInfo {
   const SchoolDepartmentModel({

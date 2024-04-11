@@ -1,5 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:skill_bridge_mobile/core/constants/hive_boxes.dart';
+import 'package:prepgenie/core/constants/hive_boxes.dart';
 
 class HiveBoxes {
   Future<void> initializeHive() async {

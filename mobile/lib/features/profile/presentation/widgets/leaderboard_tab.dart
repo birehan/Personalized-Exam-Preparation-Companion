@@ -3,12 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/bloc/tokenSession/token_session_bloc.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/nested_scrollLederboard_widget.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/top_ranked_detail_card.dart';
+import 'package:prepgenie/core/bloc/tokenSession/token_session_bloc.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/core/widgets/noInternet.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/nested_scrollLederboard_widget.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/top_ranked_detail_card.dart';
 
 import '../../domain/entities/user_leaderboard_entity.dart';
 import '../bloc/usersLeaderboard/users_leaderboard_bloc.dart';

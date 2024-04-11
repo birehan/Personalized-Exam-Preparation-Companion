@@ -1,5 +1,5 @@
-import 'package:skill_bridge_mobile/features/contest/domain/entities/contest_ranking.dart';
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
+import 'package:prepgenie/features/contest/domain/entities/contest_ranking.dart';
+import 'package:prepgenie/core/constants/app_images.dart';
 
 class ContestRankingModel extends ContestRankEntity {
   const ContestRankingModel({

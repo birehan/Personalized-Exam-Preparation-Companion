@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/profile/domain/entities/consistency_entity.dart';
 
 class GetUserConsistencyDataUsecase
     extends UseCase<List<ConsistencyEntity>, ConsistencyParams> {

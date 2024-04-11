@@ -1,6 +1,6 @@
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/consistency_model.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/profile/data/models/consistency_model.dart';
+import 'package:prepgenie/features/profile/domain/entities/consistency_entity.dart';
 
 import '../../domain/entities/user_profile_entity_get.dart';
 

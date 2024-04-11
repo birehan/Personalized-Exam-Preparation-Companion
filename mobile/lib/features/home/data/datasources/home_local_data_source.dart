@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
-import 'package:skill_bridge_mobile/core/constants/constants.dart';
-import 'package:skill_bridge_mobile/core/error/exception.dart';
+import 'package:prepgenie/core/constants/constants.dart';
+import 'package:prepgenie/core/error/exception.dart';
 
 import '../../../features.dart';
 

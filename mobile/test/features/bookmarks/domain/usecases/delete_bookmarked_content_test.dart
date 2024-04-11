@@ -3,8 +3,8 @@ import 'dart:ffi';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/delete_bookmarked_content.dart';
+import 'package:prepgenie/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
+import 'package:prepgenie/features/bookmarks/domain/usecases/delete_bookmarked_content.dart';
 
 import 'bookmark_content_usecase_test.mocks.dart';
 

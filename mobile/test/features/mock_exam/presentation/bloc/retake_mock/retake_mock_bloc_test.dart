@@ -2,8 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/mock_exam.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/features/mock_exam/mock_exam.dart';
 
 import 'retake_mock_bloc_test.mocks.dart';
 

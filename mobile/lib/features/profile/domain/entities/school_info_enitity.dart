@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/department_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/department_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/school_entity.dart';
 
 class SchoolDepartmentInfo extends Equatable {
   final List<SchoolEntity> schoolInfo;

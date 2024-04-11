@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
+import 'package:prepgenie/features/features.dart';
 
 import 'fetch_upcoming_user_contest_usecase_test.mocks.dart';
 

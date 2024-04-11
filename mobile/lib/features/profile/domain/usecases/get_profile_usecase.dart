@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/repositories/profile_repository.dart.dart';
+import 'package:prepgenie/features/profile/domain/repositories/profile_repository.dart.dart';
 
 import '../../../../core/core.dart';
 import '../entities/user_profile_entity_get.dart';

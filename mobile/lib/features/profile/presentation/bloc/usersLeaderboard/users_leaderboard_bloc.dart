@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_top_users_usecase.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prepgenie/features/profile/domain/usecases/get_top_users_usecase.dart';
 
 import '../../../../features.dart';
 

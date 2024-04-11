@@ -3,11 +3,11 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
 
 import 'userprofiel_bloc_test.mocks.dart';
 

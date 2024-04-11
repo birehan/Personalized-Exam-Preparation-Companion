@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updated_user_records.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/updated_user_records.dart';
 
 class OverviewWidget extends StatelessWidget {
   final int chapterNum;

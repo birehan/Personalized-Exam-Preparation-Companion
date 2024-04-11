@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/data/data.dart';
+import 'package:prepgenie/features/bookmarks/data/data.dart';
 
 import '../../../../core/constants/app_keys.dart';
 import '../../../../core/error/exception.dart';

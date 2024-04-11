@@ -3,7 +3,7 @@ import 'package:markdown_widget/config/configs.dart';
 import 'package:markdown_widget/config/markdown_generator.dart';
 import 'package:markdown_widget/widget/markdown.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/core.dart';
 import 'package:intl/intl.dart';
 import 'dart:math';
 

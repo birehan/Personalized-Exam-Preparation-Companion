@@ -5,9 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/core/constants/app_keys.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/features.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import '../repositories/contest_repository_impl_test.mocks.dart';

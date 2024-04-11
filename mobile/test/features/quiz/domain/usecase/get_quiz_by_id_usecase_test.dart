@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/question.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/user_answer.dart';
-import 'package:skill_bridge_mobile/features/quiz/quiz.dart';
+import 'package:prepgenie/features/question/domain/entities/question.dart';
+import 'package:prepgenie/features/question/domain/entities/user_answer.dart';
+import 'package:prepgenie/features/quiz/quiz.dart';
 
 import 'save_quiz_score_usecase_test.mocks.dart';
 

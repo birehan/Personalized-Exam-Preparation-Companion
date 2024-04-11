@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/profile_update_entity.dart';
 
 @immutable
 abstract class ChangeUsernameEvent extends Equatable {

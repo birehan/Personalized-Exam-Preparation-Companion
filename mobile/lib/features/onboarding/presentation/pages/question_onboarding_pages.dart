@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/onboarding/presentation/widgets/questions_page_8.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prepgenie/features/onboarding/presentation/widgets/questions_page_8.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
 import '../../../../core/core.dart';
 
 import '../../../features.dart';

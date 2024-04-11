@@ -6,11 +6,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
+import 'package:prepgenie/core/constants/app_images.dart';
 import '../../../features.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/core.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/logout/logout_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/logout/logout_bloc.dart';
 
 class ProfileHeader extends StatelessWidget {
   final int? grade;

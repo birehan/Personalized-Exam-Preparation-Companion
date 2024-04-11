@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/widgets/sub_chapter_card_new.dart';
+import 'package:prepgenie/features/course/presentation/widgets/sub_chapter_card_new.dart';
 import '../../../features.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

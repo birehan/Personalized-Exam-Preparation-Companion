@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/features/features.dart';
 
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/get_contest_detail_usecase.dart';
+import 'package:prepgenie/features/contest/domain/usecases/get_contest_detail_usecase.dart';
 import 'fetch_upcoming_user_contest_usecase_test.mocks.dart';
 
 void main() {

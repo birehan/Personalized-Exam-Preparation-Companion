@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/features/features.dart';
 
 class HomeModel extends HomeEntity {
   const HomeModel({

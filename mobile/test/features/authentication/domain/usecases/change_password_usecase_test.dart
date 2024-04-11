@@ -2,8 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/repositories/authentication_repository.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/change_password_usecase.dart';
+import 'package:prepgenie/features/authentication/domain/repositories/authentication_repository.dart';
+import 'package:prepgenie/features/authentication/domain/usecases/change_password_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 

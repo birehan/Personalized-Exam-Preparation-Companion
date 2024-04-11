@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/pages/typingIndicator.dart';
+import 'package:prepgenie/features/question/presentation/pages/typingIndicator.dart';
 
 class MessageWidgetLoading extends StatelessWidget {
   const MessageWidgetLoading({

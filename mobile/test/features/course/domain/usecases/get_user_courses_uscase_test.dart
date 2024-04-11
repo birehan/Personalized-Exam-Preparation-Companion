@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/course_image.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/entities.dart';
-import 'package:skill_bridge_mobile/features/course/domain/repositories/course_repositories.dart';
-import 'package:skill_bridge_mobile/features/course/domain/usecases/get_user_courses_usecases.dart';
+import 'package:prepgenie/features/course/domain/entities/course_image.dart';
+import 'package:prepgenie/features/course/domain/entities/entities.dart';
+import 'package:prepgenie/features/course/domain/repositories/course_repositories.dart';
+import 'package:prepgenie/features/course/domain/usecases/get_user_courses_usecases.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'get_user_courses_uscase_test.mocks.dart';

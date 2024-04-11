@@ -4,7 +4,7 @@ import 'package:markdown_widget/markdown_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:skill_bridge_mobile/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+import 'package:prepgenie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 import '../../../../core/core.dart';
 import '../../../features.dart';

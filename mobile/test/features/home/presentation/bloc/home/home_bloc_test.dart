@@ -1,12 +1,12 @@
 import 'package:mockito/annotations.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/error/error.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/course_image.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/core/error/error.dart';
+import 'package:prepgenie/features/course/domain/entities/course_image.dart';
+import 'package:prepgenie/features/features.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
+import 'package:prepgenie/core/error/failure.dart';
 
 import 'home_bloc_test.mocks.dart';
 
