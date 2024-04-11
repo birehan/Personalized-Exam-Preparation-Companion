@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
+import 'package:prepgenie/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
 
 import '../../../contest.dart';
 

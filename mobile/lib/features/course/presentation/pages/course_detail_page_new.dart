@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
+import 'package:prepgenie/core/widgets/noInternet.dart';
 import '../../../../core/core.dart';
 import '../../../features.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/repositories/profile_repository.dart.dart';
+import 'package:prepgenie/features/profile/domain/repositories/profile_repository.dart.dart';
 import '../../../../core/core.dart';
 import '../entities/entities.dart';
 import '../repositories/repositories.dart';

@@ -10,22 +10,22 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/department_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/profile/domain/entities/department_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/profile_update_entity.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/dropdown_with_userinput.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/dropdown_with_userinput.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/name_editing_field.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/profile_dropdown_selection.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/name_editing_field.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/profile_dropdown_selection.dart';
 import '../widgets/custom_text_button.dart';
 
 class ProfileEditPage extends StatefulWidget {

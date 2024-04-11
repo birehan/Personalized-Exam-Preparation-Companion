@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/consistency_entity.dart';
 
 class ConsistencyModel extends ConsistencyEntity {
   const ConsistencyModel({

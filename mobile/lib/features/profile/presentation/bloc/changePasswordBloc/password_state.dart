@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/entities.dart';
+import 'package:prepgenie/features/profile/domain/entities/entities.dart';
 
 
 abstract class PasswordState extends Equatable {

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/features/features.dart';
 
 class BookmarkedQuestions extends Equatable {
   final Question question;

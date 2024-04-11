@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/regster_to_contest.dart';
+import 'package:prepgenie/features/contest/domain/usecases/regster_to_contest.dart';
 
 part 'register_contest_event.dart';
 part 'register_contest_state.dart';

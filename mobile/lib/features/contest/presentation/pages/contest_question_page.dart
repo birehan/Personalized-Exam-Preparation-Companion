@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
+import 'package:prepgenie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
 
 import '../../../../core/core.dart';
 import '../../../../core/widgets/questions_shimmer.dart';

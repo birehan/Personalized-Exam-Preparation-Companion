@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/widgets/animated_dragable_widget.dart';
-import 'package:skill_bridge_mobile/features/authentication/data/datasources/authentication_local_datasource.dart';
-import 'package:skill_bridge_mobile/injection_container.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/core/widgets/animated_dragable_widget.dart';
+import 'package:prepgenie/features/authentication/data/datasources/authentication_local_datasource.dart';
+import 'package:prepgenie/injection_container.dart';
 
 class TransitionWithDragableIcon extends StatelessWidget {
   const TransitionWithDragableIcon({super.key});

@@ -7,10 +7,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
-import 'package:skill_bridge_mobile/core/widgets/tooltip_widget.dart';
-import 'package:skill_bridge_mobile/features/contest/contest.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/count_down_card.dart';
+import 'package:prepgenie/core/widgets/noInternet.dart';
+import 'package:prepgenie/core/widgets/tooltip_widget.dart';
+import 'package:prepgenie/features/contest/contest.dart';
+import 'package:prepgenie/features/home/presentation/widgets/count_down_card.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/core.dart';

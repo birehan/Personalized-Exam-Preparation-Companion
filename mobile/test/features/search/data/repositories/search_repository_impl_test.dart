@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/course_image.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/course/domain/entities/course_image.dart';
+import 'package:prepgenie/features/features.dart';
 
 import '../../domain/usecases/search_courses_usecase_test.mocks.dart';
 import 'search_repository_impl_test.mocks.dart';

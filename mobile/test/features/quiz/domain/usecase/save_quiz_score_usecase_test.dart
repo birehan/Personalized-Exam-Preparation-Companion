@@ -3,8 +3,8 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/quiz/domain/repositories/quiz_repository.dart';
-import 'package:skill_bridge_mobile/features/quiz/domain/usecases/save_quiz_score_usecase.dart';
+import 'package:prepgenie/features/quiz/domain/repositories/quiz_repository.dart';
+import 'package:prepgenie/features/quiz/domain/usecases/save_quiz_score_usecase.dart';
 
 import 'save_quiz_score_usecase_test.mocks.dart';
 

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/leaderboard_tab.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/leaderboard_tab.dart';
 
 import '../../domain/entities/user_leaderboard_entity.dart';
 

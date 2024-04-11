@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/bloc/change_password_form_bloc/change_password_form_bloc.dart';
+import 'package:prepgenie/features/authentication/presentation/bloc/change_password_form_bloc/change_password_form_bloc.dart';
 
 void main() {
   group('ChangePasswordFormBloc', () {

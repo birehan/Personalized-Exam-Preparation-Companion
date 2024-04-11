@@ -7,10 +7,10 @@ import 'dart:async' as _i5;
 
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/core.dart' as _i6;
-import 'package:skill_bridge_mobile/features/profile/domain/repositories/profile_repository.dart.dart'
+import 'package:prepgenie/core/core.dart' as _i6;
+import 'package:prepgenie/features/profile/domain/repositories/profile_repository.dart.dart'
     as _i2;
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/logout_usecase.dart'
+import 'package:prepgenie/features/profile/domain/usecases/logout_usecase.dart'
     as _i4;
 
 // ignore_for_file: type=lint

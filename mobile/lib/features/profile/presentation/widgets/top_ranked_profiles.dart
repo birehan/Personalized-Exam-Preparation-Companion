@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/routes/go_routes.dart';
+import 'package:prepgenie/core/routes/go_routes.dart';
 
 class TopRankedProfiles extends StatelessWidget {
   const TopRankedProfiles(

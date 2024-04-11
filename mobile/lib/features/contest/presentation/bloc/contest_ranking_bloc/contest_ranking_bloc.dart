@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/contest_ranking_usercase.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/contest/domain/usecases/contest_ranking_usercase.dart';
 
 import '../../../../features.dart';
 

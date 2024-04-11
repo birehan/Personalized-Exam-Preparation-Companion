@@ -3,12 +3,12 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/leaderboard.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_rank.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_top_users_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/features/profile/domain/entities/leaderboard.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_leaderboard_rank.dart';
+import 'package:prepgenie/features/profile/domain/usecases/get_top_users_usecase.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
 
 import 'user_leaderbaord_bloc_test.mocks.dart';
 

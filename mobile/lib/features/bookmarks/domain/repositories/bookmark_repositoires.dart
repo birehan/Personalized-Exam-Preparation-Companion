@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/entities.dart';
+import 'package:prepgenie/features/bookmarks/domain/entities/entities.dart';
 
 import '../../../../core/error/failure.dart';
 

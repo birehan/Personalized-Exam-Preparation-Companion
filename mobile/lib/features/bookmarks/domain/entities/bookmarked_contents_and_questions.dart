@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_contents.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_questions.dart';
+import 'package:prepgenie/features/bookmarks/domain/entities/bookmarked_contents.dart';
+import 'package:prepgenie/features/bookmarks/domain/entities/bookmarked_questions.dart';
 
 class Bookmarks extends Equatable {
   const Bookmarks(

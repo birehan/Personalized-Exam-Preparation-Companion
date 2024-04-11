@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/entities.dart';
-import 'package:skill_bridge_mobile/features/course/domain/usecases/fetch_course_videos_usecase.dart';
+import 'package:prepgenie/features/course/domain/entities/entities.dart';
+import 'package:prepgenie/features/course/domain/usecases/fetch_course_videos_usecase.dart';
 
 import 'get_user_courses_uscase_test.mocks.dart';
 

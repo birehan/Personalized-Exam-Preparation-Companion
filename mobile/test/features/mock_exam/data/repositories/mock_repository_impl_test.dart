@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/core/network/network.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/core/network/network.dart';
+import 'package:prepgenie/features/features.dart';
 
 import 'mock_repository_impl_test.mocks.dart';
 

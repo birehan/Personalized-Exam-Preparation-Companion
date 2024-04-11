@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/pages/cube_animation_page.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/pages/bookmarked_content_page.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/pages/bookmarked_question_page.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/pages/content_final_page.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/pages/content_page.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/leaderbaord_detail.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/profile_edit_page.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/updated_profile_page.dart';
+import 'package:prepgenie/features/authentication/presentation/pages/cube_animation_page.dart';
+import 'package:prepgenie/features/bookmarks/presentation/pages/bookmarked_content_page.dart';
+import 'package:prepgenie/features/bookmarks/presentation/pages/bookmarked_question_page.dart';
+import 'package:prepgenie/features/course/presentation/pages/content_final_page.dart';
+import 'package:prepgenie/features/course/presentation/pages/content_page.dart';
+import 'package:prepgenie/features/profile/presentation/pages/leaderbaord_detail.dart';
+import 'package:prepgenie/features/profile/presentation/pages/profile_edit_page.dart';
+import 'package:prepgenie/features/profile/presentation/pages/updated_profile_page.dart';
 
 import '../../features/bookmarks/domain/entities/bookmarked_contents.dart';
 import '../../features/bookmarks/domain/entities/bookmarked_questions.dart';
