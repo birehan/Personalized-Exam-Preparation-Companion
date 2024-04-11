@@ -1,4 +1,4 @@
-# skill_bridge_mobile
+# PropGenie_mobile
 
 A new Flutter project.
 
