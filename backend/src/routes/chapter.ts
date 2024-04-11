@@ -3,7 +3,6 @@ import chapterControllers from "../controllers/chapter";
 import isAuthenticated from "../middlewares/authenticate";
 
 const router = Router();
-router.get("/endOfChapterQuestions/:id", isAuthenticated, chapterControllers.getEndOfChapterQuestion);
 router.get("/courseChapters/:courseId", chapterControllers.getChaptersOfCourse);
 router.get("/", chapterControllers.getChapters);
 router.get("/:id", chapterControllers.getChapter);
