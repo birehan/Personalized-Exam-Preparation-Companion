@@ -1,0 +1,20 @@
+{
+    "data": {
+        "contests": [
+            {
+                "_id": "6592786072209a2e5c23a3f8",
+                "title": "Contest 1",
+                "startsAt": "2024-01-02T06:00:00.000Z",
+                "endsAt": "2024-01-02T06:30:00.000Z",
+                "type": "virtual",
+                "createdAt": "2024-01-01T08:31:28.489Z",
+                "updatedAt": "2024-01-01T08:31:28.489Z"
+            }
+        ]
+    },
+    "success": true,
+    "message": "Previous contests for the user retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

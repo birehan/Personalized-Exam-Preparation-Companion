@@ -1,0 +1,37 @@
+{
+    "mock": {
+        "_id": "65409f8955ae50031e35169f",
+        "name": "SAT Entrance Exam 1",
+        "userId": "6539339b0d8e1130915dc74d"
+    },
+    "mockQuestions": [
+        {
+            "question": {
+                "_id": "653cb1f54535227899808924",
+                "description": "A company uses an arithmetic sequence to determine the salaries of its employees.",
+                "choiceA": "900,000",
+                "choiceB": "750,000",
+                "choiceC": "1,000,000",
+                "choiceD": "830,000",
+                "answer": "choice_C",
+                "explanation": "The sum of an arithmetic series is given by the formula",
+                "difficulty": 6,
+                "isForQuiz": false,
+                "chapterId": "635981f6e40f61599e000064",
+                "courseId": "635981f6e40f61599e000064",
+                "subChapterId": "635981f6e40f61599e000064",
+                "createdAt": "2023-10-28T07:01:06.000Z",
+                "updatedAt": "2023-10-28T07:01:06.000Z",
+                "isForMock": true,
+                "departmentId": "64c24df185876fbb3f8dd6c7",
+                "adminApproval": true,
+                "isLiked": false
+            },
+            "userAnswer": {
+                "userId": "6539339b0d8e1130915dc74d",
+                "questionId": "653cb1f54535227899808924",
+                "userAnswer": "choice_E"
+            }
+        }
+    ]
+}

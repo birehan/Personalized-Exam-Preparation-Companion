@@ -1,0 +1,13 @@
+{
+  "dailyQuiz": {
+    "_id": "",
+    "description": "",
+    "departmentId": "",
+    "questions": [],
+    "isSolved": false,
+    "day":"2024-03-13 10:24:57.572844",
+    "userScore": 1,
+    "userId": ""
+
+  }
+}

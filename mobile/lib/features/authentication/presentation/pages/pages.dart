@@ -4,4 +4,6 @@ export 'forgot_password_page.dart';
 export 'change_password_page.dart';
 export 'new_password_confirmed_page.dart';
 export 'otp_page.dart';
+export 'select_department_page.dart';
+export 'select_field_of_study.dart';
 export 'onboarding_page.dart';

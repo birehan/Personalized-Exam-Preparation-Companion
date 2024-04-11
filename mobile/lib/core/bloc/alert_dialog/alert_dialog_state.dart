@@ -15,11 +15,13 @@ class LearningQuizModeState extends AlertDialogState {
   const LearningQuizModeState({
     required this.status,
     this.examId,
+    this.questionNumber,
     this.questionMode,
   });
 
   final AlertDialogStatus status;
   final String? examId;
+  final int? questionNumber;
   final QuestionMode? questionMode;
 
   @override

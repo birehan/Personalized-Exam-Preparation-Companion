@@ -82,3 +82,10 @@ class AuthenticationFailure extends Failure {
     required this.errorMessage,
   });
 }
+
+class DeviceTokenNotFoundFailure extends Failure {
+  @override
+  final String errorMessage;
+
+  DeviceTokenNotFoundFailure({required this.errorMessage});
+}

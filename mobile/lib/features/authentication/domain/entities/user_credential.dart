@@ -2,6 +2,7 @@
 import 'package:equatable/equatable.dart';
 
 class UserCredential extends Equatable {
+  final String id;
   final String email;
   final String firstName;
   final String lastName;
@@ -13,25 +14,42 @@ class UserCredential extends Equatable {
   final String? token;
   final String? profileAvatar;
   final String? examType;
+  final String? howPrepared;
+  final String? preferedMethod;
+  final String? studyTimePerDay;
+  final String? motivation;
+  final List<String>? challangingSub;
+  final String? reminder;
+  final int? grade;
+  final String? school;
 
-  const UserCredential({
-    required this.email,
-    required this.firstName,
-    required this.lastName,
-    this.password,
-    this.generalDepartment,
-    this.departmentId,
-    this.department,
-    this.otp,
-    this.token,
-    this.profileAvatar,
-    this.examType,
-  });
+  const UserCredential(
+      {required this.id,
+      required this.email,
+      required this.firstName,
+      required this.lastName,
+      this.password,
+      this.generalDepartment,
+      this.departmentId,
+      this.department,
+      this.otp,
+      this.token,
+      this.profileAvatar,
+      this.examType,
+      this.howPrepared,
+      this.preferedMethod,
+      this.studyTimePerDay,
+      this.motivation,
+      this.challangingSub,
+      this.reminder,
+      this.grade,
+      this.school});
 
   @override
-  List<Object?> get props => [email, firstName, lastName];
+  List<Object?> get props => [id, email, firstName, lastName, school, grade];
 
   UserCredential copyWith({
+    String? id,
     String? email,
     String? firstName,
     String? lastName,
@@ -45,6 +63,7 @@ class UserCredential extends Equatable {
     String? examType,
   }) {
     return UserCredential(
+      id: id ?? this.id,
       email: email ?? this.email,
       firstName: firstName ?? this.firstName,
       lastName: lastName ?? this.lastName,

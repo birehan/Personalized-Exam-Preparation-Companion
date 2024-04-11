@@ -9,13 +9,12 @@ import 'package:dartz/dartz.dart';
 
 class UsernameBloc extends Bloc<ChangeUsernameEvent, UsernameState> {
   final ChangeUsernameUsecase changeUsernameUsecase;
-  final ChangeUserAvatarUsecase changeUserAvatarUsecase;
+  final UpdateUserProfileUsecase updateProfileusecase;
   UsernameBloc(
-      {required this.changeUsernameUsecase,
-      required this.changeUserAvatarUsecase})
+      {required this.changeUsernameUsecase, required this.updateProfileusecase})
       : super(Empty()) {
-    on<ChangeUsernameEvent>(onUsernameChanged);
-    on<UserAvatarChangedEvent>(onUerAvatarChanged);
+    on<ChangeUsernameEvent>(onUsernameChanged); //not used
+    on<UpdateProfileEvent>(onProfileUpdate);
   }
 
   onUsernameChanged(
@@ -31,14 +30,14 @@ class UsernameBloc extends Bloc<ChangeUsernameEvent, UsernameState> {
     }
   }
 
-  onUerAvatarChanged(
-      UserAvatarChangedEvent event, Emitter<UsernameState> emit) async {
-    emit(AvatarChangeLoading());
-    final result = await changeUserAvatarUsecase(
-        AvatarChangeParams(imagePath: event.imagePath));
+  onProfileUpdate(UpdateProfileEvent event, Emitter<UsernameState> emit) async {
+    emit(ProfileUpdateOnProgress());
+    final result = await updateProfileusecase(
+        ProfileUpdateParams(updateEntity: event.updateEntity));
     final UsernameState state = result.fold(
-        (l) => FailedState(errorMessage: l.errorMessage),
-        (r) => UserAvatartChnagedState());
+        (l) => UpdateProfileFailedState(
+            errorMessage: l.errorMessage, failureType: l),
+        (r) => UserProfileUpdatedState());
     emit(state);
   }
 
@@ -46,7 +45,8 @@ class UsernameBloc extends Bloc<ChangeUsernameEvent, UsernameState> {
     Either<Failure, ChangeUsernameEntity> failureOrData,
   ) {
     return failureOrData.fold(
-        (failure) => FailedState(errorMessage: failure.errorMessage),
+        (failure) => UpdateProfileFailedState(
+            errorMessage: failure.errorMessage, failureType: failure),
         (changeUsernameEntity) =>
             Loaded(changeUsernameEntity: changeUsernameEntity));
   }

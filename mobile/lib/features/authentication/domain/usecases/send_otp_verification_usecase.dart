@@ -12,10 +12,6 @@ class SendOtpVerificationUsecase
 
   @override
   Future<Either<Failure, void>> call(SendOtpVerificationParams params) async {
-    print("send otp use case");
-    print("send otp use case");
-    print("send otp use case");
-
     return await repository.sendOtpVerification(
         emailOrPhoneNumber: params.emailOrPhoneNumber);
   }

@@ -22,7 +22,8 @@ class UserProfileBloc extends Bloc<UserProfileEvent, UserProfileState> {
     if (event is GetUserProfile) {
       emit(ProfileLoading());
 
-      final failureOrData = await getProfileUsecase(NoParams());
+      final failureOrData = await getProfileUsecase(GetUserProfileParams(
+          isRefreshed: event.isRefreshed, userId: event.userId));
       emit(_eitherLoadedOrErrorState(failureOrData));
     }
   }
@@ -31,7 +32,8 @@ class UserProfileBloc extends Bloc<UserProfileEvent, UserProfileState> {
     Either<Failure, UserProfile> failureOrData,
   ) {
     return failureOrData.fold(
-        (failure) => ProfileFailedState(errorMessage: failure.errorMessage, failure: failure),
+        (failure) => ProfileFailedState(
+            errorMessage: failure.errorMessage, failure: failure),
         (userProfile) => ProfileLoaded(userProfile: userProfile));
   }
 }
