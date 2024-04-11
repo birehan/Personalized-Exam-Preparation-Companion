@@ -17,6 +17,10 @@ app.use(cors());
 
 app.use("/api/v1/user", routes.userRouter);
 app.use("/api/v1/department", routes.departmentRouter);
+app.use("/api/v1/course", routes.courseRouter);
+app.use("/api/v1/chapter", routes.chapterRouter);
+app.use("/api/v1/sub-chapter", routes.subChapterRouter)
+app.use("/api/v1/userCourse", routes.userCourseRoutes);
 
 
 app.get("/", (req, res) => {
