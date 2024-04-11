@@ -4,6 +4,7 @@ import userRouter from "./user";
 import courseRouter from "./course"
 import chapterRouter from "./chapter"
 import subChapterRouter from "./sub-chapter"
+import userCourseRoutes from "./useCourse"
 
 
 export default {
@@ -12,4 +13,5 @@ export default {
   courseRouter,
   chapterRouter,
   subChapterRouter,
+  userCourseRoutes
 };
