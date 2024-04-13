@@ -65,3 +65,15 @@ export const userCourseValidator = (userCourse, requestType:string) => {
   });
   return schema.tailor(requestType).validate(userCourse, { abortEarly: false });
 };
+
+// Validator for subChapterContent model
+export const subChapterContentValidator = (subChapterContent, requestType: string) => {
+  const schema = Joi.object({
+    _id: Joi.forbidden(),
+    title: Joi.string().alter(requiredRule),
+    content: Joi.string().alter(requiredRule),
+    order: Joi.number(),
+    subChapterId: Joi.string().hex().length(24).alter(requiredRule)
+  });
+  return schema.tailor(requestType).validate(subChapterContent, { abortEarly: false });
+};

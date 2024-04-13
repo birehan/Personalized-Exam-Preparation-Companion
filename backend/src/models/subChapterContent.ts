@@ -5,7 +5,7 @@ export interface SubChapterContent extends Document {
 //   id: Schema.Types.ObjectId;
   title: String;
   content: String;
-  subChapterId: String;
+  subChapterId: Schema.Types.ObjectId;
  
 }
 
