@@ -6,7 +6,7 @@ import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:skill_bridge_mobile/core/bloc/routerBloc/router_bloc.dart';
+import 'package:prepgenie/core/bloc/routerBloc/router_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -165,10 +165,10 @@ class AppRouter extends StatelessWidget {
             theme: ThemeData(
               useMaterial3: true,
               colorScheme:
-                  ColorScheme.fromSeed(seedColor: const Color(0xFF1A7A6C)),
+                  ColorScheme.fromSeed(seedColor: const Color(0xFF0072FF)),
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF1A7A6C),
+                  backgroundColor: const Color(0xFF0072FF),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),

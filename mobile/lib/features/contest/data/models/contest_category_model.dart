@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/features/contest/domain/entities/contest_category.dart';
+import 'package:prepgenie/features/contest/domain/entities/contest_category.dart';
 
 class ContestCategoryModel extends ContestCategory {
   const ContestCategoryModel({

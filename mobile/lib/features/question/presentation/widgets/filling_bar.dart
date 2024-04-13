@@ -117,7 +117,7 @@ class _CircularProgressPainter extends CustomPainter {
     final sweepAngle = 2 * pi * progress;
 
     final paint = Paint()
-      ..color = const Color(0xFF18786A)
+      ..color = const Color(0xFF0072FF)
       ..style = PaintingStyle.stroke
       ..strokeWidth = strokeWidth;
 

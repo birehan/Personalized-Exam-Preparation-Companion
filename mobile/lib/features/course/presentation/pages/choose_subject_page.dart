@@ -4,8 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/core/widgets/noInternet.dart';
 import '../widgets/course_expandable_tile.dart';
 import '../../../features.dart';
 

@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/consistency_model.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/school_model.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/user_profile_model.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/profile/data/models/consistency_model.dart';
+import 'package:prepgenie/features/profile/data/models/school_model.dart';
+import 'package:prepgenie/features/profile/data/models/user_profile_model.dart';
+import 'package:prepgenie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/profile_update_entity.dart';
 
 import '../../../../core/constants/app_keys.dart';
 import '../../../../core/error/exception.dart';

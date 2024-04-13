@@ -1,6 +1,6 @@
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/home/data/models/home_mock_model.dart';
+import 'package:prepgenie/features/home/data/models/home_mock_model.dart';
 
 void main() {
   group('HomeMockModel', () {

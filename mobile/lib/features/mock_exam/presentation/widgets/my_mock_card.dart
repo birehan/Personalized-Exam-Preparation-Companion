@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/presentation/pages/mock_exam_separated_page.dart';
+import 'package:prepgenie/features/mock_exam/presentation/pages/mock_exam_separated_page.dart';
 
 import '../../../../core/core.dart';
 import '../../../features.dart';
@@ -136,8 +136,10 @@ class MyMockCard extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    if(isCompleted) {
-                      context.read<RetakeMockBloc>().add(RetakeMockEvent(mockId: examId));
+                    if (isCompleted) {
+                      context
+                          .read<RetakeMockBloc>()
+                          .add(RetakeMockEvent(mockId: examId));
                     }
                     showDialog(
                       context: context,
@@ -151,13 +153,13 @@ class MyMockCard extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(2, 2, 6, 2),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24),
-                      border: Border.all(color: const Color(0xFF1A7A6C)),
+                      border: Border.all(color: const Color(0xFF0072FF)),
                     ),
                     child: Row(
                       children: [
                         const Icon(
                           Icons.play_arrow_rounded,
-                          color: Color(0xFF1A7A6C),
+                          color: Color(0xFF0072FF),
                           size: 28,
                         ),
                         const SizedBox(width: 4),
@@ -165,7 +167,7 @@ class MyMockCard extends StatelessWidget {
                           // isCompleted ? 'Analysis' : 'Resume',
                           isCompleted ? 'RETAKE' : 'RESUME',
                           style: GoogleFonts.poppins(
-                            color: const Color(0xFF1A7A6C),
+                            color: const Color(0xFF0072FF),
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                           ),

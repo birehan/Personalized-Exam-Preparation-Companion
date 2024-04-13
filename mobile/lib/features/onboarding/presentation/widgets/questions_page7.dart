@@ -16,7 +16,7 @@ class QuestionsPageSeven extends StatelessWidget {
         if (state.responseSubmitted) {
           context.push(AppRoutes.cubeRotateLoadingPage);
         }
-      }, 
+      },
       child: Padding(
         padding: EdgeInsets.only(left: 10.w, right: 10.w),
         child: Column(
@@ -48,7 +48,7 @@ class QuestionsPageSeven extends StatelessWidget {
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: const Color(0xff18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                     child: BlocBuilder<OnboardingBloc, OnboardingAnswersState>(
                       builder: (context, state) {

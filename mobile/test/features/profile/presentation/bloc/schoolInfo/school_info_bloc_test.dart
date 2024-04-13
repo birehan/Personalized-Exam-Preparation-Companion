@@ -3,13 +3,13 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/department_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_school_info_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/logout/logout_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/features/profile/domain/entities/department_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/school_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prepgenie/features/profile/domain/usecases/get_school_info_usecase.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/logout/logout_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
 
 import 'school_info_bloc_test.mocks.dart';
 

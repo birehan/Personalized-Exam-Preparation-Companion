@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/features.dart';
 
 part 'fetch_upcoming_user_contest_event.dart';
 part 'fetch_upcoming_user_contest_state.dart';

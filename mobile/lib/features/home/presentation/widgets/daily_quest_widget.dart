@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../features.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/dhomepage_dailyquest_card.dart';
+import 'package:prepgenie/features/home/presentation/widgets/dhomepage_dailyquest_card.dart';
 
 class DailyQuestWidget extends StatelessWidget {
   const DailyQuestWidget({

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/bloc/localeBloc/locale_bloc.dart';
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
-import 'package:skill_bridge_mobile/core/routes/go_routes.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prepgenie/core/bloc/localeBloc/locale_bloc.dart';
+import 'package:prepgenie/core/constants/app_images.dart';
+import 'package:prepgenie/core/routes/go_routes.dart';
+import 'package:prepgenie/features/features.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DynamicHomepageProfileHeader extends StatelessWidget {
@@ -33,7 +33,7 @@ class DynamicHomepageProfileHeader extends StatelessWidget {
                     width: 60,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: const Color(0xff18786a).withOpacity(.3),
+                      color: const Color(0xFF0072FF).withOpacity(.3),
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(

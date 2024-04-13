@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/entities/contest_detail.dart';
+import 'package:prepgenie/features/contest/domain/entities/contest_detail.dart';
 
 import '../../../../core/core.dart';
 import '../../../features.dart';

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
+import 'package:prepgenie/core/widgets/noInternet.dart';
 import '../../../../core/core.dart';
 
 import '../../../features.dart';

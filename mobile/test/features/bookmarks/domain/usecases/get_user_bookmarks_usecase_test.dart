@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/delete_bookmarked_content.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/delete_bookmarked_question_usecase.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/user_answer.dart'
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/bookmarks/domain/domain.dart';
+import 'package:prepgenie/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
+import 'package:prepgenie/features/bookmarks/domain/usecases/delete_bookmarked_content.dart';
+import 'package:prepgenie/features/bookmarks/domain/usecases/delete_bookmarked_question_usecase.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/question/domain/entities/user_answer.dart'
     as user_answer;
 import 'bookmark_content_usecase_test.mocks.dart';
 

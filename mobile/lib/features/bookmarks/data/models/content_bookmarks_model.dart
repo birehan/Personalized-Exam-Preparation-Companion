@@ -1,5 +1,5 @@
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/chapter/data/data.dart';
+import 'package:prepgenie/features/bookmarks/domain/domain.dart';
+import 'package:prepgenie/features/chapter/data/data.dart';
 
 class BookmarkedContentsModel extends BookmarkedContent {
   const BookmarkedContentsModel(

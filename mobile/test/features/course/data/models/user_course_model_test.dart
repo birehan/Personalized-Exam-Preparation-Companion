@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/course/course.dart';
+import 'package:prepgenie/features/course/course.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {

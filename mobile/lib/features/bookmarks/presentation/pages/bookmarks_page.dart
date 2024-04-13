@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/bookmarks/domain/domain.dart';
+import 'package:prepgenie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/widgets/noInternet.dart';
@@ -294,7 +294,7 @@ class BookmarksTabWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
       decoration: BoxDecoration(
         border: Border.all(
-            color: selected ? const Color(0xff18786a) : Colors.grey, width: 1),
+            color: selected ? const Color(0xFF0072FF) : Colors.grey, width: 1),
         borderRadius: BorderRadius.circular(5),
       ),
       child: Row(
@@ -303,7 +303,7 @@ class BookmarksTabWidget extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 5, horizontal: 2.w),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                color: selected ? const Color(0xff18786a) : Colors.grey),
+                color: selected ? const Color(0xFF0072FF) : Colors.grey),
             child: Text(
               number.toString(),
               style: const TextStyle(color: Colors.white),

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/widgets/mycourses_card.dart';
+import 'package:prepgenie/features/course/presentation/widgets/mycourses_card.dart';
 
 import '../../../../core/core.dart';
 import '../../../features.dart';
@@ -98,7 +98,7 @@ class _SearchCoursePageState extends State<SearchCoursePage> {
                         child: Text(
                           'No results found',
                           style:
-                              TextStyle(color: Color(0xff18786A), fontSize: 22),
+                              TextStyle(color: Color(0xFF0072FF), fontSize: 22),
                         ),
                       );
                     }

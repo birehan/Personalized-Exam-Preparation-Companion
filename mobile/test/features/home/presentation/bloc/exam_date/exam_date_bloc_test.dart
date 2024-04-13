@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/home/domain/entities/exam_date.dart';
-import 'package:skill_bridge_mobile/features/home/domain/usecases/get_exam_date_usecase.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/bloc/exam_date/exam_date_bloc.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/features/home/domain/entities/exam_date.dart';
+import 'package:prepgenie/features/home/domain/usecases/get_exam_date_usecase.dart';
+import 'package:prepgenie/features/home/presentation/bloc/exam_date/exam_date_bloc.dart';
 
 import 'exam_date_bloc_test.mocks.dart';
 

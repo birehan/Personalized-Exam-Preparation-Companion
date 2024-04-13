@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/features/profile/domain/entities/leaderboard.dart';
+import 'package:prepgenie/features/profile/domain/entities/leaderboard.dart';
 
 import '../../../features.dart';
 import 'user_leaderboard_model.dart';

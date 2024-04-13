@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/bloc/signup_form_bloc/signup_form_bloc.dart';
+import 'package:prepgenie/features/authentication/presentation/bloc/signup_form_bloc/signup_form_bloc.dart';
 
 void main() {
   group('SignupFormBloc', () {

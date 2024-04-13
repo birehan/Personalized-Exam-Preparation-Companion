@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/entities/contest_detail.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/get_contest_detail_usecase.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/features/contest/domain/entities/contest_detail.dart';
+import 'package:prepgenie/features/contest/domain/usecases/get_contest_detail_usecase.dart';
 
 part 'contest_detail_event.dart';
 part 'contest_detail_state.dart';

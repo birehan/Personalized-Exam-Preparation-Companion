@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
-import 'package:skill_bridge_mobile/features/course/data/datasources/courses_local_data_sources.dart';
+import 'package:prepgenie/core/constants/app_keys.dart';
+import 'package:prepgenie/core/utils/hive_boxes.dart';
+import 'package:prepgenie/features/course/data/datasources/courses_local_data_sources.dart';
 
 import '../../../../core/core.dart';
 import '../../../features.dart';

@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/leaderboard.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_top_users_usecase.dart';
+import 'package:prepgenie/features/features.dart';
+import 'package:prepgenie/features/profile/domain/entities/leaderboard.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prepgenie/features/profile/domain/usecases/get_top_users_usecase.dart';
 
 import 'get_profile_usecase_test.mocks.dart';
 

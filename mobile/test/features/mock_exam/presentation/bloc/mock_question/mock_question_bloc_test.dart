@@ -3,11 +3,11 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/mock_exam.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/domain/entities/mock.dart' as mocks;
-import 'package:skill_bridge_mobile/features/question/domain/entities/question.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/user_answer.dart';
+import 'package:prepgenie/core/error/failure.dart';
+import 'package:prepgenie/features/mock_exam/mock_exam.dart';
+import 'package:prepgenie/features/mock_exam/domain/entities/mock.dart' as mocks;
+import 'package:prepgenie/features/question/domain/entities/question.dart';
+import 'package:prepgenie/features/question/domain/entities/user_answer.dart';
 
 import 'mock_question_bloc_test.mocks.dart';
 

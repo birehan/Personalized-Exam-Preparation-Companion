@@ -6,11 +6,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
+import 'package:prepgenie/core/constants/app_images.dart';
 
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/core.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/logout/logout_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/logout/logout_bloc.dart';
 
 class LeaderbordDetailHeader extends StatelessWidget {
   final int? grade;
@@ -66,7 +66,7 @@ class LeaderbordDetailHeader extends StatelessWidget {
                   Text(
                     'Grade $grade',
                     style: const TextStyle(
-                        color: Color(0xff18786a),
+                        color: Color(0xFF0072FF),
                         fontFamily: 'Poppins',
                         fontSize: 16,
                         fontWeight: FontWeight.w500),

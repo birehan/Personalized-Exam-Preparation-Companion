@@ -3,9 +3,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/bookmark_content_usecase.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
+import 'package:prepgenie/features/bookmarks/domain/usecases/bookmark_content_usecase.dart';
+import 'package:prepgenie/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
+import 'package:prepgenie/features/bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
 
 import 'add_question_bookmark_bloc_test.mocks.dart';
 

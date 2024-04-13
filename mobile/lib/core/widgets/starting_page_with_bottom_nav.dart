@@ -4,11 +4,11 @@ import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
-import 'package:skill_bridge_mobile/core/widgets/coming_soon_page.dart';
-import 'package:skill_bridge_mobile/core/widgets/doubleback.dart';
-import 'package:skill_bridge_mobile/core/widgets/dragable.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/pages/contests_main_page.dart';
+import 'package:prepgenie/core/constants/app_images.dart';
+import 'package:prepgenie/core/widgets/coming_soon_page.dart';
+import 'package:prepgenie/core/widgets/doubleback.dart';
+import 'package:prepgenie/core/widgets/dragable.dart';
+import 'package:prepgenie/features/contest/presentation/pages/contests_main_page.dart';
 import '../../features/features.dart';
 import '../core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -67,36 +67,36 @@ class _MyHomePageState extends State<MyHomePage> {
               onPageChanged: _onPageChanged,
               physics: const NeverScrollableScrollPhysics(),
               children: const [
-                ContestsMainPage(),
+                // ContestsMainPage(),
                 // ComingSoonPage(),
                 MyCoursesPage(),
                 DynamicHomePage(),
                 ExamsPage(),
-                UserLeaderboardPage(),
+                // UserLeaderboardPage(),
               ],
             ),
           ],
         ),
         bottomNavigationBar: CircleNavBar(
           activeIcons: const [
-            ActiveBttomNavWidget(icon: contestIcon),
+            // ActiveBttomNavWidget(icon: contestIcon),
             ActiveBttomNavWidget(icon: courseIcon),
             ActiveBttomNavWidget(icon: homeIcon),
             ActiveBttomNavWidget(icon: examsIcon),
-            ActiveBttomNavWidget(icon: leaderboardIcon),
+            // ActiveBttomNavWidget(icon: leaderboardIcon),
           ],
           inactiveIcons: [
-            BottomNavCard(
-                icon: contestIcon, text: AppLocalizations.of(context)!.contest),
+            // BottomNavCard(
+            //     icon: contestIcon, text: AppLocalizations.of(context)!.contest),
             BottomNavCard(
                 icon: courseIcon, text: AppLocalizations.of(context)!.courses),
             BottomNavCard(
                 icon: homeIcon, text: AppLocalizations.of(context)!.home),
             BottomNavCard(
                 icon: examsIcon, text: AppLocalizations.of(context)!.exams),
-            BottomNavCard(
-                icon: leaderboardIcon,
-                text: AppLocalizations.of(context)!.leaderboard),
+            // BottomNavCard(
+            //     icon: leaderboardIcon,
+            //     text: AppLocalizations.of(context)!.leaderboard),
           ],
           color: Colors.white,
           height: 8.h,
@@ -110,11 +110,11 @@ class _MyHomePageState extends State<MyHomePage> {
             topLeft: Radius.circular(8),
             topRight: Radius.circular(8),
           ),
-          // shadowColor: const Color(0xff18786a),
+          // shadowColor: const Color(0xFF0072FF),
 
           // elevation: 1,
-          circleColor: const Color(0xff18786a),
-          circleShadowColor: const Color(0xff18786a).withOpacity(.5),
+          circleColor: const Color(0xFF0072FF),
+          circleShadowColor: const Color(0xFF0072FF).withOpacity(.5),
         ),
       ),
     );

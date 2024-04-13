@@ -45,7 +45,7 @@ class EmptyListWidget extends StatelessWidget {
             : IconButton(
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0xFF18786A)),
+                      MaterialStateProperty.all(const Color(0xFF0072FF)),
                 ),
                 icon: const Icon(
                   Icons.refresh,
@@ -65,7 +65,7 @@ class EmptyListWidget extends StatelessWidget {
         //       padding:
         //           const EdgeInsets.symmetric(vertical: 4, horizontal: 6),
         //       decoration: BoxDecoration(
-        //         color: const Color(0xFF18786A),
+        //         color: const Color(0xFF0072FF),
         //         borderRadius: BorderRadius.circular(4),
         //       ),
         //       child: Row(

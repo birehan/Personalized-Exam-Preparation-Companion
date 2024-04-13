@@ -4,15 +4,15 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/network/network.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/data/datasources/bookmarks_remote_datasource.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/data/repositories/bookmarks_repository_impl.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_contents.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_questions.dart';
-import 'package:skill_bridge_mobile/features/chapter/domain/entities/content.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/question.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/user_answer.dart';
+import 'package:prepgenie/core/network/network.dart';
+import 'package:prepgenie/features/bookmarks/data/datasources/bookmarks_remote_datasource.dart';
+import 'package:prepgenie/features/bookmarks/data/repositories/bookmarks_repository_impl.dart';
+import 'package:prepgenie/features/bookmarks/domain/entities/bookmarked_contents.dart';
+import 'package:prepgenie/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart';
+import 'package:prepgenie/features/bookmarks/domain/entities/bookmarked_questions.dart';
+import 'package:prepgenie/features/chapter/domain/entities/content.dart';
+import 'package:prepgenie/features/question/domain/entities/question.dart';
+import 'package:prepgenie/features/question/domain/entities/user_answer.dart';
 
 import 'bookmarks_repository_impl_test.mocks.dart';
 

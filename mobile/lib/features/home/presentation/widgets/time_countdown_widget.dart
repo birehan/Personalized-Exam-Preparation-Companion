@@ -65,7 +65,7 @@ class _TimeCountDownWidgetState extends State<TimeCountDownWidget> {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       decoration: const BoxDecoration(
-        color: Color(0xFF18786A),
+        color: Color(0xFF0072FF),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(8),
           bottomRight: Radius.circular(8),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
 
 class ChangeUsernameDialog extends StatefulWidget {
   const ChangeUsernameDialog({
@@ -197,7 +197,7 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
                                 12), // Set the border-radius
-                            color: const Color(0xFF1A7A6C)),
+                            color: const Color(0xFF0072FF)),
                         child: const Center(
                           child: Text(
                             'Reset Username',

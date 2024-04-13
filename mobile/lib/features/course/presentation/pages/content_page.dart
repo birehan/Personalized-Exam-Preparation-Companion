@@ -7,9 +7,9 @@ import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/flag_button.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
+import 'package:prepgenie/core/widgets/flag_button.dart';
+import 'package:prepgenie/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
+import 'package:prepgenie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
 import '../../../../core/core.dart';
 import '../../../../core/widgets/progress_indicator2.dart';
 import '../../../chapter/domain/domain.dart';
@@ -378,7 +378,7 @@ class _ContentPageState extends State<ContentPage>
                                 isFirstPage ? "" : 'Prev',
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xff18786A),
+                                  color: Color(0xFF0072FF),
                                 ),
                               ),
                             ),
@@ -424,7 +424,7 @@ class _ContentPageState extends State<ContentPage>
                                           'Finish',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Color(0xff18786A),
+                                            color: Color(0xFF0072FF),
                                           ),
                                         );
                                       },
@@ -442,7 +442,7 @@ class _ContentPageState extends State<ContentPage>
                                       'Next',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color(0xff18786A),
+                                        color: Color(0xFF0072FF),
                                       ),
                                     ),
                                   ),

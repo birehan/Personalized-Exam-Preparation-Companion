@@ -7,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
+import 'package:prepgenie/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
+import 'package:prepgenie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
 import '../../../../core/core.dart';
 import '../../../chapter/domain/domain.dart';
 
@@ -305,7 +305,7 @@ class _RelatedTopicContentPageState extends State<RelatedTopicContentPage>
                               isFirstPage ? "" : 'Prev',
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff18786A),
+                                color: Color(0xFF0072FF),
                               ),
                             ),
                           ),
@@ -328,7 +328,7 @@ class _RelatedTopicContentPageState extends State<RelatedTopicContentPage>
                                     'Finish',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff18786A),
+                                      color: Color(0xFF0072FF),
                                     ),
                                   ),
                                 )
@@ -344,7 +344,7 @@ class _RelatedTopicContentPageState extends State<RelatedTopicContentPage>
                                     'Next',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff18786A),
+                                      color: Color(0xFF0072FF),
                                     ),
                                   ),
                                 ),

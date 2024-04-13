@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
+import 'package:prepgenie/core/constants/app_keys.dart';
 
 part 'locale_event.dart';
 part 'locale_state.dart';

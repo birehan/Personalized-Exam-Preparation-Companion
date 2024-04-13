@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/question/data/models/question_model.dart';
-import 'package:skill_bridge_mobile/features/quiz/quiz.dart';
+import 'package:prepgenie/features/question/data/models/question_model.dart';
+import 'package:prepgenie/features/quiz/quiz.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 

@@ -125,7 +125,7 @@ class _FlagDialogState extends State<FlagDialog> {
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: const BorderSide(
-                              color: Color(0xff18786A), width: 1),
+                              color: Color(0xFF0072FF), width: 1),
                         ),
                         hintText: 'please mention other reason',
                         hintStyle: const TextStyle(
@@ -159,10 +159,10 @@ class _FlagDialogState extends State<FlagDialog> {
                         borderRadius: BorderRadius.circular(15))),
                 backgroundColor: comment == ''
                     ? MaterialStateProperty.all<Color>(
-                        const Color(0xff18786A).withOpacity(.5),
+                        const Color(0xFF0072FF).withOpacity(.5),
                       )
                     : MaterialStateProperty.all<Color>(
-                        const Color(0xff18786A),
+                        const Color(0xFF0072FF),
                       ),
               ),
               onPressed: submitResponse,

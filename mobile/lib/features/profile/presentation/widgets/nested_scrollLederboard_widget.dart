@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/widgets/progress_indicator.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_rank.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/leaderboard_list_card.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/top_ranked_detail_card.dart';
+import 'package:prepgenie/core/widgets/progress_indicator.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prepgenie/features/profile/domain/entities/user_leaderboard_rank.dart';
+import 'package:prepgenie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/leaderboard_list_card.dart';
+import 'package:prepgenie/features/profile/presentation/widgets/top_ranked_detail_card.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NestedScrollableLeaderboardWidget extends StatefulWidget {

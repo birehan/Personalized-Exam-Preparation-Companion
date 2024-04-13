@@ -75,7 +75,7 @@ class ContestListCard extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 1.h),
               decoration: BoxDecoration(
-                  color: const Color(0xff18786a),
+                  color: const Color(0xFF0072FF),
                   borderRadius: BorderRadius.circular(6)),
               alignment: Alignment.center,
               child: Text(

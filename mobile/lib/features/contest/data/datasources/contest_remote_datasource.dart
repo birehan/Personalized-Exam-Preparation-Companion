@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prepgenie/core/constants/app_keys.dart';
+import 'package:prepgenie/core/core.dart';
 
 import '../../../features.dart';
 

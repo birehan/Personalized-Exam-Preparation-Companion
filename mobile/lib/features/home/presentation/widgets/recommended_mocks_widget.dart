@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/constants/constants.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/recommended_empty_list.dart';
+import 'package:prepgenie/core/constants/constants.dart';
+import 'package:prepgenie/features/home/presentation/widgets/recommended_empty_list.dart';
 
 import '../../../features.dart';
 

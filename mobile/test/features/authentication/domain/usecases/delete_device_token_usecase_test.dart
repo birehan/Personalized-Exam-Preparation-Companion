@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/delete_device_token_usecase.dart';
+import 'package:prepgenie/core/core.dart';
+import 'package:prepgenie/features/authentication/domain/usecases/delete_device_token_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 

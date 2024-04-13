@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skill_bridge_mobile/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+import 'package:prepgenie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 class FlagButton extends StatelessWidget {
   const FlagButton({
