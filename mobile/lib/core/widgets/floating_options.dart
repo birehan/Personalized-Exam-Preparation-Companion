@@ -24,7 +24,7 @@ class FloatingOptions extends StatelessWidget {
       childPadding: const EdgeInsets.all(2),
       iconTheme: const IconThemeData(color: Colors.white),
       spaceBetweenChildren: 5,
-      backgroundColor: color ?? const Color(0xff1A7A6C),
+      backgroundColor: color ?? const Color(0xFF0072FF),
       elevation: 1,
       children: [
         if (!hideChat)

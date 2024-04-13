@@ -26,7 +26,7 @@ class _ChangePasswordDialogState extends State<ChangePasswordDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-        // backgroundColor: Colors.white, 
+        // backgroundColor: Colors.white,
         title: Text(
           'Change Password',
           style: GoogleFonts.poppins(
@@ -260,7 +260,7 @@ class _ChangePasswordDialogState extends State<ChangePasswordDialog> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
                                 12), // Set the border-radius
-                            color: Color(0xFF1A7A6C)),
+                            color: Color(0xFF0072FF)),
                         child: Center(
                           child: Text(
                             'Reset Password',

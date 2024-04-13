@@ -16,7 +16,7 @@ class CustomLinearProgressIndicator extends StatelessWidget {
         width: size,
         child: LoadingIndicator(
           indicatorType: Indicator.values[18],
-          colors: const [Color(0xff18786A)],
+          colors: const [Color(0xFF0072FF)],
           strokeWidth: 4.0,
           pathBackgroundColor: Colors.black45,
         ),

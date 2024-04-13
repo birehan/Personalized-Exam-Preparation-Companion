@@ -106,7 +106,7 @@ class _OnboardingPagesState extends State<OnboardingPages> {
 
     return Scaffold(
       body: Container(
-        color: const Color(0xFF18786A),
+        color: const Color(0xFF0072FF),
         child: Stack(
           children: [
             Image.asset('assets/images/background_lines.png'),

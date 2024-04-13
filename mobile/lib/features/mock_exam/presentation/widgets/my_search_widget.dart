@@ -41,7 +41,7 @@ class MySearchWidget extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: const Color(0xFF1A7A6C),
+            color: const Color(0xFF0072FF),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(

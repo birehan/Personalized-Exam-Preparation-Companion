@@ -51,13 +51,13 @@ class TakeLessonCard extends StatelessWidget {
                                     vertical: 6, horizontal: 12),
                                 decoration: BoxDecoration(
                                   color:
-                                      const Color(0xFF1A7A6C).withOpacity(.19),
+                                      const Color(0xFF0072FF).withOpacity(.19),
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                                 child: Text(
                                   'Lesson',
                                   style: GoogleFonts.poppins(
-                                    color: const Color(0xFF1A7A6C),
+                                    color: const Color(0xFF0072FF),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -92,7 +92,7 @@ class TakeLessonCard extends StatelessWidget {
                                       : state.lastStartedChapter!.name,
                                   maxLines: 2,
                                   style: GoogleFonts.poppins(
-                                    color: const Color(0xFF1A7A6C),
+                                    color: const Color(0xFF0072FF),
                                     fontSize: 17,
                                     fontWeight: FontWeight.w400,
                                   ),
@@ -121,21 +121,21 @@ class TakeLessonCard extends StatelessWidget {
                                   padding: const EdgeInsets.only(right: 12),
                                   decoration: BoxDecoration(
                                     border: Border.all(
-                                        color: const Color(0xFF1A7A6C)),
+                                        color: const Color(0xFF0072FF)),
                                     borderRadius: BorderRadius.circular(16),
                                   ),
                                   child: Row(
                                     children: [
                                       const Icon(
                                         Icons.play_arrow_rounded,
-                                        color: Color(0xFF1A7A6C),
+                                        color: Color(0xFF0072FF),
                                         size: 32,
                                       ),
                                       const SizedBox(width: 4),
                                       Text(
                                         'Start',
                                         style: GoogleFonts.poppins(
-                                          color: const Color(0xFF1A7A6C),
+                                          color: const Color(0xFF0072FF),
                                           fontSize: 14,
                                           fontWeight: FontWeight.w600,
                                         ),

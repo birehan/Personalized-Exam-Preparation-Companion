@@ -18,7 +18,7 @@ class NewPasswordConfirmedPage extends StatelessWidget {
             const Spacer(),
             const Icon(
               Icons.check_circle_outline,
-              color: Color(0xFF18786A),
+              color: Color(0xFF0072FF),
               size: 72,
             ),
             const SizedBox(height: 12),
@@ -48,7 +48,7 @@ class NewPasswordConfirmedPage extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: const Color(0xFF18786A),
+                      backgroundColor: const Color(0xFF0072FF),
                     ),
                     onPressed: () {
                       LoginPageRoute().go(context);

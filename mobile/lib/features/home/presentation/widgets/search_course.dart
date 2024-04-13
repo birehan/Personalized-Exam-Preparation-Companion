@@ -26,12 +26,12 @@ class SearchCourse extends StatelessWidget {
             child: TextField(
               enabled: false,
               controller: _searchController,
-              cursorColor: const Color(0xFF18786A),
+              cursorColor: const Color(0xFF0072FF),
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xFF18786A),
+                    color: Color(0xFF0072FF),
                     width: 2,
                   ),
                 ),
@@ -48,7 +48,7 @@ class SearchCourse extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           decoration: BoxDecoration(
-            color: const Color(0xFF18786A),
+            color: const Color(0xFF0072FF),
             borderRadius: BorderRadius.circular(8),
           ),
           child: const Icon(

@@ -294,7 +294,7 @@ class BookmarksTabWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
       decoration: BoxDecoration(
         border: Border.all(
-            color: selected ? const Color(0xff18786a) : Colors.grey, width: 1),
+            color: selected ? const Color(0xFF0072FF) : Colors.grey, width: 1),
         borderRadius: BorderRadius.circular(5),
       ),
       child: Row(
@@ -303,7 +303,7 @@ class BookmarksTabWidget extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 5, horizontal: 2.w),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                color: selected ? const Color(0xff18786a) : Colors.grey),
+                color: selected ? const Color(0xFF0072FF) : Colors.grey),
             child: Text(
               number.toString(),
               style: const TextStyle(color: Colors.white),

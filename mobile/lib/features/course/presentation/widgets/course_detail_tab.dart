@@ -142,7 +142,7 @@ class _CourseDetailTabState extends State<CourseDetailTab> {
                           EdgeInsets.symmetric(horizontal: 2.w, vertical: .5.h),
                       decoration: BoxDecoration(
                         color: Color(widget.course.cariculumIsNew
-                                ? 0xff18786a
+                                ? 0xFF0072FF
                                 : 0xffFEA800)
                             .withOpacity(.2),
                         borderRadius: BorderRadius.circular(5),
@@ -153,7 +153,7 @@ class _CourseDetailTabState extends State<CourseDetailTab> {
                             : AppLocalizations.of(context)!.old,
                         style: TextStyle(
                           color: Color(widget.course.cariculumIsNew
-                                  ? 0xff18786a
+                                  ? 0xFF0072FF
                                   : 0xffFEA800 //0xffFEA800
                               ),
                         ),

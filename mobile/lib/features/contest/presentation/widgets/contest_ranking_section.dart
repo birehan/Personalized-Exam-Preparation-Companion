@@ -67,7 +67,7 @@ class ContestRankingSection extends StatelessWidget {
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
                                   color:
-                                      const Color(0xFF1A7A6C).withOpacity(0.13),
+                                      const Color(0xFF0072FF).withOpacity(0.13),
                                   borderRadius: const BorderRadius.vertical(
                                     top: Radius.circular(4),
                                     bottom: Radius.circular(0),

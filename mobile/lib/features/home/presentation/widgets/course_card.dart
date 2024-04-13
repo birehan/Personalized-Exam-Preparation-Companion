@@ -85,7 +85,7 @@ class CourseCard extends StatelessWidget {
                           userCourse.course.numberOfChapters),
                       backgroundColor: const Color.fromRGBO(24, 120, 106, 0.1),
                       valueColor: const AlwaysStoppedAnimation<Color>(
-                        Color(0xFF18786A),
+                        Color(0xFF0072FF),
                       ),
                     ),
                   ),

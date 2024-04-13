@@ -119,7 +119,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                       child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: const Color(0xff18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                     child: TextButton(
                       child: const Text('Cancel',
@@ -137,7 +137,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                       child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: const Color(0xff18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                     child: TextButton(
                       child: const Text(
@@ -456,7 +456,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                                   padding: EdgeInsets.symmetric(
                                       vertical: 2.h, horizontal: 10.w),
                                   decoration: BoxDecoration(
-                                    color: const Color(0xff18786a),
+                                    color: const Color(0xFF0072FF),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child:

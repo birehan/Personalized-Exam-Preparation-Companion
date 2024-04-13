@@ -22,7 +22,7 @@ class _OTPFieldWidgetState extends State<OTPFieldWidget> {
 
     void updateColor() {
       setState(() {
-        color = const Color(0xFF18786A);
+        color = const Color(0xFF0072FF);
       });
     }
 
@@ -37,7 +37,7 @@ class _OTPFieldWidgetState extends State<OTPFieldWidget> {
         style: GoogleFonts.poppins(
           fontSize: 16,
           fontWeight: FontWeight.w500,
-          color: const Color(0xFF18786A),
+          color: const Color(0xFF0072FF),
         ),
         decoration: InputDecoration(
           counterText: '',
@@ -49,7 +49,7 @@ class _OTPFieldWidgetState extends State<OTPFieldWidget> {
           ),
           focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(
-              color: Color(0xFF18786A),
+              color: Color(0xFF0072FF),
               width: 3,
             ),
           ),

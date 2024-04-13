@@ -18,7 +18,7 @@ class SubjectsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-      InkWell(
+        InkWell(
           onTap: onTap,
           child: Container(
             margin: EdgeInsets.all(1.h),
@@ -26,11 +26,11 @@ class SubjectsCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: selected
-                  ? const Color(0xff18786A).withOpacity(.16)
+                  ? const Color(0xFF0072FF).withOpacity(.16)
                   : const Color.fromARGB(181, 206, 206, 201).withOpacity(.16),
               border: Border.all(
                   color:
-                      selected ? const Color(0xff18786A) : Colors.transparent,
+                      selected ? const Color(0xFF0072FF) : Colors.transparent,
                   width: 3),
             ),
             child: Column(
@@ -71,7 +71,7 @@ class SubjectsCard extends StatelessWidget {
               width: 4.h,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(2.h),
-                  color: const Color(0xff18786A),
+                  color: const Color(0xFF0072FF),
                   border: Border.all(color: Colors.white, width: 3)),
               child: const Icon(
                 Icons.check,

@@ -99,7 +99,7 @@ class DailyQuestCard extends StatelessWidget {
                           backgroundColor:
                               const Color.fromRGBO(24, 120, 106, 0.1),
                           valueColor: const AlwaysStoppedAnimation<Color>(
-                            Color(0xFF18786A),
+                            Color(0xFF0072FF),
                           ),
                           borderRadius: BorderRadius.circular(6),
                         ),
@@ -121,14 +121,14 @@ class DailyQuestCard extends StatelessWidget {
                           padding: const EdgeInsets.all(7),
                           decoration: BoxDecoration(
                               color: completedTask == totalTask
-                                  ? const Color(0xff18786a)
+                                  ? const Color(0xFF0072FF)
                                   : const Color.fromRGBO(24, 120, 106, 0.1),
                               shape: BoxShape.circle),
                           child: Icon(
                             Icons.card_giftcard_outlined,
                             color: completedTask == totalTask
                                 ? Colors.white
-                                : const Color(0xff18786a),
+                                : const Color(0xFF0072FF),
                             size: 18,
                           ),
                         ),

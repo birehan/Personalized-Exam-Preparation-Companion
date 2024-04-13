@@ -98,7 +98,7 @@ class _SearchCoursePageState extends State<SearchCoursePage> {
                         child: Text(
                           'No results found',
                           style:
-                              TextStyle(color: Color(0xff18786A), fontSize: 22),
+                              TextStyle(color: Color(0xFF0072FF), fontSize: 22),
                         ),
                       );
                     }

@@ -72,7 +72,7 @@ class SearchEnrolledCoursesCard extends StatelessWidget {
               //           minHeight: 10,
               //           backgroundColor: Color(0xffE7F0EF),
               //           valueColor: AlwaysStoppedAnimation<Color>(
-              //             Color(0xff18786A),
+              //             Color(0xFF0072FF),
               //           ),
               //         ),
               //       ),

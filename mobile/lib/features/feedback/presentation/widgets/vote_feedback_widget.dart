@@ -41,7 +41,7 @@ class UserFeedbackWidget extends StatelessWidget {
           },
           icon: Icon(
             Icons.thumb_up_outlined,
-            color: liked ? const Color(0xFF18786A) : Colors.black,
+            color: liked ? const Color(0xFF0072FF) : Colors.black,
           ),
         ),
         // SizedBox(width: 1.w),
@@ -60,7 +60,7 @@ class UserFeedbackWidget extends StatelessWidget {
             onDisliked(false, true);
           },
           icon: Icon(Icons.thumb_down_outlined,
-              color: disliked ? const Color(0xFF18786A) : Colors.black),
+              color: disliked ? const Color(0xFF0072FF) : Colors.black),
         )
       ],
     );
