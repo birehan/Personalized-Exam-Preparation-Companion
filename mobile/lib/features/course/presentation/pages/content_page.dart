@@ -378,7 +378,7 @@ class _ContentPageState extends State<ContentPage>
                                 isFirstPage ? "" : 'Prev',
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xff18786A),
+                                  color: Color(0xFF0072FF),
                                 ),
                               ),
                             ),
@@ -424,7 +424,7 @@ class _ContentPageState extends State<ContentPage>
                                           'Finish',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Color(0xff18786A),
+                                            color: Color(0xFF0072FF),
                                           ),
                                         );
                                       },
@@ -442,7 +442,7 @@ class _ContentPageState extends State<ContentPage>
                                       'Next',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color(0xff18786A),
+                                        color: Color(0xFF0072FF),
                                       ),
                                     ),
                                   ),

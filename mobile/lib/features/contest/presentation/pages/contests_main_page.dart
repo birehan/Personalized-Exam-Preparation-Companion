@@ -195,7 +195,7 @@ class _ContestsMainPageState extends State<ContestsMainPage>
             elevation: 0,
             scrolledUnderElevation: 0,
             title: TabBar(
-              indicatorColor: const Color(0xff18786a),
+              indicatorColor: const Color(0xFF0072FF),
               labelColor: Colors.black,
               unselectedLabelStyle: const TextStyle(color: Colors.grey),
               controller: _tabController,
@@ -237,7 +237,7 @@ class _ContestsMainPageState extends State<ContestsMainPage>
               // ),
               // SizedBox(height: 4.h),
               // TabBar(
-              //   indicatorColor: const Color(0xff18786a),
+              //   indicatorColor: const Color(0xFF0072FF),
               //   labelColor: Colors.black,
               //   unselectedLabelStyle: const TextStyle(color: Colors.grey),
               //   controller: _tabController,

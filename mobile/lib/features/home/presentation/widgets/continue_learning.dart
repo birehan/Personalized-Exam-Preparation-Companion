@@ -45,7 +45,7 @@ class ContinueLearningWidget extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
-                  color: const Color(0XFF18786A),
+                  color: const Color(0xFF0072FF),
                 ),
               ),
             ),

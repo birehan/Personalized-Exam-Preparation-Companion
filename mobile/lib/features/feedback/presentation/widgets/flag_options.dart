@@ -18,7 +18,7 @@ class FlagingChips extends StatelessWidget {
           checkmarkColor: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          selectedColor: const Color(0xff18786A),
+          selectedColor: const Color(0xFF0072FF),
           backgroundColor: const Color(0xffF1F1F1),
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
           label: Text(

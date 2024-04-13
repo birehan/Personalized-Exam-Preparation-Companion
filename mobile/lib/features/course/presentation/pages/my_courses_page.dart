@@ -112,7 +112,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: _tabIndex == 0
-                            ? const Color(0xff18786a)
+                            ? const Color(0xFF0072FF)
                             : Colors.transparent,
                       ),
                       child: Text(
@@ -128,7 +128,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: _tabIndex == 1
-                            ? const Color(0xff18786a)
+                            ? const Color(0xFF0072FF)
                             : Colors.transparent,
                       ),
                       child: Text(
@@ -323,7 +323,7 @@ class FloatingWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 1.5.h),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: const Color(0xff18786a),
+          color: const Color(0xFF0072FF),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

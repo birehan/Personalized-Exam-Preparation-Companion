@@ -138,13 +138,13 @@ class MyQuizCard extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(2, 2, 6, 2),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24),
-                      border: Border.all(color: const Color(0xFF1A7A6C)),
+                      border: Border.all(color: const Color(0xFF0072FF)),
                     ),
                     child: Row(
                       children: [
                         const Icon(
                           Icons.play_arrow_rounded,
-                          color: Color(0xFF1A7A6C),
+                          color: Color(0xFF0072FF),
                           size: 28,
                         ),
                         const SizedBox(width: 4),
@@ -152,7 +152,7 @@ class MyQuizCard extends StatelessWidget {
                           // isCompleted ? 'Analysis' : 'Resume',
                           isCompleted ? 'START' : 'Resume',
                           style: GoogleFonts.poppins(
-                            color: const Color(0xFF1A7A6C),
+                            color: const Color(0xFF0072FF),
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                           ),

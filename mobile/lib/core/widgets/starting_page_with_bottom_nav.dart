@@ -1,4 +1,3 @@
-
 import 'dart:math';
 
 import 'package:circle_nav_bar/circle_nav_bar.dart';
@@ -111,11 +110,11 @@ class _MyHomePageState extends State<MyHomePage> {
             topLeft: Radius.circular(8),
             topRight: Radius.circular(8),
           ),
-          // shadowColor: const Color(0xff18786a),
+          // shadowColor: const Color(0xFF0072FF),
 
           // elevation: 1,
-          circleColor: const Color(0xff18786a),
-          circleShadowColor: const Color(0xff18786a).withOpacity(.5),
+          circleColor: const Color(0xFF0072FF),
+          circleShadowColor: const Color(0xFF0072FF).withOpacity(.5),
         ),
       ),
     );

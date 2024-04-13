@@ -94,7 +94,7 @@ class ProfileHeader extends StatelessWidget {
                   child: const Text(
                     'Edit profile',
                     style: TextStyle(
-                        color: Color(0xff18786a),
+                        color: Color(0xFF0072FF),
                         fontFamily: 'Poppins',
                         fontSize: 16,
                         fontWeight: FontWeight.w500),

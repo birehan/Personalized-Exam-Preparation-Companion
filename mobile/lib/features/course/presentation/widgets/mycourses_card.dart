@@ -69,7 +69,7 @@ class MyCoursesCard extends StatelessWidget {
                             horizontal: 2.w, vertical: .5.h),
                         decoration: BoxDecoration(
                           color: userCourse.course.cariculumIsNew
-                              ? const Color(0xff18786a).withOpacity(.1)
+                              ? const Color(0xFF0072FF).withOpacity(.1)
                               : const Color(0xffFEA800).withOpacity(.1),
                           borderRadius: BorderRadius.circular(5),
                         ),
@@ -81,7 +81,7 @@ class MyCoursesCard extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Poppins',
                             color: Color(userCourse.course.cariculumIsNew
-                                ? 0xff18786a
+                                ? 0xFF0072FF
                                 : 0xffFEA800),
                           ),
                         ),
@@ -117,7 +117,7 @@ class MyCoursesCard extends StatelessWidget {
                               backgroundColor:
                                   const Color.fromRGBO(24, 120, 106, 0.1),
                               valueColor: const AlwaysStoppedAnimation<Color>(
-                                Color(0xFF18786A),
+                                Color(0xFF0072FF),
                               ),
                             ),
                           ),

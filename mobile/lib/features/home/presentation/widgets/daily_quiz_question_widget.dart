@@ -102,7 +102,7 @@ class _QuestionWidgetState extends State<DailyQuizQuestionWidget> {
                                 ? widget.questionMode == QuestionMode.quiz
                                     ? widget.userAnswers[index].toLowerCase() !=
                                             'choice_e'
-                                        ? const Color(0xFF18786A)
+                                        ? const Color(0xFF0072FF)
                                         : const Color(0xFFEDEDED)
                                     : widget.userAnswers[index].toLowerCase() ==
                                             'choice_e'
@@ -111,12 +111,12 @@ class _QuestionWidgetState extends State<DailyQuizQuestionWidget> {
                                                     .toLowerCase() ==
                                                 widget.correctAnswers[index]
                                                     .toLowerCase()
-                                            ? const Color(0xFF18786A)
+                                            ? const Color(0xFF0072FF)
                                             : Colors.red
                                 : widget.userAnswers[index].toLowerCase() ==
                                         widget.correctAnswers[index]
                                             .toLowerCase()
-                                    ? const Color(0xFF18786A)
+                                    ? const Color(0xFF0072FF)
                                     : Colors.red,
                           ),
                           child: Text(
@@ -491,14 +491,14 @@ class _QuestionWidgetState extends State<DailyQuizQuestionWidget> {
                           vertical: 12, horizontal: 16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(36),
-                        color: const Color(0xFF18786A).withOpacity(.1),
+                        color: const Color(0xFF0072FF).withOpacity(.1),
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           // const Icon(
                           //   Icons.help,
-                          //   color: Color(0xFF18786A),
+                          //   color: Color(0xFF0072FF),
                           // ),
                           // const SizedBox(width: 8),
                           Text(
@@ -506,13 +506,13 @@ class _QuestionWidgetState extends State<DailyQuizQuestionWidget> {
                             style: GoogleFonts.poppins(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              color: const Color(0xFF18786A),
+                              color: const Color(0xFF0072FF),
                             ),
                           ),
                           const SizedBox(width: 6),
                           const Icon(
                             Icons.fast_forward_rounded,
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                           )
                         ],
                       ),

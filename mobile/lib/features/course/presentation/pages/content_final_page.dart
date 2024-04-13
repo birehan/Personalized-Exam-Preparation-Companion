@@ -26,7 +26,7 @@ class ContentFinalPage extends StatelessWidget {
                   fontSize: 22,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w600,
-                  color: Color(0xff18786A)),
+                  color: Color(0xFF0072FF)),
             ),
             SizedBox(height: 10.h),
             Image(
@@ -70,7 +70,7 @@ class ContentFinalPage extends StatelessWidget {
                 height: 8.h,
                 width: 45.w,
                 decoration: BoxDecoration(
-                  color: const Color(0xff18786A),
+                  color: const Color(0xFF0072FF),
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: const Text(

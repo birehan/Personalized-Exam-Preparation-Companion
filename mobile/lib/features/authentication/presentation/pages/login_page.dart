@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: const Color(0xFF1A7A6C),
+                        color: const Color(0xFF0072FF),
                       ),
                     ),
                     // Text(
@@ -152,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                       validator: (emailOrPhoneNumber) {
                         return validateEmailOrPhoneNumber(emailOrPhoneNumber);
                       },
-                      cursorColor: const Color(0xFF18786A),
+                      cursorColor: const Color(0xFF0072FF),
                       decoration: const InputDecoration(
                         contentPadding:
                             EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -160,7 +160,7 @@ class _LoginPageState extends State<LoginPage> {
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                             width: 2,
                           ),
                         ),
@@ -189,7 +189,7 @@ class _LoginPageState extends State<LoginPage> {
                         return validatePassword(password);
                       },
                       obscureText: !_passwordVisible,
-                      cursorColor: const Color(0xFF18786A),
+                      cursorColor: const Color(0xFF0072FF),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 6, horizontal: 12),
@@ -197,7 +197,7 @@ class _LoginPageState extends State<LoginPage> {
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                             width: 2,
                           ),
                         ),
@@ -211,7 +211,7 @@ class _LoginPageState extends State<LoginPage> {
                             _passwordVisible
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: const Color(0xFF18786A),
+                            color: const Color(0xFF0072FF),
                           ),
                         ),
                       ),
@@ -294,7 +294,7 @@ class _LoginPageState extends State<LoginPage> {
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF18786A),
+                              backgroundColor: const Color(0xFF0072FF),
                               foregroundColor: const Color(0xFFFFFFFF),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 16, vertical: 12),
@@ -414,7 +414,7 @@ class _LoginPageState extends State<LoginPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
-                        color: const Color(0xFF18786A),
+                        color: const Color(0xFF0072FF),
                       ),
                     ),
                   )

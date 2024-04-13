@@ -30,11 +30,11 @@ class CustomSearchTextField extends StatelessWidget {
           contentPadding: const EdgeInsets.only(left: 10),
           icon: leadingIcon != null ? Icon(leadingIcon) : null,
           fillColor: const Color(0xffF6F7Fc),
-          focusColor: const Color(0xff18786A),
+          focusColor: const Color(0xFF0072FF),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
               borderSide: const BorderSide(
-                color: Color(0xff18786A),
+                color: Color(0xFF0072FF),
               )),
           filled: true,
           border: InputBorder.none,

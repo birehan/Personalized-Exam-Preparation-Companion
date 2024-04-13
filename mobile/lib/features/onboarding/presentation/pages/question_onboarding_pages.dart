@@ -76,7 +76,7 @@ class _OnboardingQuestionPagesState extends State<OnboardingQuestionPages> {
                         minHeight: 6,
                         backgroundColor: const Color(0xffE7F0EF),
                         valueColor: const AlwaysStoppedAnimation<Color>(
-                          Color(0xff18786A),
+                          Color(0xFF0072FF),
                         ),
                       ),
                     ),
@@ -156,7 +156,7 @@ class _OnboardingQuestionPagesState extends State<OnboardingQuestionPages> {
                             borderRadius: BorderRadius.circular(30),
                             color: _currentIndex == 4 && !state.validResponse
                                 ? Colors.grey
-                                : const Color(0xff18786A)),
+                                : const Color(0xFF0072FF)),
                         child: BlocConsumer<OnboardingBloc,
                             OnboardingAnswersState>(
                           listener: (context, state) {

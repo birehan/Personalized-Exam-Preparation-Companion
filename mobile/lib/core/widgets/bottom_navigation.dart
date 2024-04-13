@@ -34,7 +34,7 @@ class _MyBottomNavigationState extends State<MyBottomNavigation> {
         fontSize: 14,
         fontWeight: FontWeight.w500,
       ),
-      selectedItemColor: const Color(0xFF18786A),
+      selectedItemColor: const Color(0xFF0072FF),
       currentIndex: currentIndex,
       onTap: (index) {
         setState(() {

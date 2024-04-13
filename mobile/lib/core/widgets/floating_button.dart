@@ -10,7 +10,7 @@ class FloatingChatButton extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: const BoxDecoration(
-        color: Color(0xff18786a),
+        color: Color(0xFF0072FF),
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(

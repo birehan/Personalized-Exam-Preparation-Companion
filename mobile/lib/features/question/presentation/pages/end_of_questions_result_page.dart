@@ -119,7 +119,7 @@ class _EndofQuestionsResultPageState extends State<EndofQuestionsResultPage> {
                                   padding: const EdgeInsets.all(12),
                                   decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Color(0xFF1A7A6C),
+                                    color: Color(0xFF0072FF),
                                   ),
                                   child: const Icon(
                                     Icons.check,
@@ -203,7 +203,7 @@ class _EndofQuestionsResultPageState extends State<EndofQuestionsResultPage> {
                           const SizedBox(height: 20),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF18786A),
+                              backgroundColor: const Color(0xFF0072FF),
                             ),
                             onPressed: () {
                               context.pop();

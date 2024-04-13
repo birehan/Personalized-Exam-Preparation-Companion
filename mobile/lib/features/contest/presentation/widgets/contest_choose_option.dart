@@ -33,7 +33,7 @@ class ContestChooseOption extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
           decoration: BoxDecoration(
             color: isSelected
-                ? const Color(0xFF1A7A6C)
+                ? const Color(0xFF0072FF)
                 : isWrongAnswer
                     ? Colors.red
                     : Colors.white,
@@ -178,7 +178,7 @@ class ContestChooseOption extends StatelessWidget {
                     : isSelected
                         ? const Icon(
                             Icons.check,
-                            color: Color(0xFF1A7A6C),
+                            color: Color(0xFF0072FF),
                             size: 14,
                           )
                         : isWrongAnswer
