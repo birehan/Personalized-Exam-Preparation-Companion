@@ -34,7 +34,7 @@ void main() async {
     print('Failed to initialize Firebase $e');
   }
 
-  await NotificationService().initNotifications();
+  // await NotificationService().initNotifications();
   FlutterNativeSplash.remove();
   runApp(
     MultiBlocProvider(
