@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -122,23 +123,23 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                             fontFamily: 'Poppins'),
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 2.h),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: _tabIndex == 1
-                            ? const Color(0xFF0072FF)
-                            : Colors.transparent,
-                      ),
-                      child: Text(
-                        AppLocalizations.of(context)!.bookmarks,
-                        style: TextStyle(
-                          color: _tabIndex == 1 ? Colors.white : Colors.black,
-                          fontFamily: 'Poppins',
-                        ),
-                      ),
-                    )
+                    // Container(
+                    //   padding: EdgeInsets.symmetric(vertical: 2.h),
+                    //   alignment: Alignment.center,
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10),
+                    //     color: _tabIndex == 1
+                    //         ? const Color(0xFF0072FF)
+                    //         : Colors.transparent,
+                    //   ),
+                    //   child: Text(
+                    //     AppLocalizations.of(context)!.bookmarks,
+                    //     style: TextStyle(
+                    //       color: _tabIndex == 1 ? Colors.white : Colors.black,
+                    //       fontFamily: 'Poppins',
+                    //     ),
+                    //   ),
+                    // )
                   ],
                 ),
               ),
@@ -178,7 +179,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                                 } else if (state.failure
                                     is AuthenticationFailure) {
                                   return const Center(
-                                    child: SessionExpireAlert(),
+                                    // child: SessionExpireAlert(),
                                   );
                                 }
                                 return Center(
@@ -208,11 +209,11 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                             },
                           ),
                         ),
-                        Positioned(
-                          bottom: 2.h,
-                          right: 4.w,
-                          child: const FloatingWidget(),
-                        )
+                        // Positioned(
+                        //   bottom: 2.h,
+                        //   right: 4.w,
+                        //   child: const FloatingWidget(),
+                        // )
                       ],
                     ),
                     const BookmarksPage()
