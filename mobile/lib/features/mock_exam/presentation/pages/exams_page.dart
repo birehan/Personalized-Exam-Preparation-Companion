@@ -50,6 +50,7 @@ class ExamsPage extends StatelessWidget {
                 imageAddress: 'assets/images/education.png',
                 onPressed: () {
                   ChooseMockSubjectPageRoute(isStandard: true).go(context);
+
                   // UniversityMockExamPageRoute().go(context);
                   // context.push(AppRoutes.universityMockExamPage);
                 },
@@ -61,7 +62,7 @@ class ExamsPage extends StatelessWidget {
                 title: AppLocalizations.of(context)!.ai_generated_exams,
                 description:
                     AppLocalizations.of(context)!.ai_generated_exams_text,
-                imageAddress: 'assets/images/chatbot_ai.png',
+                imageAddress: 'assets/images/chatbot_ai1.png',
                 onPressed: () {
                   ChooseMockSubjectPageRoute(isStandard: false).go(context);
                   // ChooseSubjectPageRoute($extra: true).go(context);
@@ -69,17 +70,17 @@ class ExamsPage extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 16),
-              ExamCard(
-                width: width,
-                cardBackgroundColor: const Color(0xFFFDF7E5),
-                title: AppLocalizations.of(context)!.my_exams,
-                description: AppLocalizations.of(context)!.my_exams_text,
-                imageAddress: 'assets/images/school_supplies.png',
-                onPressed: () {
-                  MyExamsPageRoute().go(context);
-                  // context.push(AppRoutes.myExamPage);
-                },
-              ),
+              // ExamCard(
+              //   width: width,
+              //   cardBackgroundColor: const Color(0xFFFDF7E5),
+              //   title: AppLocalizations.of(context)!.my_exams,
+              //   description: AppLocalizations.of(context)!.my_exams_text,
+              //   imageAddress: 'assets/images/school_supplies.png',
+              //   onPressed: () {
+              //     MyExamsPageRoute().go(context);
+              //     // context.push(AppRoutes.myExamPage);
+              //   },
+              // ),
             ],
           ),
         ),
