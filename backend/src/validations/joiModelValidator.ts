@@ -65,3 +65,38 @@ export const userCourseValidator = (userCourse, requestType:string) => {
   });
   return schema.tailor(requestType).validate(userCourse, { abortEarly: false });
 };
+
+// Validator for question model
+export const questionValidator = (question, requestType: string) => {
+  const schema = Joi.object({
+    _id: Joi.forbidden(),
+    description: Joi.string().alter(requiredRule),
+    choiceA: Joi.string().alter(requiredRule),
+    choiceB: Joi.string().alter(requiredRule),
+    choiceC: Joi.string().alter(requiredRule),
+    choiceD: Joi.string().alter(requiredRule),
+    answer: Joi.string().alter(requiredRule),
+    explanation: Joi.string().alter(requiredRule),
+    relatedTopic: Joi.string(),
+    isForQuiz: Joi.boolean().alter(requiredRule),
+    adminApproval: Joi.boolean(),
+    chapterId: Joi.string().hex().length(24).alter(requiredRule),
+    courseId: Joi.string().hex().length(24).alter(requiredRule),
+    subChapterId: Joi.string().hex().length(24).alter(requiredRule)
+  });
+  return schema.tailor(requestType).validate(question, { abortEarly: false });
+};
+
+// Validator for subChapterContent model
+export const subChapterContentValidator = (subChapterContent, requestType: string) => {
+  const schema = Joi.object({
+    _id: Joi.forbidden(),
+    title: Joi.string().alter(requiredRule),
+    content: Joi.string().alter(requiredRule),
+    order: Joi.number(),
+    subChapterId: Joi.string().hex().length(24).alter(requiredRule)
+  });
+
+
+  return schema.tailor(requestType).validate(subChapterContent, { abortEarly: false });
+};
