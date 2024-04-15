@@ -22,6 +22,7 @@ app.use("/api/v1/chapter", routes.chapterRouter);
 app.use("/api/v1/sub-chapter", routes.subChapterRouter)
 app.use("/api/v1/userCourse", routes.userCourseRoutes);
 app.use("/api/v1/subChapterContent", routes.subChapterContentRouter);
+app.use("/api/v1/question", routes.questionRouter);
 
 
 app.get("/", (req, res) => {
