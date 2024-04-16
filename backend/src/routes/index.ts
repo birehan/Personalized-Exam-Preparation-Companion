@@ -7,6 +7,8 @@ import subChapterRouter from "./sub-chapter"
 import userCourseRoutes from "./useCourse"
 import subChapterContentRouter from "./subChapterContent"
 import questionRouter from "./question"
+import quizRouter from "./quiz"
+import questionUserAnswerRoute from "./questionUserAnswer"
 
 
 export default {
@@ -17,5 +19,7 @@ export default {
   subChapterRouter,
   userCourseRoutes,
   subChapterContentRouter,
-  questionRouter
+  questionRouter,
+  quizRouter,
+  questionUserAnswerRoute
 };
