@@ -88,7 +88,7 @@ export const questionValidator = (question, requestType: string) => {
   return schema.tailor(requestType).validate(question, { abortEarly: false });
 };
 
-// Validator for quiz model
+// Validator for the quiz model
 export const quizValidator = (quiz, requestType: string) => {
   const schema = Joi.object({
     _id: Joi.forbidden(),
