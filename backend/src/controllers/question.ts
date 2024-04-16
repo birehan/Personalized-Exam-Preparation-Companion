@@ -11,12 +11,12 @@ const createQuestion = async (req: Request, res: Response, next: NextFunction) =
         const {
             description, choiceA,
             choiceB,choiceC,choiceD,
-            answer,explanation,relatedTopic, isForQuiz,
+            answer,explanation,relatedTopic, 
             chapterId, courseId, subChapterId
         } = req.body;
 
         const userInput = { description, choiceA, choiceB,choiceC,choiceD,
-            answer,explanation,relatedTopic, isForQuiz, chapterId, courseId, subChapterId }
+            answer,explanation,relatedTopic, chapterId, courseId, subChapterId }
 
         const { error, value } = questionValidator(userInput,"post");
 
