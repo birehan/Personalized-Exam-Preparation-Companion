@@ -4,6 +4,7 @@ export interface ISubChapter extends Document {
     name: String;
     contents: [Schema.Types.ObjectId];
     chapterId: Schema.Types.ObjectId;
+    order: Number;
 }
 
 const SubChapterSchema: Schema<ISubChapter> = new Schema({
@@ -15,6 +16,10 @@ const SubChapterSchema: Schema<ISubChapter> = new Schema({
     name: {
         type: String,
         required: [true, "Sub-chapter name is required"]
+    },
+    order:{
+        type: Number,
+        default: 0
     },
     contents: {
         type: [{

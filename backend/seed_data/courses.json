@@ -1,0 +1,148 @@
+[
+  {
+    "_id": {
+      "$oid": "65a0f2a1938f09b54fca2b0f"
+    },
+    "name": "Biology",
+    "grade": 12,
+    "description": "This course explores Grade 12 Biology , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+    "ECTS": 10,
+    "referenceBook": "Grade 12 Biology",
+    "noOfChapters": 5,
+    "departmentId": {
+      "$oid": "64c24df185876fbb3f8dd6c7"
+    },
+    "createdAt": {
+      "$date": "2024-01-12T08:03:26.000Z"
+    },
+    "updatedAt": {
+      "$date": "2024-01-12T08:03:26.000Z"
+    },
+    "image": {
+      "$oid": "bebe4df185876fbb3f8dd6c7"
+    },
+    "curriculum": true
+  },
+  {
+    "_id": {
+      "$oid": "66067f59d4905df9369a1cd3"
+    },
+    "name": "Biology",
+    "grade": 10,
+    "description": "This course explores Grade 10 Biology , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+    "ECTS": 10,
+    "referenceBook": "Grade 10 Biology",
+    "noOfChapters": 6,
+    "departmentId": {
+      "$oid": "65898c5b52f4ffeace9210e6"
+    },
+    "createdAt": {
+      "$date": "2024-03-29T08:43:13.000Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-29T08:43:13.000Z"
+    },
+    "image": {
+      "$oid": "bebe4df185876fbb3f8dd6c7"
+    },
+    "curriculum": true
+  },
+  {
+    "_id": {
+      "$oid": "660ac49dcdb8610b10ced816"
+    },
+    "name": "Biology",
+    "grade": 9,
+    "description": "This course explores Grade 9 Biology , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+    "ECTS": 10,
+    "referenceBook": "Grade 9 Biology",
+    "noOfChapters": 6,
+    "departmentId": {
+      "$oid": "65898c5b52f4ffeace9210e6"
+    },
+    "createdAt": {
+      "$date": "2024-04-01T14:27:35.000Z"
+    },
+    "updatedAt": {
+      "$date": "2024-04-01T14:27:35.000Z"
+    },
+    "image": {
+      "$oid": "bebe4df185876fbb3f8dd6c7"
+    },
+    "curriculum": true
+  },
+
+  {
+    "_id": {
+      "$oid": "658c3148f928b0c897231caa"
+    },
+    "name": "Biology",
+    "grade": 10,
+    "description": "This course explores Grade 10 Biology , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+    "ECTS": 10,
+    "referenceBook": "Grade 10 Biology",
+    "noOfChapters": 5,
+    "departmentId": {
+      "$oid": "65898c5b52f4ffeace9210e6"
+    },
+    "createdAt": {
+      "$date": "2023-12-27T14:12:36.000Z"
+    },
+    "updatedAt": {
+      "$date": "2023-12-27T14:12:36.000Z"
+    },
+    "image": {
+      "$oid": "bebe4df185876fbb3f8dd6c7"
+    },
+    "curriculum": false
+  },
+{
+  "_id": {
+    "$oid": "6530d803128c1e08e946def8"
+  },
+  "name": "Biology",
+  "grade": 11,
+  "description": "This course explores Grade 11 Biology , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+  "ECTS": 10,
+  "referenceBook": "Grade 11 Biology",
+  "noOfChapters": 5,
+  "departmentId": {
+    "$oid": "64c24df185876fbb3f8dd6c7"
+  },
+  "createdAt": {
+    "$date": "2023-10-19T07:14:54.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-25T12:47:57.606Z"
+  },
+  "image": {
+    "$oid": "65390e7d2d0354a1629a0f74"
+  },
+  "curriculum": false
+},
+{
+  "_id": {
+    "$oid": "6589685d52f4ffeace920fec"
+  },
+  "name": "Biology",
+  "grade": 9,
+  "description": "This course explores Grade 9 Biology , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+  "ECTS": 10,
+  "referenceBook": "Grade 9 Biology",
+  "noOfChapters": 8,
+  "departmentId": {
+    "$oid": "65898c5b52f4ffeace9210e6"
+  },
+  "createdAt": {
+    "$date": "2023-12-25T14:07:04.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-29T11:46:22.269Z"
+  },
+  "image": {
+    "$oid": "bebe4df185876fbb3f8dd6c7"
+  },
+  "curriculum": false
+}
+
+]
