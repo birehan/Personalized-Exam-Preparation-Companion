@@ -6,6 +6,7 @@ export interface ICourse extends Document {
   description: String;
   noOfChapters: Number;
   grade: Number;
+  curriculum: Boolean;
   departmentId: Schema.Types.ObjectId;
 }
 
@@ -35,6 +36,11 @@ const CourseSchema: Schema<ICourse> = new Schema(
       type: Number,
       required: false,
       default: 0,
+    },
+    curriculum:{
+      type: Boolean,
+      required: true,
+      default: true
     },
     departmentId: {
       type: Schema.Types.ObjectId,

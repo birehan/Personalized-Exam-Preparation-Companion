@@ -1,8 +1,13 @@
 import { Document, Schema, model } from "mongoose";
 
 export interface IQuestion extends Document {
+  departmentId: Schema.Types.ObjectId;
   courseId: Schema.Types.ObjectId;
+  chapterId: Schema.Types.ObjectId;
+  subChapterId: Schema.Types.ObjectId;
+  
   description: String;
+  subject: String;
   choiceA: String;
   choiceB: String;
   choiceC: String;
@@ -10,12 +15,17 @@ export interface IQuestion extends Document {
   answer: String;
   relatedTopic: String;
   explanation: String;
-  chapterId: Schema.Types.ObjectId;
-  subChapterId: Schema.Types.ObjectId;
+  year: Number;
+  difficulty: Number;
 }
 
 const QuestionSchema: Schema<IQuestion> = new Schema(
   {
+    departmentId: {
+      type: Schema.Types.ObjectId,
+      ref: "Department",
+      required: [true, "department Id is required"],
+    },
     chapterId: {
       type: Schema.Types.ObjectId,
       ref: "Chapter",
@@ -59,6 +69,18 @@ const QuestionSchema: Schema<IQuestion> = new Schema(
       type: String,
       required: [true, "explanation is required"],
     },
+    difficulty: {
+      type:Number,
+      default: 1
+    },
+    subject:{
+      type: String,
+      required: [true, "subject is required"],
+    },
+    year: {
+      type:Number,
+      required: [true, "year is required"],
+    }
   },
   {
     timestamps: {

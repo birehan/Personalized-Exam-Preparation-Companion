@@ -6,7 +6,7 @@ export interface SubChapterContent extends Document {
   title: String;
   content: String;
   subChapterId: Schema.Types.ObjectId;
- 
+  order: Number;
 }
 
 const SubChapterContentSchema: Schema<SubChapterContent> = new Schema({
@@ -24,6 +24,10 @@ const SubChapterContentSchema: Schema<SubChapterContent> = new Schema({
     ref:'SubChapter',
     required: [true, "Sub Chapter id is required"]
   },
+  order:{
+    type: Number,
+    default: 0
+},
 
 },
 {

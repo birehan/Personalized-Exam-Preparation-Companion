@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "64c24df185876fbb3f8dd6c7"
+  },
+  "name": "Natural Science",
+  "description": "For natural science students",
+  "noOfCourses": 7,
+  "generalDepartmentId": {
+    "$oid": "64c24d2d85876fbb3f8dd6c4"
+  },
+  "createdAt": {
+    "$date": "2023-07-27T10:58:57.297Z"
+  },
+  "updatedAt": {
+    "$date": "2023-07-27T10:58:57.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64c24e0e85876fbb3f8dd6ca"
+  },
+  "name": "Social Science",
+  "description": "For natural science students",
+  "noOfCourses": 7,
+  "generalDepartmentId": {
+    "$oid": "64c24d2d85876fbb3f8dd6c4"
+  },
+  "createdAt": {
+    "$date": "2023-07-27T10:59:26.254Z"
+  },
+  "updatedAt": {
+    "$date": "2023-07-27T10:59:26.254Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65898c5b52f4ffeace9210e6"
+  },
+  "name": "grade 9 and 10",
+  "description": "For grade 9 and 10 students",
+  "noOfCourses": 7,
+  "generalDepartmentId": {
+    "$oid": "64c24d2d85876fbb3f8dd6c4"
+  },
+  "createdAt": {
+    "$date": "2023-12-27T10:58:57.297Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-27T10:58:57.297Z"
+  }
+}]
