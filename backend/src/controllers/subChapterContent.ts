@@ -17,7 +17,7 @@ const createSubChapterContent = async (req: Request, res: Response, next: NextFu
 
         if (error) throw error
 
-        const foundSubChapter = await SubChapter.findById(subChapterId)
+        const foundSubChapter = await SubChapter.findOne({"_id": subChapterId})
         if(!foundSubChapter) throw Error("Sub chapter doesn't exist")
 
         const subChapterContent = new SubChapterContent({...value});
@@ -77,7 +77,7 @@ const getSubChapterContent = async (req: Request, res: Response, next: NextFunct
 const updateSubChapterContent = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const subChapterContentToBeUpdated = await SubChapterContent.findById(id).lean().exec();
+        const subChapterContentToBeUpdated = await SubChapterContent.findOne({"_id": id}).lean().exec();
 
         if (!subChapterContentToBeUpdated) throw Error("SubChapterContent not found with that Id.")
 
@@ -94,7 +94,7 @@ const updateSubChapterContent = async (req: Request, res: Response, next: NextFu
 
         let foundSubChapter
         if(subChapterId){
-            foundSubChapter = await SubChapter.findById(subChapterId)
+            foundSubChapter = await SubChapter.findOne({"_id": subChapterId})
             if(!foundSubChapter) throw Error("Sub chapter doesn't exist")
         }
         
@@ -120,7 +120,7 @@ const updateSubChapterContent = async (req: Request, res: Response, next: NextFu
 const deleteSubChapterContent = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const subChapterContentToBeDeleted = await SubChapterContent.findById(id).lean().exec();
+        const subChapterContentToBeDeleted = await SubChapterContent.findOne({"_id": id}).lean().exec();
 
         if (!subChapterContentToBeDeleted) throw Error("SubChapterContent not found with that Id.");
 

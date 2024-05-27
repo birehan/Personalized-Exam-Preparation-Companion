@@ -22,9 +22,9 @@ const createQuestion = async (req: Request, res: Response, next: NextFunction) =
 
         if (error) throw error
         
-        const foundChapter = await Chapter.findById(chapterId)
-        const foundCourse = await Course.findById(courseId)
-        const foundSubChapter = await SubChapter.findById(subChapterId)
+        const foundChapter = await Chapter.findOne({"_id": chapterId})
+        const foundCourse = await Course.findOne({"_id": courseId})
+        const foundSubChapter = await SubChapter.findOne({"_id": subChapterId})
 
         if (!foundChapter) throw Error("Chapter Doesn't Exixt")
         if (!foundCourse) throw Error("Course Doesn't Exixt")
@@ -87,7 +87,7 @@ const getQuestion = async (req: Request, res: Response, next: NextFunction) => {
 const updateQuestion = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const questionToBeUpdated = await Question.findById(id).lean().exec();
+        const questionToBeUpdated = await Question.findOne({"_id": id}).lean().exec();
 
         if (!questionToBeUpdated) throw Error("Question not found with that Id.")
 
@@ -113,15 +113,15 @@ const updateQuestion = async (req: Request, res: Response, next: NextFunction) =
         let foundCourse
         let foundSubChapter
         if (chapterId){
-            foundChapter = await Chapter.findById(chapterId)
+            foundChapter = await Chapter.findOne({"_id": chapterId})
             if (!foundChapter) throw Error("Chapter Doesn't Exixt")
         }
         if(courseId){
-            foundCourse = await Course.findById(courseId)
+            foundCourse = await Course.findOne({"_id": courseId})
             if (!foundCourse) throw Error("Course Doesn't Exixt")
         }
         if(subChapterId){
-            foundSubChapter = await SubChapter.findById(subChapterId)
+            foundSubChapter = await SubChapter.findOne({"_id": subChapterId})
             if (!foundSubChapter) throw Error("Sub Chapter Doesn't Exixt")
         }
         
@@ -144,7 +144,7 @@ const updateQuestion = async (req: Request, res: Response, next: NextFunction) =
 const deleteQuestion = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const questionToBeDeleted = await Question.findById(id).lean().exec();
+        const questionToBeDeleted = await Question.findOne({"_id": id}).lean().exec();
 
         if (!questionToBeDeleted) throw Error("Question not found with that Id.");
 

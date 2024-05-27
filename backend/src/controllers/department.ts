@@ -75,7 +75,7 @@ const getDepartment = async (req: Request, res: Response, next: NextFunction) =>
 const updateDepartment = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const departmentToBeUpdated = await Department.findById(id).lean().exec();
+        const departmentToBeUpdated = await Department.findOne({"_id": id}).lean().exec();
 
         if (!departmentToBeUpdated) throw Error("Department not found with that Id.")
 
@@ -113,7 +113,7 @@ const updateDepartment = async (req: Request, res: Response, next: NextFunction)
 const deleteDepartment = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const departmentToBeDeleted = await Department.findById(id).lean().exec();
+        const departmentToBeDeleted = await Department.findOne({"_id": id}).lean().exec();
 
         if (!departmentToBeDeleted) throw Error("Department not found with that Id.");
 

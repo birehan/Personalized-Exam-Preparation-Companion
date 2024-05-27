@@ -22,14 +22,14 @@ const createCourse = async (req: Request, res: Response, next: NextFunction) => 
     
         if (error) throw error
 
-        const foundDepartment = await Department.findById(depId)
+        const foundDepartment = await Department.findOne({"_id": depId})
         if (!foundDepartment) throw Error("Department Id does not exist")
 
         const course = new Course({...value});
       
         const savedCourse = await course.save();
 
-        const {noOfCourses} = await Department.findById(depId)
+        const {noOfCourses} = await Department.findOne({"_id": depId})
         const newNoOfCourse:number = Number( noOfCourses)+ 1
         await Department.findByIdAndUpdate(depId, {noOfCourses: newNoOfCourse}).lean().exec();
         
@@ -67,7 +67,7 @@ const getCourses = async (req: Request, res: Response, next: NextFunction) => {
     try {
         let id = req.params.departmentId;
         
-        const foundDepartment = await Department.findById(id).lean().exec();
+        const foundDepartment = await Department.findOne({"_id": id}).lean().exec();
 
         if (!foundDepartment) throw Error("No Department by this Id.");
 
@@ -210,7 +210,7 @@ const getCourse = async (req: Request, res: Response, next: NextFunction) => {
 const updateCourse = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const courseToBeUpdated = await Course.findById(id).lean().exec();
+        const courseToBeUpdated = await Course.findOne({"_id": id}).lean().exec();
 
         if (!courseToBeUpdated) throw Error("Course not found with that Id.")
 
@@ -227,7 +227,7 @@ const updateCourse = async (req: Request, res: Response, next: NextFunction) => 
         let foundDepartment
         
         if (departmentId){
-            foundDepartment  = await Department.findById(id)
+            foundDepartment  = await Department.findOne({"_id": id})
             if (!foundDepartment) throw Error("Department Id does not exist")
         }
         const { error, value } = courseValidator(updateObject,"put");
@@ -252,13 +252,13 @@ const updateCourse = async (req: Request, res: Response, next: NextFunction) => 
 const deleteCourse = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const courseToBeDeleted = await Course.findById(id).lean().exec();
+        const courseToBeDeleted = await Course.findOne({"_id": id}).lean().exec();
 
         if (!courseToBeDeleted) throw Error("Course not found with that Id.");
 
         const deletedCourse = await Course.findByIdAndDelete(id).lean().exec();
         const {departmentId} = deletedCourse
-        const department = await Department.findById(departmentId).lean().exec();
+        const department = await Department.findOne({"_id": departmentId}).lean().exec();
 
         await Department.findByIdAndUpdate(departmentId, {noOfCourses: Number(department.noOfCourses) - 1},{new:true}).lean().exec();
     

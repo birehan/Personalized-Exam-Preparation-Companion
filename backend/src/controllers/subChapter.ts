@@ -133,7 +133,7 @@ const getSubChapter = async (req: Request, res: Response, next: NextFunction) =>
 const updateSubChapter = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const subChapterToBeUpdated = await SubChapter.findById(id).lean().exec();
+        const subChapterToBeUpdated = await SubChapter.findOne({"_id": id}).lean().exec();
 
         if (!subChapterToBeUpdated) throw Error("Sub-chapter not found with that Id.")
 
@@ -179,14 +179,14 @@ const updateSubChapter = async (req: Request, res: Response, next: NextFunction)
 const deleteSubChapter = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const subChapterToBeDeleted = await SubChapter.findById(id).lean().exec();
+        const subChapterToBeDeleted = await SubChapter.findOne({"_id": id}).lean().exec();
 
         if (!subChapterToBeDeleted) throw Error("Sub-chapter not found with that Id.");
 
         const deletedSubChapter = await SubChapter.findByIdAndDelete(id).lean().exec();
 
         const {chapterId} = deletedSubChapter
-        const chapter = await Chapter.findById(chapterId).lean().exec();
+        const chapter = await Chapter.findOne({"_id": id}).lean().exec();
 
         await Chapter.findByIdAndUpdate(chapterId, {noOfSubChapters: Number(chapter.noOfSubChapters) - 1},{new:true}).lean().exec();
     
