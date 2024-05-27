@@ -162,11 +162,33 @@ const userSignup = async (req, res, next) => {
     const token = createToken(new_user);
     res.header("token", token);
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
+    
 
-    const cur_user = await User.findOne({ _id: new_user._id }).populate("department", "select _id name")
-      .populate("avatar", "select imageAddress -_id")
-      .select('-__v -password -createdAt -updatedAt -resetToken')
-      .lean().exec();
+    let logged_user = await User.findOne({ _id: new_user._id });
+    const all_departments = await Department.find().lean().exec();
+    let course_department = null;
+
+    let cur_user = await User.findOne({ _id: new_user._id })
+    .populate({
+      path: "department",
+      select: "_id name"
+    })
+    .populate({
+      path: "avatar",
+      select: "imageAddress -_id"
+    })
+    .select('-__v -password -createdAt -updatedAt -resetToken')
+    .lean()
+    .exec();
+
+
+    for(let i=0; i<all_departments.length; i++){
+      if (all_departments[i]["_id"].toString() == logged_user["department"].toString()){
+        course_department = {"_id": all_departments[i]["_id"].toString(), "name": all_departments[i]["name"]}
+      }
+    }
+
+    cur_user["department"] = course_department;
 
     
 
