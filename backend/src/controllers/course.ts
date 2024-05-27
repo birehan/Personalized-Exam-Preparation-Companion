@@ -66,10 +66,24 @@ const getCourses = async (req: Request, res: Response, next: NextFunction) => {
   const getCoursesByDepartment = async (req: Request, res: Response, next: NextFunction) => {
     try {
         let id = req.params.departmentId;
-        
-        const foundDepartment = await Department.findOne({"_id": id}).lean().exec();
 
-        if (!foundDepartment) throw Error("No Department by this Id.");
+        console.log("id: " + id);
+        let foundDepartment = null;
+        const courses = await Department.find().lean().exec();
+
+        for (let i=0; i < courses.length; i++){
+            if (courses[i]["_id"].toString() == id){
+                foundDepartment = courses[i]
+            }
+        }
+
+        console.log("course departmemt: ", foundDepartment);
+
+
+        
+        // const foundDepartment = await Department.findOne({"_id": id}).lean().exec();
+
+        if (!foundDepartment) throw Error("No Department by this Id. hi");
 
         const departmentId= new Types.ObjectId(id)
         const specificDepartmentId = new Types.ObjectId("65898c5b52f4ffeace9210e6");
