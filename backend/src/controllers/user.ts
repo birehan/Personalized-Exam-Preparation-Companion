@@ -16,6 +16,7 @@ import axios from "axios";
 
 const jwtSecret = configs.JWT_SECRET;
 import { google } from "googleapis";
+import Department from "../models/department";
 const OAuth2 = google.auth.OAuth2;
 
 const oauth2Client = new OAuth2(
@@ -74,11 +75,37 @@ const userLogin = async (req: Request, res: Response, next) => {
     res.header("token", token);
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
 
-    const cur_user = await User.findOne({ _id: user._id })
-      .populate("avatar", "select imageAddress -_id")
-      .select("-__v -password -createdAt -updatedAt -resetToken")
-      .lean()
-      .exec();
+    let logged_user = await User.findOne({ _id: user._id });
+    const all_departments = await Department.find().lean().exec();
+    let course_department = null;
+
+    let cur_user = await User.findOne({ _id: user._id })
+    .populate({
+      path: "department",
+      select: "_id name"
+    })
+    .populate({
+      path: "avatar",
+      select: "imageAddress -_id"
+    })
+    .select('-__v -password -createdAt -updatedAt -resetToken')
+    .lean()
+    .exec();
+
+
+    for(let i=0; i<all_departments.length; i++){
+      if (all_departments[i]["_id"].toString() == logged_user["department"].toString()){
+        course_department = {"_id": all_departments[i]["_id"].toString(), "name": all_departments[i]["name"]}
+      }
+    }
+
+    cur_user["department"] = course_department;
+
+
+    // const cur_user = await User.findOne({ _id: user._id }).populate("department", "select _id name")
+    //   .populate("avatar", "select imageAddress -_id")
+    //   .select('-__v -password -createdAt -updatedAt -resetToken')
+    //   .lean().exec();
 
     baseResponse.success = true;
     baseResponse.message = "User logged in successfully";
@@ -98,6 +125,9 @@ const userLogin = async (req: Request, res: Response, next) => {
 //TODO: should work for both email and phone number. Change User's email attribute to email_phone
 const userSignup = async (req, res, next) => {
   try {
+    // default natural science department id
+    const departmentId = "64c24df185876fbb3f8dd6c7";
+
     let { firstName, lastName, email_phone, password, otp } = req.body;
 
     let baseResponse = new BaseResponse();
@@ -126,18 +156,19 @@ const userSignup = async (req, res, next) => {
       throw Error(verifyUserOTP.error);
     }
 
-    const new_user = await User.create({ ...validatedUser });
+    const new_user = await User.create({ ...validatedUser, department: departmentId });
 
     //send jwt token
     const token = createToken(new_user);
     res.header("token", token);
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
 
-    const cur_user = await User.findOne({ _id: new_user._id })
+    const cur_user = await User.findOne({ _id: new_user._id }).populate("department", "select _id name")
       .populate("avatar", "select imageAddress -_id")
-      .select("-__v -password -createdAt -updatedAt -resetToken")
-      .lean()
-      .exec();
+      .select('-__v -password -createdAt -updatedAt -resetToken')
+      .lean().exec();
+
+    
 
     baseResponse.success = true;
     baseResponse.message = "User registered in successfully";
@@ -156,6 +187,8 @@ const userSignup = async (req, res, next) => {
     next(err);
   }
 };
+
+
 
 //verify OTP before login || TODO: Should work for both phone number and email
 const verifyUserAndOtp = async ({ email_phone, otp }) => {

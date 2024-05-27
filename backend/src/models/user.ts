@@ -64,7 +64,7 @@ const UserSchema: Schema<IUserDocument, UserModel> = new Schema(
     department: {
       type: Schema.Types.ObjectId,
       ref:'Department',
-      default: null
+      default: "64c24df185876fbb3f8dd6c7"
     },
     grade: {
       type: Number,
