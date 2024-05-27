@@ -8,6 +8,8 @@ noOfChapters: Number;
 grade: Number;
 curriculum: Boolean;
 departmentId: Schema.Types.ObjectId;
+referenceBook: String;
+ECTS: Number;
 }
 
 const CourseSchema: Schema<ICourse> = new Schema(
@@ -46,6 +48,15 @@ const CourseSchema: Schema<ICourse> = new Schema(
     type: Schema.Types.ObjectId,
     ref: "Department",
     required: [true, "Department Id is required"],
+  },
+  referenceBook: {
+    type: String,
+    required: false,
+    default: "No reference book."
+  },
+  ECTS: {
+      type: Number,
+      default:0
   },
 },
 {

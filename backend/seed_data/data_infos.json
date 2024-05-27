@@ -8,7 +8,7 @@
   {
     "collection_name": "courses",
     "file_path": "courses.json",
-    "keys_to_remove": ["ECTS"],
+    "keys_to_remove": [],
     "reference_data": [["departments", "departmentId"]]
   },
   {
