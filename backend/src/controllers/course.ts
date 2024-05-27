@@ -48,7 +48,7 @@ const createCourse = async (req: Request, res: Response, next: NextFunction) => 
 
 const getCourses = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const courses = await Department.find().lean().exec();
+      const courses = await Course.find().lean().exec();
   
       let baseResponse = new BaseResponse();
       baseResponse.success = true;
@@ -62,140 +62,72 @@ const getCourses = async (req: Request, res: Response, next: NextFunction) => {
       next(error);
     }
   };
+  
 
-  const getCoursesByDepartment = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-        let id = req.params.departmentId;
+const getCoursesByDepartment = async (req: Request, res: Response, next: NextFunction) => {
+try {
+    let id = req.params.departmentId;
 
-        console.log("id: " + id);
-        let foundDepartment = null;
-        const courses = await Department.find().lean().exec();
+    console.log("id: " + id);
+    let foundDepartment = null;
+    const departments = await Department.find().lean().exec();
 
-        for (let i=0; i < courses.length; i++){
-            if (courses[i]["_id"].toString() == id){
-                foundDepartment = courses[i]
-            }
+    for (let i=0; i < departments.length; i++){
+        if (departments[i]["_id"].toString() == id){
+            foundDepartment = departments[i]
         }
-
-        console.log("course departmemt: ", foundDepartment);
-
-
-        
-        // const foundDepartment = await Department.findOne({"_id": id}).lean().exec();
-
-        if (!foundDepartment) throw Error("No Department by this Id. hi");
-
-        const departmentId= new Types.ObjectId(id)
-        const specificDepartmentId = new Types.ObjectId("65898c5b52f4ffeace9210e6");
-
-        let excludedCourses = [];
-
-        if (id === "64c24e0e85876fbb3f8dd6ca") {
-        excludedCourses = ["Biology", "Chemistry", "Physics"];
-        } else if (id === "64c24df185876fbb3f8dd6c7") {
-        excludedCourses = ["History", "Geography"];
-        }
-
-        const departmentCourses = await Course.aggregate([
-        {
-            $match: {
-            $or: [
-                { departmentId: { $eq: departmentId } },
-                { departmentId: { $eq: specificDepartmentId } }
-            ],
-            name: { $nin: excludedCourses }
-            }
-        },
-        {
-            $lookup: {
-              from: 'images',
-              localField: 'image',
-              foreignField: '_id',
-              as: 'image',
-            },
-          },
-          {
-            $set: {
-              image: {
-                $ifNull: [{ $arrayElemAt: ['$image.imageAddress', 0] }, null],
-              },
-            },
-          },
-        {
-            $project: {
-            name: 1,
-            image: {
-                $cond: {
-                  if: { $eq: ['$image', null] },
-                  then: null,
-                  else: { imageAddress: '$image' },
-                },
-            },
-            description: 1,
-            noOfChapters: 1,
-            grade: 1,
-            departmentId: 1,
-            referenceBook: 1,
-            ECTS: 1,
-            curriculum: 1
-            }
-        }
-        ]).exec();
-
-
-        if (foundDepartment.name !== 'Natural Science' && foundDepartment.name !== 'Social Science' && foundDepartment.name !== 'grade 9 and 10') {
-            let baseResponse = new BaseResponse();
-            baseResponse.success = true;
-            baseResponse.message = 'Courses retrieved successfully!';
-            baseResponse.data = {
-                departmentCourses
-            };
-            return res.status(200).json({ ...baseResponse });
-        }
-
-        const courseCatalog = {
-            Biology: [],
-            Chemistry: [],
-            Civics: [],
-            English: [],
-            Mathematics: [],
-            Physics: [],
-            SAT: [],
-            Economics: [],
-            History: [],
-            Business: [],
-            Geography: [],
-            Others: []
-        };
-
-        departmentCourses.forEach(course => {
-            let mapped = false;
-
-            for (const category in courseCatalog) {
-                if (category !== 'Others' && course.name.includes(category)) {
-                    courseCatalog[category].push(course);
-                    mapped = true;
-                    break;
-                }
-            }
-
-            if (!mapped) {
-                courseCatalog.Others.push(course);
-            }
-        });
-
-        let baseResponse = new BaseResponse();
-        baseResponse.success = true
-        baseResponse.message = 'Courses retrieved successfully!'
-        baseResponse.data = {
-           departmentCourses: courseCatalog,
-        }
-
-        return res.status(200).json({...baseResponse});
-
-    } catch (error) {
-        next(error)
     }
+
+
+
+    
+    // const foundDepartment = await Department.findOne({"_id": id}).lean().exec();
+
+    if (!foundDepartment) throw Error("No Department by this Id. hi");
+
+    const departmentId= new Types.ObjectId(id)
+    const specificDepartmentId = new Types.ObjectId("65898c5b52f4ffeace9210e6");
+
+    let excludedCourses = [];
+
+    if (id === "64c24e0e85876fbb3f8dd6ca") {
+    excludedCourses = ["Biology", "Chemistry", "Physics"];
+    } else if (id === "64c24df185876fbb3f8dd6c7") {
+    excludedCourses = ["History", "Geography"];
+    }
+
+    const courses = await Course.find().lean().exec();
+
+    let courseCatalog = {
+        Biology: [],
+        Chemistry: [],
+        Civics: [],
+        English: [],
+        Mathematics: [],
+        Physics: [],
+        SAT: [],
+        Economics: [],
+        History: [],
+        Business: [],
+        Geography: [],
+        Others: []
+    };
+
+    courseCatalog["Biology"] = courses
+
+
+    let baseResponse = new BaseResponse();
+    baseResponse.success = true
+    baseResponse.message = 'Courses retrieved successfully!'
+    baseResponse.data = {
+        departmentCourses: courseCatalog,
+    }
+
+    return res.status(200).json({...baseResponse});
+
+} catch (error) {
+    next(error)
+}
 }
 
 const getCourse = async (req: Request, res: Response, next: NextFunction) => {
