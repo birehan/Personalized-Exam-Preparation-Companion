@@ -159,7 +159,7 @@ const getQuestionUserAnswer = async (req: Request, res: Response, next: NextFunc
 const updateQuestionUserAnswer = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const questionAnswerToBeUpdated = await QuestionUserAnswer.findById(id).lean().exec();
+        const questionAnswerToBeUpdated = await QuestionUserAnswer.findOne({"_id": id}).lean().exec();
 
         if (!questionAnswerToBeUpdated) throw Error("Questions Answer not found with that Id.")
 
@@ -194,7 +194,7 @@ const updateQuestionUserAnswer = async (req: Request, res: Response, next: NextF
 const deleteQuestionUserAnswer = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const questionToBeDeleted = await QuestionUserAnswer.findById(id).lean().exec();
+        const questionToBeDeleted = await QuestionUserAnswer.findOne({"_id": id}).lean().exec();
 
         if (!questionToBeDeleted) throw Error("Questions Answer not found with that Id.");
 

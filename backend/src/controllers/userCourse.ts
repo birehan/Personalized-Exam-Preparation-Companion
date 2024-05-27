@@ -79,7 +79,7 @@ const getUserCourse = async (req: Request, res: Response, next: NextFunction) =>
 const deleteUserCourse = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const userCourseToBeDeleted = await UserCourse.findById(id).lean().exec();
+        const userCourseToBeDeleted = await UserCourse.findOne({"_id": id}).lean().exec();
 
         if (!userCourseToBeDeleted) throw Error("UserCourse not found with that Id.");
 
@@ -100,7 +100,7 @@ const deleteUserCourse = async (req: Request, res: Response, next: NextFunction)
 const addCourseToUserCourses = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { user, course } = req.body;
-      const foundCourse = await Course.findById(course);
+      const foundCourse = await Course.findOne({"_id": course});
       if (!foundCourse) {
         throw new Error("Course does not exist");
       }

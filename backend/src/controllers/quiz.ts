@@ -181,7 +181,7 @@ const getUserQuiz = async (req: Request, res: Response, next: NextFunction) => {
 const updateQuiz = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const quizToBeUpdated = await Quiz.findById(id).lean().exec();
+        const quizToBeUpdated = await Quiz.findOne({"_id": id}).lean().exec();
 
         if (!quizToBeUpdated) throw Error("Quiz not found with that Id.")
 
@@ -215,7 +215,7 @@ const updateQuiz = async (req: Request, res: Response, next: NextFunction) => {
 const deleteQuiz = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        const quizToBeDeleted = await Quiz.findById(id).lean().exec();
+        const quizToBeDeleted = await Quiz.findOne({"_id": id}).lean().exec();
 
         if (!quizToBeDeleted) throw Error("Quiz not found with that Id.");
 
