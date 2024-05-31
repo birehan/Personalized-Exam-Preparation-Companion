@@ -1,0 +1,28 @@
+{
+    "data": {
+        "quizzes": [
+            {
+                "_id": "653925700d8e1130915dc3a0",
+                "courseId": "6530d7be128c1e08e946dee6",
+                "chapters": [
+                    "6530de97128c1e08e946defb"
+                ],
+                "userId": "6538f952957a801dfb5e9c52",
+                "name": "Micro Organsm Quiz",
+                "questions": [
+                    "653241f65f7b64997bfd5de5"
+                ],
+                "createdAt": "2023-10-25T14:25:52.960Z",
+                "updatedAt": "2023-10-25T14:25:52.960Z",
+                "__v": 0,
+                "score": 0,
+                "completed": false
+            }
+        ]
+    },
+    "success": true,
+    "message": "Quizzes retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

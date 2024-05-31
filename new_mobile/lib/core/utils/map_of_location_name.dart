@@ -1,0 +1,20 @@
+Map<String, String> locationNames = {
+  'onboarding': 'Onboarding page',
+  'login': 'Login Page',
+  'signup': 'Signup Page',
+  'onboarding-questions': 'Onbaording Questions',
+  '': 'Home Page',
+  'searchCourses': 'Search Courses Page',
+  'my-courses': 'My Courses Page',
+  'choose-subject': 'Choose new Subjets Page',
+  'exams': 'Exams Page',
+  'mockSubject': 'Mock exams Page',
+  'my-exams': 'myExams Page',
+  'profile': 'Profile Page',
+  'course': 'course Detail Page',
+  'bookmarkedContent': 'bookmarked Content',
+  'bookmarkedQuestion': 'bookmarked Question',
+  'mockQuestionPage': 'MockQuestion Page',
+  'dailyQuiz': 'DailyQuizQuestion Page',
+  'leaderboardDetail': 'leaderboardDetail'
+};

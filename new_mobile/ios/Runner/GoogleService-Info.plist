@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>443488801728-tflv1dlbl7odsghpju4gfi8aocnpmok0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.443488801728-tflv1dlbl7odsghpju4gfi8aocnpmok0</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>443488801728-ctlhjv76mqvio5kgjoia6cvop22dhsgk.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC52fWYu0_CVExdWbBtSZVNKj09Pan2LwA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>443488801728</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>academy.skillbridge.skillBridgeMobile</string>
+	<key>PROJECT_ID</key>
+	<string>skillbridge-a947f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>skillbridge-a947f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:443488801728:ios:56b1ca308eb8868fd1ae25</string>
+</dict>
+</plist>

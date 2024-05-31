@@ -1,0 +1,30 @@
+{
+    "data": {
+        "dailyQuiz": {
+            "_id": "660b658cde5f27e4c2fdb15a",
+            "day": "2024-04-02T00:00:00.000Z",
+            "description": "Complete daily quiz to earn points!",
+            "departmentId": "64c24df185876fbb3f8dd6c7",
+            "questions": [
+                {
+                    "_id": "65bb4a18f7f7405c3317e6d4",
+                    "description": "Choose the alternative that is most appropriate to complete the dialogue.\n\nYou: Are you married, Zahara?\nZahara:________________",
+                    "choiceA": "Before three years",
+                    "choiceB": "My husband's name is Jemal",
+                    "choiceC": "I'm 30",
+                    "choiceD": "No, I'm not"
+                }
+            ],
+            "createdAt": "2024-04-02T01:55:24.995Z",
+            "updatedAt": "2024-04-02T01:55:24.995Z",
+            "__v": 0
+        },
+        "isSolved": false,
+        "userScore": 0
+    },
+    "success": true,
+    "message": "Daily Quiz retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

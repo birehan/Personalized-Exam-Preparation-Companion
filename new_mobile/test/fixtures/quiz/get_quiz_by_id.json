@@ -1,0 +1,45 @@
+{
+    "data": {
+        "quiz": {
+            "_id": "653925700d8e1130915dc3a0",
+            "name": "Micro Organsm Quiz",
+            "userId": "6538f952957a801dfb5e9c52"
+        },
+        "quizQuestions": [
+            {
+                "question": {
+                    "_id": "653241f65f7b64997bfd5de5",
+                    "description": "Which of the following best describes the structure of HIV?",
+                    "choiceA": "A bundle of genetic material surrounded by a protein coat",
+                    "choiceB": "A single-celled organism with a nucleus",
+                    "choiceC": "A microscopic animal",
+                    "choiceD": "A plant-like organism with chlorophyll",
+                    "answer": "choice_A",
+                    "explanation": "HIV is a retrovirus that contains two copies of single-stranded RNA and is surrounded by a protein coat, which fits the description in choice_A. The remaining choices do not correctly describe the structure of HIV.",
+                    "difficulty": 9,
+                    "isForQuiz": true,
+                    "chapterId": "6530de97128c1e08e946defb",
+                    "courseId": "6530d7be128c1e08e946dee6",
+                    "subChapterId": "6530e4b2128c1e08e946df7e",
+                    "createdAt": "2023-10-20T08:59:59.000Z",
+                    "updatedAt": "2023-10-20T08:59:59.000Z",
+                    "isForMock": false,
+                    "departmentId": "64c24df185876fbb3f8dd6c7",
+                    "relatedTopic": "Grade 12 Biology Micro-organisms What are viruses?",
+                    "adminApproval": true,
+                    "isLiked": true
+                },
+                "userAnswer": {
+                    "userId": "6538f952957a801dfb5e9c52",
+                    "questionId": "653241f65f7b64997bfd5de5",
+                    "userAnswer": "choice_E"
+                }
+            }
+        ]
+    },
+    "success": true,
+    "message": "Quiz retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

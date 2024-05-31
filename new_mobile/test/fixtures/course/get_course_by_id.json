@@ -1,0 +1,51 @@
+{
+    "data": {
+        "course": {
+            "_id": "65a0f2a1938f09b54fca2b11",
+            "name": "Physics",
+            "grade": 12,
+            "description": "This course explores Grade 12 Physics , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+            "ECTS": 10,
+            "referenceBook": "Grade 12 Physics",
+            "noOfChapters": 8,
+            "departmentId": {
+                "name": "Natural Science"
+            },
+            "createdAt": "2024-01-12T08:03:26.000Z",
+            "updatedAt": "2024-01-12T08:03:26.000Z",
+            "image": null,
+            "curriculum": true
+        },
+        "userChapterAnalysis": [
+            {
+                "_id": "65a0f2a1938f09b54fca2b11",
+                "chapter": {
+                    "_id": "65a0f6a3938f09b54fca2b1c",
+                    "name": "Application of physics in other fields",
+                    "description": "NONE",
+                    "summary": "NONE",
+                    "order": 1,
+                    "courseId": "65a0f2a1938f09b54fca2b11",
+                    "noOfSubChapters": 1,
+                    "createdAt": "2024-01-12T08:20:29.000Z",
+                    "updatedAt": "2024-03-14T07:47:55.526Z"
+                },
+                "completedSubChapters": 0,
+                "subChapters": [
+                    {
+                        "_id": "65a0f8ea938f09b54fca2b5c",
+                        "name": "Physics and Other Sciences",
+                        "chapterId": "65a0f6a3938f09b54fca2b1c",
+                        "order": 1,
+                        "isCompleted": false
+                    }
+                ]
+            }            
+        ]
+    },
+    "success": true,
+    "message": "Course retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

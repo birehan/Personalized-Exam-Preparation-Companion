@@ -1,0 +1,20 @@
+{
+    "data": {
+        "userDailyStreak": [
+            {
+                "date": "2024-01-09T00:00:00.000Z",
+                "activeOnDay": false
+            }
+        ],
+        "totalStreak": {
+            "maxStreak": 0,
+            "currentStreak": 0,
+            "points": 0
+        }
+    },
+    "success": true,
+    "message": "User streak retrieved successfully",
+    "errors": [
+        null
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "data": {
+        "examDates": [
+            {
+                "_id": "649be3c293194f83430b3cba",
+                "date": "10/7/2023",
+                "createdAt": "2023-06-28T07:39:46.121Z",
+                "updatedAt": "2023-06-28T07:39:46.121Z",
+                "__v": 0
+            }
+        ]
+    },
+    "success": true,
+    "message": "Exam Dates retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

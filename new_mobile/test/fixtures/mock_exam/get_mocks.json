@@ -1,0 +1,26 @@
+{
+    "data": {
+        "mocks": [
+            {
+                "_id": "6538db5f48753d97e4ea2459",
+                "name": "Civics Entrance Exam",
+                "subject": "Civics",
+                "isStandard": true,
+                "examYear": "2013",
+                "questions": [
+                    "6538b7b48a99822eeb9e9521"
+                ],
+                "departmentId": "64c24df185876fbb3f8dd6c7",
+                "createdAt": "2023-10-25T09:09:51.596Z",
+                "updatedAt": "2023-12-13T07:24:21.327Z",
+                "__v": 0,
+                "adminApproval": false
+            }
+        ]
+    },
+    "success": true,
+    "message": "Mocks retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

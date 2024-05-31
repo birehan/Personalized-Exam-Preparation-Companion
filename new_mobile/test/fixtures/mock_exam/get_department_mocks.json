@@ -1,0 +1,23 @@
+{
+    "data": {
+        "departmentMocks": [
+            {
+                "_id": "Chemistry",
+                "mocks": [
+                    {
+                        "_id": "64e371ff3e07594c36cda753",
+                        "name": "Chemistry Enterance Exam | 2022/2024",
+                        "examYear": "2022/2023",
+                        "questions": 71,
+                        "departmentId": "64c24df185876fbb3f8dd6c7"
+                    }
+                ]
+            }       
+        ]
+    },
+    "success": true,
+    "message": "Mocks retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

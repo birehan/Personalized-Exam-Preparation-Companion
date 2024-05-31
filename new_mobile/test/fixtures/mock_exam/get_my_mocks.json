@@ -1,0 +1,21 @@
+{
+    "data": {
+        "allUserMocks": [
+            {
+                "mock": {
+                    "_id": "65409e4655ae50031e35167b",
+                    "name": "Mathematics Entrance Exam 2",
+                    "questions": 53,
+                    "departmentId": "64c24df185876fbb3f8dd6c7"
+                },
+                "completed": false,
+                "score": 0
+            }
+        ]
+    },
+    "success": true,
+    "message": "User mocks retrieved successfully!",
+    "errors": [
+        null
+    ]
+}
