@@ -58,7 +58,7 @@ class DailyQuestWidget extends StatelessWidget {
                     (index) => Container(
                       margin: EdgeInsets.only(bottom: 2.h),
                       // child: _dailyQuestCardShimmer(),
-                      child: DailyQuestCard(
+                      child: index == 0 || index == 2? Container() : DailyQuestCard(
                         title:
                             "${dailyQuests[index].challenge[0].toUpperCase()}${dailyQuests[index].challenge.substring(1).toLowerCase()}",
                         taskDesciption: AppLocalizations.of(context)!.completed,

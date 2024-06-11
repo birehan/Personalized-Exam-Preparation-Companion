@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 MyCoursesPage(tabIndex: tabIndex),
                 const DynamicHomePage(),
                 const ExamsPage(),
-                const UserLeaderboardPage(),
+                // const UserLeaderboardPage(),
               ],
             ),
             if ((isOfflineWidgetShown == isOffline) && isOffline)
@@ -135,20 +135,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ActiveBttomNavWidget(icon: courseIcon),
             ActiveBttomNavWidget(icon: homeIcon),
             ActiveBttomNavWidget(icon: examsIcon),
-            ActiveBttomNavWidget(icon: leaderboardIcon),
+            // ActiveBttomNavWidget(icon: leaderboardIcon),
           ],
           inactiveIcons: [
-            BottomNavCard(
-                icon: contestIcon, text: AppLocalizations.of(context)!.contest),
+            const BottomNavCard(
+                icon: contestIcon, text: "Recommended"),
+                // AppLocalizations.of(context)!.contest),
             BottomNavCard(
                 icon: courseIcon, text: AppLocalizations.of(context)!.courses),
             BottomNavCard(
                 icon: homeIcon, text: AppLocalizations.of(context)!.home),
             BottomNavCard(
                 icon: examsIcon, text: AppLocalizations.of(context)!.exams),
-            BottomNavCard(
-                icon: leaderboardIcon,
-                text: AppLocalizations.of(context)!.leaderboard),
+            // BottomNavCard(
+            //     icon: leaderboardIcon,
+            //     text: AppLocalizations.of(context)!.leaderboard),
           ],
           color: Colors.white,
           height: 8.h,
