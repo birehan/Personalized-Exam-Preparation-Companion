@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    _currentIndex = widget.index != null ? int.parse(widget.index!) : 2;
+    _currentIndex = widget.index != null ? int.parse(widget.index!) : 0;
     _pageController = PageController(initialPage: _currentIndex);
   }
 
@@ -109,10 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
               onPageChanged: _onPageChanged,
               physics: const NeverScrollableScrollPhysics(),
               children: [
-                const ContestsMainPage(),
-                MyCoursesPage(tabIndex: tabIndex),
                 const DynamicHomePage(),
+                MyCoursesPage(tabIndex: tabIndex),
                 const ExamsPage(),
+                const ContestsMainPage(),
                 // const UserLeaderboardPage(),
               ],
             ),
@@ -131,21 +131,21 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         bottomNavigationBar: CircleNavBar(
           activeIcons: const [
-            ActiveBttomNavWidget(icon: contestIcon),
-            ActiveBttomNavWidget(icon: courseIcon),
             ActiveBttomNavWidget(icon: homeIcon),
+            ActiveBttomNavWidget(icon: courseIcon),
             ActiveBttomNavWidget(icon: examsIcon),
+            ActiveBttomNavWidget(icon: contestIcon),
             // ActiveBttomNavWidget(icon: leaderboardIcon),
           ],
           inactiveIcons: [
-            const BottomNavCard(icon: contestIcon, text: "Recommended"),
-            // AppLocalizations.of(context)!.contest),
-            BottomNavCard(
-                icon: courseIcon, text: AppLocalizations.of(context)!.courses),
             BottomNavCard(
                 icon: homeIcon, text: AppLocalizations.of(context)!.home),
             BottomNavCard(
+                icon: courseIcon, text: AppLocalizations.of(context)!.courses),
+            BottomNavCard(
                 icon: examsIcon, text: AppLocalizations.of(context)!.exams),
+            const BottomNavCard(icon: contestIcon, text: "Recommended"),
+            // AppLocalizations.of(context)!.contest),
             // BottomNavCard(
             //     icon: leaderboardIcon,
             //     text: AppLocalizations.of(context)!.leaderboard),

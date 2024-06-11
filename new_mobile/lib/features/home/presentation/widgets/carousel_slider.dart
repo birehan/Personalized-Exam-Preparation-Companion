@@ -88,7 +88,7 @@ class _CarouselSliderForUpcommingEventsState
               height: 10.h,
               enlargeCenterPage: true,
 
-              viewportFraction: 1.006,
+              viewportFraction: 1.05,
               // enableInfiniteScroll: true,
               autoPlay: _carouselItems.length > 1,
               onPageChanged: (index, reason) {
