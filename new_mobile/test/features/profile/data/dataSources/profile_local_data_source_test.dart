@@ -5,11 +5,11 @@
 // import 'package:hive_flutter/hive_flutter.dart';
 // import 'package:mockito/annotations.dart';
 // import 'package:mockito/mockito.dart';
-// import 'package:skill_bridge_mobile/core/constants/hive_boxes.dart';
-// import 'package:skill_bridge_mobile/core/error/exeption_to_failure_map.dart';
-// import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
-// import 'package:skill_bridge_mobile/features/authentication/data/models/user_credential_model.dart';
-// import 'package:skill_bridge_mobile/features/profile/data/datasources/profile_local_data_source.dart';
+// import 'package:prep_genie/core/constants/hive_boxes.dart';
+// import 'package:prep_genie/core/error/exeption_to_failure_map.dart';
+// import 'package:prep_genie/core/utils/hive_boxes.dart';
+// import 'package:prep_genie/features/authentication/data/models/user_credential_model.dart';
+// import 'package:prep_genie/features/profile/data/datasources/profile_local_data_source.dart';
 
 // import '../../../../fixtures/fixture_reader.dart';
 // import '../../../course/data/datasources/course_remote_datasource_test.dart';

@@ -1,20 +1,18 @@
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/quiz/domain/repositories/quiz_repository.dart';
-import 'package:skill_bridge_mobile/features/quiz/domain/usecases/save_quiz_score_usecase.dart';
+import 'package:prep_genie/features/quiz/domain/repositories/quiz_repository.dart';
+import 'package:prep_genie/features/quiz/domain/usecases/save_quiz_score_usecase.dart';
 
 import 'save_quiz_score_usecase_test.mocks.dart';
 
 @GenerateNiceMocks([MockSpec<QuizRepository>()])
-
-void main(){
+void main() {
   late SaveQuizScoreUsecase usecase;
   late MockQuizRepository mockQuizRepository;
 
-   setUp(() {
+  setUp(() {
     mockQuizRepository = MockQuizRepository();
     usecase = SaveQuizScoreUsecase(mockQuizRepository);
   });
@@ -22,13 +20,14 @@ void main(){
   const tId = "test id";
   const score = 3;
 
-   test(
+  test(
     "Should save quize score from repository",
     () async {
       when(mockQuizRepository.saveQuizScore(quizId: tId, score: score))
           .thenAnswer((_) async => const Right(unit));
 
-      final result = await usecase.call(const SaveQuizScoreParams(quizId: tId, score: score));
+      final result = await usecase
+          .call(const SaveQuizScoreParams(quizId: tId, score: score));
 
       expect(result, const Right(unit));
 
@@ -38,4 +37,3 @@ void main(){
     },
   );
 }
-

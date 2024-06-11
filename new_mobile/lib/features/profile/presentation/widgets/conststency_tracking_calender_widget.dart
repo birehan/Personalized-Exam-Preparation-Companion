@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
 
 class ConsistencyTrackingCalenderWidget extends StatelessWidget {
   final String month;

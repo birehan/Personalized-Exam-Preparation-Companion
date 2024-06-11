@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/course/course.dart';
+import 'package:prep_genie/features/course/course.dart';
 
 import '../../../../../core/core.dart';
 import '../../../../features.dart';

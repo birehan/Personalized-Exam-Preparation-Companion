@@ -1,14 +1,14 @@
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/all_barchart_categories_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/change_password_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/change_username_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_profile_entity_get.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
+import 'package:prep_genie/features/profile/domain/entities/all_barchart_categories_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/change_password_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/change_username_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/profile_update_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prep_genie/features/profile/domain/entities/user_profile_entity_get.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
 
 import '../../../../core/error/failure.dart';
 import '../../../features.dart';

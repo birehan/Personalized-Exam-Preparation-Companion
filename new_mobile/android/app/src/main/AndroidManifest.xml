@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="academy.skillbridge.skill_bridge_mobile">
+    package="com.prepgenie.prep_genie">
    
    
    <uses-permission android:name="android.permission.INTERNET" />
@@ -37,7 +37,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data
-                    android:host="academy.skillbridge.skill_bridge_mobile"
+                    android:host="com.prepgenie.prep_genie"
                     android:scheme="https"/>
             </intent-filter>
         </activity>

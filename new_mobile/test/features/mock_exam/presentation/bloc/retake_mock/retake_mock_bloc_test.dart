@@ -2,21 +2,17 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/mock_exam.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/mock_exam/mock_exam.dart';
 
 import 'retake_mock_bloc_test.mocks.dart';
 
-
 @GenerateNiceMocks([
-  MockSpec<RetakeMockUsecase>(),  
+  MockSpec<RetakeMockUsecase>(),
 ])
-
-
-void main(){
+void main() {
   late RetakeMockBloc bloc;
   late MockRetakeMockUsecase mockRetakeMockUsecase;
-
 
   setUp(() {
     mockRetakeMockUsecase = MockRetakeMockUsecase();
@@ -27,7 +23,7 @@ void main(){
     test('should get data from the get department mocks usecase', () async {
       // arrange
       when(mockRetakeMockUsecase(any))
-          .thenAnswer((_) async =>  const Right(unit));
+          .thenAnswer((_) async => const Right(unit));
       // act
       bloc.add(const RetakeMockEvent(mockId: tId));
 
@@ -41,10 +37,7 @@ void main(){
       when(mockRetakeMockUsecase(any))
           .thenAnswer((_) async => const Right(unit));
       // assert later
-      final expected = [
-        RetakeMockLoading(),
-        RetakeMockLoaded()
-      ];
+      final expected = [RetakeMockLoading(), RetakeMockLoaded()];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(const RetakeMockEvent(mockId: tId));
@@ -56,7 +49,7 @@ void main(){
       // assert later
       final expected = [
         RetakeMockLoading(),
-        const RetakeMockFailed(errorMessage: "Server failure" )
+        const RetakeMockFailed(errorMessage: "Server failure")
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
@@ -66,7 +59,8 @@ void main(){
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
         () async {
       // arrange
-      when(mockRetakeMockUsecase(any)).thenAnswer((_) async => Left(CacheFailure()));
+      when(mockRetakeMockUsecase(any))
+          .thenAnswer((_) async => Left(CacheFailure()));
       // assert later
       final expected = [
         RetakeMockLoading(),
@@ -77,5 +71,4 @@ void main(){
       bloc.add(const RetakeMockEvent(mockId: tId));
     });
   });
-  
 }

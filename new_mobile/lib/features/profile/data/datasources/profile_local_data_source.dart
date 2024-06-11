@@ -4,8 +4,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive/hive.dart';
-import 'package:skill_bridge_mobile/core/constants/hive_boxes.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/user_profile_model.dart';
+import 'package:prep_genie/core/constants/hive_boxes.dart';
+import 'package:prep_genie/features/profile/data/models/user_profile_model.dart';
 import '../../../features.dart';
 
 import '../../../../core/constants/app_keys.dart';

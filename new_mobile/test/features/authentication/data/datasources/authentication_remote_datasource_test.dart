@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/error/exception.dart';
-import 'package:skill_bridge_mobile/features/authentication/authentication.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/error/exception.dart';
+import 'package:prep_genie/features/authentication/authentication.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import '../../../contest/data/datasources/contest_remote_datasources_test.mocks.dart'

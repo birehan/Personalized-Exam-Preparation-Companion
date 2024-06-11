@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
@@ -20,9 +20,7 @@ void main() {
       explanation: "The sum of an arithmetic series is given by the formula",
       userId: "",
       userAnswer: "",
-      relatedTopic: ""
-      );
-
+      relatedTopic: "");
 
   const dailyQuizQuestions = DailyQuizQuestionModel(
     id: "653cb1f54535227899808924",

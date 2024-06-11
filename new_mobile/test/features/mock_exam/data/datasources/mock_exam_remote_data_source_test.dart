@@ -4,9 +4,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:http/http.dart' as http;
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/error/exception.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/error/exception.dart';
+import 'package:prep_genie/features/features.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import '../../../contest/data/datasources/contest_remote_datasources_test.mocks.dart';
@@ -167,7 +167,7 @@ void main() {
 
       final call = remoteDatasource.getMockById;
 
-      expect(() async => await call('6538db5f48753d97e4ea2459',0),
+      expect(() async => await call('6538db5f48753d97e4ea2459', 0),
           throwsA(const TypeMatcher<RequestOverloadException>()));
     });
   });
@@ -216,8 +216,10 @@ void main() {
           .thenAnswer((_) async => http.Response('Too Many Request', 429));
 
       final call = remoteDatasource.getDepartmentMocks;
-  expect(() async => await call('64c24df185876fbb3f8dd6c7',true), // Invoke the 'call' function using parentheses
-      throwsA(const TypeMatcher<RequestOverloadException>()));
+      expect(
+          () async => await call('64c24df185876fbb3f8dd6c7',
+              true), // Invoke the 'call' function using parentheses
+          throwsA(const TypeMatcher<RequestOverloadException>()));
     });
   });
 

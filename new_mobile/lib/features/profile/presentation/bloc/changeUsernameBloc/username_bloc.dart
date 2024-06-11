@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/change_username_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/change_user_avatar_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/change_username_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
+import 'package:prep_genie/features/profile/domain/entities/change_username_entity.dart';
+import 'package:prep_genie/features/profile/domain/usecases/change_user_avatar_usecase.dart';
+import 'package:prep_genie/features/profile/domain/usecases/change_username_usecase.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
 import '../../../../../core/error/failure.dart';
 import 'package:dartz/dartz.dart';
 

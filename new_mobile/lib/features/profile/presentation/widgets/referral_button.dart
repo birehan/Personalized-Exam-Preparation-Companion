@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:skill_bridge_mobile/core/utils/create_links.dart';
-import 'package:skill_bridge_mobile/core/widgets/progress_indicator2.dart';
+import 'package:prep_genie/core/utils/create_links.dart';
+import 'package:prep_genie/core/widgets/progress_indicator2.dart';
 
 class ReferalButton extends StatefulWidget {
   const ReferalButton({

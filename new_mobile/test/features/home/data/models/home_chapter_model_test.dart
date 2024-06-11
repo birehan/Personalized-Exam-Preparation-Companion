@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/home/data/models/home_chapter_model.dart';
-
+import 'package:prep_genie/features/home/data/models/home_chapter_model.dart';
 
 void main() {
   group('HomeChapterModel', () {

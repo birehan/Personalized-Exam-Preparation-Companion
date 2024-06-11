@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/top_ranked_profiles.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/top_ranked_profiles.dart';
 
 class TopRankedDetail extends StatelessWidget {
   const TopRankedDetail(

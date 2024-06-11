@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_school_info_usecase.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_school_info_usecase.dart';
 
 part 'school_event.dart';
 part 'school_state.dart';

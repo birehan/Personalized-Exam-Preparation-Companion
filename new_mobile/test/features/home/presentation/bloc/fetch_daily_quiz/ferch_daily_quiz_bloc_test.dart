@@ -1,9 +1,9 @@
 import 'package:mockito/annotations.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
+import 'package:prep_genie/core/error/failure.dart';
 
 import 'ferch_daily_quiz_bloc_test.mocks.dart';
 
@@ -17,7 +17,11 @@ void main() {
     bloc = FetchDailyQuizBloc(fetchDailyQuizUsecase: mockFetchDailyQuizUsecase);
   });
 
-   const dailyQuiz = DailyQuiz(id: "id", description: "description", dailyQuizQuestions: [], userScore: 3);
+  const dailyQuiz = DailyQuiz(
+      id: "id",
+      description: "description",
+      dailyQuizQuestions: [],
+      userScore: 3);
   group('_onFetchDailyQuiz', () {
     test('should get data from the fetch daily quiz usecase', () async {
       // arrange

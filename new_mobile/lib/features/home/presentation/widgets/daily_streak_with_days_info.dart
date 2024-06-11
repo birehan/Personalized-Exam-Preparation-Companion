@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/utils/same_day.dart';
-import 'package:skill_bridge_mobile/features/home/domain/entities/user_daily_streak.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/bloc/fetch_daily_streak/fetch_daily_streak_bloc.dart';
+import 'package:prep_genie/core/utils/same_day.dart';
+import 'package:prep_genie/features/home/domain/entities/user_daily_streak.dart';
+import 'package:prep_genie/features/home/presentation/bloc/fetch_daily_streak/fetch_daily_streak_bloc.dart';
 
 class DailyStreakWithDaysWidget extends StatelessWidget {
   const DailyStreakWithDaysWidget({

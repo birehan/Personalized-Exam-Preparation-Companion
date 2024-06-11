@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:skill_bridge_mobile/core/utils/map_of_location_name.dart';
-import 'package:skill_bridge_mobile/core/widgets/floating_button.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/pages/general_chat_page.dart';
+import 'package:prep_genie/core/utils/map_of_location_name.dart';
+import 'package:prep_genie/core/widgets/floating_button.dart';
+import 'package:prep_genie/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
+import 'package:prep_genie/features/question/presentation/pages/general_chat_page.dart';
 
 class DraggableWidget extends StatelessWidget {
   const DraggableWidget({

@@ -1,9 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 
 import '../../../features.dart';
 
-class FetchDownloadedMocksUsecase extends UseCase<List<DownloadedUserMock>, NoParams> {
+class FetchDownloadedMocksUsecase
+    extends UseCase<List<DownloadedUserMock>, NoParams> {
   final MockExamRepository repository;
 
   FetchDownloadedMocksUsecase({
@@ -11,7 +12,8 @@ class FetchDownloadedMocksUsecase extends UseCase<List<DownloadedUserMock>, NoPa
   });
 
   @override
-  Future<Either<Failure, List<DownloadedUserMock>>> call(NoParams params) async {
+  Future<Either<Failure, List<DownloadedUserMock>>> call(
+      NoParams params) async {
     return await repository.fetchDownloadedMocks();
   }
 }

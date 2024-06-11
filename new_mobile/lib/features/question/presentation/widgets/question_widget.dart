@@ -4,7 +4,7 @@ import 'package:markdown_widget/markdown_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:skill_bridge_mobile/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 import '../../../../core/core.dart';
 import '../../../bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
@@ -203,7 +203,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                             context: context,
                             builder: (BuildContext context) {
                               return FlagDialog(
-                                originalContext:originalContext,
+                                originalContext: originalContext,
                                 index: 0,
                                 id: widget.question.id,
                                 feedbackType: FeedbackType.questionFeedback,

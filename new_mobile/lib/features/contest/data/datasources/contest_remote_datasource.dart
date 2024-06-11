@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/core.dart';
 
 import '../../../features.dart';
 
@@ -105,7 +105,7 @@ class ContestRemoteDatasourceImpl extends ContestRemoteDatasource {
         return ContestModel.fromJson(data);
       } else if (response.statusCode == 429) {
         throw RequestOverloadException(errorMessage: 'Too Many Request');
-      }  else {
+      } else {
         throw ServerException();
       }
     } catch (e) {

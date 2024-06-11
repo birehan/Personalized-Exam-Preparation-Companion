@@ -1,7 +1,7 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
-import 'package:skill_bridge_mobile/injection_container.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/utils/hive_boxes.dart';
+import 'package:prep_genie/injection_container.dart';
 
 import 'exception.dart';
 import 'failure.dart';
@@ -24,8 +24,9 @@ Future<Failure> mapExceptionToFailure(dynamic e) async {
   } else if (e is AuthenticationException) {
     return AuthenticationFailure(errorMessage: e.errorMessage);
   } else if (e is RequestOverloadException) {
-    return RequestOverloadFailure(errorMessage: "Too many request. Please wait a moment and try again.");
-  }else {
+    return RequestOverloadFailure(
+        errorMessage: "Too many request. Please wait a moment and try again.");
+  } else {
     return AnonymousFailure();
   }
 }

@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
+import 'package:prep_genie/features/bookmarks/domain/domain.dart';
 
 import '../../../../core/core.dart';
 import '../bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
@@ -86,7 +86,7 @@ class _BookmarkedContentPageState extends State<BookmarkedContentPage> {
                           : const Icon(Icons.bookmark_outline),
                       onPressed: () {
                         String contentId = widget.bookmarkedContent.content.id;
-                        
+
                         //! Should their be error handling here?
                         if (isBookmarked) {
                           context.read<DeleteContentBookmarkBloc>().add(

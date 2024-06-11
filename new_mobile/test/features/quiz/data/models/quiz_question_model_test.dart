@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/question/data/models/question_model.dart';
-import 'package:skill_bridge_mobile/features/question/data/models/user_answer_model.dart';
-import 'package:skill_bridge_mobile/features/quiz/quiz.dart';
+import 'package:prep_genie/features/question/data/models/question_model.dart';
+import 'package:prep_genie/features/question/data/models/user_answer_model.dart';
+import 'package:prep_genie/features/quiz/quiz.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 

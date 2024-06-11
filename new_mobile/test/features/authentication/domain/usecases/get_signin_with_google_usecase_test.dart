@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/get_signin_with_google_usecase.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/authentication/domain/usecases/get_signin_with_google_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 
@@ -12,20 +12,23 @@ void main() {
 
   setUp(() {
     mockRepository = MockAuthenticationRepository();
-    getSignInWithGoogleUsecase = GetSignInWithGoogleUsecase(repository: mockRepository);
+    getSignInWithGoogleUsecase =
+        GetSignInWithGoogleUsecase(repository: mockRepository);
   });
 
   group('GetSignInWithGoogleUsecase', () {
-    test('should call the repository to check if signed in with Google', () async {
+    test('should call the repository to check if signed in with Google',
+        () async {
       // Arrange
 
       // Act
-      when(mockRepository.isAuthenticatedWithGoogle()).thenAnswer((_) async =>const Right(true));
+      when(mockRepository.isAuthenticatedWithGoogle())
+          .thenAnswer((_) async => const Right(true));
 
       final result = await getSignInWithGoogleUsecase(NoParams());
 
       // Assert
-      expect(result, equals(const Right(true))); 
+      expect(result, equals(const Right(true)));
       verify(mockRepository.isAuthenticatedWithGoogle());
       verifyNoMoreInteractions(mockRepository);
     });

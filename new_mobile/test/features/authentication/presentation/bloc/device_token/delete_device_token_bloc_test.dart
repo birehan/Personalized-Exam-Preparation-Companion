@@ -2,23 +2,20 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'delete_device_token_bloc_test.mocks.dart';
 
-
-@GenerateNiceMocks([
-  MockSpec<DeleteDeviceTokenUsecase>() 
-])
-
+@GenerateNiceMocks([MockSpec<DeleteDeviceTokenUsecase>()])
 void main() {
   late DeleteDeviceTokenBloc bloc;
   late DeleteDeviceTokenUsecase deleteDeviceTokenUsecase;
 
   setUp(() {
     deleteDeviceTokenUsecase = MockDeleteDeviceTokenUsecase();
-    bloc = DeleteDeviceTokenBloc(deleteDeviceTokenUsecase: deleteDeviceTokenUsecase);
+    bloc = DeleteDeviceTokenBloc(
+        deleteDeviceTokenUsecase: deleteDeviceTokenUsecase);
   });
 
   group('_deleteDeviceToken', () {
@@ -39,10 +36,7 @@ void main() {
       when(deleteDeviceTokenUsecase(NoParams()))
           .thenAnswer((_) async => const Right(unit));
       // assert later
-      final expected = [
-        DeleteDeviceTokenLoading(),
-         DeleteDeviceTokenLoaded()
-      ];
+      final expected = [DeleteDeviceTokenLoading(), DeleteDeviceTokenLoaded()];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(const DeleteDeviceTokenEvent());
@@ -52,7 +46,10 @@ void main() {
       when(deleteDeviceTokenUsecase(NoParams()))
           .thenAnswer((_) async => Left(ServerFailure()));
       // assert later
-      final expected = [DeleteDeviceTokenLoading(), const DeleteDeviceTokenFailed(message: "Server failure")];
+      final expected = [
+        DeleteDeviceTokenLoading(),
+        const DeleteDeviceTokenFailed(message: "Server failure")
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(const DeleteDeviceTokenEvent());
@@ -61,9 +58,13 @@ void main() {
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
         () async {
       // arrange
-      when(deleteDeviceTokenUsecase(NoParams())).thenAnswer((_) async => Left(CacheFailure()));
+      when(deleteDeviceTokenUsecase(NoParams()))
+          .thenAnswer((_) async => Left(CacheFailure()));
       // assert later
-      final expected = [DeleteDeviceTokenLoading(), const DeleteDeviceTokenFailed(message: "Cache failure")];
+      final expected = [
+        DeleteDeviceTokenLoading(),
+        const DeleteDeviceTokenFailed(message: "Cache failure")
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(const DeleteDeviceTokenEvent());

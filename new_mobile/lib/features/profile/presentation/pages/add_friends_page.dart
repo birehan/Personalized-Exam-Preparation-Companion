@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/constants/dummydata.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/profiles_listing_card.dart';
+import 'package:prep_genie/core/constants/dummydata.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/profiles_listing_card.dart';
 
 class AddFriendsPage extends StatefulWidget {
   const AddFriendsPage({super.key});

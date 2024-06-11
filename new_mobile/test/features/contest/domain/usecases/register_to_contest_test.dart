@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/regster_to_contest.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/contest/domain/usecases/regster_to_contest.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'fetch_upcoming_user_contest_usecase_test.mocks.dart';
 
@@ -33,13 +33,16 @@ void main() {
   test('should get registerToContest by calling ContestRegstrationUsecase',
       () async {
     // arrange
-    when(mockContestRepository.registerUserToContest('6593b3b08a65e3bd7982fde9'))
+    when(mockContestRepository
+            .registerUserToContest('6593b3b08a65e3bd7982fde9'))
         .thenAnswer((_) async => Right(contest));
     // act
-    final result = await usecase(ContestRegistrationParams(contestId: '6593b3b08a65e3bd7982fde9'));
+    final result = await usecase(
+        ContestRegistrationParams(contestId: '6593b3b08a65e3bd7982fde9'));
     // assert
     expect(result, Right(contest));
-    verify(mockContestRepository.registerUserToContest('6593b3b08a65e3bd7982fde9'));
+    verify(mockContestRepository
+        .registerUserToContest('6593b3b08a65e3bd7982fde9'));
     verifyNoMoreInteractions(mockContestRepository);
   });
 }

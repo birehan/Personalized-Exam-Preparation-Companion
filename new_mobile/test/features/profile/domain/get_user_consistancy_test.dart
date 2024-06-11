@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_user_consistancy_data.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_user_consistancy_data.dart';
 
 import 'get_profile_usecase_test.mocks.dart';
 

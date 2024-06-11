@@ -1,9 +1,9 @@
 import 'package:mockito/annotations.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
+import 'package:prep_genie/core/error/failure.dart';
 
 import 'fetch_daily_quiz_for_analysis_bloc_test.mocks.dart';
 
@@ -59,7 +59,8 @@ void main() {
       // assert later
       final expected = [
         FetchDailyQuizForAnalysisLoading(),
-         FetchDailyQuizForAnalysisFailed(errorMessage: "Server failure", failure: ServerFailure())
+        FetchDailyQuizForAnalysisFailed(
+            errorMessage: "Server failure", failure: ServerFailure())
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
@@ -74,7 +75,8 @@ void main() {
       // assert later
       final expected = [
         FetchDailyQuizForAnalysisLoading(),
-         FetchDailyQuizForAnalysisFailed(errorMessage: "Cache failure", failure: CacheFailure())
+        FetchDailyQuizForAnalysisFailed(
+            errorMessage: "Cache failure", failure: CacheFailure())
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act

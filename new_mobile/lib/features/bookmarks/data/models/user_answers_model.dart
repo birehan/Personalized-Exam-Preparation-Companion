@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 
 class UserAnswersModel extends UserAnswer {
   const UserAnswersModel({

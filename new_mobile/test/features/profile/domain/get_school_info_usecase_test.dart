@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/usecase/usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/department_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_school_info_usecase.dart';
+import 'package:prep_genie/core/usecase/usecase.dart';
+import 'package:prep_genie/features/profile/domain/entities/department_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/school_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_school_info_usecase.dart';
 
 import 'get_profile_usecase_test.mocks.dart';
 

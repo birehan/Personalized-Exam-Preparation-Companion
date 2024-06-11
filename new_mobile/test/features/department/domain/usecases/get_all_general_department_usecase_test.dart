@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'get_all_general_department_usecase_test.mocks.dart';
 

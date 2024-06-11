@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
+import 'package:prep_genie/core/widgets/noInternet.dart';
 
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';

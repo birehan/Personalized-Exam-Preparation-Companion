@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/utils/hive_boxes.dart';
 
 import '../../../../core/core.dart';
 import '../../../features.dart';
@@ -129,11 +129,11 @@ class HomeRepositoryImpl extends HomeRepository {
     try {
       final dailyQuiz = await remoteDatasource.fetchDailyQuizForAnalysis(id);
       return Right(dailyQuiz);
-    // } on AuthenticationException {
-    //   await flutterSecureStorage.delete(key: authenticationKey);
-    //   return Left(
-    //     AuthenticationFailure(errorMessage: 'Token invalid or expired'),
-    //   );
+      // } on AuthenticationException {
+      //   await flutterSecureStorage.delete(key: authenticationKey);
+      //   return Left(
+      //     AuthenticationFailure(errorMessage: 'Token invalid or expired'),
+      //   );
     } catch (e) {
       return Left(await mapExceptionToFailure(e));
     }
@@ -148,7 +148,7 @@ class HomeRepositoryImpl extends HomeRepository {
     try {
       await remoteDatasource.submitDailyQuizAnswer(dailyQuizAnswer);
       return const Right(unit);
-    } catch(e) {
+    } catch (e) {
       return Left(await mapExceptionToFailure(e));
     }
   }

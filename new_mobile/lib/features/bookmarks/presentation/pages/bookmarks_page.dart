@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/bookmarks/domain/domain.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/utils/snack_bar.dart';
@@ -85,53 +85,55 @@ class _BookmarksPageState extends State<BookmarksPage> {
                               .add(GetBookmarksEvent());
                         },
                       );
-                    }else if (state.failure is RequestOverloadFailure) {
-                return Padding(
-                 padding: EdgeInsets.fromLTRB(
-                    MediaQuery.of(context).size.width *
-                        0.10, // 5% of screen width
-                    MediaQuery.of(context).size.height *
-                        0.25, // 25% of screen height
-                    MediaQuery.of(context).size.width *
-                        0.10, // 5% of screen width
-                    MediaQuery.of(context).size.height *
-                        0.25, // 25% of screen height
-                  ),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Center(
-                          child: Text(
-                            '${state.failure.errorMessage} 🙏',
-                            style: GoogleFonts.poppins(
-                              color: const Color(0xFF797979),
-                              fontSize: 13,
-                              fontWeight: FontWeight.w400,
-                            ),
+                    } else if (state.failure is RequestOverloadFailure) {
+                      return Padding(
+                        padding: EdgeInsets.fromLTRB(
+                          MediaQuery.of(context).size.width *
+                              0.10, // 5% of screen width
+                          MediaQuery.of(context).size.height *
+                              0.25, // 25% of screen height
+                          MediaQuery.of(context).size.width *
+                              0.10, // 5% of screen width
+                          MediaQuery.of(context).size.height *
+                              0.25, // 25% of screen height
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              Center(
+                                child: Text(
+                                  '${state.failure.errorMessage} 🙏',
+                                  style: GoogleFonts.poppins(
+                                    color: const Color(0xFF797979),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              IconButton(
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                      const Color(0xFF18786A)),
+                                ),
+                                icon: const Icon(
+                                  Icons.refresh,
+                                  color: Colors.white,
+                                  // size: 18,
+                                ),
+                                onPressed: () {
+                                  context
+                                      .read<BookmarksBlocBloc>()
+                                      .add(GetBookmarksEvent());
+                                },
+                              ),
+                            ],
                           ),
                         ),
-                        IconButton(
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                const Color(0xFF18786A)),
-                          ),
-                          icon: const Icon(
-                            Icons.refresh,
-                            color: Colors.white,
-                            // size: 18,
-                          ),
-                          onPressed: () {
-                           context.read<BookmarksBlocBloc>().add(GetBookmarksEvent());
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-             
-              }
+                      );
+                    }
                     return Center(
-                      child: Text(AppLocalizations.of(context)!.unkown_error_happened),
+                      child: Text(
+                          AppLocalizations.of(context)!.unkown_error_happened),
                     );
                   } else if (state is BookmarksLoadingState) {
                     return _BookmarksLoadingShimmer();
@@ -177,7 +179,8 @@ class _BookmarksPageState extends State<BookmarksPage> {
                         if (_tabIndex == 0)
                           contents.isEmpty
                               ? EmptyListWidget(
-                                  message: AppLocalizations.of(context)!.no_bookmark)
+                                  message:
+                                      AppLocalizations.of(context)!.no_bookmark)
                               : Expanded(
                                   child: RefreshIndicator(
                                     onRefresh: () async {
@@ -202,7 +205,8 @@ class _BookmarksPageState extends State<BookmarksPage> {
                         if (_tabIndex == 1)
                           questions.isEmpty
                               ? EmptyListWidget(
-                                  message: AppLocalizations.of(context)!.no_bookmark)
+                                  message:
+                                      AppLocalizations.of(context)!.no_bookmark)
                               : Expanded(
                                   child: RefreshIndicator(
                                     onRefresh: () async {

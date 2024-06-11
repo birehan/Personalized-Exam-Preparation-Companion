@@ -3,12 +3,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/error/exception.dart';
-import 'package:skill_bridge_mobile/features/chapter/domain/entities/sub_chapters_list.dart';
-import 'package:skill_bridge_mobile/features/course/data/models/department_course_model.dart';
-import 'package:skill_bridge_mobile/features/course/data/models/user_course_analysis_model.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/error/exception.dart';
+import 'package:prep_genie/features/chapter/domain/entities/sub_chapters_list.dart';
+import 'package:prep_genie/features/course/data/models/department_course_model.dart';
+import 'package:prep_genie/features/course/data/models/user_course_analysis_model.dart';
+import 'package:prep_genie/features/features.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import '../repositories/course_repository_impl_test.mocks.dart';

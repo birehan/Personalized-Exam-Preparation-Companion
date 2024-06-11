@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/widgets/sub_chapter_card_new.dart';
-import 'package:skill_bridge_mobile/features/question/question.dart';
+import 'package:prep_genie/features/course/presentation/widgets/sub_chapter_card_new.dart';
+import 'package:prep_genie/features/question/question.dart';
 import '../../../features.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -119,8 +119,8 @@ class _ChapterCardState extends State<ChapterCard> {
                       text: widget
                           .userChapterAnalysis.subchapters[idx].subChapterName,
                       courseId: widget.course.id,
-                      completed:
-                          widget.userChapterAnalysis.subchapters[idx].isCompleted,
+                      completed: widget
+                          .userChapterAnalysis.subchapters[idx].isCompleted,
                     );
                   },
                 ),

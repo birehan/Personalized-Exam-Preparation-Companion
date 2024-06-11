@@ -5,7 +5,7 @@ import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/widgets/siginin_with_google.dart';
+import 'package:prep_genie/features/authentication/presentation/widgets/siginin_with_google.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/constants/app_keys.dart';
@@ -39,11 +39,10 @@ class _LoginPageState extends State<LoginPage> {
   void dispatchLogin() {
     context.read<AuthenticationBloc>().add(
           LoginEvent(
-            emailOrPhoneNumber: _emailOrPhoneNumberController.text.trim(),
-            password: _passwordController.text,
-            rememberMe: _rememberMe,
-            context: context
-          ),
+              emailOrPhoneNumber: _emailOrPhoneNumberController.text.trim(),
+              password: _passwordController.text,
+              rememberMe: _rememberMe,
+              context: context),
         );
   }
 
@@ -176,13 +175,15 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       controller: _emailOrPhoneNumberController,
                       validator: (emailOrPhoneNumber) {
-                        return validateEmailOrPhoneNumber(emailOrPhoneNumber, context);
+                        return validateEmailOrPhoneNumber(
+                            emailOrPhoneNumber, context);
                       },
                       cursorColor: const Color(0xFF18786A),
                       decoration: InputDecoration(
-                        contentPadding:
-                            const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                        hintText: AppLocalizations.of(context)!.enter_your_email_or_phone_number,
+                        contentPadding: const EdgeInsets.symmetric(
+                            vertical: 6, horizontal: 12),
+                        hintText: AppLocalizations.of(context)!
+                            .enter_your_email_or_phone_number,
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
@@ -219,7 +220,8 @@ class _LoginPageState extends State<LoginPage> {
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 6, horizontal: 12),
-                        hintText: AppLocalizations.of(context)!.enter_your_password,
+                        hintText:
+                            AppLocalizations.of(context)!.enter_your_password,
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
@@ -340,7 +342,7 @@ class _LoginPageState extends State<LoginPage> {
                       ],
                     ),
                     SizedBox(height: 2.h),
-                     SignInWithGoogleWidget(
+                    SignInWithGoogleWidget(
                       text: AppLocalizations.of(context)!.sign_in_with_google,
                     ),
                     const SizedBox(height: 24),

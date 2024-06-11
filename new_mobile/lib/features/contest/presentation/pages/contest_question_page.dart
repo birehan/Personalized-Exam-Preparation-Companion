@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
 
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
@@ -354,7 +354,8 @@ class _ContestQuestionsByCategoryPageState
                     children: [
                       Icon(Icons.check, color: Colors.white),
                       SizedBox(width: 8),
-                      Text('${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
+                      Text(
+                          '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
                           style: TextStyle(color: Colors.white)),
                     ],
                   ),
@@ -406,7 +407,8 @@ class _ContestQuestionsByCategoryPageState
                 if (state is FetchContestAnalysisByCategoryFailed) {
                   return Scaffold(
                     body: Center(
-                      child: Text(AppLocalizations.of(context)!.error_loading_question),
+                      child: Text(
+                          AppLocalizations.of(context)!.error_loading_question),
                     ),
                   );
                 } else if (state is FetchContestAnalysisByCategoryLoading) {
@@ -467,7 +469,8 @@ class _ContestQuestionsByCategoryPageState
                 if (state is FetchContestQuestionsByCategoryFailed) {
                   return Scaffold(
                     body: Center(
-                      child: Text(AppLocalizations.of(context)!.error_loading_question),
+                      child: Text(
+                          AppLocalizations.of(context)!.error_loading_question),
                     ),
                   );
                 } else if (state is FetchContestQuestionsByCategoryLoading) {

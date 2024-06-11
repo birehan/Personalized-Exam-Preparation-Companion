@@ -4,10 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/receiced_requests_tab.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/sent_friends_requests_tab.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/receiced_requests_tab.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/sent_friends_requests_tab.dart';
 
 class RequestsTab extends StatefulWidget {
   const RequestsTab({super.key});

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/deleteQuestionBookmarkBloc/delete_question_bookmark_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/widgets/bookmark_choose_option_card.dart';
-import 'package:skill_bridge_mobile/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteQuestionBookmarkBloc/delete_question_bookmark_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/widgets/bookmark_choose_option_card.dart';
+import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 import '../../../features.dart';
 

@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
-import 'package:skill_bridge_mobile/core/utils/connectivity_service.dart';
-import 'package:skill_bridge_mobile/core/widgets/coming_soon_page.dart';
-import 'package:skill_bridge_mobile/core/widgets/doubleback.dart';
-import 'package:skill_bridge_mobile/core/widgets/dragable.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/pages/contests_main_page.dart';
+import 'package:prep_genie/core/constants/app_images.dart';
+import 'package:prep_genie/core/utils/connectivity_service.dart';
+import 'package:prep_genie/core/widgets/coming_soon_page.dart';
+import 'package:prep_genie/core/widgets/doubleback.dart';
+import 'package:prep_genie/core/widgets/dragable.dart';
+import 'package:prep_genie/features/contest/presentation/pages/contests_main_page.dart';
 import '../../features/features.dart';
 import '../core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -138,9 +138,8 @@ class _MyHomePageState extends State<MyHomePage> {
             // ActiveBttomNavWidget(icon: leaderboardIcon),
           ],
           inactiveIcons: [
-            const BottomNavCard(
-                icon: contestIcon, text: "Recommended"),
-                // AppLocalizations.of(context)!.contest),
+            const BottomNavCard(icon: contestIcon, text: "Recommended"),
+            // AppLocalizations.of(context)!.contest),
             BottomNavCard(
                 icon: courseIcon, text: AppLocalizations.of(context)!.courses),
             BottomNavCard(

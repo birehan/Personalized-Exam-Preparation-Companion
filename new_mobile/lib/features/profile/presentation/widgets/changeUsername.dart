@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
 
 import '../../../../core/error/failure.dart';
 import '../../../../core/utils/snack_bar.dart';

@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/network/network.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/core/network/network.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'department_repository_impl_test.mocks.dart';
 
@@ -39,12 +39,14 @@ void main() {
         numberOfCourses: 5)
   ];
 
-  const generalDepartment = [GeneralDepartmentModel(
-      id: "id",
-      name: "name",
-      description: "description",
-      departments: department,
-      isForListing: false)];
+  const generalDepartment = [
+    GeneralDepartmentModel(
+        id: "id",
+        name: "name",
+        description: "description",
+        departments: department,
+        isForListing: false)
+  ];
 
   void runTestsOnline(Function body) {
     group('device is online', () {
@@ -91,5 +93,4 @@ void main() {
       verifyNoMoreInteractions(remoteDataSource);
     });
   });
-
 }

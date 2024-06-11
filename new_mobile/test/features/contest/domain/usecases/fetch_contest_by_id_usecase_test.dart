@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'fetch_upcoming_user_contest_usecase_test.mocks.dart';
 
@@ -27,8 +27,7 @@ void main() {
     liveRegister: 1,
     virtualRegister: 0,
   );
-  test('should get contest by calling FetchContestByIdUsecase',
-      () async {
+  test('should get contest by calling FetchContestByIdUsecase', () async {
     // arrange
     when(mockContestRepository.fetchContestById(
             contestId: '6593b3b08a65e3bd7982fde9'))

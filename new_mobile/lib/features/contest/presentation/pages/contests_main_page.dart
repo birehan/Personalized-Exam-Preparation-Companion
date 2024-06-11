@@ -6,10 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
-import 'package:skill_bridge_mobile/core/widgets/tooltip_widget.dart';
-import 'package:skill_bridge_mobile/features/contest/contest.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/count_down_card.dart';
+import 'package:prep_genie/core/widgets/noInternet.dart';
+import 'package:prep_genie/core/widgets/tooltip_widget.dart';
+import 'package:prep_genie/features/contest/contest.dart';
+import 'package:prep_genie/features/home/presentation/widgets/count_down_card.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/core.dart';
@@ -116,74 +116,77 @@ class _ContestsMainPageState extends State<ContestsMainPage>
                         ],
                       ),
                     ),
-                    child: BlocListener<FetchUpcomingUserContestBloc, FetchUpcomingUserContestState>(
+                    child: BlocListener<FetchUpcomingUserContestBloc,
+                        FetchUpcomingUserContestState>(
                       listener: (context, state) {
                         if (state is UpcomingContestFailredState) {
                           if (state.failureType is RequestOverloadFailure) {
                             ScaffoldMessenger.of(context).showSnackBar(
                                 snackBar(state.failureType.errorMessage));
-                          } }
+                          }
+                        }
                       },
                       child: BlocBuilder<FetchUpcomingUserContestBloc,
-                    
-                        FetchUpcomingUserContestState>(
-                      builder: (context, state) {
-                        if (state is UpcomingContestFailredState) {
-                          if (state.failureType is NetworkFailure) {
-                            return NoInternet(
-                              setColor: true,
-                              reloadCallback: () {
-                                context
-                                    .read<FetchUpcomingUserContestBloc>()
-                                    .add(FetchUpcomingContestEvent());
-                              },
-                              // setColor: true,
+                          FetchUpcomingUserContestState>(
+                        builder: (context, state) {
+                          if (state is UpcomingContestFailredState) {
+                            if (state.failureType is NetworkFailure) {
+                              return NoInternet(
+                                setColor: true,
+                                reloadCallback: () {
+                                  context
+                                      .read<FetchUpcomingUserContestBloc>()
+                                      .add(FetchUpcomingContestEvent());
+                                },
+                                // setColor: true,
+                              );
+                            }
+                            return Center(
+                              child: Text(AppLocalizations.of(context)!
+                                  .something_is_not_right),
                             );
+                          } else if (state is UpcomingContestLoadingState) {
+                            return _contestTimerBoxShimmer();
+                          } else if (state is UpcomingContestFetchedState) {
+                            final contest = state.upcomingContes;
+                            if (contest == null) {
+                              // no contest available
+                              return Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/noContest.png',
+                                    height: 8.h,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Text(
+                                    AppLocalizations.of(context)!.no_contest,
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.w600,
+                                        fontFamily: 'Poppins'),
+                                  ),
+                                  SizedBox(height: 1.h),
+                                  Text(
+                                    "${AppLocalizations.of(context)!.no_contest_text} 🌟",
+                                    style: const TextStyle(color: Colors.white),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              );
+                            }
+                            // contest available
+                            return UpcomingContestCard(contest: contest);
                           }
-                          return  Center(
-                            child: Text(AppLocalizations.of(context)!.something_is_not_right),
-                          );
-                        } else if (state is UpcomingContestLoadingState) {
-                          return _contestTimerBoxShimmer();
-                        } else if (state is UpcomingContestFetchedState) {
-                          final contest = state.upcomingContes;
-                          if (contest == null) {
-                            // no contest available
-                            return Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  'assets/images/noContest.png',
-                                  height: 8.h,
-                                  fit: BoxFit.cover,
-                                ),
-                                SizedBox(height: 2.h),
-                                Text(
-                                  AppLocalizations.of(context)!.no_contest,
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'Poppins'),
-                                ),
-                                SizedBox(height: 1.h),
-                                Text(
-                                  "${AppLocalizations.of(context)!.no_contest_text} 🌟",
-                                  style: const TextStyle(color: Colors.white),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
-                            );
-                          }
-                          // contest available
-                          return UpcomingContestCard(contest: contest);
-                        }
-                        return Container();
-                      },
+                          return Container();
+                        },
+                      ),
                     ),
-                  ),),
+                  ),
                   SizedBox(height: 4.h),
                   Text(
                     AppLocalizations.of(context)!.previous_contests,
@@ -306,8 +309,8 @@ class _ContestsMainPageState extends State<ContestsMainPage>
                                   child: EmptyListWidget(
                                     width: 100,
                                     height: 100,
-                                    message:
-                                        AppLocalizations.of(context)!.coming_soon_no_contests_here_yet,
+                                    message: AppLocalizations.of(context)!
+                                        .coming_soon_no_contests_here_yet,
                                     reloadCallBack: () {
                                       context
                                           .read<FetchPreviousContestsBloc>()
@@ -340,8 +343,8 @@ class _ContestsMainPageState extends State<ContestsMainPage>
                                 padding: const EdgeInsets.only(bottom: 16),
                                 child: EmptyListWidget(
                                   showImage: false,
-                                  message:
-                                      AppLocalizations.of(context)!.check_your_internet_connection_and_try_again,
+                                  message: AppLocalizations.of(context)!
+                                      .check_your_internet_connection_and_try_again,
                                   reloadCallBack: () {
                                     context
                                         .read<FetchPreviousContestsBloc>()
@@ -384,8 +387,8 @@ class _ContestsMainPageState extends State<ContestsMainPage>
                                   child: EmptyListWidget(
                                     width: 100,
                                     height: 100,
-                                    message:
-                                        AppLocalizations.of(context)!.you_have_not_registered_for_any_contests_yet,
+                                    message: AppLocalizations.of(context)!
+                                        .you_have_not_registered_for_any_contests_yet,
                                     reloadCallBack: () {
                                       context
                                           .read<FetchPreviousUserContestsBloc>()
@@ -419,8 +422,8 @@ class _ContestsMainPageState extends State<ContestsMainPage>
                                 padding: const EdgeInsets.only(bottom: 16),
                                 child: EmptyListWidget(
                                   showImage: false,
-                                  message:
-                                      AppLocalizations.of(context)!.check_your_internet_connection_and_try_again,
+                                  message: AppLocalizations.of(context)!
+                                      .check_your_internet_connection_and_try_again,
                                   reloadCallBack: () {
                                     context
                                         .read<FetchPreviousUserContestsBloc>()

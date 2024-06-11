@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/get_app_initialization_usecase.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/authentication/domain/usecases/get_app_initialization_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 
@@ -12,15 +12,18 @@ void main() {
 
   setUp(() {
     mockRepository = MockAuthenticationRepository();
-    getAppInitializationUsecase = GetAppInitializationUsecase(repository: mockRepository);
+    getAppInitializationUsecase =
+        GetAppInitializationUsecase(repository: mockRepository);
   });
 
   group('GetAppInitializationUsecase', () {
-    test('should call the repository to get app initialization status', () async {
+    test('should call the repository to get app initialization status',
+        () async {
       // Arrange
 
       // Act
-      when(mockRepository.getAppInitialization()).thenAnswer((_) async =>const Right(true));
+      when(mockRepository.getAppInitialization())
+          .thenAnswer((_) async => const Right(true));
 
       final result = await getAppInitializationUsecase(NoParams());
 

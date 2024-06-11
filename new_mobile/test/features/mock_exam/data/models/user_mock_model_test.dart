@@ -1,10 +1,16 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  const userMock = UserMockModel(id: "64954a111a381d8c0955f3cb", name:  "Elictraical Mock", numberOfQuestions: 100, departmentId: "64943ec6f296abbe4531d069", isCompleted: true, score: 2);
+  const userMock = UserMockModel(
+      id: "64954a111a381d8c0955f3cb",
+      name: "Elictraical Mock",
+      numberOfQuestions: 100,
+      departmentId: "64943ec6f296abbe4531d069",
+      isCompleted: true,
+      score: 2);
 
   test('should be a user Mock of user Mock entity', () async {
     // assert

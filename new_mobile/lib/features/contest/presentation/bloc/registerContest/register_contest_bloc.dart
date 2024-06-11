@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/regster_to_contest.dart';
+import 'package:prep_genie/features/contest/domain/usecases/regster_to_contest.dart';
 
 import '../../../../../core/error/failure.dart';
 

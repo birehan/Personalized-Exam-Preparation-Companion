@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/bloc/get_user_bloc/get_user_bloc.dart';
+import 'package:prep_genie/features/authentication/presentation/bloc/get_user_bloc/get_user_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/core.dart';

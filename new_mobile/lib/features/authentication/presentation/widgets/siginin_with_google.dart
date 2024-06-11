@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/bloc/authentication_bloc/authentication_bloc.dart';
+import 'package:prep_genie/core/constants/app_images.dart';
+import 'package:prep_genie/features/authentication/presentation/bloc/authentication_bloc/authentication_bloc.dart';
 
 class SignInWithGoogleWidget extends StatelessWidget {
   const SignInWithGoogleWidget({

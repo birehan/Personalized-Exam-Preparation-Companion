@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 
 import '../../../authentication/domain/entities/user_credential.dart';
 import '../entities/onboarding_questions_response.dart';

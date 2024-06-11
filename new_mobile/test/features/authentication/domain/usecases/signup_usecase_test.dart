@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/entities/user_credential.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/signup_usecase.dart';
+import 'package:prep_genie/features/authentication/domain/entities/user_credential.dart';
+import 'package:prep_genie/features/authentication/domain/usecases/signup_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 
@@ -45,7 +45,7 @@ void main() {
       final result = await signupUsecase(params);
 
       // Assert
-      expect(result, equals(const Right(userCredential))); 
+      expect(result, equals(const Right(userCredential)));
       verify(mockRepository.signup(
         emailOrPhoneNumber: params.emailOrPhoneNumber,
         password: params.password,

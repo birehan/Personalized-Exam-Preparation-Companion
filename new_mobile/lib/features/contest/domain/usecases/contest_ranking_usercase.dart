@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
 
 class GetContestRankingUsecase
     extends UseCase<ContestRank, ContestRankingParams> {
@@ -8,8 +8,7 @@ class GetContestRankingUsecase
 
   GetContestRankingUsecase({required this.contestRepository});
   @override
-  Future<Either<Failure, ContestRank>> call(
-      ContestRankingParams params) async {
+  Future<Either<Failure, ContestRank>> call(ContestRankingParams params) async {
     return await contestRepository.getContestRanking(params.contestId);
   }
 }

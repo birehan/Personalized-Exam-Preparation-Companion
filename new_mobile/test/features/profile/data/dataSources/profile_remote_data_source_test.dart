@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/error/exception.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/error/exception.dart';
+import 'package:prep_genie/features/features.dart';
 import 'package:http/http.dart' as http;
-import 'package:skill_bridge_mobile/features/profile/data/models/user_profile_model.dart';
+import 'package:prep_genie/features/profile/data/models/user_profile_model.dart';
 import '../../../../fixtures/fixture_reader.dart';
 import '../../../course/data/datasources/course_remote_datasource_test.mocks.dart';
 import '../../../course/data/repositories/course_repository_impl_test.mocks.dart';
@@ -106,8 +106,7 @@ void main() {
 
       when(mockClient.get(Uri.parse('$baseUrl/user/currentUser'),
               headers: anyNamed('headers')))
-          .thenAnswer(
-              (_) async => http.Response('Too Many Request', 429));
+          .thenAnswer((_) async => http.Response('Too Many Request', 429));
 
       // Assertion
       expect(() async => await profileRemoteDataSourceImple.getUserProfile(),

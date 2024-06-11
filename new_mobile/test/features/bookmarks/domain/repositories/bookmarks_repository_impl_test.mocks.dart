@@ -6,9 +6,9 @@
 import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/network/network.dart' as _i5;
-import 'package:skill_bridge_mobile/features/bookmarks/data/data.dart' as _i3;
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart'
+import 'package:prep_genie/core/network/network.dart' as _i5;
+import 'package:prep_genie/features/bookmarks/data/data.dart' as _i3;
+import 'package:prep_genie/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart'
     as _i2;
 
 // ignore_for_file: type=lint

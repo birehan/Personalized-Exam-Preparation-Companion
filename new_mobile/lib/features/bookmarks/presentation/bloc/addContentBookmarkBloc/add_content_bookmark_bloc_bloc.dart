@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
+import 'package:prep_genie/features/bookmarks/domain/domain.dart';
 
 import '../../../../../core/error/failure.dart';
 
@@ -26,6 +26,7 @@ class AddContentBookmarkBlocBloc
   AddContentBookmarkBlocState _eitherFailureOrSuccess(
       Either<Failure, bool> response) {
     return response.fold(
-        (failure) => ContentBookmarkErrorState(failure: failure), (r) => ContentBookmarkAddedState());
+        (failure) => ContentBookmarkErrorState(failure: failure),
+        (r) => ContentBookmarkAddedState());
   }
 }

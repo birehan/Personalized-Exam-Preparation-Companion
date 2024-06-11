@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/question/domain/usecases/get_end_chapter_questions_usecase.dart';
+import 'package:prep_genie/features/question/domain/usecases/get_end_chapter_questions_usecase.dart';
 
 import '../../../../../core/error/failure.dart';
 import '../../../domain/entities/end_subtopic_question_answer.dart';
@@ -23,7 +23,8 @@ class EndofChapterQuestionsBloc
         await getEndOfChapterQuestionsUsecase(
             GetEndChapterQuestionsParams(chapterId: event.chapterId));
     EndofChapterQuestionsState state = response.fold(
-        (failure) => EndofChapterQuestionsErrorState(errorMessage: failure.errorMessage, failure: failure),
+        (failure) => EndofChapterQuestionsErrorState(
+            errorMessage: failure.errorMessage, failure: failure),
         (questions) => EndofChapterQuestionsSuccessState(
             endSubtopicQuestionAnswers: questions));
     emit(state);

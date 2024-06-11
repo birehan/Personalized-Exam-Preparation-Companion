@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/leaderboard_tab.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
+import 'package:prep_genie/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/leaderboard_tab.dart';
 
 class GetTopUsersUsecase extends UseCase<Leaderboard, LeaderboardParams> {
   final ProfileRepositories profileRepositories;

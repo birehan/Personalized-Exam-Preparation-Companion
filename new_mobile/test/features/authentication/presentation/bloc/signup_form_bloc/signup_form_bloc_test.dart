@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/bloc/signup_form_bloc/signup_form_bloc.dart';
+import 'package:prep_genie/features/authentication/presentation/bloc/signup_form_bloc/signup_form_bloc.dart';
 
 void main() {
   group('SignupFormBloc', () {
@@ -15,7 +15,7 @@ void main() {
 
     test('emits [SignupForm] when ChangeEmailEvent is added', () {
       final bloc = SignupFormBloc();
-      
+
       expect(bloc.state, equals(initialState));
 
       bloc.add(const ChangeEmailEvent(email: 'test@email.com'));
@@ -28,9 +28,10 @@ void main() {
 
     // Add tests for other events (ChangeFirstNameEvent, ChangeLastNameEvent, etc.)
 
-    test('emits [SignupForm] with updated state when multiple events are added', () {
+    test('emits [SignupForm] with updated state when multiple events are added',
+        () {
       final bloc = SignupFormBloc();
-      
+
       expect(bloc.state, equals(initialState));
 
       bloc
@@ -47,11 +48,34 @@ void main() {
         emitsInOrder([
           initialState.copyWith(email: 'test@email.com'),
           initialState.copyWith(email: 'test@email.com', firstName: 'John'),
-          initialState.copyWith(email: 'test@email.com', firstName: 'John', lastName: 'Doe'),
-          initialState.copyWith(email: 'test@email.com', firstName: 'John', lastName: 'Doe', password: 'password'),
-          initialState.copyWith(email: 'test@email.com', firstName: 'John', lastName: 'Doe', password: 'password', otp: '123456'),
-          initialState.copyWith(email: 'test@email.com', firstName: 'John', lastName: 'Doe', password: 'password', otp: '123456', department: 'Computer Science'),
-          initialState.copyWith(email: 'test@email.com', firstName: 'John', lastName: 'Doe', password: 'password', otp: '123456', department: 'Computer Science', major: 'Software Engineering'),
+          initialState.copyWith(
+              email: 'test@email.com', firstName: 'John', lastName: 'Doe'),
+          initialState.copyWith(
+              email: 'test@email.com',
+              firstName: 'John',
+              lastName: 'Doe',
+              password: 'password'),
+          initialState.copyWith(
+              email: 'test@email.com',
+              firstName: 'John',
+              lastName: 'Doe',
+              password: 'password',
+              otp: '123456'),
+          initialState.copyWith(
+              email: 'test@email.com',
+              firstName: 'John',
+              lastName: 'Doe',
+              password: 'password',
+              otp: '123456',
+              department: 'Computer Science'),
+          initialState.copyWith(
+              email: 'test@email.com',
+              firstName: 'John',
+              lastName: 'Doe',
+              password: 'password',
+              otp: '123456',
+              department: 'Computer Science',
+              major: 'Software Engineering'),
         ]),
       );
     });

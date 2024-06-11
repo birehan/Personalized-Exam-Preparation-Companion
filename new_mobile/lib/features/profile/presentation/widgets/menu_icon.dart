@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
 
 class ProfileEditpageMenuIcon extends StatelessWidget {
   const ProfileEditpageMenuIcon({

@@ -8,8 +8,8 @@ import 'dart:async' as _i4;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i5;
-import 'package:skill_bridge_mobile/core/core.dart' as _i6;
-import 'package:skill_bridge_mobile/features/features.dart' as _i2;
+import 'package:prep_genie/core/core.dart' as _i6;
+import 'package:prep_genie/features/features.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

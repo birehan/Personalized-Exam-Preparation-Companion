@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/tooltip_widget.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/carousel_slider.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/daily_streak_widget_desctiption.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/daily_streak_with_days_info.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/dynamic_homepage_header_section.dart';
+import 'package:prep_genie/core/widgets/tooltip_widget.dart';
+import 'package:prep_genie/features/home/presentation/widgets/carousel_slider.dart';
+import 'package:prep_genie/features/home/presentation/widgets/daily_streak_widget_desctiption.dart';
+import 'package:prep_genie/features/home/presentation/widgets/daily_streak_with_days_info.dart';
+import 'package:prep_genie/features/home/presentation/widgets/dynamic_homepage_header_section.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
@@ -516,8 +516,9 @@ class _DynamicHomePageState extends State<DynamicHomePage> {
                         ),
                         SizedBox(width: 2.w),
                         const TooltipWidget(
-                            message: "Complete different activities throughout the app. Check them off your list as you go!")
-                                // AppLocalizations.of(context)!.daily_quest_info)
+                            message:
+                                "Complete different activities throughout the app. Check them off your list as you go!")
+                        // AppLocalizations.of(context)!.daily_quest_info)
                       ],
                     ),
                     const DailyQuestWidget(),

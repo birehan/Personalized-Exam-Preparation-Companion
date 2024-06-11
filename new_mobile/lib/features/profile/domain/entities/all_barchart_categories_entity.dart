@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/score_category_for_charts_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/score_category_for_charts_entity.dart';
 
 class ScoreCategoryListEntity extends Equatable {
   final ScoreCategoryEntity userCategory;

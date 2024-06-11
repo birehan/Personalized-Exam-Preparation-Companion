@@ -7,12 +7,12 @@ import 'dart:async' as _i5;
 
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/core.dart' as _i6;
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart'
+import 'package:prep_genie/core/core.dart' as _i6;
+import 'package:prep_genie/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart'
     as _i7;
-import 'package:skill_bridge_mobile/features/bookmarks/domain/repositories/repositories.dart'
+import 'package:prep_genie/features/bookmarks/domain/repositories/repositories.dart'
     as _i2;
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/get_user_bookmarks_usecase.dart'
+import 'package:prep_genie/features/bookmarks/domain/usecases/get_user_bookmarks_usecase.dart'
     as _i4;
 
 // ignore_for_file: type=lint

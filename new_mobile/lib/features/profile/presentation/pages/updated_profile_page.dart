@@ -8,26 +8,26 @@ import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
+import 'package:prep_genie/core/error/failure.dart';
 
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
-import 'package:skill_bridge_mobile/core/widgets/tooltip_widget.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/consistancyBloc/consistancy_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/bar_chart_with_description.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/conststency_tracking_calender_widget.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/friends_and_invite_card.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/graph_description.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/linechart.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updadted_profile_overview_widget.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updated_profile_header.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updated_profile_stat_card.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updated_user_records.dart';
+import 'package:prep_genie/core/widgets/noInternet.dart';
+import 'package:prep_genie/core/widgets/tooltip_widget.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/consistancyBloc/consistancy_bloc_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/bar_chart_with_description.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/conststency_tracking_calender_widget.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/friends_and_invite_card.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/graph_description.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/linechart.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updadted_profile_overview_widget.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updated_profile_header.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updated_profile_stat_card.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updated_user_records.dart';
 
 import '../../../../core/utils/snack_bar.dart';
 

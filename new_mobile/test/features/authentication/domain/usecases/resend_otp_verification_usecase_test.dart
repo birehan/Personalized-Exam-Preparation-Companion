@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/resend_otp_verification_usecase.dart';
+import 'package:prep_genie/features/authentication/domain/usecases/resend_otp_verification_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 
@@ -11,13 +11,15 @@ void main() {
 
   setUp(() {
     mockRepository = MockAuthenticationRepository();
-    resendOtpVerificationUsecase = ResendOtpVerificationUsecase(repository: mockRepository);
+    resendOtpVerificationUsecase =
+        ResendOtpVerificationUsecase(repository: mockRepository);
   });
 
   group('ResendOtpVerificationUsecase', () {
     test('should call the repository to resend OTP verification', () async {
       // Arrange
-      const params = ResendOtpVerificationParams(emailOrPhoneNumber: 'test@example.com');
+      const params =
+          ResendOtpVerificationParams(emailOrPhoneNumber: 'test@example.com');
 
       // Act
       when(mockRepository.resendOtpVerification(

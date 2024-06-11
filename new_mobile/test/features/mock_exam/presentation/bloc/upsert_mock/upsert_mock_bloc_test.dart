@@ -1,33 +1,30 @@
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/mock_exam.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/mock_exam/mock_exam.dart';
 
 import 'upsert_mock_bloc_test.mocks.dart';
 
 @GenerateNiceMocks([
-  MockSpec<UpsertMockScoreUsecase>(),  
+  MockSpec<UpsertMockScoreUsecase>(),
 ])
-
-
-void main(){
+void main() {
   late UpsertMockScoreBloc bloc;
   late MockUpsertMockScoreUsecase mockUpsertMockScoreUsecase;
 
-
   setUp(() {
     mockUpsertMockScoreUsecase = MockUpsertMockScoreUsecase();
-    bloc = UpsertMockScoreBloc(upsertMockScoreUsecase: mockUpsertMockScoreUsecase);
+    bloc =
+        UpsertMockScoreBloc(upsertMockScoreUsecase: mockUpsertMockScoreUsecase);
   });
   const tId = "test id";
   group('_onGetMockById', () {
     test('should get data from the get department mocks usecase', () async {
       // arrange
       when(mockUpsertMockScoreUsecase(any))
-          .thenAnswer((_) async =>  const Right(unit));
+          .thenAnswer((_) async => const Right(unit));
       // act
       bloc.add(const UpsertMyMockScoreEvent(mockId: tId, score: 5));
 
@@ -66,7 +63,8 @@ void main(){
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
         () async {
       // arrange
-      when(mockUpsertMockScoreUsecase(any)).thenAnswer((_) async => Left(CacheFailure()));
+      when(mockUpsertMockScoreUsecase(any))
+          .thenAnswer((_) async => Left(CacheFailure()));
       // assert later
       final expected = [
         const UpsertMyMockScoreState(status: MockExamStatus.loading),
@@ -77,5 +75,4 @@ void main(){
       bloc.add(const UpsertMyMockScoreEvent(mockId: tId, score: 5));
     });
   });
-  
 }

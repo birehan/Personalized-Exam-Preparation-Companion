@@ -6,11 +6,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
+import 'package:prep_genie/core/constants/app_images.dart';
 
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/logout/logout_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/logout/logout_bloc.dart';
 
 import '../../../../core/utils/snack_bar.dart';
 

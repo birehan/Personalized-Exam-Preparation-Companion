@@ -1,11 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 
 import '../../../features.dart';
 
-class DownloadMockByIdUsecase
-    extends UseCase<Unit, DownloadMockByIdParams> {
+class DownloadMockByIdUsecase extends UseCase<Unit, DownloadMockByIdParams> {
   final MockExamRepository repository;
 
   DownloadMockByIdUsecase({

@@ -1,12 +1,12 @@
 import 'dart:ffi';
 
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/all_barchart_categories_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
+import 'package:prep_genie/core/utils/hive_boxes.dart';
+import 'package:prep_genie/features/profile/domain/entities/all_barchart_categories_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/profile_update_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
 import '../../../features.dart';
 import '../../../../core/core.dart';
 

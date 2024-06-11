@@ -3,9 +3,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/routes/go_routes.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/fetch_upcoming_user_contest/fetch_upcoming_user_contest_bloc.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/time_count_down_for_national_exams.dart';
+import 'package:prep_genie/core/routes/go_routes.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/fetch_upcoming_user_contest/fetch_upcoming_user_contest_bloc.dart';
+import 'package:prep_genie/features/home/presentation/widgets/time_count_down_for_national_exams.dart';
 
 class CarouselSliderForUpcommingEvents extends StatefulWidget {
   const CarouselSliderForUpcommingEvents({Key? key}) : super(key: key);

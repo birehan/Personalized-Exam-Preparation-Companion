@@ -7,12 +7,12 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/widgets/share.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/registerContest/register_contest_bloc.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/widgets/contest_ranking_section.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/widgets/weekly_prizes_widget.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/widgets/share.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/registerContest/register_contest_bloc.dart';
+import 'package:prep_genie/features/contest/presentation/widgets/contest_ranking_section.dart';
+import 'package:prep_genie/features/contest/presentation/widgets/weekly_prizes_widget.dart';
+import 'package:prep_genie/features/features.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/core.dart';

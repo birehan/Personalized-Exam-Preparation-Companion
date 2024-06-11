@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:skill_bridge_mobile/features/question/domain/entities/general_chat_entity.dart';
+import 'package:prep_genie/features/question/domain/entities/general_chat_entity.dart';
 
 import '../../../../core/constants/app_keys.dart';
 import '../../../../core/core.dart';

@@ -1,15 +1,26 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-
   DateTime dateTime = DateTime.parse("2024-03-13 10:24:57.572844");
 
-  final dailyQuiz = DailyQuizModel(dailyQuizQuestions: [], description: "",id: "", userScore: 0, day:dateTime, departmentId: "", isSolved: false);
-  const dailyQuizs = DailyQuizModel(dailyQuizQuestions: [], description: "",id: "", userScore: 1, userId: "");
-  
+  final dailyQuiz = DailyQuizModel(
+      dailyQuizQuestions: [],
+      description: "",
+      id: "",
+      userScore: 0,
+      day: dateTime,
+      departmentId: "",
+      isSolved: false);
+  const dailyQuizs = DailyQuizModel(
+      dailyQuizQuestions: [],
+      description: "",
+      id: "",
+      userScore: 1,
+      userId: "");
+
   test('should be a subclass of daily quiz entity', () async {
     // assert
     expect(dailyQuiz, isA<DailyQuiz>());
@@ -27,7 +38,7 @@ void main() {
     });
   });
 
-  group('fromAnalysisJson', () { 
+  group('fromAnalysisJson', () {
     test('should return a valid model when the JSON is recieved', () async {
       // arrange
       final Map<String, dynamic> jsonMap =
@@ -39,6 +50,3 @@ void main() {
     });
   });
 }
-
-
-
