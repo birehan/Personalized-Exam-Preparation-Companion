@@ -101,7 +101,7 @@ class DownloadedSubChapterCard extends StatelessWidget {
                 width: 24,
                 height: 24,
                 decoration: const BoxDecoration(
-                  color: Color(0xFF1A7A6C),
+                  color: Color(0xFF0072FF),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(

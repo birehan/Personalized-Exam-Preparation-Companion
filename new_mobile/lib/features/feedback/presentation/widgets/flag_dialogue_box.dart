@@ -17,13 +17,12 @@ class FlagDialog extends StatefulWidget {
   final int index;
   final BuildContext originalContext;
 
-  const FlagDialog({
-    super.key,
-    required this.id,
-    required this.feedbackType,
-    required this.index,
-    required this.originalContext
-  });
+  const FlagDialog(
+      {super.key,
+      required this.id,
+      required this.feedbackType,
+      required this.index,
+      required this.originalContext});
 
   @override
   _FlagDialogState createState() => _FlagDialogState();
@@ -54,7 +53,7 @@ class _FlagDialogState extends State<FlagDialog> {
 
   @override
   Widget build(BuildContext context) {
-        // const List<FeedbackMessages> feedbackMessages = [
+    // const List<FeedbackMessages> feedbackMessages = [
 
     List<FeedbackMessages> feedbackMessages = [
       FeedbackMessages(
@@ -65,8 +64,7 @@ class _FlagDialogState extends State<FlagDialog> {
           AppLocalizations.of(widget.originalContext!)!.too_wide,
           AppLocalizations.of(widget.originalContext!)!.other
         ],
-                // messages: ["Inaccurate", "Out of Scope", "Too wide", "Other"],
-
+        // messages: ["Inaccurate", "Out of Scope", "Too wide", "Other"],
       ),
       FeedbackMessages(
         type: 'questions',
@@ -76,8 +74,7 @@ class _FlagDialogState extends State<FlagDialog> {
           AppLocalizations.of(widget.originalContext!)!.unrelated_choice,
           AppLocalizations.of(widget.originalContext!)!.other
         ],
-                // messages: ["No Answers", "Out of Scope", "Unrelated choice", "Other"],
-
+        // messages: ["No Answers", "Out of Scope", "Unrelated choice", "Other"],
       ),
       FeedbackMessages(
         type: 'analysis',
@@ -87,8 +84,7 @@ class _FlagDialogState extends State<FlagDialog> {
           AppLocalizations.of(widget.originalContext!)!.wrong_explanation,
           AppLocalizations.of(widget.originalContext!)!.other
         ],
-                // messages: ["Wrong Answer", "Irelevant", "wrong Explanation", "Other"],
-
+        // messages: ["Wrong Answer", "Irelevant", "wrong Explanation", "Other"],
       )
     ];
     return BackdropFilter(
@@ -116,7 +112,7 @@ class _FlagDialogState extends State<FlagDialog> {
               Text(
                 AppLocalizations.of(widget.originalContext!)!
                     .do_you_want_to_flag_this_as_inappropriate,
-                                    // 'Do you want to flag this as inappropriate?',
+                // 'Do you want to flag this as inappropriate?',
 
                 textAlign: TextAlign.center,
               )
@@ -148,7 +144,7 @@ class _FlagDialogState extends State<FlagDialog> {
                 ),
                 if (selectedOption ==
                     AppLocalizations.of(widget.originalContext!)!.other)
-                                    // if (selectedOption == 'Other')
+                  // if (selectedOption == 'Other')
 
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.w),
@@ -158,11 +154,11 @@ class _FlagDialogState extends State<FlagDialog> {
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: const BorderSide(
-                              color: Color(0xff18786A), width: 1),
+                              color: Color(0xFF0072FF), width: 1),
                         ),
                         hintText: AppLocalizations.of(widget.originalContext!)!
                             .please_mention_other_reason,
-                                                // hintText: 'please mention other reason',
+                        // hintText: 'please mention other reason',
 
                         hintStyle: const TextStyle(
                             color: Color.fromARGB(255, 207, 207, 207)),
@@ -195,10 +191,10 @@ class _FlagDialogState extends State<FlagDialog> {
                         borderRadius: BorderRadius.circular(15))),
                 backgroundColor: comment == ''
                     ? MaterialStateProperty.all<Color>(
-                        const Color(0xff18786A).withOpacity(.5),
+                        const Color(0xFF0072FF).withOpacity(.5),
                       )
                     : MaterialStateProperty.all<Color>(
-                        const Color(0xff18786A),
+                        const Color(0xFF0072FF),
                       ),
               ),
               onPressed: submitResponse,

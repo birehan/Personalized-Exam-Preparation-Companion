@@ -47,7 +47,7 @@ class HeaderWidget extends StatelessWidget {
                         offset: const Offset(1, 5)),
                   ],
                   border: Border.all(
-                    color: const Color(0XFF18786A),
+                    color: const Color(0xFF0072FF),
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(7.h),

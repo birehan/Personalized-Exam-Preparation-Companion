@@ -107,7 +107,7 @@ class _LeaderboardTabState extends State<LeaderboardTab>
                     LeaderboardTabs(
                         isActive: currentTabIndex == 2, title: 'Monthly'),
                   ],
-                  dividerColor: const Color(0xff18786a).withOpacity(.5),
+                  dividerColor: const Color(0xFF0072FF).withOpacity(.5),
                   indicatorSize: TabBarIndicatorSize.tab,
                   labelColor: Colors.white,
                   unselectedLabelColor:

@@ -7,7 +7,7 @@ class CustomLinearProgressIndicator extends StatelessWidget {
   const CustomLinearProgressIndicator({
     super.key,
     this.size = 40,
-    this.color = const Color(0xff18786a),
+    this.color = const Color(0xFF0072FF),
   });
 
   @override

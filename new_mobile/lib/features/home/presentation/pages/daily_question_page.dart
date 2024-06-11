@@ -160,7 +160,9 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                         FetchDailyQuizForAnalysisByIdEvent(
                             id: widget.dailyQuestionPageParams.dailyQuiz.id),
                       );
-                  context.read<FetchDailyQuestBloc>().add(const FetchDailyQuestEvent());
+                  context
+                      .read<FetchDailyQuestBloc>()
+                      .add(const FetchDailyQuestEvent());
 
                   //  context.read<PopupMenuBloc>().add(QuitExamEvent());
                   Navigator.of(context).pop();
@@ -171,7 +173,7 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Icon(Icons.task_alt, color: Color(0xFF18786A), size: 48),
+                const Icon(Icons.task_alt, color: Color(0xFF0072FF), size: 48),
                 // Image.asset('assets/images/time_machine.png'),
                 const SizedBox(height: 12),
                 Text(
@@ -179,7 +181,7 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                   AppLocalizations.of(originalContext)!.completed_successfully,
                   style: GoogleFonts.poppins(
                     fontSize: 20,
-                    color: const Color(0xFF18786A),
+                    color: const Color(0xFF0072FF),
                     fontWeight: FontWeight.w500,
                   ),
                   textAlign: TextAlign.center,
@@ -211,7 +213,7 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                                 vertical: 1.h, horizontal: 4.w),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: const Color(0xff18786a),
+                              color: const Color(0xFF0072FF),
                             ),
                             child: (state is FetchDailyQuizForAnalysisLoading)
                                 ? const SizedBox(
@@ -224,7 +226,8 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                                   )
                                 : Text(
                                     // 'Analysis',
-                                    AppLocalizations.of(originalContext)!.analyis,
+                                    AppLocalizations.of(originalContext)!
+                                        .analyis,
                                     style: const TextStyle(
                                       color: Colors.white,
                                     ),
@@ -368,7 +371,8 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
           ),
           content: Text(
             // 'You have run out of time to answer the question.',
-            AppLocalizations.of(originalContext)!.you_have_run_out_of_time_to_answer_the_question,
+            AppLocalizations.of(originalContext)!
+                .you_have_run_out_of_time_to_answer_the_question,
             style: GoogleFonts.poppins(),
           ),
           actions: [
@@ -406,7 +410,8 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
             style: GoogleFonts.poppins(color: Colors.red),
           ),
           content: Text(
-            AppLocalizations.of(originalContext)!.are_you_sure_you_want_to_leave_your_unsaved_changes_may_be_lost,
+            AppLocalizations.of(originalContext)!
+                .are_you_sure_you_want_to_leave_your_unsaved_changes_may_be_lost,
             style: GoogleFonts.poppins(),
           ),
           actions: [
@@ -489,7 +494,8 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                       Icon(Icons.check, color: Colors.white),
                       SizedBox(width: 8),
                       // Text('Thank you for your feedback 🙏',
-                      Text('${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
+                      Text(
+                          '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
                           style: TextStyle(color: Colors.white)),
                     ],
                   ),
@@ -571,7 +577,7 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.red,
-                                // color: const Color(0xFF18786A),
+                                // color: const Color(0xFF0072FF),
                               ),
                             ),
                           )

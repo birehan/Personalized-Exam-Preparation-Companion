@@ -98,7 +98,7 @@ class _ReferalButtonState extends State<ReferalButton> {
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: .75.h),
         decoration: BoxDecoration(
-          color: const Color(0xff18786a),
+          color: const Color(0xFF0072FF),
           borderRadius: BorderRadius.circular(5),
         ),
         child: loading

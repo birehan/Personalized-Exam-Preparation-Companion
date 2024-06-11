@@ -125,7 +125,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        color: const Color(0xff18786A),
+                        color: const Color(0xFF0072FF),
                       ),
                       child: TextButton(
                         child: const Text('Cancel',
@@ -143,7 +143,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        color: const Color(0xff18786A),
+                        color: const Color(0xFF0072FF),
                       ),
                       child: TextButton(
                         child: const Text(
@@ -467,7 +467,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                               const Text(
                                                 'Checkout the leaderboard',
                                                 style: TextStyle(
-                                                    color: Color(0xff18786a),
+                                                    color: Color(0xFF0072FF),
                                                     fontFamily: 'Poppins',
                                                     decoration: TextDecoration
                                                         .underline),

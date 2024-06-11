@@ -73,7 +73,7 @@ class LeaderbordDetailHeader extends StatelessWidget {
                   Text(
                     'Grade $grade',
                     style: const TextStyle(
-                        color: Color(0xff18786a),
+                        color: Color(0xFF0072FF),
                         fontFamily: 'Poppins',
                         fontSize: 16,
                         fontWeight: FontWeight.w500),

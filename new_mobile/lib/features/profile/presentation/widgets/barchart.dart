@@ -12,7 +12,7 @@ class BarChartWidget extends StatefulWidget {
       required this.maxItemCount});
 
   final Color barBackgroundColor = Colors.black.withOpacity(0.3);
-  final Color barColor = const Color(0xff18786a);
+  final Color barColor = const Color(0xFF0072FF);
   final ScoreCategoryListEntity scoreCategoryListEntity;
   final int maxItemCount;
 
@@ -62,7 +62,7 @@ class BarChartSample1State extends State<BarChartWidget> {
 
   Widget getTitles(double value, TitleMeta meta) {
     const style = TextStyle(
-      color: Color(0xff18786a),
+      color: Color(0xFF0072FF),
       fontWeight: FontWeight.w300,
       fontFamily: 'Poppins',
       fontSize: 12,

@@ -9,7 +9,7 @@ class ChatLoadingWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       decoration: const BoxDecoration(
-        color: Color(0xFF44A092),
+        color: Color(0xFF0072FF),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),

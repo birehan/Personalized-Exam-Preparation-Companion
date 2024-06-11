@@ -97,7 +97,7 @@ class _ContestDetailPageState extends State<ContestDetailPage>
                     padding: EdgeInsets.symmetric(vertical: 1.h),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xff18786a),
+                      color: const Color(0xFF0072FF),
                     ),
                     child: const Text(
                       // AppLocalizations.of(context)!.ok,
@@ -369,7 +369,7 @@ class _ContestDetailPageState extends State<ContestDetailPage>
                                                             decoration:
                                                                 BoxDecoration(
                                                               color: const Color(
-                                                                  0xFF1A7A6C),
+                                                                  0xFF0072FF),
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
@@ -691,7 +691,7 @@ class _ContestDetailPageState extends State<ContestDetailPage>
                                                               decoration:
                                                                   BoxDecoration(
                                                                 color: const Color(
-                                                                        0xFF18786A)
+                                                                        0xFF0072FF)
                                                                     .withOpacity(
                                                                         0.11),
                                                                 borderRadius:
@@ -706,7 +706,7 @@ class _ContestDetailPageState extends State<ContestDetailPage>
                                                                         .poppins(
                                                                   color:
                                                                       const Color(
-                                                                    0xFF18786A,
+                                                                    0xFF0072FF,
                                                                   ),
                                                                   fontWeight:
                                                                       FontWeight
@@ -751,7 +751,7 @@ class _ContestDetailPageState extends State<ContestDetailPage>
                                                           ? const Color(
                                                               0xFFFF6652)
                                                           : const Color(
-                                                              0xFF1A7A6C),
+                                                              0xFF0072FF),
                                                       shape: BoxShape.circle,
                                                     ),
                                                     child: Icon(
@@ -801,7 +801,7 @@ class _ContestDetailPageState extends State<ContestDetailPage>
                                               child: const Center(
                                                 child: Icon(
                                                   Icons.lock,
-                                                  color: Color(0XFF1A7A6C),
+                                                  color: Color(0xFF0072FF),
                                                   size: 48,
                                                 ),
                                               ),
@@ -839,7 +839,7 @@ class _ContestDetailPageState extends State<ContestDetailPage>
                                               child: const Center(
                                                 child: Icon(
                                                   Icons.lock,
-                                                  color: Color(0XFF1A7A6C),
+                                                  color: Color(0xFF0072FF),
                                                   size: 48,
                                                 ),
                                               ),

@@ -141,10 +141,10 @@ class AppRouter extends StatelessWidget {
             theme: ThemeData(
               useMaterial3: true,
               colorScheme:
-                  ColorScheme.fromSeed(seedColor: const Color(0xFF1A7A6C)),
+                  ColorScheme.fromSeed(seedColor: const Color(0xFF0072FF)),
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF1A7A6C),
+                  backgroundColor: const Color(0xFF0072FF),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),

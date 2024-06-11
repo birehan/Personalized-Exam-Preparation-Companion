@@ -73,7 +73,7 @@ class _EndOfSubtopicQuestionsPageState
                           },
                           icon: const Icon(
                             Icons.arrow_back,
-                            color: Color(0xff18786A),
+                            color: Color(0xFF0072FF),
                           ))
                     ],
                   )),

@@ -81,7 +81,7 @@ class _AddFriendsPageState extends State<AddFriendsPage> {
                     height: 40,
                     width: 40,
                     decoration: BoxDecoration(
-                        color: const Color(0xff18786a),
+                        color: const Color(0xFF0072FF),
                         borderRadius: BorderRadius.circular(5)),
                     child: const Icon(
                       Icons.person_add_alt_1_rounded,

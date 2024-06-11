@@ -29,7 +29,7 @@ class CountDownCard extends StatelessWidget {
         Expanded(
           child: Container(
             decoration: BoxDecoration(
-              color: forContest ? Colors.transparent : const Color(0xFF18786A),
+              color: forContest ? Colors.transparent : const Color(0xFF0072FF),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Column(

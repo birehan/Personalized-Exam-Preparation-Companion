@@ -28,7 +28,7 @@ class ReceicedRequestsTab extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AcceptDeclineWidget(
-                color: const Color(0xff18786a),
+                color: const Color(0xFF0072FF),
                 onClick: () {
                   // trigger accept
                 },

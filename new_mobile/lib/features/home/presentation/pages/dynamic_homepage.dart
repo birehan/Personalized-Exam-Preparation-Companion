@@ -185,7 +185,7 @@ class _DynamicHomePageState extends State<DynamicHomePage> {
                                   padding: EdgeInsets.only(
                                       left: 4.w, top: 3.h, bottom: 3.h),
                                   decoration: BoxDecoration(
-                                      color: const Color(0xff18786a),
+                                      color: const Color(0xFF0072FF),
                                       borderRadius: BorderRadius.circular(20)),
                                   child: BlocBuilder<HomeBloc, HomeState>(
                                     builder: (context, state) {
@@ -438,7 +438,7 @@ class _DynamicHomePageState extends State<DynamicHomePage> {
                           //                               BorderRadius.circular(
                           //                                   15),
                           //                           color:
-                          //                               const Color(0xff18786a),
+                          //                               const Color(0xFF0072FF),
                           //                         ),
                           //                         child: (fetchDailyQuizForAnalysisState
                           //                                 is FetchDailyQuizForAnalysisLoading)

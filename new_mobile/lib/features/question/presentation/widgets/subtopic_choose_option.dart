@@ -32,7 +32,7 @@ class SubtopicChooseOption extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
           decoration: BoxDecoration(
             color: isSelected
-                ? const Color(0xFF18786A)
+                ? const Color(0xFF0072FF)
                 : isWrongAnswer
                     ? Colors.red
                     : Colors.white,
@@ -118,7 +118,7 @@ class SubtopicChooseOption extends StatelessWidget {
                 child: isSelected
                     ? const Icon(
                         Icons.check,
-                        color: Color(0xFF18786A),
+                        color: Color(0xFF0072FF),
                         size: 14,
                       )
                     : isWrongAnswer

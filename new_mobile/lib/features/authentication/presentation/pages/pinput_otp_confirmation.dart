@@ -23,7 +23,7 @@
 
 //   @override
 //   Widget build(BuildContext context) {
-//     const focusedBorderColor = Color(0xff18786a);
+//     const focusedBorderColor = Color(0xFF0072FF);
 //     const fillColor = Color.fromRGBO(243, 246, 249, 0);
 //     final borderColor = const Color(0xff28786a).withOpacity(.5);
 

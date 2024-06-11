@@ -38,7 +38,7 @@ class UserMockRank extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(Icons.check, color: Color(0xFF1A7A6C)),
+                const Icon(Icons.check, color: Color(0xFF0072FF)),
                 const SizedBox(height: 16),
                 isCompleted == true
                     ? Text(

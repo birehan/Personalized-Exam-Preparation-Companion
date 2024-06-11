@@ -66,7 +66,7 @@ class _TimeCountDownWidgetState extends State<TimeCountDownWidget> {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       decoration: const BoxDecoration(
-        color: Color(0xFF18786A),
+        color: Color(0xFF0072FF),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(8),
           bottomRight: Radius.circular(8),
@@ -88,15 +88,21 @@ class _TimeCountDownWidgetState extends State<TimeCountDownWidget> {
             children: [
               TimeCounterWidget(
                 countDownTime: months,
-                timeFormat: int.parse(months) > 1 ? AppLocalizations.of(context)!.months : AppLocalizations.of(context)!.month,
+                timeFormat: int.parse(months) > 1
+                    ? AppLocalizations.of(context)!.months
+                    : AppLocalizations.of(context)!.month,
               ),
               TimeCounterWidget(
                 countDownTime: weeks,
-                timeFormat: int.parse(weeks) > 1 ? AppLocalizations.of(context)!.weeks : AppLocalizations.of(context)!.week,
+                timeFormat: int.parse(weeks) > 1
+                    ? AppLocalizations.of(context)!.weeks
+                    : AppLocalizations.of(context)!.week,
               ),
               TimeCounterWidget(
                 countDownTime: days,
-                timeFormat: int.parse(days) > 1 ? AppLocalizations.of(context)!.days : AppLocalizations.of(context)!.day,
+                timeFormat: int.parse(days) > 1
+                    ? AppLocalizations.of(context)!.days
+                    : AppLocalizations.of(context)!.day,
               ),
               // TimeCounterWidget(
               //   countDownTime: seconds,

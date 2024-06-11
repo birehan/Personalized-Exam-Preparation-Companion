@@ -106,7 +106,7 @@ class _GeneralChatMessageInputFieldState
               padding: const EdgeInsets.all(12),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color(0xFF16786A),
+                color: Color(0xFF0072FF),
               ),
               child: const Icon(
                 Icons.send_rounded,

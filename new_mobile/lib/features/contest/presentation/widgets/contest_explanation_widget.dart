@@ -58,7 +58,7 @@ class ContestExplanationWidget extends StatelessWidget {
                             horizontal: 40,
                           ),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF1A7A6C),
+                            color: const Color(0xFF0072FF),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Column(
@@ -122,13 +122,13 @@ class ContestExplanationWidget extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.explore_outlined,
-                                          color: Color(0xFF1A7A6C),
+                                          color: Color(0xFF0072FF),
                                         ),
                                         const SizedBox(width: 6),
                                         Text(
                                           AppLocalizations.of(context)!.explore,
                                           style: GoogleFonts.poppins(
-                                            color: const Color(0xFF1A7A6C),
+                                            color: const Color(0xFF0072FF),
                                             fontSize: 16,
                                             fontWeight: FontWeight.w600,
                                           ),

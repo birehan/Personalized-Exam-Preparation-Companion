@@ -83,7 +83,7 @@ class _FriendsMainPageState extends State<FriendsMainPage>
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: _tabIndex == 0
-                          ? const Color(0xff1A7A6C)
+                          ? const Color(0xFF0072FF)
                           : Colors.transparent,
                     ),
                     child: Text(
@@ -99,7 +99,7 @@ class _FriendsMainPageState extends State<FriendsMainPage>
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: _tabIndex == 1
-                          ? const Color(0xff1A7A6C)
+                          ? const Color(0xFF0072FF)
                           : Colors.transparent,
                     ),
                     child: Text(

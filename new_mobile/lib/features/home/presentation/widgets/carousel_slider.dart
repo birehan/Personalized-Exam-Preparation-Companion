@@ -111,7 +111,7 @@ class _CarouselSliderForUpcommingEventsState
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: _currentIndex == index
-                        ? const Color(0xff18786a)
+                        ? const Color(0xFF0072FF)
                         : Colors.grey.shade300,
                   ),
                 ),

@@ -66,7 +66,7 @@ class ProfileEditpageMenuIcon extends StatelessWidget {
                           inputDecorationTheme: const InputDecorationTheme(
                             // Set the border color for TextField
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Color(0xff18786a)),
+                              borderSide: BorderSide(color: Color(0xFF0072FF)),
                             ),
                             // Add more InputDecoration styles if needed
                           ),
@@ -114,7 +114,7 @@ class ProfileEditpageMenuIcon extends StatelessWidget {
                                 return TextButton(
                                   child: const Text('Cancel',
                                       style: TextStyle(
-                                          color: Color(0xff18786a),
+                                          color: Color(0xFF0072FF),
                                           fontFamily: 'Poppins')),
                                   onPressed: () {
                                     Navigator.pop(context);
@@ -147,7 +147,7 @@ class ProfileEditpageMenuIcon extends StatelessWidget {
                                 return TextButton(
                                   child: const Text('Change',
                                       style: TextStyle(
-                                          color: Color(0xff18786a),
+                                          color: Color(0xFF0072FF),
                                           fontFamily: 'Poppins')),
                                   onPressed: () {
                                     context.read<PasswordBloc>().add(
@@ -225,7 +225,7 @@ class _PasswordChangeTextFieldWidgetState
             contentPadding:
                 EdgeInsets.symmetric(vertical: 1.h, horizontal: 3.w),
             border: OutlineInputBorder(
-              borderSide: const BorderSide(color: Color(0xff18786a)),
+              borderSide: const BorderSide(color: Color(0xFF0072FF)),
               borderRadius: BorderRadius.circular(5),
             ),
             suffixIcon: IconButton(
@@ -236,7 +236,7 @@ class _PasswordChangeTextFieldWidgetState
               },
               icon: Icon(
                 obscureText ? Icons.visibility_off : Icons.visibility,
-                color: const Color(0xFF18786A),
+                color: const Color(0xFF0072FF),
               ),
             ),
           ),

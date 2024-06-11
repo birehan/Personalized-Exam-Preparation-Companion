@@ -18,7 +18,7 @@ class SignInWithGoogleWidget extends StatelessWidget {
       },
       child: Container(
         decoration: BoxDecoration(
-            color: const Color(0xff18786a).withOpacity(.3),
+            color: const Color(0xFF0072FF).withOpacity(.3),
             borderRadius: BorderRadius.circular(10)),
         padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.2.h),
         child: Row(

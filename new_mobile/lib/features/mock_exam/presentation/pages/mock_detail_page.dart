@@ -170,7 +170,7 @@ class _MockDetailPageState extends State<MockDetailPage> {
                                       iconData: Icons.play_arrow_rounded,
                                       iconColor: Colors.white,
                                       buttonText: 'Start Exam',
-                                      bgColor: const Color(0xFF1A7A6C),
+                                      bgColor: const Color(0xFF0072FF),
                                       textColor: Colors.white,
                                     ),
                                   ],
@@ -216,7 +216,7 @@ class _MockDetailPageState extends State<MockDetailPage> {
                                       },
                                       imageUrl: 'assets/images/search.png',
                                       buttonText: 'Mock Analysis',
-                                      bgColor: const Color(0xFF1A7A6C),
+                                      bgColor: const Color(0xFF0072FF),
                                       textColor: Colors.white,
                                     ),
                                     const SizedBox(width: 8),
@@ -235,10 +235,10 @@ class _MockDetailPageState extends State<MockDetailPage> {
                                         );
                                       },
                                       iconData: Icons.refresh,
-                                      iconColor: const Color(0xFF1A7A6C),
+                                      iconColor: const Color(0xFF0072FF),
                                       buttonText: 'Retake Exam',
                                       bgColor: Colors.white,
-                                      textColor: const Color(0xFF1A7A6C),
+                                      textColor: const Color(0xFF0072FF),
                                     ),
                                   ],
                                 ),
@@ -279,7 +279,7 @@ class _MockDetailPageState extends State<MockDetailPage> {
                                 alignment: Alignment.centerRight,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color(0xFF18786a),
+                                    backgroundColor: const Color(0xFF0072FF),
                                     foregroundColor: Colors.white,
                                   ),
                                   onPressed: isMockDownloaded

@@ -208,7 +208,7 @@ class _ChangeUsernameDialogState extends State<ChangeUsernameDialog> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(
                                   12), // Set the border-radius
-                              color: const Color(0xFF1A7A6C)),
+                              color: const Color(0xFF0072FF)),
                           child: const Center(
                             child: Text(
                               'Reset Username',

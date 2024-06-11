@@ -210,7 +210,7 @@ class _ContentPageState extends State<ContentPage>
           actions: [
             ShareButton(
               route: GoRouter.of(context).location,
-              subject: 'SkillBridge content',
+              subject: 'PrepGenie content',
             ),
           ],
         ),
@@ -391,7 +391,7 @@ class _ContentPageState extends State<ContentPage>
                                       : AppLocalizations.of(context)!.prev,
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Color(0xff18786A),
+                                    color: Color(0xFF0072FF),
                                   ),
                                 ),
                               ),
@@ -438,7 +438,7 @@ class _ContentPageState extends State<ContentPage>
                                                 .finish,
                                             style: const TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              color: Color(0xff18786A),
+                                              color: Color(0xFF0072FF),
                                             ),
                                           );
                                         },
@@ -456,7 +456,7 @@ class _ContentPageState extends State<ContentPage>
                                         AppLocalizations.of(context)!.next,
                                         style: const TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: Color(0xff18786A),
+                                          color: Color(0xFF0072FF),
                                         ),
                                       ),
                                     ),

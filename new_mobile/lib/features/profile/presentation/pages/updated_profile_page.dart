@@ -213,7 +213,7 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                   //       style: TextStyle(
                   //         fontSize: 24,
                   //         fontWeight: FontWeight.bold,
-                  //         color: Color(0xff18786a),
+                  //         color: Color(0xFF0072FF),
                   //       ),
                   //     ),
                   //     Padding(
@@ -250,7 +250,7 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                   //       style: TextStyle(
                   //         fontSize: 24,
                   //         fontWeight: FontWeight.bold,
-                  //         color: Color(0xff18786a),
+                  //         color: Color(0xFF0072FF),
                   //       ),
                   //     ),
                   //   ],

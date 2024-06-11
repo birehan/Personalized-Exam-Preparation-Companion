@@ -35,7 +35,7 @@ class DynamicHomepageProfileHeader extends StatelessWidget {
                         width: 60,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: const Color(0xff18786a).withOpacity(.3),
+                          color: const Color(0xFF0072FF).withOpacity(.3),
                           image: DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(

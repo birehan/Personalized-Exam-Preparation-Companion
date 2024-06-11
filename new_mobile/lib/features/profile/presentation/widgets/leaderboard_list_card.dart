@@ -37,7 +37,7 @@ class LeaderboardListCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: isMyRank
-              ? const Color(0xFF1A7A6C).withOpacity(0.13)
+              ? const Color(0xFF0072FF).withOpacity(0.13)
               : index % 2 == 0
                   ? const Color(0xffF7F7F7)
                   : Colors.white,
@@ -68,7 +68,7 @@ class LeaderboardListCard extends StatelessWidget {
               height: 6.h,
               width: 6.h,
               decoration: BoxDecoration(
-                  color: const Color(0xff18786a).withOpacity(.3),
+                  color: const Color(0xFF0072FF).withOpacity(.3),
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       fit: BoxFit.cover,

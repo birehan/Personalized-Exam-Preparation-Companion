@@ -18,7 +18,7 @@ class NewPasswordConfirmedPage extends StatelessWidget {
             const Spacer(),
             const Icon(
               Icons.check_circle_outline,
-              color: Color(0xFF18786A),
+              color: Color(0xFF0072FF),
               size: 72,
             ),
             const SizedBox(height: 12),
@@ -33,7 +33,8 @@ class NewPasswordConfirmedPage extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             Text(
-              AppLocalizations.of(context)!.you_have_successfully_confirm_your_new_password_please_use_your_new_password_when_logging_in,
+              AppLocalizations.of(context)!
+                  .you_have_successfully_confirm_your_new_password_please_use_your_new_password_when_logging_in,
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 14,
@@ -48,7 +49,7 @@ class NewPasswordConfirmedPage extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: const Color(0xFF18786A),
+                      backgroundColor: const Color(0xFF0072FF),
                     ),
                     onPressed: () {
                       LoginPageRoute().go(context);

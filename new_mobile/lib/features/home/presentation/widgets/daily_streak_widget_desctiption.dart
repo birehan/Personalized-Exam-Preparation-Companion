@@ -61,13 +61,13 @@ class DailyStreakWidgetDesctiptionWidget extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF18786A).withOpacity(0.11),
+                      color: const Color(0xFF0072FF).withOpacity(0.11),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
                       'Today',
                       style: GoogleFonts.poppins(
-                        color: const Color(0xFF18786A),
+                        color: const Color(0xFF0072FF),
                         fontWeight: FontWeight.w500,
                       ),
                     ),

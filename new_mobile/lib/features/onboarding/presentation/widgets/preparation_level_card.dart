@@ -27,10 +27,10 @@ class OnboardingCard extends StatelessWidget {
           border: Border.all(
               width: 0.1,
               color: selected
-                  ? const Color(0xff18786A)
+                  ? const Color(0xFF0072FF)
                   : const Color.fromARGB(255, 223, 218, 218)),
           color:
-              selected ? const Color(0xff18786A).withOpacity(.1) : Colors.white,
+              selected ? const Color(0xFF0072FF).withOpacity(.1) : Colors.white,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,7 +61,7 @@ class OnboardingCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15)),
               onChanged: (val) {},
               fillColor: selected
-                  ? MaterialStateProperty.all<Color>(const Color(0xff18786A))
+                  ? MaterialStateProperty.all<Color>(const Color(0xFF0072FF))
                   : MaterialStateProperty.all<Color>(Colors.white),
             )
           ],

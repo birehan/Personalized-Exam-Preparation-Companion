@@ -209,7 +209,7 @@ class _DownloadedMockExamQuestionsPageState
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: Colors.red,
-                            // color: const Color(0xFF18786A),
+                            // color: const Color(0xFF0072FF),
                           ),
                         ),
                       )

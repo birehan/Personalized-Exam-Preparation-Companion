@@ -58,7 +58,7 @@ class SubChapterCardNew extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(
                         color: completed
-                            ? const Color(0xff18786a)
+                            ? const Color(0xFF0072FF)
                             : const Color(0xffDCE8F7),
                         width: .4.h),
                     color: Colors.transparent,
@@ -85,7 +85,7 @@ class SubChapterCardNew extends StatelessWidget {
                   width: 1.5.w,
                   decoration: BoxDecoration(
                       color: completed
-                          ? const Color(0xff18786a)
+                          ? const Color(0xFF0072FF)
                           : const Color(0xffDCE8F7),
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -149,7 +149,7 @@ class SubChapterCardNew extends StatelessWidget {
                 width: 24,
                 height: 24,
                 decoration: const BoxDecoration(
-                  color: Color(0xFF1A7A6C),
+                  color: Color(0xFF0072FF),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(

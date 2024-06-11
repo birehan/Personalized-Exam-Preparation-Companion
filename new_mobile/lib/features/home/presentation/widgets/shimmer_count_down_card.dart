@@ -9,9 +9,9 @@ class ShimmerCountDownCard extends StatelessWidget {
     return Shimmer(
       gradient: LinearGradient(
         colors: [
-          const Color(0xFF18786A).withOpacity(0.5),
-          const Color(0xFF18786A).withOpacity(0.7),
-          const Color(0xFF18786A).withOpacity(0.5),
+          const Color(0xFF0072FF).withOpacity(0.5),
+          const Color(0xFF0072FF).withOpacity(0.7),
+          const Color(0xFF0072FF).withOpacity(0.5),
         ],
         stops: const [0.0, 0.5, 1.0],
       ),
@@ -21,7 +21,7 @@ class ShimmerCountDownCard extends StatelessWidget {
             child: Container(
               height: 100,
               decoration: BoxDecoration(
-                color: const Color(0xFF18786A),
+                color: const Color(0xFF0072FF),
                 borderRadius: BorderRadius.circular(8),
               ),
             ),

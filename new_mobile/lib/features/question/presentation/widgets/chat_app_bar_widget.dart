@@ -11,7 +11,7 @@ class ChatAppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color(0xFF1A7A6C),
+        color: Color(0xFF0072FF),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -40,7 +40,7 @@ class ChatAppBarWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'SkillBridge AI Bot',
+                        'PrepGenie AI Bot',
                         style: GoogleFonts.poppins(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,

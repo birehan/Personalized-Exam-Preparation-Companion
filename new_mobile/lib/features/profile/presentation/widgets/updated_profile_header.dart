@@ -95,7 +95,7 @@ class ProfileHeader extends StatelessWidget {
                   child: const Text(
                     'Edit profile',
                     style: TextStyle(
-                        color: Color(0xff18786a),
+                        color: Color(0xFF0072FF),
                         fontFamily: 'Poppins',
                         fontSize: 16,
                         fontWeight: FontWeight.w500),
@@ -139,7 +139,7 @@ class ProfileHeader extends StatelessWidget {
               inputDecorationTheme: const InputDecorationTheme(
                 // Set the border color for TextField
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xff18786a)),
+                  borderSide: BorderSide(color: Color(0xFF0072FF)),
                 ),
                 // Add more InputDecoration styles if needed
               ),
@@ -157,7 +157,7 @@ class ProfileHeader extends StatelessWidget {
                 TextButton(
                   child: const Text('Cancel',
                       style: TextStyle(
-                          color: Color(0xff18786a), fontFamily: 'Poppins')),
+                          color: Color(0xFF0072FF), fontFamily: 'Poppins')),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -165,7 +165,7 @@ class ProfileHeader extends StatelessWidget {
                 TextButton(
                   child: const Text('Logout',
                       style: TextStyle(
-                          color: Color(0xff18786a), fontFamily: 'Poppins')),
+                          color: Color(0xFF0072FF), fontFamily: 'Poppins')),
                   onPressed: () {
                     context
                         .read<DeleteDeviceTokenBloc>()
