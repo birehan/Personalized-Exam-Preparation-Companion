@@ -207,12 +207,12 @@ class _ContentPageState extends State<ContentPage>
               },
             ),
           ),
-          actions: [
-            ShareButton(
-              route: GoRouter.of(context).location,
-              subject: 'PrepGenie content',
-            ),
-          ],
+          // actions: [
+          //   ShareButton(
+          //     route: GoRouter.of(context).location,
+          //     subject: 'PrepGenie content',
+          //   ),
+          // ],
         ),
         body: BlocListener<SubChapterBloc, SubChapterState>(
           listener: (context, state) {
@@ -276,22 +276,22 @@ class _ContentPageState extends State<ContentPage>
                                         ),
                                       ),
                                     ),
-                                    FlagButton(onPressed: () {
-                                      final originalContext = context;
+                                    // FlagButton(onPressed: () {
+                                    //   final originalContext = context;
 
-                                      showDialog(
-                                        context: context,
-                                        builder: (BuildContext context) {
-                                          return FlagDialog(
-                                            originalContext: originalContext,
-                                            index: 0,
-                                            id: contentId,
-                                            feedbackType:
-                                                FeedbackType.contentFeedback,
-                                          );
-                                        },
-                                      );
-                                    }),
+                                    //   showDialog(
+                                    //     context: context,
+                                    //     builder: (BuildContext context) {
+                                    //       return FlagDialog(
+                                    //         originalContext: originalContext,
+                                    //         index: 0,
+                                    //         id: contentId,
+                                    //         feedbackType:
+                                    //             FeedbackType.contentFeedback,
+                                    //       );
+                                    //     },
+                                    //   );
+                                    // }),
                                     IconButton(
                                       icon: isBookmarked.contains(index)
                                           ? const Icon(Icons.bookmark,

@@ -157,15 +157,15 @@ class _CourseDetailPageNewState extends State<CourseDetailPageNew>
                         ),
                       ),
                     ),
-                    Tab(
-                      child: Text(
-                        AppLocalizations.of(context)!.quizzes,
-                        style: GoogleFonts.poppins(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
+                    // Tab(
+                    //   child: Text(
+                    //     AppLocalizations.of(context)!.quizzes,
+                    //     style: GoogleFonts.poppins(
+                    //       color: Colors.black,
+                    //       fontWeight: FontWeight.w500,
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

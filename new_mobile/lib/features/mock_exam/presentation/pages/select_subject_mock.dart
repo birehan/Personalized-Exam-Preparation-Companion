@@ -36,48 +36,48 @@ class SelectSubjectForMockPage extends StatelessWidget {
         //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446211/SkillBridge/mobile_team_icons/suatuo9fk4ty5g71o4vu.png',
         isStandard: isStandard,
       ),
-      SubjectCard(
-        subjectTitle: 'Chemistry',
-        imageUrl: 'assets/images/Chemistry.png',
-        // imageUrl:
-        //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446284/SkillBridge/mobile_team_icons/p43wc8hwy6vgq2qfcxe1.png',
-        isStandard: isStandard,
-      ),
-      SubjectCard(
-        subjectTitle: 'Physics',
-        imageUrl: 'assets/images/Physics.png',
-        // imageUrl:
-        //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446505/SkillBridge/mobile_team_icons/mdzmeqnqjxfftcyyadmx.png',
-        isStandard: isStandard,
-      ),
-      SubjectCard(
-        subjectTitle: 'English',
-        imageUrl: 'assets/images/English.png',
-        // imageUrl:
-        //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446380/SkillBridge/mobile_team_icons/agdxx77c3jyyfrljsp7x.png',
-        isStandard: isStandard,
-      ),
-      SubjectCard(
-        subjectTitle: 'Civics',
-        imageUrl: 'assets/images/Civics.png',
-        // imageUrl:
-        //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446324/SkillBridge/mobile_team_icons/za9bhxjbwoqbxuzlhfwt.png',
-        isStandard: isStandard,
-      ),
-      SubjectCard(
-        subjectTitle: 'Mathematics',
-        imageUrl: 'assets/images/maths.png',
-        // imageUrl:
-        //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446474/SkillBridge/mobile_team_icons/mfyfruoreocx0jtj4snp.png',
-        isStandard: isStandard,
-      ),
-      SubjectCard(
-        subjectTitle: 'SAT',
-        imageUrl: 'assets/images/SAT.png',
-        // imageUrl:
-        //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446535/SkillBridge/mobile_team_icons/ki9zk3ppga4ixqeux5ks.png',
-        isStandard: isStandard,
-      ),
+      // SubjectCard(
+      //   subjectTitle: 'Chemistry',
+      //   imageUrl: 'assets/images/Chemistry.png',
+      //   // imageUrl:
+      //   //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446284/SkillBridge/mobile_team_icons/p43wc8hwy6vgq2qfcxe1.png',
+      //   isStandard: isStandard,
+      // ),
+      // SubjectCard(
+      //   subjectTitle: 'Physics',
+      //   imageUrl: 'assets/images/Physics.png',
+      //   // imageUrl:
+      //   //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446505/SkillBridge/mobile_team_icons/mdzmeqnqjxfftcyyadmx.png',
+      //   isStandard: isStandard,
+      // ),
+      // SubjectCard(
+      //   subjectTitle: 'English',
+      //   imageUrl: 'assets/images/English.png',
+      //   // imageUrl:
+      //   //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446380/SkillBridge/mobile_team_icons/agdxx77c3jyyfrljsp7x.png',
+      //   isStandard: isStandard,
+      // ),
+      // SubjectCard(
+      //   subjectTitle: 'Civics',
+      //   imageUrl: 'assets/images/Civics.png',
+      //   // imageUrl:
+      //   //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446324/SkillBridge/mobile_team_icons/za9bhxjbwoqbxuzlhfwt.png',
+      //   isStandard: isStandard,
+      // ),
+      // SubjectCard(
+      //   subjectTitle: 'Mathematics',
+      //   imageUrl: 'assets/images/maths.png',
+      //   // imageUrl:
+      //   //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446474/SkillBridge/mobile_team_icons/mfyfruoreocx0jtj4snp.png',
+      //   isStandard: isStandard,
+      // ),
+      // SubjectCard(
+      //   subjectTitle: 'SAT',
+      //   imageUrl: 'assets/images/SAT.png',
+      //   // imageUrl:
+      //   //     'https://res.cloudinary.com/djrfgfo08/image/upload/v1697446535/SkillBridge/mobile_team_icons/ki9zk3ppga4ixqeux5ks.png',
+      //   isStandard: isStandard,
+      // ),
     ];
 
     final List<Widget> socialScienceWidgets = [
