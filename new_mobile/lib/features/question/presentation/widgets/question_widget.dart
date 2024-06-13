@@ -4,7 +4,7 @@ import 'package:markdown_widget/markdown_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+// import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 import '../../../../core/core.dart';
 import '../../../bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
@@ -197,20 +197,20 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                     ),
                     Row(
                       children: [
-                        FlagButton(onPressed: () {
-                          var originalContext = context;
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return FlagDialog(
-                                originalContext: originalContext,
-                                index: 0,
-                                id: widget.question.id,
-                                feedbackType: FeedbackType.questionFeedback,
-                              );
-                            },
-                          );
-                        }),
+                        // FlagButton(onPressed: () {
+                        //   var originalContext = context;
+                        //   showDialog(
+                        //     context: context,
+                        //     builder: (BuildContext context) {
+                        //       return FlagDialog(
+                        //         originalContext: originalContext,
+                        //         index: 0,
+                        //         id: widget.question.id,
+                        //         feedbackType: FeedbackType.questionFeedback,
+                        //       );
+                        //     },
+                        //   );
+                        // }),
                         IconButton(
                             onPressed: () {
                               if (bookmarked) {

@@ -14,7 +14,7 @@ import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../../../core/widgets/questions_shimmer.dart';
 import '../../../features.dart';
-import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
+// import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
 
 class MockExamQuestionPageParams {
   final int questionNumber;
@@ -161,41 +161,41 @@ class _MockExamQuestionsPageState extends State<MockExamQuestionsPage> {
             }
           },
         ),
-        BlocListener<FeedbackBloc, FeedbackState>(
-          listener: (context, state) {
-            if (state is FeedbackSubmitedState) {
-              final snackBar = SnackBar(
-                backgroundColor: Colors.transparent,
-                elevation: 0,
-                content: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: const [
-                      BoxShadow(color: Colors.black26, blurRadius: 4)
-                    ],
-                  ),
-                  child: const Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.check, color: Colors.white),
-                      SizedBox(width: 8),
-                      Text(
-                          'Thank you for your feedback 🙏', //! this has to be changed
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                ),
-                duration: const Duration(seconds: 3),
-                behavior: SnackBarBehavior.floating,
-              );
+        // BlocListener<FeedbackBloc, FeedbackState>(
+        //   listener: (context, state) {
+        //     if (state is FeedbackSubmitedState) {
+        //       final snackBar = SnackBar(
+        //         backgroundColor: Colors.transparent,
+        //         elevation: 0,
+        //         content: Container(
+        //           padding:
+        //               const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        //           decoration: BoxDecoration(
+        //             color: Colors.green,
+        //             borderRadius: BorderRadius.circular(8),
+        //             boxShadow: const [
+        //               BoxShadow(color: Colors.black26, blurRadius: 4)
+        //             ],
+        //           ),
+        //           child: const Row(
+        //             mainAxisSize: MainAxisSize.min,
+        //             children: [
+        //               Icon(Icons.check, color: Colors.white),
+        //               SizedBox(width: 8),
+        //               Text(
+        //                   'Thank you for your feedback 🙏', //! this has to be changed
+        //                   style: TextStyle(color: Colors.white)),
+        //             ],
+        //           ),
+        //         ),
+        //         duration: const Duration(seconds: 3),
+        //         behavior: SnackBarBehavior.floating,
+        //       );
 
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            }
-          },
-        )
+        //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        //     }
+        //   },
+        // )
       ],
       child: buildWidget(context, hours, minutes, seconds, goTo),
     );
@@ -300,14 +300,14 @@ class _MockExamQuestionsPageState extends State<MockExamQuestionsPage> {
                         color: const Color(0xFF363636),
                       ),
                     ),
-          actions: [
-            if (loadedMock.id != 'id')
-              ShareButton(
-                route:
-                    '/shared-question-page/${loadedMock.mockQuestions[currentIndex].question.id}',
-                subject: 'SkillBridge question',
-              ),
-          ],
+          // actions: [
+          //   if (loadedMock.id != 'id')
+          //     ShareButton(
+          //       route:
+          //           '/shared-question-page/${loadedMock.mockQuestions[currentIndex].question.id}',
+          //       subject: 'SkillBridge question',
+          //     ),
+          // ],
         ),
         body: BlocConsumer<MockQuestionBloc, MockQuestionState>(
           listener: (context, state) {

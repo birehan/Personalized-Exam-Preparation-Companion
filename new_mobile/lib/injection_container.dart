@@ -842,39 +842,39 @@ Future<void> init() async {
         repository: serviceLocator(),
       ));
   //! Feature 11 Feedback
-  serviceLocator.registerFactory(
-    () => FeedbackBloc(
-      submitContentFeedbackUsecase: serviceLocator(),
-    ),
-  );
-  serviceLocator.registerFactory(
-    () => QuestionVoteBloc(
-      voteQuestionUsecase: serviceLocator(),
-    ),
-  );
+  // serviceLocator.registerFactory(
+  //   () => FeedbackBloc(
+  //     submitContentFeedbackUsecase: serviceLocator(),
+  //   ),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => QuestionVoteBloc(
+  //     voteQuestionUsecase: serviceLocator(),
+  //   ),
+  // );
 
-  // Usecase
-  serviceLocator.registerLazySingleton(
-    () => SubmitContentFeedbackUsecase(feedbackRepositories: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => VoteQuestionUsecase(
-      feedbackRepositories: serviceLocator(),
-    ),
-  );
-  // Repository
-  serviceLocator.registerLazySingleton<FeedbackRepositories>(
-    () => FeedbackRepositoriesImpl(
-      feedbackRemoteDataSource: serviceLocator(),
-      networkInfo: serviceLocator(),
-    ),
-  );
-  serviceLocator.registerLazySingleton<FeedbackRemoteDataSource>(
-    () => FeedbackRemoteDataSourceImpl(
-      client: serviceLocator(),
-      flutterSecureStorage: serviceLocator(),
-    ),
-  );
+  // // Usecase
+  // serviceLocator.registerLazySingleton(
+  //   () => SubmitContentFeedbackUsecase(feedbackRepositories: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => VoteQuestionUsecase(
+  //     feedbackRepositories: serviceLocator(),
+  //   ),
+  // );
+  // // Repository
+  // serviceLocator.registerLazySingleton<FeedbackRepositories>(
+  //   () => FeedbackRepositoriesImpl(
+  //     feedbackRemoteDataSource: serviceLocator(),
+  //     networkInfo: serviceLocator(),
+  //   ),
+  // );
+  // serviceLocator.registerLazySingleton<FeedbackRemoteDataSource>(
+  //   () => FeedbackRemoteDataSourceImpl(
+  //     client: serviceLocator(),
+  //     flutterSecureStorage: serviceLocator(),
+  //   ),
+  // );
 
   //! Feature 12 Onboarding
   //bloc

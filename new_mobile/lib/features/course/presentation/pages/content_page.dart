@@ -19,8 +19,8 @@ import '../../../../core/widgets/progress_indicator2.dart';
 import '../../../chapter/domain/domain.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../chapter/presentation/bloc/subChapterBloc/sub_chapter_bloc.dart';
-import '../../../feedback/presentation/bloc/feedbackBloc/feedback_bloc.dart';
-import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
+// import '../../../feedback/presentation/bloc/feedbackBloc/feedback_bloc.dart';
+// import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
 import '../bloc/course/course_bloc.dart';
 import '../bloc/courseWithuserAnalysis/course_with_user_analysis_bloc.dart';
 import '../bloc/subChapterRegstration/sub_chapter_regstration_bloc.dart';
@@ -110,46 +110,46 @@ class _ContentPageState extends State<ContentPage>
                 .go(context);
           } //! add message for the failed state and push
         }),
-        BlocListener<FeedbackBloc, FeedbackState>(
-          listener: (context, state) {
-            if (state is FeedbackSubmisionFailedState &&
-                state.failure is RequestOverloadFailure) {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(snackBar(state.failure.errorMessage));
-            }
-            if (state is FeedbackSubmitedState) {
-              final snackBar = SnackBar(
-                backgroundColor: Colors.transparent,
-                elevation: 0,
-                content: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: const [
-                      BoxShadow(color: Colors.black26, blurRadius: 4)
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Icon(Icons.check, color: Colors.white),
-                      const SizedBox(width: 8),
-                      Text(
-                          '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                ),
-                duration: const Duration(seconds: 3),
-                behavior: SnackBarBehavior.floating,
-              );
+        // BlocListener<FeedbackBloc, FeedbackState>(
+        //   listener: (context, state) {
+        //     if (state is FeedbackSubmisionFailedState &&
+        //         state.failure is RequestOverloadFailure) {
+        //       ScaffoldMessenger.of(context)
+        //           .showSnackBar(snackBar(state.failure.errorMessage));
+        //     }
+        //     if (state is FeedbackSubmitedState) {
+        //       final snackBar = SnackBar(
+        //         backgroundColor: Colors.transparent,
+        //         elevation: 0,
+        //         content: Container(
+        //           padding:
+        //               const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        //           decoration: BoxDecoration(
+        //             color: Colors.green,
+        //             borderRadius: BorderRadius.circular(8),
+        //             boxShadow: const [
+        //               BoxShadow(color: Colors.black26, blurRadius: 4)
+        //             ],
+        //           ),
+        //           child: Row(
+        //             mainAxisSize: MainAxisSize.min,
+        //             children: [
+        //               const Icon(Icons.check, color: Colors.white),
+        //               const SizedBox(width: 8),
+        //               Text(
+        //                   '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
+        //                   style: TextStyle(color: Colors.white)),
+        //             ],
+        //           ),
+        //         ),
+        //         duration: const Duration(seconds: 3),
+        //         behavior: SnackBarBehavior.floating,
+        //       );
 
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            }
-          },
-        )
+        //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        //     }
+        //   },
+        // )
       ],
       child: Scaffold(
         floatingActionButton: InkWell(

@@ -13,16 +13,16 @@ export 'bookmarks/bookmarks.dart';
 export 'profile/profile.dart';
 
 // TODO: make sure to export files where they belong to
-export 'feedback/data/datasources/feedback_remote_data_source.dart';
-export 'feedback/data/repositories/feedback_repositories_impl.dart';
-export 'feedback/domain/repositories/feedback_repositories.dart';
-export 'feedback/domain/usecases/feedback_submission_usecase.dart';
-export 'feedback/domain/usecases/vote_question_usecase.dart';
-export 'feedback/presentation/bloc/questionVoteBloc/question_vote_bloc.dart';
+// export 'feedback/data/datasources/feedback_remote_data_source.dart';
+// export 'feedback/data/repositories/feedback_repositories_impl.dart';
+// export 'feedback/domain/repositories/feedback_repositories.dart';
+// export 'feedback/domain/usecases/feedback_submission_usecase.dart';
+// export 'feedback/domain/usecases/vote_question_usecase.dart';
+// export 'feedback/presentation/bloc/questionVoteBloc/question_vote_bloc.dart';
 export 'chapter/data/repositories/chapter_repository_impl.dart';
 export 'course/domain/usecases/register_sub_chapter_usecase.dart';
 export 'course/presentation/bloc/subChapterRegstration/sub_chapter_regstration_bloc.dart';
-export 'feedback/presentation/bloc/feedbackBloc/feedback_bloc.dart';
+// export 'feedback/presentation/bloc/feedbackBloc/feedback_bloc.dart';
 export 'profile/domain/repositories/profile_repository.dart.dart';
 export 'profile/domain/usecases/update_profile_usecase.dart';
 export 'search/data/repositories/search_repository_impl.dart';

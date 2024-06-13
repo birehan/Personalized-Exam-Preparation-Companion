@@ -15,7 +15,7 @@ import '../../../chapter/domain/domain.dart';
 
 import '../../../chapter/presentation/bloc/subChapterBloc/sub_chapter_bloc.dart';
 import '../../../course/presentation/bloc/course/course_bloc.dart';
-import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
+// import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
 
 class RelatedTopicContentPage extends StatefulWidget {
   const RelatedTopicContentPage({
@@ -226,21 +226,21 @@ class _RelatedTopicContentPageState extends State<RelatedTopicContentPage>
                                       ),
                                     ),
                                   ),
-                                  FlagButton(onPressed: () {
-                                    var originalContext = context;
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return FlagDialog(
-                                          originalContext: originalContext,
-                                          index: 0,
-                                          id: contents[currentPageIndex].id,
-                                          feedbackType:
-                                              FeedbackType.contentFeedback,
-                                        );
-                                      },
-                                    );
-                                  }),
+                                  // FlagButton(onPressed: () {
+                                  //   var originalContext = context;
+                                  //   showDialog(
+                                  //     context: context,
+                                  //     builder: (BuildContext context) {
+                                  //       return FlagDialog(
+                                  //         originalContext: originalContext,
+                                  //         index: 0,
+                                  //         id: contents[currentPageIndex].id,
+                                  //         feedbackType:
+                                  //             FeedbackType.contentFeedback,
+                                  //       );
+                                  //     },
+                                  //   );
+                                  // }),
                                   IconButton(
                                     icon: isBookmarked.contains(index)
                                         ? const Icon(Icons.bookmark,

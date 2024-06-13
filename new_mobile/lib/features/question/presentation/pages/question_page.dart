@@ -271,41 +271,41 @@ class _QuestionsPageState extends State<QuestionsPage> {
             }
           },
         ),
-        BlocListener<FeedbackBloc, FeedbackState>(
-          listener: (context, state) {
-            if (state is FeedbackSubmitedState) {
-              final snackBar = SnackBar(
-                backgroundColor: Colors.transparent,
-                elevation: 0,
-                content: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: const [
-                      BoxShadow(color: Colors.black26, blurRadius: 4)
-                    ],
-                  ),
-                  child: const Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.check, color: Colors.white),
-                      SizedBox(width: 8),
-                      Text(
-                          'Thank you for your feedback 🙏', //! this has to be changed
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                ),
-                duration: const Duration(seconds: 3),
-                behavior: SnackBarBehavior.floating,
-              );
+        // BlocListener<FeedbackBloc, FeedbackState>(
+        //   listener: (context, state) {
+        //     if (state is FeedbackSubmitedState) {
+        //       final snackBar = SnackBar(
+        //         backgroundColor: Colors.transparent,
+        //         elevation: 0,
+        //         content: Container(
+        //           padding:
+        //               const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        //           decoration: BoxDecoration(
+        //             color: Colors.green,
+        //             borderRadius: BorderRadius.circular(8),
+        //             boxShadow: const [
+        //               BoxShadow(color: Colors.black26, blurRadius: 4)
+        //             ],
+        //           ),
+        //           child: const Row(
+        //             mainAxisSize: MainAxisSize.min,
+        //             children: [
+        //               Icon(Icons.check, color: Colors.white),
+        //               SizedBox(width: 8),
+        //               Text(
+        //                   'Thank you for your feedback 🙏', //! this has to be changed
+        //                   style: TextStyle(color: Colors.white)),
+        //             ],
+        //           ),
+        //         ),
+        //         duration: const Duration(seconds: 3),
+        //         behavior: SnackBarBehavior.floating,
+        //       );
 
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            }
-          },
-        )
+        //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        //     }
+        //   },
+        // )
       ],
       child: buildWidget(context, hours, minutes, seconds, goTo),
     );

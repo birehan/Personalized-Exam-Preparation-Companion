@@ -9,7 +9,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../../../features/features.dart';
-import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
+// import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DailyQuestionPageParams extends Equatable {
@@ -472,42 +472,42 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
             }
           },
         ),
-        BlocListener<FeedbackBloc, FeedbackState>(
-          listener: (context, state) {
-            if (state is FeedbackSubmitedState) {
-              final snackBar = SnackBar(
-                backgroundColor: Colors.transparent,
-                elevation: 0,
-                content: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: const [
-                      BoxShadow(color: Colors.black26, blurRadius: 4)
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.check, color: Colors.white),
-                      SizedBox(width: 8),
-                      // Text('Thank you for your feedback 🙏',
-                      Text(
-                          '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                ),
-                duration: const Duration(seconds: 3),
-                behavior: SnackBarBehavior.floating,
-              );
+        // BlocListener<FeedbackBloc, FeedbackState>(
+        //   listener: (context, state) {
+        //     if (state is FeedbackSubmitedState) {
+        //       final snackBar = SnackBar(
+        //         backgroundColor: Colors.transparent,
+        //         elevation: 0,
+        //         content: Container(
+        //           padding:
+        //               const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        //           decoration: BoxDecoration(
+        //             color: Colors.green,
+        //             borderRadius: BorderRadius.circular(8),
+        //             boxShadow: const [
+        //               BoxShadow(color: Colors.black26, blurRadius: 4)
+        //             ],
+        //           ),
+        //           child: Row(
+        //             mainAxisSize: MainAxisSize.min,
+        //             children: [
+        //               Icon(Icons.check, color: Colors.white),
+        //               SizedBox(width: 8),
+        //               // Text('Thank you for your feedback 🙏',
+        //               Text(
+        //                   '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
+        //                   style: TextStyle(color: Colors.white)),
+        //             ],
+        //           ),
+        //         ),
+        //         duration: const Duration(seconds: 3),
+        //         behavior: SnackBarBehavior.floating,
+        //       );
 
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            }
-          },
-        )
+        //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        //     }
+        //   },
+        // )
       ],
       child: buildWidget(context, hours, minutes, seconds, goTo),
     );

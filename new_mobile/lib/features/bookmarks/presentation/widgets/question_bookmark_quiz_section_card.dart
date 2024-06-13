@@ -5,7 +5,7 @@ import 'package:prep_genie/core/core.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteQuestionBookmarkBloc/delete_question_bookmark_bloc.dart';
-import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+// import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 import '../../../features.dart';
 import 'bookmark_choose_option_card.dart';
@@ -52,20 +52,20 @@ class _QuestionBookmarkQuizSectionCardState
                         ),
                       ),
                     ),
-                    FlagButton(onPressed: () {
-                      var originalContext = context;
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return FlagDialog(
-                            originalContext: originalContext,
-                            index: 0,
-                            id: widget.question.id,
-                            feedbackType: FeedbackType.questionFeedback,
-                          );
-                        },
-                      );
-                    }),
+                    // FlagButton(onPressed: () {
+                    //   var originalContext = context;
+                    //   showDialog(
+                    //     context: context,
+                    //     builder: (BuildContext context) {
+                    //       return FlagDialog(
+                    //         originalContext: originalContext,
+                    //         index: 0,
+                    //         id: widget.question.id,
+                    //         feedbackType: FeedbackType.questionFeedback,
+                    //       );
+                    //     },
+                    //   );
+                    // }),
                     IconButton(
                       onPressed: () {
                         if (bookmarked) {

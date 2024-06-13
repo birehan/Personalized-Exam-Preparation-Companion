@@ -5,7 +5,7 @@ import 'package:prep_genie/core/constants/app_enums.dart';
 import 'package:prep_genie/core/markdown/latex.dart';
 import 'package:prep_genie/core/widgets/flag_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
+// import 'package:prep_genie/features/feedback/presentation/widgets/flag_dialogue_box.dart';
 
 import '../../../features.dart';
 
@@ -56,20 +56,20 @@ class _SubtopicQuestionSectionState extends State<SubtopicQuestionSection> {
                   ),
                 ),
               ),
-              FlagButton(onPressed: () {
-                var originalContext = context;
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return FlagDialog(
-                      originalContext: originalContext,
-                      index: 0,
-                      id: widget.question.id,
-                      feedbackType: FeedbackType.questionFeedback,
-                    );
-                  },
-                );
-              }),
+              // FlagButton(onPressed: () {
+              //   var originalContext = context;
+              //   showDialog(
+              //     context: context,
+              //     builder: (BuildContext context) {
+              //       return FlagDialog(
+              //         originalContext: originalContext,
+              //         index: 0,
+              //         id: widget.question.id,
+              //         feedbackType: FeedbackType.questionFeedback,
+              //       );
+              //     },
+              //   );
+              // }),
             ],
           ),
           const SizedBox(height: 12),

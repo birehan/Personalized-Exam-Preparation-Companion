@@ -125,12 +125,12 @@ List<BlocProvider> registedBlocs() {
     BlocProvider<ChatBloc>(
       create: (_) => serviceLocator<ChatBloc>(),
     ),
-    BlocProvider<FeedbackBloc>(
-      create: (_) => serviceLocator<FeedbackBloc>(),
-    ),
-    BlocProvider<QuestionVoteBloc>(
-      create: (_) => serviceLocator<QuestionVoteBloc>(),
-    ),
+    // BlocProvider<FeedbackBloc>(
+    //   create: (_) => serviceLocator<FeedbackBloc>(),
+    // ),
+    // BlocProvider<QuestionVoteBloc>(
+    //   create: (_) => serviceLocator<QuestionVoteBloc>(),
+    // ),
     BlocProvider<OnboardingBloc>(
       create: (_) => serviceLocator<OnboardingBloc>(),
     ),
