@@ -3,9 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/mock_exam/domain/entities/mock.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/features.dart';
+import 'package:prep_genie/features/mock_exam/domain/entities/mock.dart';
 
 import 'get_profile_usecase_test.mocks.dart';
 

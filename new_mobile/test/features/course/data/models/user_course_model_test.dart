@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/course/course.dart';
+import 'package:prep_genie/features/course/course.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
@@ -58,8 +58,8 @@ void main() {
           'ECTS': '10',
           'no_of_chapters': 5,
           'image': CourseImageModel(
-            imageAddress:
-                 "https://res.cloudinary.com/djrfgfo08/image/upload/v1698238074/SkillBridge/k9ajmykrzoihaqrnesgu.png"),
+              imageAddress:
+                  "https://res.cloudinary.com/djrfgfo08/image/upload/v1698238074/SkillBridge/k9ajmykrzoihaqrnesgu.png"),
           'referense_book': null
         },
         'completedChapters': 1
@@ -68,4 +68,3 @@ void main() {
     });
   });
 }
-

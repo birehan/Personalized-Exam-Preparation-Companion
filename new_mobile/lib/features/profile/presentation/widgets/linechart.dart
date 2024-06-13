@@ -12,7 +12,7 @@ class _LineChartWidgetState extends State<LineChartWidget> {
   List<Color> gradientColors = [
     // const Color.fromARGB(255, 161, 192, 196),
     // const Color.fromARGB(255, 121, 184, 236),
-    const Color(0xff18786a),
+    const Color(0xFF0072FF),
     const Color(0xff18786c)
   ];
 
@@ -91,7 +91,7 @@ class _LineChartWidgetState extends State<LineChartWidget> {
         verticalInterval: 1,
         getDrawingHorizontalLine: (value) {
           return const FlLine(
-            color: Color(0xff18786a),
+            color: Color(0xFF0072FF),
             strokeWidth: 1,
           );
         },

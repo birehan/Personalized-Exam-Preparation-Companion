@@ -7,23 +7,23 @@ import 'dart:async' as _i4;
 
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/error/failure.dart' as _i5;
-import 'package:skill_bridge_mobile/features/features.dart' as _i3;
-import 'package:skill_bridge_mobile/features/profile/domain/entities/all_barchart_categories_entity.dart'
+import 'package:prep_genie/core/error/failure.dart' as _i5;
+import 'package:prep_genie/features/features.dart' as _i3;
+import 'package:prep_genie/features/profile/domain/entities/all_barchart_categories_entity.dart'
     as _i13;
-import 'package:skill_bridge_mobile/features/profile/domain/entities/change_password_entity.dart'
+import 'package:prep_genie/features/profile/domain/entities/change_password_entity.dart'
     as _i8;
-import 'package:skill_bridge_mobile/features/profile/domain/entities/change_username_entity.dart'
+import 'package:prep_genie/features/profile/domain/entities/change_username_entity.dart'
     as _i7;
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart'
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart'
     as _i11;
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart'
+import 'package:prep_genie/features/profile/domain/entities/profile_update_entity.dart'
     as _i9;
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart'
+import 'package:prep_genie/features/profile/domain/entities/school_info_enitity.dart'
     as _i12;
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_profile_entity_get.dart'
+import 'package:prep_genie/features/profile/domain/entities/user_profile_entity_get.dart'
     as _i6;
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart'
+import 'package:prep_genie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart'
     as _i10;
 
 // ignore_for_file: type=lint

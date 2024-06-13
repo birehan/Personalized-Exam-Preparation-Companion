@@ -1,5 +1,5 @@
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/profile/domain/entities/user_leaderboard_entity.dart';
 
 class UserLeaderboardModel extends UserLeaderboardEntity {
   const UserLeaderboardModel({

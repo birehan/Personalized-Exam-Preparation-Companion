@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
+import 'package:prep_genie/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
 
 import '../../../features.dart';
 
@@ -106,7 +106,7 @@ class _GeneralChatMessageInputFieldState
               padding: const EdgeInsets.all(12),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color(0xFF16786A),
+                color: Color(0xFF0072FF),
               ),
               child: const Icon(
                 Icons.send_rounded,

@@ -6,8 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/bloc/tokenSession/token_session_bloc.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
+import 'package:prep_genie/core/bloc/tokenSession/token_session_bloc.dart';
+import 'package:prep_genie/core/widgets/noInternet.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/core.dart';
@@ -69,7 +69,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(width: 2.w),
@@ -81,22 +81,22 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      SearchCoursesPageRoute().go(context);
-                    },
-                    child: Container(
-                      height: 2.75.h,
-                      padding: const EdgeInsets.all(1),
-                      child: SvgPicture.asset(
-                        searchIcon,
-                        // height: .3.h,
-                        fit: BoxFit.scaleDown,
-                        // width: 1.w,
-                        color: Colors.black.withOpacity(.7),
-                      ),
-                    ),
-                  ),
+                  // InkWell(
+                  //   onTap: () {
+                  //     SearchCoursesPageRoute().go(context);
+                  //   },
+                  //   child: Container(
+                  //     height: 2.75.h,
+                  //     padding: const EdgeInsets.all(1),
+                  //     child: SvgPicture.asset(
+                  //       searchIcon,
+                  //       // height: .3.h,
+                  //       fit: BoxFit.scaleDown,
+                  //       // width: 1.w,
+                  //       color: Colors.black.withOpacity(.7),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
               SizedBox(height: 3.h),
@@ -120,7 +120,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: _tabIndex == 0
-                            ? const Color(0xff18786a)
+                            ? const Color(0xFF0072FF)
                             : Colors.transparent,
                       ),
                       child: Text(
@@ -136,7 +136,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: _tabIndex == 1
-                            ? const Color(0xff18786a)
+                            ? const Color(0xFF0072FF)
                             : Colors.transparent,
                       ),
                       child: Text(
@@ -153,7 +153,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: _tabIndex == 2
-                            ? const Color(0xff18786a)
+                            ? const Color(0xFF0072FF)
                             : Colors.transparent,
                       ),
                       child: Text(
@@ -234,7 +234,7 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                                             style: ButtonStyle(
                                               backgroundColor:
                                                   MaterialStateProperty.all(
-                                                      const Color(0xFF18786A)),
+                                                      const Color(0xFF0072FF)),
                                             ),
                                             icon: const Icon(
                                               Icons.refresh,
@@ -398,7 +398,7 @@ class FloatingWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 1.5.h),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: const Color(0xff18786a),
+          color: const Color(0xFF0072FF),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

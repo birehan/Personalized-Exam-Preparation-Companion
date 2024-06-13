@@ -2,16 +2,12 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'quiz_create_bloc_test.mocks.dart';
 
-
-@GenerateNiceMocks([
-  MockSpec<CreateQuizUsecase>() 
-])
-
+@GenerateNiceMocks([MockSpec<CreateQuizUsecase>()])
 void main() {
   late QuizCreateBloc bloc;
   late MockCreateQuizUsecase mockCreateQuizUsecase;
@@ -29,7 +25,11 @@ void main() {
       when(mockCreateQuizUsecase(any))
           .thenAnswer((_) async => const Right(quizId));
       // act
-      bloc.add(const CreateQuizEvent(chapters: ["chapter id"],courseId: "course id",name: "name",numberOfQuestions: 20));
+      bloc.add(const CreateQuizEvent(
+          chapters: ["chapter id"],
+          courseId: "course id",
+          name: "name",
+          numberOfQuestions: 20));
 
       await untilCalled(mockCreateQuizUsecase(any));
       // assert
@@ -47,7 +47,8 @@ void main() {
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
-      bloc.add(const CreateQuizEvent(chapters: [],courseId: "",name: "",numberOfQuestions: 20));
+      bloc.add(const CreateQuizEvent(
+          chapters: [], courseId: "", name: "", numberOfQuestions: 20));
     });
     test('should emit [Loading, Error] when getting data fails', () async {
       // arrange
@@ -61,7 +62,8 @@ void main() {
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
-      bloc.add(const CreateQuizEvent(chapters: [],courseId: "",name: "",numberOfQuestions: 20));
+      bloc.add(const CreateQuizEvent(
+          chapters: [], courseId: "", name: "", numberOfQuestions: 20));
     });
     test(
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
@@ -77,7 +79,8 @@ void main() {
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
-      bloc.add(const CreateQuizEvent(chapters: [],courseId: "",name: "",numberOfQuestions: 20));
+      bloc.add(const CreateQuizEvent(
+          chapters: [], courseId: "", name: "", numberOfQuestions: 20));
     });
   });
 }

@@ -28,7 +28,7 @@ class SendAgainWidget extends StatelessWidget {
         style: GoogleFonts.poppins(
           fontSize: 13,
           fontWeight: FontWeight.w700,
-          color: const Color(0xFF18786A),
+          color: const Color(0xFF0072FF),
         ),
       ),
     );

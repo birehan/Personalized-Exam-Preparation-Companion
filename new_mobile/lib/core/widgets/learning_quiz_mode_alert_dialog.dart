@@ -121,10 +121,10 @@ class CustomRadioButton extends StatelessWidget {
             width: 24,
             height: 24,
             decoration: BoxDecoration(
-              color: isSelected ? const Color(0xFF18786A) : null,
+              color: isSelected ? const Color(0xFF0072FF) : null,
               border: Border.all(
                 color: isSelected
-                    ? const Color(0xFF18786A).withOpacity(.5)
+                    ? const Color(0xFF0072FF).withOpacity(.5)
                     : Colors.grey,
               ),
               shape: BoxShape.circle,

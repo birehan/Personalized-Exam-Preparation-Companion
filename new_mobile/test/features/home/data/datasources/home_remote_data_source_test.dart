@@ -5,9 +5,9 @@ import 'package:intl/intl.dart';
 import 'package:mockito/annotations.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import '../repositories/home_repository_impl_test.mocks.dart';

@@ -3,14 +3,14 @@ import 'dart:io';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/all_barchart_categories_model.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/consistency_model.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/school_model.dart';
-import 'package:skill_bridge_mobile/features/profile/data/models/user_profile_model.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
+import 'package:prep_genie/features/features.dart';
+import 'package:prep_genie/features/profile/data/models/all_barchart_categories_model.dart';
+import 'package:prep_genie/features/profile/data/models/consistency_model.dart';
+import 'package:prep_genie/features/profile/data/models/school_model.dart';
+import 'package:prep_genie/features/profile/data/models/user_profile_model.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/profile_update_entity.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/usersLeaderboard/users_leaderboard_bloc.dart';
 
 import '../../../../core/constants/app_keys.dart';
 import '../../../../core/error/exception.dart';

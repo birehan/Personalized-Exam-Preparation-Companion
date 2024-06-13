@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 
 import '../../../features.dart';
 
@@ -13,7 +13,8 @@ class MarkCourseAsDownloadedUsecase
   });
 
   @override
-  Future<Either<Failure, Unit>> call(MarkCourseAsDownloadedParams params) async {
+  Future<Either<Failure, Unit>> call(
+      MarkCourseAsDownloadedParams params) async {
     return await courseRepositories.markCourseAsDownloaded(params.courseId);
   }
 }

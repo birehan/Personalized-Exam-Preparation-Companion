@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/question/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/general_chat_entity.dart';
-import 'package:skill_bridge_mobile/features/question/domain/usecases/general_chat_usecase.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/features.dart';
+import 'package:prep_genie/features/question/domain/domain.dart';
+import 'package:prep_genie/features/question/domain/entities/general_chat_entity.dart';
+import 'package:prep_genie/features/question/domain/usecases/general_chat_usecase.dart';
 
 part 'general_chat_event.dart';
 part 'general_chat_state.dart';

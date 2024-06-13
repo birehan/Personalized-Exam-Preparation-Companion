@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/widgets/siginin_with_google.dart';
-import 'package:skill_bridge_mobile/injection_container.dart';
+import 'package:prep_genie/features/authentication/presentation/widgets/siginin_with_google.dart';
+import 'package:prep_genie/injection_container.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/core.dart';
@@ -169,7 +169,7 @@ class _SignupPageState extends State<SignupPage> {
                     Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'SKILLBRIDGE',
+                        'PrepGenie',
                         style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
@@ -182,7 +182,7 @@ class _SignupPageState extends State<SignupPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: const Color(0xFF1A7A6C),
+                        color: const Color(0xFF0072FF),
                       ),
                     ),
                     // Text(
@@ -208,7 +208,7 @@ class _SignupPageState extends State<SignupPage> {
                         return validateEmailOrPhoneNumber(
                             emailOrPhoneNumber, context);
                       },
-                      cursorColor: const Color(0xFF18786A),
+                      cursorColor: const Color(0xFF0072FF),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 6, horizontal: 12),
@@ -217,7 +217,7 @@ class _SignupPageState extends State<SignupPage> {
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                             width: 2,
                           ),
                         ),
@@ -242,7 +242,7 @@ class _SignupPageState extends State<SignupPage> {
                       validator: (fullName) {
                         return validateFullName(fullName, context);
                       },
-                      cursorColor: const Color(0xFF18786A),
+                      cursorColor: const Color(0xFF0072FF),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 6, horizontal: 12),
@@ -251,7 +251,7 @@ class _SignupPageState extends State<SignupPage> {
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                             width: 2,
                           ),
                         ),
@@ -277,7 +277,7 @@ class _SignupPageState extends State<SignupPage> {
                         return validatePassword(value, context);
                       },
                       obscureText: !_passwordVisible,
-                      cursorColor: const Color(0xFF18786A),
+                      cursorColor: const Color(0xFF0072FF),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 6, horizontal: 12),
@@ -286,7 +286,7 @@ class _SignupPageState extends State<SignupPage> {
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                             width: 2,
                           ),
                         ),
@@ -300,7 +300,7 @@ class _SignupPageState extends State<SignupPage> {
                             _passwordVisible
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: const Color(0xFF18786A),
+                            color: const Color(0xFF0072FF),
                           ),
                         ),
                       ),
@@ -354,7 +354,7 @@ class _SignupPageState extends State<SignupPage> {
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF18786A),
+                              backgroundColor: const Color(0xFF0072FF),
                               foregroundColor: const Color(0xFFFFFFFF),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 16, vertical: 12),
@@ -468,7 +468,7 @@ class _SignupPageState extends State<SignupPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
-                        color: const Color(0xFF18786A),
+                        color: const Color(0xFF0072FF),
                       ),
                     ),
                   )

@@ -97,7 +97,7 @@ class _CubeAnimationPageState extends State<CubeAnimationPage>
     return Scaffold(
       body: Stack(
         children: [
-          Container(color: const Color(0xFF1A7A6C)),
+          Container(color: const Color(0xFF0072FF)),
           Padding(
             padding: const EdgeInsets.only(top: 100),
             child: Align(
@@ -193,7 +193,7 @@ class _CubeAnimationPageState extends State<CubeAnimationPage>
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
               decoration: BoxDecoration(
-                color: const Color(0xFF1A7A6C),
+                color: const Color(0xFF0072FF),
                 borderRadius: BorderRadius.circular(24),
               ),
               child: Text(

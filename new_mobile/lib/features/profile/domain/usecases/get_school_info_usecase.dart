@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/school_info_enitity.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
+import 'package:prep_genie/features/profile/domain/entities/school_info_enitity.dart';
 
 class GetSchoolInfoUsecase extends UseCase<SchoolDepartmentInfo, NoParams> {
   final ProfileRepositories profileRepositories;

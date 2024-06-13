@@ -81,7 +81,7 @@ class QuestionBottomNavBar extends StatelessWidget {
                 icon: Icon(
                   index == 0 ? null : Icons.arrow_back,
                   size: 32,
-                  color: const Color(0xFF18786A),
+                  color: const Color(0xFF0072FF),
                 ),
               ),
               const SizedBox(width: 16),
@@ -90,7 +90,7 @@ class QuestionBottomNavBar extends StatelessWidget {
                           questionMode == QuestionMode.quiz
                       ? ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF18786A),
+                            backgroundColor: const Color(0xFF0072FF),
                             foregroundColor: Colors.white,
                           ),
                           onPressed: () {
@@ -107,7 +107,7 @@ class QuestionBottomNavBar extends StatelessWidget {
                         )
                       : ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF18786A),
+                            backgroundColor: const Color(0xFF0072FF),
                             foregroundColor: Colors.white,
                           ),
                           onPressed: () {
@@ -136,7 +136,7 @@ class QuestionBottomNavBar extends StatelessWidget {
                       icon: const Icon(
                         Icons.arrow_forward,
                         size: 32,
-                        color: Color(0xFF18786A),
+                        color: Color(0xFF0072FF),
                       ),
                     ),
             ],

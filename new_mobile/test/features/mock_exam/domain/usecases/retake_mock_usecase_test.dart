@@ -1,23 +1,22 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'add_mock_to_user_mocks_usecase_test.mocks.dart';
 
-void main(){
+void main() {
   late RetakeMockUsecase usecase;
   late MockMockExamRepository mockExamRepository;
 
-   setUp(() {
+  setUp(() {
     mockExamRepository = MockMockExamRepository();
     usecase = RetakeMockUsecase(mockExamRepository: mockExamRepository);
   });
 
   const tId = "test id";
-  
-  
-   test(
+
+  test(
     "Should add mock to user mocks response from repository",
     () async {
       when(mockExamRepository.retakeMock(tId))
@@ -32,5 +31,4 @@ void main(){
       verifyNoMoreInteractions(mockExamRepository);
     },
   );
-
 }

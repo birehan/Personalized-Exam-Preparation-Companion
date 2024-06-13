@@ -8,26 +8,26 @@ import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
+import 'package:prep_genie/core/error/failure.dart';
 
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
-import 'package:skill_bridge_mobile/core/widgets/tooltip_widget.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/consistancyBloc/consistancy_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/bar_chart_with_description.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/conststency_tracking_calender_widget.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/friends_and_invite_card.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/graph_description.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/linechart.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updadted_profile_overview_widget.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updated_profile_header.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updated_profile_stat_card.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/updated_user_records.dart';
+import 'package:prep_genie/core/widgets/noInternet.dart';
+import 'package:prep_genie/core/widgets/tooltip_widget.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/consistancyBloc/consistancy_bloc_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/bar_chart_with_description.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/conststency_tracking_calender_widget.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/friends_and_invite_card.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/graph_description.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/linechart.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updadted_profile_overview_widget.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updated_profile_header.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updated_profile_stat_card.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/updated_user_records.dart';
 
 import '../../../../core/utils/snack_bar.dart';
 
@@ -142,33 +142,33 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                               avatar: user.profileImage,
                             ),
                             SizedBox(height: 3.h),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                StatCard(
-                                    imageAsset: 'assets/images/fireRed.png',
-                                    width: 26.w,
-                                    number: user.maxStreak.toString(),
-                                    title: 'STREAK',
-                                    isForPoint: false),
-                                StatCard(
-                                    imageAsset: 'assets/images/Coin.png',
-                                    width: 30.w,
-                                    number: user.coins.ceil().toString(),
-                                    title: 'Coins',
-                                    isForPoint: true),
-                                StatCard(
-                                    imageAsset: 'assets/images/Rank.png',
-                                    width: 26.w,
-                                    number: user.rank.toString(),
-                                    title: 'RANK',
-                                    isForPoint: false),
-                              ],
-                            ),
+                            // Row(
+                            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            //   children: [
+                            //     StatCard(
+                            //         imageAsset: 'assets/images/fireRed.png',
+                            //         width: 26.w,
+                            //         number: user.maxStreak.toString(),
+                            //         title: 'STREAK',
+                            //         isForPoint: false),
+                            //     StatCard(
+                            //         imageAsset: 'assets/images/Coin.png',
+                            //         width: 30.w,
+                            //         number: user.coins.ceil().toString(),
+                            //         title: 'Coins',
+                            //         isForPoint: true),
+                            //     StatCard(
+                            //         imageAsset: 'assets/images/Rank.png',
+                            //         width: 26.w,
+                            //         number: user.rank.toString(),
+                            //         title: 'RANK',
+                            //         isForPoint: false),
+                            //   ],
+                            // ),
                             SizedBox(height: 2.h),
-                            FriendsAndInviteCard(
-                              userId: user.id,
-                            ),
+                            // FriendsAndInviteCard(
+                            //   userId: user.id,
+                            // ),
                             SizedBox(height: 3.h),
                             Row(
                               children: [
@@ -213,7 +213,7 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                   //       style: TextStyle(
                   //         fontSize: 24,
                   //         fontWeight: FontWeight.bold,
-                  //         color: Color(0xff18786a),
+                  //         color: Color(0xFF0072FF),
                   //       ),
                   //     ),
                   //     Padding(
@@ -250,13 +250,13 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                   //       style: TextStyle(
                   //         fontSize: 24,
                   //         fontWeight: FontWeight.bold,
-                  //         color: Color(0xff18786a),
+                  //         color: Color(0xFF0072FF),
                   //       ),
                   //     ),
                   //   ],
                   // ),
                   SizedBox(height: 3.h),
-                  const BarChartWithDesctiption(),
+                  // const BarChartWithDesctiption(),
                   SizedBox(height: 3.h),
                   // const GraphDescription(
                   //   numOfUsers: '34 / 214 Users',
@@ -266,128 +266,128 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                   // ),
                   // SizedBox(height: 3.h),
                   // SizedBox(height: 20.h, child: const LineChartWidget()),
-                  BlocListener<ConsistancyBlocBloc, ConsistancyBlocState>(
-                    listener: (context, state) {
-                      if (state is ConsistancyFailedState) {
-                        if (state.failureType is RequestOverloadFailure) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                              snackBar(state.failureType.errorMessage));
-                        }
-                      }
-                    },
-                    child:
-                        BlocBuilder<ConsistancyBlocBloc, ConsistancyBlocState>(
-                      builder: (context, state) {
-                        if (state is ConsistancyLoadingState) {
-                          return _updatedProfilePageBottomShimmer();
-                        } else if (state is ConsistancyFailedState) {
-                          // return SizedBox(
-                          //   height: 50.h,
-                          //   child: Center(
-                          //     child: NoInternet(reloadCallback: () {
+                  // BlocListener<ConsistancyBlocBloc, ConsistancyBlocState>(
+                  //   listener: (context, state) {
+                  //     if (state is ConsistancyFailedState) {
+                  //       if (state.failureType is RequestOverloadFailure) {
+                  //         ScaffoldMessenger.of(context).showSnackBar(
+                  //             snackBar(state.failureType.errorMessage));
+                  //       }
+                  //     }
+                  //   },
+                  //   child:
+                  //       BlocBuilder<ConsistancyBlocBloc, ConsistancyBlocState>(
+                  //     builder: (context, state) {
+                  //       if (state is ConsistancyLoadingState) {
+                  //         return _updatedProfilePageBottomShimmer();
+                  //       } else if (state is ConsistancyFailedState) {
+                  //         // return SizedBox(
+                  //         //   height: 50.h,
+                  //         //   child: Center(
+                  //         //     child: NoInternet(reloadCallback: () {
 
-                          //     }),
-                          //   ),
-                          // );
-                        } else if (state is ConsistancyLoadedState) {
-                          final consistencyData = state.consistencyData;
-                          return Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    children: [
-                                      const Text('Consistency Chart',
-                                          style: TextStyle(
-                                            fontFamily: 'Poppins',
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w600,
-                                          )),
-                                      SizedBox(width: 2.w),
-                                      const TooltipWidget(
-                                          iconSize: 18,
-                                          message:
-                                              'Monitor and Visualize the total number of questions you solved and topics you completed each day.'),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      IconButton(
-                                          onPressed: () {
-                                            final year =
-                                                consistencyData[0][0].day.year -
-                                                    1;
-                                            context
-                                                .read<ConsistancyBlocBloc>()
-                                                .add(
-                                                  GetUserConsistencyDataEvent(
-                                                      year: year.toString()),
-                                                );
-                                          },
-                                          icon: const Icon(
-                                            Icons.keyboard_arrow_left,
-                                          )),
-                                      Text(consistencyData[0][0]
-                                          .day
-                                          .year
-                                          .toString()),
-                                      IconButton(
-                                          onPressed: () {
-                                            if (consistencyData[0][0]
-                                                    .day
-                                                    .year ==
-                                                curYear) return;
-                                            final year =
-                                                consistencyData[0][0].day.year +
-                                                    1;
-                                            context
-                                                .read<ConsistancyBlocBloc>()
-                                                .add(
-                                                    GetUserConsistencyDataEvent(
-                                                        year: year.toString()));
-                                          },
-                                          icon: Icon(Icons.keyboard_arrow_right,
-                                              color: consistencyData[0][0]
-                                                          .day
-                                                          .year ==
-                                                      curYear
-                                                  ? Colors.grey
-                                                  : null))
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 1.h),
-                              SizedBox(
-                                height: 35.h,
-                                child: ListView.separated(
-                                  scrollDirection: Axis.horizontal,
-                                  itemBuilder: (context, index) {
-                                    List<ConsistencyEntity> monthData =
-                                        consistencyData[index];
+                  //         //     }),
+                  //         //   ),
+                  //         // );
+                  //       } else if (state is ConsistancyLoadedState) {
+                  //         final consistencyData = state.consistencyData;
+                  //         return Column(
+                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                  //           children: [
+                  //             Row(
+                  //               mainAxisAlignment:
+                  //                   MainAxisAlignment.spaceBetween,
+                  //               children: [
+                  //                 Row(
+                  //                   children: [
+                  //                     const Text('Consistency Chart',
+                  //                         style: TextStyle(
+                  //                           fontFamily: 'Poppins',
+                  //                           fontSize: 16,
+                  //                           fontWeight: FontWeight.w600,
+                  //                         )),
+                  //                     SizedBox(width: 2.w),
+                  //                     const TooltipWidget(
+                  //                         iconSize: 18,
+                  //                         message:
+                  //                             'Monitor and Visualize the total number of questions you solved and topics you completed each day.'),
+                  //                   ],
+                  //                 ),
+                  //                 Row(
+                  //                   children: [
+                  //                     IconButton(
+                  //                         onPressed: () {
+                  //                           final year =
+                  //                               consistencyData[0][0].day.year -
+                  //                                   1;
+                  //                           context
+                  //                               .read<ConsistancyBlocBloc>()
+                  //                               .add(
+                  //                                 GetUserConsistencyDataEvent(
+                  //                                     year: year.toString()),
+                  //                               );
+                  //                         },
+                  //                         icon: const Icon(
+                  //                           Icons.keyboard_arrow_left,
+                  //                         )),
+                  //                     Text(consistencyData[0][0]
+                  //                         .day
+                  //                         .year
+                  //                         .toString()),
+                  //                     IconButton(
+                  //                         onPressed: () {
+                  //                           if (consistencyData[0][0]
+                  //                                   .day
+                  //                                   .year ==
+                  //                               curYear) return;
+                  //                           final year =
+                  //                               consistencyData[0][0].day.year +
+                  //                                   1;
+                  //                           context
+                  //                               .read<ConsistancyBlocBloc>()
+                  //                               .add(
+                  //                                   GetUserConsistencyDataEvent(
+                  //                                       year: year.toString()));
+                  //                         },
+                  //                         icon: Icon(Icons.keyboard_arrow_right,
+                  //                             color: consistencyData[0][0]
+                  //                                         .day
+                  //                                         .year ==
+                  //                                     curYear
+                  //                                 ? Colors.grey
+                  //                                 : null))
+                  //                   ],
+                  //                 ),
+                  //               ],
+                  //             ),
+                  //             SizedBox(height: 1.h),
+                  //             SizedBox(
+                  //               height: 35.h,
+                  //               child: ListView.separated(
+                  //                 scrollDirection: Axis.horizontal,
+                  //                 itemBuilder: (context, index) {
+                  //                   List<ConsistencyEntity> monthData =
+                  //                       consistencyData[index];
 
-                                    return ConsistencyTrackingCalenderWidget(
-                                      month: months[index],
-                                      numOfDays: monthData.length,
-                                      consistencyData: monthData,
-                                    );
-                                  },
-                                  separatorBuilder: (context, index) {
-                                    return SizedBox(width: 3.w);
-                                  },
-                                  itemCount: 12,
-                                ),
-                              ),
-                            ],
-                          );
-                        }
-                        return Container();
-                      },
-                    ),
-                  )
+                  //                   return ConsistencyTrackingCalenderWidget(
+                  //                     month: months[index],
+                  //                     numOfDays: monthData.length,
+                  //                     consistencyData: monthData,
+                  //                   );
+                  //                 },
+                  //                 separatorBuilder: (context, index) {
+                  //                   return SizedBox(width: 3.w);
+                  //                 },
+                  //                 itemCount: 12,
+                  //               ),
+                  //             ),
+                  //           ],
+                  //         );
+                  //       }
+                  //       return Container();
+                  //     },
+                  //   ),
+                  // )
                 ],
               ),
             ),

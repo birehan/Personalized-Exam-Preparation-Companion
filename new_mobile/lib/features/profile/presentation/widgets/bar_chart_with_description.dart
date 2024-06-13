@@ -3,11 +3,11 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/barchart.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/barchart.dart';
 import 'dart:math' as math;
 
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/graph_description.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/graph_description.dart';
 
 class BarChartWithDesctiption extends StatelessWidget {
   const BarChartWithDesctiption({

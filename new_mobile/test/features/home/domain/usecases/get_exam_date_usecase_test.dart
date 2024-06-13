@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'fetch_daily_quest_usecase_test.mocks.dart';
+
 void main() {
   late GetExamDateUsecase usecase;
   late MockHomeRepository mockHomeRepository;

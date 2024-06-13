@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/course.dart';
-import 'package:skill_bridge_mobile/features/course/domain/entities/course_image.dart';
-import 'package:skill_bridge_mobile/features/search/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/search/domain/repositories/search_repository.dart';
+import 'package:prep_genie/features/course/domain/entities/course.dart';
+import 'package:prep_genie/features/course/domain/entities/course_image.dart';
+import 'package:prep_genie/features/search/domain/domain.dart';
+import 'package:prep_genie/features/search/domain/repositories/search_repository.dart';
 
 import 'search_courses_usecase_test.mocks.dart';
 

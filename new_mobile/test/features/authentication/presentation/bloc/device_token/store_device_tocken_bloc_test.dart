@@ -2,24 +2,20 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'store_device_tocken_bloc_test.mocks.dart';
 
-
-
-@GenerateNiceMocks([
-  MockSpec<StoreDeviceTokenUsecase>() 
-])
-
+@GenerateNiceMocks([MockSpec<StoreDeviceTokenUsecase>()])
 void main() {
   late StoreDeviceTokenBloc bloc;
   late MockStoreDeviceTokenUsecase storeDeviceTokenUsecase;
 
   setUp(() {
     storeDeviceTokenUsecase = MockStoreDeviceTokenUsecase();
-    bloc = StoreDeviceTokenBloc(storeDeviceTokenUsecase: storeDeviceTokenUsecase);
+    bloc =
+        StoreDeviceTokenBloc(storeDeviceTokenUsecase: storeDeviceTokenUsecase);
   });
 
   group('_storeDeviceToken', () {
@@ -40,10 +36,7 @@ void main() {
       when(storeDeviceTokenUsecase(NoParams()))
           .thenAnswer((_) async => const Right(unit));
       // assert later
-      final expected = [
-        StoreDeviceTokenLoading(),
-         StoreDeviceTokenLoaded()
-      ];
+      final expected = [StoreDeviceTokenLoading(), StoreDeviceTokenLoaded()];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(const StoreDeviceTokenEvent());
@@ -53,7 +46,10 @@ void main() {
       when(storeDeviceTokenUsecase(NoParams()))
           .thenAnswer((_) async => Left(ServerFailure()));
       // assert later
-      final expected = [StoreDeviceTokenLoading(), const StoreDeviceTokenFailed(message: "Server failure")];
+      final expected = [
+        StoreDeviceTokenLoading(),
+        const StoreDeviceTokenFailed(message: "Server failure")
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(const StoreDeviceTokenEvent());
@@ -62,9 +58,13 @@ void main() {
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
         () async {
       // arrange
-      when(storeDeviceTokenUsecase(NoParams())).thenAnswer((_) async => Left(CacheFailure()));
+      when(storeDeviceTokenUsecase(NoParams()))
+          .thenAnswer((_) async => Left(CacheFailure()));
       // assert later
-      final expected = [StoreDeviceTokenLoading(), const StoreDeviceTokenFailed(message: "Cache failure")];
+      final expected = [
+        StoreDeviceTokenLoading(),
+        const StoreDeviceTokenFailed(message: "Cache failure")
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(const StoreDeviceTokenEvent());

@@ -128,7 +128,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   return validateEmailOrPhoneNumber(
                       emailOrPhoneNumber, context);
                 },
-                cursorColor: const Color(0xFF18786A),
+                cursorColor: const Color(0xFF0072FF),
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -137,7 +137,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF18786A),
+                      color: Color(0xFF0072FF),
                       width: 2,
                     ),
                   ),
@@ -155,7 +155,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: const Color(0xFF18786A),
+                        backgroundColor: const Color(0xFF0072FF),
                         padding: const EdgeInsets.symmetric(
                           vertical: 10,
                           horizontal: 4,

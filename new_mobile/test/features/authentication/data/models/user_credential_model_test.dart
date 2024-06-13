@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/authentication/data/models/user_credential_model.dart';
+import 'package:prep_genie/features/authentication/data/models/user_credential_model.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 

@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/authentication/data/models/user_credential_model.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/get_user_credential_usecase.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/bloc/get_user_bloc/get_user_bloc.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/authentication/data/models/user_credential_model.dart';
+import 'package:prep_genie/features/authentication/domain/usecases/get_user_credential_usecase.dart';
+import 'package:prep_genie/features/authentication/presentation/bloc/get_user_bloc/get_user_bloc.dart';
 
 import 'get_user_bloc_test.mocks.dart';
 

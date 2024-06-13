@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/bloc/tokenSession/token_session_bloc.dart';
+import 'package:prep_genie/core/bloc/tokenSession/token_session_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/core.dart';
@@ -71,8 +71,9 @@ class _UpdatedHomePageState extends State<UpdatedHomePage> {
                 }
 
                 ScaffoldMessenger.of(context).removeCurrentSnackBar();
-                final snackBar =
-                    SnackBar(content: Text(AppLocalizations.of(context)!.you_are_not_connected));
+                final snackBar = SnackBar(
+                    content: Text(
+                        AppLocalizations.of(context)!.you_are_not_connected));
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
               },
               child: SingleChildScrollView(
@@ -112,7 +113,9 @@ class _UpdatedHomePageState extends State<UpdatedHomePage> {
                               // });
                               // });
                             }
-                            return Center(child: Text(AppLocalizations.of(context)!.unkown_error_happend));
+                            return Center(
+                                child: Text(AppLocalizations.of(context)!
+                                    .unkown_error_happend));
                           } else {
                             return Column(
                               children: [

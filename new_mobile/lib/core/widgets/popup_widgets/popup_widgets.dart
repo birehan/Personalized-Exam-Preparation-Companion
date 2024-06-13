@@ -147,7 +147,7 @@ void showPopupOnCompletingContest({
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             isSubmitted
-                ? const Icon(Icons.task_alt, color: Color(0xFF18786A), size: 48)
+                ? const Icon(Icons.task_alt, color: Color(0xFF0072FF), size: 48)
                 : Image.asset('assets/images/time_machine.png'),
             const SizedBox(height: 12),
             Text(
@@ -156,7 +156,7 @@ void showPopupOnCompletingContest({
               style: GoogleFonts.poppins(
                 fontSize: 20,
                 color: Colors.black,
-                // color: const Color(0xFF18786A),
+                // color: const Color(0xFF0072FF),
                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
@@ -227,7 +227,7 @@ void showPopupOnCompletingContestAnalysis({
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             isSubmitted
-                ? const Icon(Icons.task_alt, color: Color(0xFF18786A), size: 48)
+                ? const Icon(Icons.task_alt, color: Color(0xFF0072FF), size: 48)
                 : Image.asset('assets/images/time_machine.png'),
             const SizedBox(height: 12),
             Text(
@@ -236,7 +236,7 @@ void showPopupOnCompletingContestAnalysis({
               style: GoogleFonts.poppins(
                 fontSize: 20,
                 color: Colors.black,
-                // color: const Color(0xFF18786A),
+                // color: const Color(0xFF0072FF),
                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
@@ -273,4 +273,3 @@ void showPopupOnCompletingContestAnalysis({
     },
   );
 }
-

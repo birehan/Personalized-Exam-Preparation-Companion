@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/bookmarks/domain/domain.dart';
 
 class DeleteContentBookmarkUsecase
     extends UseCase<void, DeleteContentBookmarkParams> {

@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/general_chat_entity.dart';
-import 'package:skill_bridge_mobile/features/question/domain/repositories/question_repository.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
+import 'package:prep_genie/features/question/domain/entities/general_chat_entity.dart';
+import 'package:prep_genie/features/question/domain/repositories/question_repository.dart';
 
 class GeneralChatUsecase extends UseCase<ChatResponse, GeneralChatParams> {
   final QuestionRepository repository;

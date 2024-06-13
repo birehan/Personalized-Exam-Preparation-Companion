@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/constants/dummydata.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/profiles_listing_card.dart';
+import 'package:prep_genie/core/constants/dummydata.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/profiles_listing_card.dart';
 
 class AddFriendsPage extends StatefulWidget {
   const AddFriendsPage({super.key});
@@ -81,7 +81,7 @@ class _AddFriendsPageState extends State<AddFriendsPage> {
                     height: 40,
                     width: 40,
                     decoration: BoxDecoration(
-                        color: const Color(0xff18786a),
+                        color: const Color(0xFF0072FF),
                         borderRadius: BorderRadius.circular(5)),
                     child: const Icon(
                       Icons.person_add_alt_1_rounded,

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/count_down_item_for_national_exam.dart';
+import 'package:prep_genie/features/home/presentation/widgets/count_down_item_for_national_exam.dart';
 
 class CountDownCardForNationalExams extends StatefulWidget {
   const CountDownCardForNationalExams({

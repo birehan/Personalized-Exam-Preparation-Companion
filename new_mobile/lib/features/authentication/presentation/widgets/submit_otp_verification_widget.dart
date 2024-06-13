@@ -26,7 +26,7 @@ class SubmitOTPVerificationWidget extends StatelessWidget {
               dispatchOtp(state.emailOrPhoneNumber);
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF18786A),
+              backgroundColor: const Color(0xFF0072FF),
               foregroundColor: const Color(0xFFFFFFFF),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               shape: RoundedRectangleBorder(
@@ -51,7 +51,7 @@ class SubmitOTPVerificationWidget extends StatelessWidget {
               dispatchOtp(state.emailOrPhoneNumber);
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF18786A),
+              backgroundColor: const Color(0xFF0072FF),
               foregroundColor: const Color(0xFFFFFFFF),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               shape: RoundedRectangleBorder(

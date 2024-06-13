@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/delete_device_token_usecase.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/authentication/domain/usecases/delete_device_token_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 
@@ -12,7 +12,8 @@ void main() {
 
   setUp(() {
     mockRepository = MockAuthenticationRepository();
-    deleteDeviceTokenUsecase = DeleteDeviceTokenUsecase(repository: mockRepository);
+    deleteDeviceTokenUsecase =
+        DeleteDeviceTokenUsecase(repository: mockRepository);
   });
 
   group('DeleteDeviceTokenUsecase', () {
@@ -20,7 +21,8 @@ void main() {
       // Arrange
 
       // Act
-      when(mockRepository.deleteDeviceToken()).thenAnswer((_) async => const Right(unit));
+      when(mockRepository.deleteDeviceToken())
+          .thenAnswer((_) async => const Right(unit));
 
       final result = await deleteDeviceTokenUsecase(NoParams());
 
@@ -31,4 +33,3 @@ void main() {
     });
   });
 }
-

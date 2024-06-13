@@ -7,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:skill_bridge_mobile/core/utils/create_links.dart';
-import 'package:skill_bridge_mobile/core/widgets/share.dart';
+import 'package:prep_genie/core/utils/create_links.dart';
+import 'package:prep_genie/core/widgets/share.dart';
 
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
@@ -275,7 +275,7 @@ class _MockExamQuestionsPageState extends State<MockExamQuestionsPage> {
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: Colors.red,
-                            // color: const Color(0xFF18786A),
+                            // color: const Color(0xFF0072FF),
                           ),
                         ),
                       )

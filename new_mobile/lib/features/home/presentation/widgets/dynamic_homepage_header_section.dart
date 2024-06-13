@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/bloc/localeBloc/locale_bloc.dart';
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
-import 'package:skill_bridge_mobile/core/routes/go_routes.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/bloc/localeBloc/locale_bloc.dart';
+import 'package:prep_genie/core/constants/app_images.dart';
+import 'package:prep_genie/core/routes/go_routes.dart';
+import 'package:prep_genie/features/features.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DynamicHomepageProfileHeader extends StatelessWidget {
@@ -35,7 +35,7 @@ class DynamicHomepageProfileHeader extends StatelessWidget {
                         width: 60,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: const Color(0xff18786a).withOpacity(.3),
+                          color: const Color(0xFF0072FF).withOpacity(.3),
                           image: DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(
@@ -75,36 +75,36 @@ class DynamicHomepageProfileHeader extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                BlocBuilder<FetchDailyStreakBloc, FetchDailyStreakState>(
-                    builder: (context, state) {
-                  if (state is FetchDailyStreakLoading) {
-                    return _maxStreakShimmer();
-                  } else if (state is FetchDailyStreakLoaded) {
-                    // return _maxStreakShimmer();
-                    return Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        const Image(
-                          image: AssetImage('assets/images/fireRed.png'),
-                          height: 30,
-                          width: 30,
-                        ),
-                        Text(
-                          '${state.dailyStreak.totalStreak.maxStreak}',
-                          style: const TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18,
-                            color: Color(0xffF53A04),
-                          ),
-                        ),
-                        // Here add small dropdown to select language. there are two languages available
-                      ],
-                    );
-                  } else {
-                    return Container();
-                  }
-                }),
+                // BlocBuilder<FetchDailyStreakBloc, FetchDailyStreakState>(
+                //     builder: (context, state) {
+                //   if (state is FetchDailyStreakLoading) {
+                //     return _maxStreakShimmer();
+                //   } else if (state is FetchDailyStreakLoaded) {
+                //     // return _maxStreakShimmer();
+                //     return Row(
+                //       crossAxisAlignment: CrossAxisAlignment.end,
+                //       children: [
+                //         const Image(
+                //           image: AssetImage('assets/images/fireRed.png'),
+                //           height: 30,
+                //           width: 30,
+                //         ),
+                //         Text(
+                //           '${state.dailyStreak.totalStreak.maxStreak}',
+                //           style: const TextStyle(
+                //             fontFamily: 'Poppins',
+                //             fontWeight: FontWeight.w600,
+                //             fontSize: 18,
+                //             color: Color(0xffF53A04),
+                //           ),
+                //         ),
+                //         // Here add small dropdown to select language. there are two languages available
+                //       ],
+                //     );
+                //   } else {
+                //     return Container();
+                //   }
+                // }),
                 SizedBox(width: 3.w),
                 BlocBuilder<LocaleBloc, LocaleState>(
                   builder: (context, state) {

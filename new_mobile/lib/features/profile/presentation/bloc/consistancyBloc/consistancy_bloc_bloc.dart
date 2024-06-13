@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/consistency_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_user_consistancy_data.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/profile/domain/entities/consistency_entity.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_user_consistancy_data.dart';
 
 part 'consistancy_bloc_event.dart';
 part 'consistancy_bloc_state.dart';

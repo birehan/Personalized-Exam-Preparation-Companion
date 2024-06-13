@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/core/widgets/noInternet.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
 import '../../../features.dart';
 
 class ContestRankingSection extends StatelessWidget {
@@ -67,7 +67,7 @@ class ContestRankingSection extends StatelessWidget {
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
                                   color:
-                                      const Color(0xFF1A7A6C).withOpacity(0.13),
+                                      const Color(0xFF0072FF).withOpacity(0.13),
                                   borderRadius: const BorderRadius.vertical(
                                     top: Radius.circular(4),
                                     bottom: Radius.circular(0),

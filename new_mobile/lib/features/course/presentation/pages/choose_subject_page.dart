@@ -4,8 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/widgets/noInternet.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/core/widgets/noInternet.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../widgets/course_expandable_tile.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -85,7 +85,7 @@ class _ChooseSubjectPageState extends State<ChooseSubjectPage> {
                 ),
               ),
               Text(
-                AppLocalizations.of(context)!.select_subject_you_want_to_study, 
+                AppLocalizations.of(context)!.select_subject_you_want_to_study,
                 style: GoogleFonts.poppins(
                   color: const Color(0xFF939393),
                   fontSize: 15,
@@ -108,17 +108,17 @@ class _ChooseSubjectPageState extends State<ChooseSubjectPage> {
                         state.status == DepartmentCourseStatus.loaded) {
                       final courseMap = [
                         ['Biology', state.departmentCourse!.biology],
-                        ['Chemistry', state.departmentCourse!.chemistry],
-                        ['Civics', state.departmentCourse!.civics],
-                        ['English', state.departmentCourse!.english],
-                        ['Mathematics', state.departmentCourse!.maths],
-                        ['Physics', state.departmentCourse!.physics],
-                        ['SAT', state.departmentCourse!.sat],
-                        ['Economics', state.departmentCourse!.economics],
-                        ['History', state.departmentCourse!.history],
-                        ['Geography', state.departmentCourse!.geography],
-                        ['Business', state.departmentCourse!.business],
-                        ['Others', state.departmentCourse!.others],
+                        // ['Chemistry', state.departmentCourse!.chemistry],
+                        // ['Civics', state.departmentCourse!.civics],
+                        // ['English', state.departmentCourse!.english],
+                        // ['Mathematics', state.departmentCourse!.maths],
+                        // ['Physics', state.departmentCourse!.physics],
+                        // ['SAT', state.departmentCourse!.sat],
+                        // ['Economics', state.departmentCourse!.economics],
+                        // ['History', state.departmentCourse!.history],
+                        // ['Geography', state.departmentCourse!.geography],
+                        // ['Business', state.departmentCourse!.business],
+                        // ['Others', state.departmentCourse!.others],
                       ];
 
                       return ListView.separated(

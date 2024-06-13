@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 
 import '../../../../core/core.dart';
 
@@ -203,13 +203,13 @@ class MockCard extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1A7A6C),
+                        color: const Color(0xFF0072FF),
                         shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(
                             offset: const Offset(0, 8),
                             blurRadius: 8,
-                            color: const Color(0xFF1A7A6C).withOpacity(.5),
+                            color: const Color(0xFF0072FF).withOpacity(.5),
                           )
                         ],
                       ),

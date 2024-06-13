@@ -7,12 +7,12 @@ import 'dart:async' as _i5;
 
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/core.dart' as _i6;
-import 'package:skill_bridge_mobile/features/course/domain/entities/entities.dart'
+import 'package:prep_genie/core/core.dart' as _i6;
+import 'package:prep_genie/features/course/domain/entities/entities.dart'
     as _i7;
-import 'package:skill_bridge_mobile/features/course/domain/repositories/repositories.dart'
+import 'package:prep_genie/features/course/domain/repositories/repositories.dart'
     as _i2;
-import 'package:skill_bridge_mobile/features/features.dart' as _i4;
+import 'package:prep_genie/features/features.dart' as _i4;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/bloc/routerBloc/router_bloc.dart';
-import 'package:skill_bridge_mobile/core/widgets/dragable.dart';
+import 'package:prep_genie/core/bloc/routerBloc/router_bloc.dart';
+import 'package:prep_genie/core/widgets/dragable.dart';
 
 class AnimatedDraggableWidget extends StatefulWidget {
   const AnimatedDraggableWidget({super.key});

@@ -7,9 +7,9 @@ import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/widgets/share.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
+import 'package:prep_genie/core/widgets/share.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../../../core/widgets/progress_indicator2.dart';
@@ -200,7 +200,7 @@ class _DownloadedContentPageState extends State<DownloadedContentPage>
                         isFirstPage ? "" : 'Prev',
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff18786A),
+                          color: Color(0xFF0072FF),
                         ),
                       ),
                     ),
@@ -231,7 +231,7 @@ class _DownloadedContentPageState extends State<DownloadedContentPage>
                               'Finish',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff18786A),
+                                color: Color(0xFF0072FF),
                               ),
                             ),
                           )
@@ -254,7 +254,7 @@ class _DownloadedContentPageState extends State<DownloadedContentPage>
                               'Next',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff18786A),
+                                color: Color(0xFF0072FF),
                               ),
                             ),
                           ),

@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/entities/user_credential.dart';
-import 'package:skill_bridge_mobile/features/authentication/domain/usecases/login_with_google_usecase.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/authentication/domain/entities/user_credential.dart';
+import 'package:prep_genie/features/authentication/domain/usecases/login_with_google_usecase.dart';
 
 import 'change_password_usecase_test.mocks.dart';
 

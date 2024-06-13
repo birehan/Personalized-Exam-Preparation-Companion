@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/home/data/models/daily_quest_model.dart';
+import 'package:prep_genie/features/home/data/models/daily_quest_model.dart';
 
 void main() {
   group('DailyQuestModel', () {

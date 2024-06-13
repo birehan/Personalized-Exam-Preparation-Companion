@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/utils/same_day.dart';
-import 'package:skill_bridge_mobile/core/widgets/tooltip_widget.dart';
-import 'package:skill_bridge_mobile/features/home/domain/entities/user_daily_streak.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/bloc/fetch_daily_streak/fetch_daily_streak_bloc.dart';
+import 'package:prep_genie/core/utils/same_day.dart';
+import 'package:prep_genie/core/widgets/tooltip_widget.dart';
+import 'package:prep_genie/features/home/domain/entities/user_daily_streak.dart';
+import 'package:prep_genie/features/home/presentation/bloc/fetch_daily_streak/fetch_daily_streak_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DailyStreakWidgetDesctiptionWidget extends StatelessWidget {
@@ -61,13 +61,13 @@ class DailyStreakWidgetDesctiptionWidget extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF18786A).withOpacity(0.11),
+                      color: const Color(0xFF0072FF).withOpacity(0.11),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
                       'Today',
                       style: GoogleFonts.poppins(
-                        color: const Color(0xFF18786A),
+                        color: const Color(0xFF0072FF),
                         fontWeight: FontWeight.w500,
                       ),
                     ),

@@ -83,7 +83,7 @@ class DownloadedCourseDetailTab extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 2.w, vertical: .5.h),
                       decoration: BoxDecoration(
                         color: Color(course.isNewCurriculum
-                                ? 0xff18786a
+                                ? 0xFF0072FF
                                 : 0xffFEA800)
                             .withOpacity(.2),
                         borderRadius: BorderRadius.circular(5),
@@ -94,7 +94,7 @@ class DownloadedCourseDetailTab extends StatelessWidget {
                             : AppLocalizations.of(context)!.old,
                         style: TextStyle(
                           color: Color(course.isNewCurriculum
-                                  ? 0xff18786a
+                                  ? 0xFF0072FF
                                   : 0xffFEA800 //0xffFEA800
                               ),
                         ),

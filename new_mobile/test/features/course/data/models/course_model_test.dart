@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/course/course.dart';
+import 'package:prep_genie/features/course/course.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
@@ -33,8 +33,6 @@ void main() {
           imageAddress:
               "https://res.cloudinary.com/djrfgfo08/image/upload/v1698237821/SkillBridge/hixwf8xe7kugefiniy1m.png"),
       cariculumIsNew: false);
-
- 
 
   test('should be a subclass of course entity', () async {
     // assert
@@ -84,5 +82,3 @@ void main() {
     });
   });
 }
-
-

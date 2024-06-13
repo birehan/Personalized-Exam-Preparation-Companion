@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/utils/get_ordinal.dart';
+import 'package:prep_genie/core/utils/get_ordinal.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WeeklyPrizeDisplay extends StatelessWidget {
@@ -22,7 +22,7 @@ class WeeklyPrizeDisplay extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            '${getOrdinal(place)} ${AppLocalizations.of(context)!.place}', 
+            '${getOrdinal(place)} ${AppLocalizations.of(context)!.place}',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 16,

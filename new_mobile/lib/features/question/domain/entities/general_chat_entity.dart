@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/chat_history.dart';
+import 'package:prep_genie/features/question/domain/entities/chat_history.dart';
 
 class GeneralChatEntity extends Equatable {
   final String? userQuestion;

@@ -2,17 +2,12 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'register_course_bloc_test.mocks.dart';
 
-
-
-@GenerateNiceMocks([
-  MockSpec<RegisterCourseUsecase>() 
-])
-
+@GenerateNiceMocks([MockSpec<RegisterCourseUsecase>()])
 void main() {
   late RegisterCourseBloc bloc;
   late MockRegisterCourseUsecase mockRegisterCourseUsecase;
@@ -42,10 +37,7 @@ void main() {
       when(mockRegisterCourseUsecase(any))
           .thenAnswer((_) async => const Right(true));
       // assert later
-      final expected = [
-        CourseRegisteringState(),
-         UserRegisteredState()
-      ];
+      final expected = [CourseRegisteringState(), UserRegisteredState()];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(RegisterUserToACourse(courseId: id));
@@ -55,7 +47,10 @@ void main() {
       when(mockRegisterCourseUsecase(any))
           .thenAnswer((_) async => Left(ServerFailure()));
       // assert later
-      final expected = [CourseRegisteringState(),  CourseRegistrationFailedState()];
+      final expected = [
+        CourseRegisteringState(),
+        CourseRegistrationFailedState()
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(RegisterUserToACourse(courseId: id));
@@ -64,9 +59,13 @@ void main() {
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
         () async {
       // arrange
-      when(mockRegisterCourseUsecase(any)).thenAnswer((_) async => Left(CacheFailure()));
+      when(mockRegisterCourseUsecase(any))
+          .thenAnswer((_) async => Left(CacheFailure()));
       // assert later
-      final expected = [CourseRegisteringState(),  CourseRegistrationFailedState()];
+      final expected = [
+        CourseRegisteringState(),
+        CourseRegistrationFailedState()
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(RegisterUserToACourse(courseId: id));

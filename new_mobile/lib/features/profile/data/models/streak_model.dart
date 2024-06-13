@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/features/profile/domain/entities/streak_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/streak_entity.dart';
 
 class StreakModel extends StreakEntity {
   const StreakModel({

@@ -1,24 +1,27 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  const questions = [QuestionModel(
-      isLiked: false,
-      id: "649448dbf296abbe4531d110",
-      courseId: "64943fd3f296abbe4531d06b",
-      chapterId: "649440e9f296abbe4531d06f",
-      subChapterId: "649441bbf296abbe4531d077",
-      description: "What is the benefit of using an intranet within an organization?",
-      choiceA: "Improved productivity and collaboration",
-      choiceB: "Access to the global network",
-      choiceC: "Enhanced security for online transactions",
-      choiceD: "Ability to connect with other organizations",
-      answer: "choice_A",
-      explanation:
-          "Using an intranet within an organization can improve productivity, streamline communication, and enhance collaboration among employees.",
-      isForQuiz: true)];
+  const questions = [
+    QuestionModel(
+        isLiked: false,
+        id: "649448dbf296abbe4531d110",
+        courseId: "64943fd3f296abbe4531d06b",
+        chapterId: "649440e9f296abbe4531d06f",
+        subChapterId: "649441bbf296abbe4531d077",
+        description:
+            "What is the benefit of using an intranet within an organization?",
+        choiceA: "Improved productivity and collaboration",
+        choiceB: "Access to the global network",
+        choiceC: "Enhanced security for online transactions",
+        choiceD: "Ability to connect with other organizations",
+        answer: "choice_A",
+        explanation:
+            "Using an intranet within an organization can improve productivity, streamline communication, and enhance collaboration among employees.",
+        isForQuiz: true)
+  ];
   const mockExamsFromDepartment = MockExamModel(
       id: "65409e6055ae50031e35167f",
       name: "English Entrance Exam",

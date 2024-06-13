@@ -4,11 +4,11 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/core/error/error.dart';
-import 'package:skill_bridge_mobile/core/error/exception.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/core/error/error.dart';
+import 'package:prep_genie/core/error/exception.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/features.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import '../datasources/contest_remote_datasources_test.mocks.dart';
@@ -539,7 +539,7 @@ void main() {
             mockRemoteDatasource.registerToContest('6593b3b08a65e3bd7982fde9'));
         expect(result, equals(Right(contestModel)));
       });
-test(
+      test(
           'should return request over load failure when the registerToContest call to remote data source is unsuccessful',
           () async {
         // arrange
@@ -670,7 +670,7 @@ test(
         expect(result, equals(const Right(contestQuestion)));
       });
 
-test(
+      test(
           'should return request over load failure when the fetchContestQuestionByCategory call to remote data source has many request',
           () async {
         // arrange
@@ -742,7 +742,7 @@ test(
         verify(mockRemoteDatasource.submitUserContestAnswer(contestUserAnswer));
         expect(result, equals(const Right(unit)));
       });
- test(
+      test(
           'should return request over load failure when the submitUserContestAnswer call to remote data source is unsuccessful',
           () async {
         // arrange
@@ -811,7 +811,7 @@ test(
             mockRemoteDatasource.getContestRanking('6593b3b08a65e3bd7982fde9'));
         expect(result, equals(Right(contestRankModel)));
       });
-test(
+      test(
           'should return request over load failure when the getContestRanking call to remote data source has many request',
           () async {
         // arrange
@@ -884,7 +884,7 @@ test(
             categoryId: '6593b3b08a65e3bd7982fde9'));
         expect(result, equals(const Right(contestQuestion)));
       });
-test(
+      test(
           'should return request over load failure when the fetchContestAnalysisByCategory call to remote data source has many request',
           () async {
         // arrange

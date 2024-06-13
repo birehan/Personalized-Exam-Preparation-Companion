@@ -4,10 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/receiced_requests_tab.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/sent_friends_requests_tab.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/receiced_requests_tab.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/sent_friends_requests_tab.dart';
 
 class RequestsTab extends StatefulWidget {
   const RequestsTab({super.key});
@@ -230,7 +230,7 @@ class RequestsTabWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
       decoration: BoxDecoration(
         border: Border.all(
-            color: selected ? const Color(0xff18786a) : Colors.grey, width: 1),
+            color: selected ? const Color(0xFF0072FF) : Colors.grey, width: 1),
         borderRadius: BorderRadius.circular(5),
       ),
       child: Row(
@@ -239,7 +239,7 @@ class RequestsTabWidget extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 5, horizontal: 2.w),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                color: selected ? const Color(0xff18786a) : Colors.grey),
+                color: selected ? const Color(0xFF0072FF) : Colors.grey),
             child: Text(
               number.toString(),
               style: const TextStyle(color: Colors.white),

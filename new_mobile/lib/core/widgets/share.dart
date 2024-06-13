@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:skill_bridge_mobile/core/utils/create_links.dart';
+import 'package:prep_genie/core/utils/create_links.dart';
 
 class ShareButton extends StatefulWidget {
   const ShareButton({

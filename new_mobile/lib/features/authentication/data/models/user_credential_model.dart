@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
+import 'package:prep_genie/core/constants/app_images.dart';
 
 import '../../domain/domain.dart';
 

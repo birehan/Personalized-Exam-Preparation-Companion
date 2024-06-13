@@ -1,11 +1,11 @@
 import 'dart:ffi';
 
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/core/network/network.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/data/datasources/bookmarks_remote_datasource.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/repositories/repositories.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/core/network/network.dart';
+import 'package:prep_genie/features/bookmarks/data/datasources/bookmarks_remote_datasource.dart';
+import 'package:prep_genie/features/bookmarks/domain/entities/bookmarked_contents_and_questions.dart';
+import 'package:prep_genie/features/bookmarks/domain/repositories/repositories.dart';
 
 import '../../../../core/error/exeption_to_failure_map.dart';
 

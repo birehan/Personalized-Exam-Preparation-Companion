@@ -1,4 +1,4 @@
-import 'package:skill_bridge_mobile/features/question/domain/entities/general_chat_entity.dart';
+import 'package:prep_genie/features/question/domain/entities/general_chat_entity.dart';
 
 class GeneralChatModel extends GeneralChatEntity {
   const GeneralChatModel({

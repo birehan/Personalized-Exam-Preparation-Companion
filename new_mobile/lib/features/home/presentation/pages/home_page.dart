@@ -4,7 +4,7 @@
 // import 'package:responsive_sizer/responsive_sizer.dart';
 // import 'package:shimmer/shimmer.dart';
 
-// // import 'package:skill_bridge_mobile/features/course/presentation/bloc/course/course_bloc.dart';
+// // import 'package:prep_genie/features/course/presentation/bloc/course/course_bloc.dart';
 // // import 'package:google_fonts/google_fonts.dart';
 // // import 'package:responsive_sizer/responsive_sizer.dart';
 

@@ -1,12 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:skill_bridge_mobile/core/usecase/usecase.dart';
+import 'package:prep_genie/core/usecase/usecase.dart';
 import '../../../../../core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_profile_entity_get.dart';
+import 'package:prep_genie/features/profile/domain/entities/user_profile_entity_get.dart';
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_profile_usecase.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_profile_usecase.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_state.dart';
 
 class UserProfileBloc extends Bloc<UserProfileEvent, UserProfileState> {
   final GetProfileUsecase getProfileUsecase;

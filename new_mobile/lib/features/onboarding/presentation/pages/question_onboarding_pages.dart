@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/onboarding/presentation/widgets/questions_page_8.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prep_genie/features/onboarding/presentation/widgets/questions_page_8.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
 import '../../../../core/core.dart';
 
 import '../../../features.dart';
@@ -77,7 +77,7 @@ class _OnboardingQuestionPagesState extends State<OnboardingQuestionPages> {
                         minHeight: 6,
                         backgroundColor: const Color(0xffE7F0EF),
                         valueColor: const AlwaysStoppedAnimation<Color>(
-                          Color(0xff18786A),
+                          Color(0xFF0072FF),
                         ),
                       ),
                     ),
@@ -204,7 +204,7 @@ class _OnboardingQuestionPagesState extends State<OnboardingQuestionPages> {
                             borderRadius: BorderRadius.circular(30),
                             color: _currentIndex == 6 && !state.validResponse
                                 ? Colors.grey
-                                : const Color(0xff18786A)),
+                                : const Color(0xFF0072FF)),
                         child: BlocConsumer<OnboardingBloc,
                             OnboardingAnswersState>(
                           listener: (context, state) {

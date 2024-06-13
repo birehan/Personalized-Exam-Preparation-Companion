@@ -2,48 +2,48 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:skill_bridge_mobile/core/bloc/localeBloc/locale_bloc.dart';
-import 'package:skill_bridge_mobile/core/bloc/routerBloc/router_bloc.dart';
-import 'package:skill_bridge_mobile/core/bloc/tokenSession/token_session_bloc.dart';
-import 'package:skill_bridge_mobile/core/utils/hive_boxes.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/delete_bookmarked_content.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/delete_bookmarked_question_usecase.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/contest_ranking_usercase.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/get_contest_detail_usecase.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/regster_to_contest.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/fetch_contest_question_by_category/fetch_contest_questions_by_category_bloc.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
-import 'package:skill_bridge_mobile/features/contest/presentation/bloc/registerContest/register_contest_bloc.dart';
-import 'package:skill_bridge_mobile/features/course/data/datasources/courses_local_data_sources.dart';
-import 'package:skill_bridge_mobile/features/course/domain/usecases/update_video_status_usecase.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/bloc/changeVideoStatus/change_video_status_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/change_user_avatar_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_school_info_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_top_users_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/get_user_consistancy_data.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/load_chart_categories_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/consistancyBloc/consistancy_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
-import 'package:skill_bridge_mobile/features/question/domain/usecases/general_chat_usecase.dart';
-import 'package:skill_bridge_mobile/features/question/domain/usecases/get_end_chapter_questions_usecase.dart';
-import 'package:skill_bridge_mobile/features/question/domain/usecases/get_question_by_id_usecase.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/bloc/endOfChaptersQuestionsBloc/endof_chapter_questions_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/change_password_usercase.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/change_username_usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/bloc/singleQuestionBloc/single_question_bloc.dart';
+import 'package:prep_genie/core/bloc/localeBloc/locale_bloc.dart';
+import 'package:prep_genie/core/bloc/routerBloc/router_bloc.dart';
+import 'package:prep_genie/core/bloc/tokenSession/token_session_bloc.dart';
+import 'package:prep_genie/core/utils/hive_boxes.dart';
+import 'package:prep_genie/features/bookmarks/domain/usecases/bookmark_question_usecase.dart';
+import 'package:prep_genie/features/bookmarks/domain/usecases/delete_bookmarked_content.dart';
+import 'package:prep_genie/features/bookmarks/domain/usecases/delete_bookmarked_question_usecase.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
+import 'package:prep_genie/features/contest/domain/usecases/contest_ranking_usercase.dart';
+import 'package:prep_genie/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
+import 'package:prep_genie/features/contest/domain/usecases/get_contest_detail_usecase.dart';
+import 'package:prep_genie/features/contest/domain/usecases/regster_to_contest.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/fetch_contest_question_by_category/fetch_contest_questions_by_category_bloc.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
+import 'package:prep_genie/features/contest/presentation/bloc/registerContest/register_contest_bloc.dart';
+import 'package:prep_genie/features/course/data/datasources/courses_local_data_sources.dart';
+import 'package:prep_genie/features/course/domain/usecases/update_video_status_usecase.dart';
+import 'package:prep_genie/features/course/presentation/bloc/changeVideoStatus/change_video_status_bloc.dart';
+import 'package:prep_genie/features/profile/domain/usecases/change_user_avatar_usecase.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_school_info_usecase.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_top_users_usecase.dart';
+import 'package:prep_genie/features/profile/domain/usecases/get_user_consistancy_data.dart';
+import 'package:prep_genie/features/profile/domain/usecases/load_chart_categories_usecase.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/consistancyBloc/consistancy_bloc_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prep_genie/features/question/domain/usecases/general_chat_usecase.dart';
+import 'package:prep_genie/features/question/domain/usecases/get_end_chapter_questions_usecase.dart';
+import 'package:prep_genie/features/question/domain/usecases/get_question_by_id_usecase.dart';
+import 'package:prep_genie/features/question/presentation/bloc/bloc/general_chat_bloc.dart';
+import 'package:prep_genie/features/question/presentation/bloc/endOfChaptersQuestionsBloc/endof_chapter_questions_bloc.dart';
+import 'package:prep_genie/features/profile/domain/usecases/change_password_usercase.dart';
+import 'package:prep_genie/features/profile/domain/usecases/change_username_usecase.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
+import 'package:prep_genie/features/question/presentation/bloc/singleQuestionBloc/single_question_bloc.dart';
 
 import 'features/bookmarks/data/data.dart';
 import 'features/bookmarks/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
 import 'features/bookmarks/presentation/bloc/addQuestionBookmarkBloc/add_question_bookmark_bloc.dart';
 import 'features/bookmarks/presentation/bloc/deleteQuestionBookmarkBloc/delete_question_bookmark_bloc.dart';
 import 'features/course/presentation/bloc/course/course_bloc.dart';
@@ -324,7 +324,8 @@ Future<void> init() async {
     () => ChangeVideoStatusBloc(
       updateVideoStatusUsecase: serviceLocator(),
     ),
-  );  serviceLocator.registerFactory<OfflineCourseBloc>(
+  );
+  serviceLocator.registerFactory<OfflineCourseBloc>(
     () => OfflineCourseBloc(
       downloadCourseByIdUsecase: serviceLocator(),
       fetchDownloadedCoursesUsecase: serviceLocator(),
@@ -363,7 +364,8 @@ Future<void> init() async {
     () => UpdateVideoStatusUsecase(
       repository: serviceLocator(),
     ),
-  );  serviceLocator.registerLazySingleton(
+  );
+  serviceLocator.registerLazySingleton(
     () => DownloadCourseByIdUsecase(
       courseRepositories: serviceLocator(),
     ),

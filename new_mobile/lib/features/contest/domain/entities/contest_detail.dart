@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/entities/contest_category.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/entities/contest_prize.dart';
+import 'package:prep_genie/features/contest/domain/entities/contest_category.dart';
+import 'package:prep_genie/features/contest/domain/entities/contest_prize.dart';
 
 class ContestDetail extends Equatable {
   final String contestId;

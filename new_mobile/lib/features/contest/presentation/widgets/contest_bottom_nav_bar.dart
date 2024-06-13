@@ -53,7 +53,7 @@ class ContestQuestionBottomNavBar extends StatelessWidget {
                     prefixIcon: Icon(Icons.menu, color: Colors.white),
                     border: InputBorder.none,
                     filled: true,
-                    fillColor: Color(0xFF1A7A6C),
+                    fillColor: Color(0xFF0072FF),
                     icon: null,
                   ),
                   onChanged: (String? value) {
@@ -75,7 +75,7 @@ class ContestQuestionBottomNavBar extends StatelessWidget {
                     return categories.map<Widget>((category) {
                       return Container(
                         decoration: BoxDecoration(
-                          color: const Color(0xFF1A7A6C),
+                          color: const Color(0xFF0072FF),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Text(
@@ -102,7 +102,7 @@ class ContestQuestionBottomNavBar extends StatelessWidget {
                                     category.subject,
                                     style: GoogleFonts.poppins(
                                       color: category.categoryId == categoryId
-                                          ? const Color(0xFF1A7A6C)
+                                          ? const Color(0xFF0072FF)
                                           : Colors.black,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -110,7 +110,7 @@ class ContestQuestionBottomNavBar extends StatelessWidget {
                                   if (submittedCategories
                                       .contains(category.categoryId))
                                     const Icon(Icons.check,
-                                        color: Color(0xFF1A7A6C))
+                                        color: Color(0xFF0072FF))
                                 ],
                               ),
                               Text(
@@ -118,7 +118,7 @@ class ContestQuestionBottomNavBar extends StatelessWidget {
                                 style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   color: category.categoryId == categoryId
-                                      ? const Color(0xFF1A7A6C)
+                                      ? const Color(0xFF0072FF)
                                       : Colors.black,
                                 ),
                               ),
@@ -142,14 +142,14 @@ class ContestQuestionBottomNavBar extends StatelessWidget {
                       icon: const Icon(
                         Icons.arrow_back,
                         size: 32,
-                        color: Color(0xFF18786A),
+                        color: Color(0xFF0072FF),
                       ),
                     ),
               const SizedBox(width: 16),
               index == totalQuestions - 1
                   ? ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF18786A),
+                        backgroundColor: const Color(0xFF0072FF),
                         foregroundColor: Colors.white,
                       ),
                       onPressed:
@@ -181,7 +181,7 @@ class ContestQuestionBottomNavBar extends StatelessWidget {
                       icon: const Icon(
                         Icons.arrow_forward,
                         size: 32,
-                        color: Color(0xFF18786A),
+                        color: Color(0xFF0072FF),
                       ),
                     ),
             ],

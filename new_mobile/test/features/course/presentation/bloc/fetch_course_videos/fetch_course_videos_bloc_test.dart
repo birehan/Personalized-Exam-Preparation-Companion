@@ -2,23 +2,20 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'fetch_course_videos_bloc_test.mocks.dart';
 
-
-@GenerateNiceMocks([
-  MockSpec<FetchCourseVideosUsecase>() 
-])
-
+@GenerateNiceMocks([MockSpec<FetchCourseVideosUsecase>()])
 void main() {
   late FetchCourseVideosBloc bloc;
   late MockFetchCourseVideosUsecase mockFetchCourseVideosUsecase;
 
   setUp(() {
     mockFetchCourseVideosUsecase = MockFetchCourseVideosUsecase();
-    bloc = FetchCourseVideosBloc(fetchCourseVideosUsecase: mockFetchCourseVideosUsecase);
+    bloc = FetchCourseVideosBloc(
+        fetchCourseVideosUsecase: mockFetchCourseVideosUsecase);
   });
 
   const courseId = "test course id";
@@ -66,7 +63,7 @@ void main() {
       // assert later
       final expected = [
         FetchCourseVideosLoading(),
-         FetchCourseVideosLoaded(chapterVideos: chapterVideos)
+        FetchCourseVideosLoaded(chapterVideos: chapterVideos)
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
@@ -77,7 +74,12 @@ void main() {
       when(mockFetchCourseVideosUsecase(any))
           .thenAnswer((_) async => Left(ServerFailure()));
       // assert later
-      final expected = [FetchCourseVideosLoading(), FetchCourseVideosFailed(errorMessage: "Server failure", failure: ServerFailure(errorMessage: 'Server failure'))];
+      final expected = [
+        FetchCourseVideosLoading(),
+        FetchCourseVideosFailed(
+            errorMessage: "Server failure",
+            failure: ServerFailure(errorMessage: 'Server failure'))
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(FetchCourseVideosEvent(courseId: courseId));
@@ -86,9 +88,15 @@ void main() {
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
         () async {
       // arrange
-      when(mockFetchCourseVideosUsecase(any)).thenAnswer((_) async => Left(CacheFailure()));
+      when(mockFetchCourseVideosUsecase(any))
+          .thenAnswer((_) async => Left(CacheFailure()));
       // assert later
-      final expected = [FetchCourseVideosLoading(), FetchCourseVideosFailed(errorMessage:  'Cache failure', failure: CacheFailure(errorMessage: 'Cache failure'))];
+      final expected = [
+        FetchCourseVideosLoading(),
+        FetchCourseVideosFailed(
+            errorMessage: 'Cache failure',
+            failure: CacheFailure(errorMessage: 'Cache failure'))
+      ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
       bloc.add(FetchCourseVideosEvent(courseId: courseId));

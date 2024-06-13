@@ -82,7 +82,7 @@ class _OnboardingPagesState extends State<OnboardingPages> {
       OnboardingWidget(
         index: 0,
         indicators: indicators,
-        title: 'Welcome to SkillBridge',
+        title: 'Welcome to PrepGenie',
         description:
             'Discover a comprehensive exam preparation tool that helps you ace your university entrance exams',
         onNext: onNext,
@@ -90,23 +90,23 @@ class _OnboardingPagesState extends State<OnboardingPages> {
       OnboardingWidget(
         index: 1,
         indicators: indicators,
-        title: 'Personalized Quizzes',
-        description: 'Tailor your study experience with personalized quizzes',
+        title: 'Prep Smarter with PrepGenie',
+        description: 'PrepGenie offers summarized content and tailored exam features to boost your performance like never before.',
         onNext: onNext,
       ),
       OnboardingWidget(
         index: 2,
         indicators: indicators,
-        title: 'Model Exams for Success',
+        title: 'Mock Exams for Success',
         description:
-            'Access to a collection of previous year exams with their explanations.',
+            'Access to a collection of previous year and AI generated exams with their explanations.',
         onNext: onNext,
       ),
     ];
 
     return Scaffold(
       body: Container(
-        color: const Color(0xFF18786A),
+        color: const Color(0xFF0072FF),
         child: Stack(
           children: [
             Image.asset('assets/images/background_lines.png'),

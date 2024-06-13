@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/friends_tab.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/requests_tab.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/friends_tab.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/requests_tab.dart';
 
 class FriendsMainPage extends StatefulWidget {
   const FriendsMainPage({super.key});
@@ -83,7 +83,7 @@ class _FriendsMainPageState extends State<FriendsMainPage>
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: _tabIndex == 0
-                          ? const Color(0xff1A7A6C)
+                          ? const Color(0xFF0072FF)
                           : Colors.transparent,
                     ),
                     child: Text(
@@ -99,7 +99,7 @@ class _FriendsMainPageState extends State<FriendsMainPage>
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: _tabIndex == 1
-                          ? const Color(0xff1A7A6C)
+                          ? const Color(0xFF0072FF)
                           : Colors.transparent,
                     ),
                     child: Text(

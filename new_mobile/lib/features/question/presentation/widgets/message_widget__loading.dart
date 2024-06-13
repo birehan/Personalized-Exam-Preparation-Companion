@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/pages/typingIndicator.dart';
+import 'package:prep_genie/features/question/presentation/pages/typingIndicator.dart';
 
 class MessageWidgetLoading extends StatelessWidget {
   const MessageWidgetLoading({
@@ -30,7 +30,7 @@ class MessageWidgetLoading extends StatelessWidget {
             ),
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
             decoration: BoxDecoration(
-              color: isMyMessage ? Colors.white : const Color(0xFF44A092),
+              color: isMyMessage ? Colors.white : const Color(0xFF0072FF),
               borderRadius: BorderRadius.only(
                 topLeft: const Radius.circular(20),
                 topRight: const Radius.circular(20),
@@ -39,7 +39,7 @@ class MessageWidgetLoading extends StatelessWidget {
               ),
             ),
             child: TypingIndicator(),
-            
+
             // SelectableText(
             //   "typing",
             //   style: GoogleFonts.poppins(

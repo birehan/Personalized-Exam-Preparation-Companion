@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
-import 'package:skill_bridge_mobile/core/constants/dummydata.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/profiles_listing_card.dart';
+import 'package:prep_genie/core/constants/app_images.dart';
+import 'package:prep_genie/core/constants/dummydata.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/profiles_listing_card.dart';
 
 class ReceicedRequestsTab extends StatelessWidget {
   const ReceicedRequestsTab({
@@ -28,7 +28,7 @@ class ReceicedRequestsTab extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AcceptDeclineWidget(
-                color: const Color(0xff18786a),
+                color: const Color(0xFF0072FF),
                 onClick: () {
                   // trigger accept
                 },

@@ -10,26 +10,26 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/department_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/profile_update_entity.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
+import 'package:prep_genie/features/profile/domain/entities/department_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/profile_update_entity.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_event.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/dropdown_with_userinput.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/menu_icon.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changeUsernameBloc/username_state.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/userProfile/userProfile_event.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/dropdown_with_userinput.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/menu_icon.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/name_editing_field.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/profile_dropdown_selection.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/name_editing_field.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/profile_dropdown_selection.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../widgets/custom_text_button.dart';
 
@@ -124,7 +124,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                       child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: const Color(0xff18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                     child: TextButton(
                       child: const Text('Cancel',
@@ -142,7 +142,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                       child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: const Color(0xff18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                     child: TextButton(
                       child: const Text(
@@ -497,7 +497,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                                   padding: EdgeInsets.symmetric(
                                       vertical: 2.h, horizontal: 10.w),
                                   decoration: BoxDecoration(
-                                    color: const Color(0xff18786a),
+                                    color: const Color(0xFF0072FF),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child:

@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:internet_connection_checker/internet_connection_checker.dart';
-// import 'package:skill_bridge_mobile/core/core.dart';
+// import 'package:prep_genie/core/core.dart';
 
 // class NetworkFailureWidget extends StatefulWidget {
 //   const NetworkFailureWidget({

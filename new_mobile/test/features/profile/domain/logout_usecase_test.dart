@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/usecase/usecase.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/usecases/logout_usecase.dart';
+import 'package:prep_genie/core/usecase/usecase.dart';
+import 'package:prep_genie/features/profile/domain/usecases/logout_usecase.dart';
 
 import 'get_profile_usecase_test.mocks.dart';
 

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/authentication/authentication.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/logout/logout_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/changePassword.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/changeUsername.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/authentication/authentication.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/logout/logout_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/changePassword.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/changeUsername.dart';
 
 class AccountComponent extends StatelessWidget {
   final String imageAssetPath;

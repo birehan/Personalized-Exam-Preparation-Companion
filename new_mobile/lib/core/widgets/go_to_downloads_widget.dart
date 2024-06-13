@@ -70,7 +70,7 @@ class GoToDownloadsWidget extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 14),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF18786A),
+                    color: const Color(0xFF0072FF),
                     borderRadius: BorderRadius.circular(24),
                   ),
                   child: Text(

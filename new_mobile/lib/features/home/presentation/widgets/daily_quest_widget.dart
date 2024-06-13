@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/utils/snack_bar.dart';
 import '../../../features.dart';
-import 'package:skill_bridge_mobile/features/home/presentation/widgets/dhomepage_dailyquest_card.dart';
+import 'package:prep_genie/features/home/presentation/widgets/dhomepage_dailyquest_card.dart';
 
 class DailyQuestWidget extends StatelessWidget {
   const DailyQuestWidget({
@@ -58,16 +58,19 @@ class DailyQuestWidget extends StatelessWidget {
                     (index) => Container(
                       margin: EdgeInsets.only(bottom: 2.h),
                       // child: _dailyQuestCardShimmer(),
-                      child: DailyQuestCard(
-                        title:
-                            "${dailyQuests[index].challenge[0].toUpperCase()}${dailyQuests[index].challenge.substring(1).toLowerCase()}",
-                        taskDesciption: AppLocalizations.of(context)!.completed,
-                        iconBackground: index % 2 == 0
-                            ? const Color(0xffffc107)
-                            : const Color(0xff714625),
-                        completedTask: dailyQuests[index].completed,
-                        totalTask: dailyQuests[index].expected,
-                      ),
+                      child: index == 0 || index == 2
+                          ? Container()
+                          : DailyQuestCard(
+                              title:
+                                  "${dailyQuests[index].challenge[0].toUpperCase()}${dailyQuests[index].challenge.substring(1).toLowerCase()}",
+                              taskDesciption:
+                                  AppLocalizations.of(context)!.completed,
+                              iconBackground: index % 2 == 0
+                                  ? const Color(0xffffc107)
+                                  : const Color(0xff714625),
+                              completedTask: dailyQuests[index].completed,
+                              totalTask: dailyQuests[index].expected,
+                            ),
                     ),
                   ),
                 ),
@@ -79,7 +82,8 @@ class DailyQuestWidget extends StatelessWidget {
                 height: 30.h,
                 child: EmptyListWidget(
                   showImage: false,
-                  message: AppLocalizations.of(context)!.check_your_internet_connection_and_try_again,
+                  message: AppLocalizations.of(context)!
+                      .check_your_internet_connection_and_try_again,
                   reloadCallBack: () {
                     context
                         .read<FetchDailyQuestBloc>()

@@ -6,11 +6,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import 'package:skill_bridge_mobile/core/constants/app_images.dart';
+import 'package:prep_genie/core/constants/app_images.dart';
 import '../../../features.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
+import 'package:prep_genie/core/core.dart';
 
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/logout/logout_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/logout/logout_bloc.dart';
 
 class ProfileHeader extends StatelessWidget {
   final int? grade;
@@ -95,7 +95,7 @@ class ProfileHeader extends StatelessWidget {
                   child: const Text(
                     'Edit profile',
                     style: TextStyle(
-                        color: Color(0xff18786a),
+                        color: Color(0xFF0072FF),
                         fontFamily: 'Poppins',
                         fontSize: 16,
                         fontWeight: FontWeight.w500),
@@ -139,7 +139,7 @@ class ProfileHeader extends StatelessWidget {
               inputDecorationTheme: const InputDecorationTheme(
                 // Set the border color for TextField
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xff18786a)),
+                  borderSide: BorderSide(color: Color(0xFF0072FF)),
                 ),
                 // Add more InputDecoration styles if needed
               ),
@@ -157,7 +157,7 @@ class ProfileHeader extends StatelessWidget {
                 TextButton(
                   child: const Text('Cancel',
                       style: TextStyle(
-                          color: Color(0xff18786a), fontFamily: 'Poppins')),
+                          color: Color(0xFF0072FF), fontFamily: 'Poppins')),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -165,7 +165,7 @@ class ProfileHeader extends StatelessWidget {
                 TextButton(
                   child: const Text('Logout',
                       style: TextStyle(
-                          color: Color(0xff18786a), fontFamily: 'Poppins')),
+                          color: Color(0xFF0072FF), fontFamily: 'Poppins')),
                   onPressed: () {
                     context
                         .read<DeleteDeviceTokenBloc>()

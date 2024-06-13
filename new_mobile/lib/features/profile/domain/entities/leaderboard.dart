@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import '../../../features.dart';
-import 'package:skill_bridge_mobile/features/profile/domain/entities/user_leaderboard_entity.dart';
+import 'package:prep_genie/features/profile/domain/entities/user_leaderboard_entity.dart';
 
 class Leaderboard extends Equatable {
   final List<UserLeaderboardEntity> userLeaderboardEntities;

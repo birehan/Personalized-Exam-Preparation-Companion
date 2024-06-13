@@ -39,7 +39,8 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           // context.go(AppRoutes.newPasswordConfirmedPage);
         } else if (state is ChangePasswordState &&
             state.status == AuthStatus.error) {
-          ScaffoldMessenger.of(context).showSnackBar(snackBar(state.errorMessage));
+          ScaffoldMessenger.of(context)
+              .showSnackBar(snackBar(state.errorMessage));
         }
       },
       child: Stack(
@@ -102,7 +103,8 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               ),
               const SizedBox(height: 8),
               Text(
-                AppLocalizations.of(context)!.set_a_secure_password_for_your_account_ensure_both_entries_match_before_submitting,
+                AppLocalizations.of(context)!
+                    .set_a_secure_password_for_your_account_ensure_both_entries_match_before_submitting,
                 style: GoogleFonts.poppins(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -122,13 +124,10 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 controller: _passwordController,
                 validator: (password) {
                   return validatePasswordAndConfirmPassword(
-                    password,
-                    _confirmPasswordController.text,
-                    context
-                  );
+                      password, _confirmPasswordController.text, context);
                 },
                 obscureText: !_passwordVisible,
-                cursorColor: const Color(0xFF18786A),
+                cursorColor: const Color(0xFF0072FF),
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -136,7 +135,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF18786A),
+                      color: Color(0xFF0072FF),
                       width: 2,
                     ),
                   ),
@@ -150,7 +149,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       _passwordVisible
                           ? Icons.visibility
                           : Icons.visibility_off,
-                      color: const Color(0xFF18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                   ),
                 ),
@@ -173,13 +172,10 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 controller: _confirmPasswordController,
                 validator: (confirmPassword) {
                   return validatePasswordAndConfirmPassword(
-                    confirmPassword,
-                    _passwordController.text,
-                    context
-                  );
+                      confirmPassword, _passwordController.text, context);
                 },
                 obscureText: !_confirmPasswordVisible,
-                cursorColor: const Color(0xFF18786A),
+                cursorColor: const Color(0xFF0072FF),
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -187,7 +183,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF18786A),
+                      color: Color(0xFF0072FF),
                       width: 2,
                     ),
                   ),
@@ -201,7 +197,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       _confirmPasswordVisible
                           ? Icons.visibility
                           : Icons.visibility_off,
-                      color: const Color(0xFF18786A),
+                      color: const Color(0xFF0072FF),
                     ),
                   ),
                 ),
@@ -221,7 +217,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         return ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            backgroundColor: const Color(0xFF18786A),
+                            backgroundColor: const Color(0xFF0072FF),
                             padding: const EdgeInsets.symmetric(
                               vertical: 10,
                               horizontal: 4,
@@ -232,14 +228,13 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                               _formKey.currentState!.save();
                               context.read<AuthenticationBloc>().add(
                                     ChangePasswordEvent(
-                                      emailOrPhoneNumber:
-                                          state.emailOrPhoneNumber,
-                                      newPassword: _passwordController.text,
-                                      confirmPassword:
-                                          _confirmPasswordController.text,
-                                      otp: state.otp,
-                                      context: context
-                                    ),
+                                        emailOrPhoneNumber:
+                                            state.emailOrPhoneNumber,
+                                        newPassword: _passwordController.text,
+                                        confirmPassword:
+                                            _confirmPasswordController.text,
+                                        otp: state.otp,
+                                        context: context),
                                   );
                             }
                           },

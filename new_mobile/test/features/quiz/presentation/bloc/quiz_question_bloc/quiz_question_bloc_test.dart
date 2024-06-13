@@ -2,8 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/error/failure.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/error/failure.dart';
+import 'package:prep_genie/features/features.dart';
 
 import 'quiz_question_bloc_test.mocks.dart';
 
@@ -185,8 +185,7 @@ void main() {
       // assert later
       final expected = [
         const SaveQuizScoreState(status: QuizQuestionStatus.loading),
-        const SaveQuizScoreState(
-            status: QuizQuestionStatus.loaded)
+        const SaveQuizScoreState(status: QuizQuestionStatus.loaded)
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act

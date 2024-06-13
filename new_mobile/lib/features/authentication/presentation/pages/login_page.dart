@@ -5,7 +5,7 @@ import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/widgets/siginin_with_google.dart';
+import 'package:prep_genie/features/authentication/presentation/widgets/siginin_with_google.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/constants/app_keys.dart';
@@ -39,11 +39,10 @@ class _LoginPageState extends State<LoginPage> {
   void dispatchLogin() {
     context.read<AuthenticationBloc>().add(
           LoginEvent(
-            emailOrPhoneNumber: _emailOrPhoneNumberController.text.trim(),
-            password: _passwordController.text,
-            rememberMe: _rememberMe,
-            context: context
-          ),
+              emailOrPhoneNumber: _emailOrPhoneNumberController.text.trim(),
+              password: _passwordController.text,
+              rememberMe: _rememberMe,
+              context: context),
         );
   }
 
@@ -137,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                     Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'SKILLBRIDGE',
+                        'PrepGenie',
                         style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
@@ -150,7 +149,7 @@ class _LoginPageState extends State<LoginPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: const Color(0xFF1A7A6C),
+                        color: const Color(0xFF0072FF),
                       ),
                     ),
                     // Text(
@@ -176,17 +175,19 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       controller: _emailOrPhoneNumberController,
                       validator: (emailOrPhoneNumber) {
-                        return validateEmailOrPhoneNumber(emailOrPhoneNumber, context);
+                        return validateEmailOrPhoneNumber(
+                            emailOrPhoneNumber, context);
                       },
-                      cursorColor: const Color(0xFF18786A),
+                      cursorColor: const Color(0xFF0072FF),
                       decoration: InputDecoration(
-                        contentPadding:
-                            const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                        hintText: AppLocalizations.of(context)!.enter_your_email_or_phone_number,
+                        contentPadding: const EdgeInsets.symmetric(
+                            vertical: 6, horizontal: 12),
+                        hintText: AppLocalizations.of(context)!
+                            .enter_your_email_or_phone_number,
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                             width: 2,
                           ),
                         ),
@@ -215,15 +216,16 @@ class _LoginPageState extends State<LoginPage> {
                         return validatePassword(password, context);
                       },
                       obscureText: !_passwordVisible,
-                      cursorColor: const Color(0xFF18786A),
+                      cursorColor: const Color(0xFF0072FF),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 6, horizontal: 12),
-                        hintText: AppLocalizations.of(context)!.enter_your_password,
+                        hintText:
+                            AppLocalizations.of(context)!.enter_your_password,
                         border: const OutlineInputBorder(),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF18786A),
+                            color: Color(0xFF0072FF),
                             width: 2,
                           ),
                         ),
@@ -237,7 +239,7 @@ class _LoginPageState extends State<LoginPage> {
                             _passwordVisible
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: const Color(0xFF18786A),
+                            color: const Color(0xFF0072FF),
                           ),
                         ),
                       ),
@@ -307,7 +309,7 @@ class _LoginPageState extends State<LoginPage> {
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF18786A),
+                              backgroundColor: const Color(0xFF0072FF),
                               foregroundColor: const Color(0xFFFFFFFF),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 16, vertical: 12),
@@ -340,7 +342,7 @@ class _LoginPageState extends State<LoginPage> {
                       ],
                     ),
                     SizedBox(height: 2.h),
-                     SignInWithGoogleWidget(
+                    SignInWithGoogleWidget(
                       text: AppLocalizations.of(context)!.sign_in_with_google,
                     ),
                     const SizedBox(height: 24),
@@ -368,7 +370,7 @@ class _LoginPageState extends State<LoginPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
-                        color: const Color(0xFF18786A),
+                        color: const Color(0xFF0072FF),
                       ),
                     ),
                   )

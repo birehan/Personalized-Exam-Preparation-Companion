@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/general_chat_entity.dart';
+import 'package:prep_genie/features/question/domain/entities/general_chat_entity.dart';
 
 import '../../../../core/core.dart';
 import '../../../features.dart';

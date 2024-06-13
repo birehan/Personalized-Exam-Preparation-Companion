@@ -7,10 +7,10 @@ import 'dart:async' as _i4;
 
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:skill_bridge_mobile/core/error/failure.dart' as _i5;
-import 'package:skill_bridge_mobile/features/bookmarks/domain/entities/entities.dart'
+import 'package:prep_genie/core/error/failure.dart' as _i5;
+import 'package:prep_genie/features/bookmarks/domain/entities/entities.dart'
     as _i6;
-import 'package:skill_bridge_mobile/features/bookmarks/domain/repositories/bookmark_repositoires.dart'
+import 'package:prep_genie/features/bookmarks/domain/repositories/bookmark_repositoires.dart'
     as _i3;
 
 // ignore_for_file: type=lint

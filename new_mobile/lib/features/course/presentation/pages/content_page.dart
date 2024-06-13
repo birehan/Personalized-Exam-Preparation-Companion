@@ -8,11 +8,11 @@ import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:skill_bridge_mobile/core/utils/create_links.dart';
-import 'package:skill_bridge_mobile/core/widgets/flag_button.dart';
-import 'package:skill_bridge_mobile/core/widgets/share.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
+import 'package:prep_genie/core/utils/create_links.dart';
+import 'package:prep_genie/core/widgets/flag_button.dart';
+import 'package:prep_genie/core/widgets/share.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../../../core/widgets/progress_indicator2.dart';
@@ -207,12 +207,12 @@ class _ContentPageState extends State<ContentPage>
               },
             ),
           ),
-          actions: [
-            ShareButton(
-              route: GoRouter.of(context).location,
-              subject: 'SkillBridge content',
-            ),
-          ],
+          // actions: [
+          //   ShareButton(
+          //     route: GoRouter.of(context).location,
+          //     subject: 'PrepGenie content',
+          //   ),
+          // ],
         ),
         body: BlocListener<SubChapterBloc, SubChapterState>(
           listener: (context, state) {
@@ -276,22 +276,22 @@ class _ContentPageState extends State<ContentPage>
                                         ),
                                       ),
                                     ),
-                                    FlagButton(onPressed: () {
-                                      final originalContext = context;
+                                    // FlagButton(onPressed: () {
+                                    //   final originalContext = context;
 
-                                      showDialog(
-                                        context: context,
-                                        builder: (BuildContext context) {
-                                          return FlagDialog(
-                                            originalContext: originalContext,
-                                            index: 0,
-                                            id: contentId,
-                                            feedbackType:
-                                                FeedbackType.contentFeedback,
-                                          );
-                                        },
-                                      );
-                                    }),
+                                    //   showDialog(
+                                    //     context: context,
+                                    //     builder: (BuildContext context) {
+                                    //       return FlagDialog(
+                                    //         originalContext: originalContext,
+                                    //         index: 0,
+                                    //         id: contentId,
+                                    //         feedbackType:
+                                    //             FeedbackType.contentFeedback,
+                                    //       );
+                                    //     },
+                                    //   );
+                                    // }),
                                     IconButton(
                                       icon: isBookmarked.contains(index)
                                           ? const Icon(Icons.bookmark,
@@ -391,7 +391,7 @@ class _ContentPageState extends State<ContentPage>
                                       : AppLocalizations.of(context)!.prev,
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Color(0xff18786A),
+                                    color: Color(0xFF0072FF),
                                   ),
                                 ),
                               ),
@@ -438,7 +438,7 @@ class _ContentPageState extends State<ContentPage>
                                                 .finish,
                                             style: const TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              color: Color(0xff18786A),
+                                              color: Color(0xFF0072FF),
                                             ),
                                           );
                                         },
@@ -456,7 +456,7 @@ class _ContentPageState extends State<ContentPage>
                                         AppLocalizations.of(context)!.next,
                                         style: const TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: Color(0xff18786A),
+                                          color: Color(0xFF0072FF),
                                         ),
                                       ),
                                     ),

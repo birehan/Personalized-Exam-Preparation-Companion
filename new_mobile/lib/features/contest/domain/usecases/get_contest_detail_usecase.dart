@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/contest/domain/entities/contest_detail.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/contest/domain/entities/contest_detail.dart';
+import 'package:prep_genie/features/features.dart';
 
 class GetContestDetailUsecase
     extends UseCase<ContestDetail, ContestDetailParams> {

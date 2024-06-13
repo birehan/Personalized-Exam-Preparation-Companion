@@ -11,7 +11,7 @@ class FloatingChatButton extends StatelessWidget {
     // return Container(
     //   padding: const EdgeInsets.all(10),
     //   decoration: const BoxDecoration(
-    //     color: Color(0xff18786a),
+    //     color: Color(0xFF0072FF),
     //     shape: BoxShape.circle,
     //     boxShadow: [
     //       BoxShadow(
@@ -44,13 +44,13 @@ class FloatingChatButton extends StatelessWidget {
         ],
         gradient: const LinearGradient(
           colors: [
-            Color(0xff18786a),
+            Color(0xFF0072FF),
             Color.fromARGB(255, 34, 170, 175),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
-        // color: const Color(0xff18786a),
+        // color: const Color(0xFF0072FF),
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(30),
           topLeft: Radius.circular(30),

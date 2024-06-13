@@ -39,13 +39,13 @@ class NoInternet extends StatelessWidget {
                 reloadCallback();
               },
               borderRadius: BorderRadius.circular(2.h),
-              splashColor: const Color(0xff18786A).withOpacity(.1),
+              splashColor: const Color(0xFF0072FF).withOpacity(.1),
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: .7.h, horizontal: 4.w),
                 decoration: BoxDecoration(
                   color: setColor ? Colors.white : Colors.transparent,
                   border: Border.all(
-                    color: setColor ? Colors.white : const Color(0xff18786a),
+                    color: setColor ? Colors.white : const Color(0xFF0072FF),
                   ),
                   borderRadius: BorderRadius.circular(2.h),
                 ),
@@ -54,7 +54,7 @@ class NoInternet extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                     fontFamily: 'Poppins',
-                    color: setColor ? Colors.black : const Color(0xff18786a),
+                    color: setColor ? Colors.black : const Color(0xFF0072FF),
                   ),
                 ),
               ),

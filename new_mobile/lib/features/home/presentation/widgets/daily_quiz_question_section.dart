@@ -103,7 +103,7 @@ class _QuestionSectionState extends State<DailyQuizQuestionSection>
                   showGlow
                       ? DefaultTextStyle(
                           style: const TextStyle(
-                            color: Color(0xff18786a),
+                            color: Color(0xFF0072FF),
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),

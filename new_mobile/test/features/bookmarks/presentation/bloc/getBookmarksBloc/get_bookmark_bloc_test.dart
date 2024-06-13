@@ -3,12 +3,12 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/domain.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/domain/usecases/bookmark_content_usecase.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
-import 'package:skill_bridge_mobile/features/chapter/domain/entities/content.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/question.dart';
-import 'package:skill_bridge_mobile/features/question/domain/entities/user_answer.dart'
+import 'package:prep_genie/features/bookmarks/domain/domain.dart';
+import 'package:prep_genie/features/bookmarks/domain/usecases/bookmark_content_usecase.dart';
+import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
+import 'package:prep_genie/features/chapter/domain/entities/content.dart';
+import 'package:prep_genie/features/question/domain/entities/question.dart';
+import 'package:prep_genie/features/question/domain/entities/user_answer.dart'
     as user_answer;
 import 'get_bookmark_bloc_test.mocks.dart';
 

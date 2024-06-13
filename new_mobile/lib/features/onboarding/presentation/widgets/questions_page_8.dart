@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:skill_bridge_mobile/features/onboarding/presentation/bloc/onboarding_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/dropdown_with_userinput.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/widgets/profile_dropdown_selection.dart';
+import 'package:prep_genie/features/onboarding/presentation/bloc/onboarding_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/schoolInfoBloc/school_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/dropdown_with_userinput.dart';
+import 'package:prep_genie/features/profile/presentation/widgets/profile_dropdown_selection.dart';
 
 class OnboardingSchoolsPage extends StatelessWidget {
   const OnboardingSchoolsPage({super.key});

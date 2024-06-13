@@ -84,7 +84,7 @@ class OtpWidget extends StatelessWidget {
           width: 56,
           height: 1,
           decoration: BoxDecoration(
-            color: const Color(0xff18786a),
+            color: const Color(0xFF0072FF),
             borderRadius: BorderRadius.circular(8),
           ),
         ),
@@ -189,7 +189,7 @@ class OtpWidget extends StatelessWidget {
                       // color: fillColor,
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(
-                        color: const Color(0xff18786a),
+                        color: const Color(0xFF0072FF),
                       ),
                     ),
                   ),

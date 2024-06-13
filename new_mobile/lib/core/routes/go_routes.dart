@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:skill_bridge_mobile/features/authentication/presentation/pages/cube_animation_page.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/pages/bookmarked_content_page.dart';
-import 'package:skill_bridge_mobile/features/bookmarks/presentation/pages/bookmarked_question_page.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/pages/content_final_page.dart';
-import 'package:skill_bridge_mobile/features/course/presentation/pages/content_page.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/add_friends_page.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/friends_page.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/leaderbaord_detail.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/profile_edit_page.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/pages/updated_profile_page.dart';
-import 'package:skill_bridge_mobile/features/question/presentation/pages/shared_question_page.dart';
+import 'package:prep_genie/features/authentication/presentation/pages/cube_animation_page.dart';
+import 'package:prep_genie/features/bookmarks/presentation/pages/bookmarked_content_page.dart';
+import 'package:prep_genie/features/bookmarks/presentation/pages/bookmarked_question_page.dart';
+import 'package:prep_genie/features/course/presentation/pages/content_final_page.dart';
+import 'package:prep_genie/features/course/presentation/pages/content_page.dart';
+import 'package:prep_genie/features/profile/presentation/pages/add_friends_page.dart';
+import 'package:prep_genie/features/profile/presentation/pages/friends_page.dart';
+import 'package:prep_genie/features/profile/presentation/pages/leaderbaord_detail.dart';
+import 'package:prep_genie/features/profile/presentation/pages/profile_edit_page.dart';
+import 'package:prep_genie/features/profile/presentation/pages/updated_profile_page.dart';
+import 'package:prep_genie/features/question/presentation/pages/shared_question_page.dart';
 
 import '../../features/bookmarks/domain/entities/bookmarked_contents.dart';
 import '../../features/bookmarks/domain/entities/bookmarked_questions.dart';
@@ -698,7 +698,7 @@ class MyMockExamResultPageRoute extends GoRouteData {
 
   @override
   build(context, state) => ResultPage(resultPageParams: $extra);
-} 
+}
 
 class ProfilePageRoute extends GoRouteData {
   ProfilePageRoute();

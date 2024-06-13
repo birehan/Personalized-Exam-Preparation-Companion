@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
-import 'package:skill_bridge_mobile/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_bloc.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_event.dart';
+import 'package:prep_genie/features/profile/presentation/bloc/changePasswordBloc/password_state.dart';
 
 import '../../../../core/utils/snack_bar.dart';
 
@@ -271,7 +271,7 @@ class _ChangePasswordDialogState extends State<ChangePasswordDialog> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(
                                   12), // Set the border-radius
-                              color: const Color(0xFF1A7A6C)),
+                              color: const Color(0xFF0072FF)),
                           child: const Center(
                             child: Text(
                               'Reset Password',

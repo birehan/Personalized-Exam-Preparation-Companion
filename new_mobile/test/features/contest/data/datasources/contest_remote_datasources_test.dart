@@ -5,9 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/core/constants/app_keys.dart';
-import 'package:skill_bridge_mobile/core/core.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/core/constants/app_keys.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/features.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import '../repositories/contest_repository_impl_test.mocks.dart';
@@ -315,7 +315,7 @@ void main() {
       expect(result, equals(previousContest));
     });
 
-     test(
+    test(
         'should throw a RequestOverloadException when the response code is 429',
         () async {
       // arrange
@@ -396,7 +396,7 @@ void main() {
       // assert
       expect(() async => await call(contestId: '659276d9405be56034f74407'),
           throwsA(const TypeMatcher<RequestOverloadException>()));
-  });
+    });
     test(
         'should throw a ServerException when the response code is 404 or other',
         () async {
@@ -448,8 +448,7 @@ void main() {
       expect(result, equals(previousUserContest));
     });
 
-        test(
-        'should throw a RuestOverloadException when the response code is 429',
+    test('should throw a RuestOverloadException when the response code is 429',
         () async {
       // arrange
       when(mockHttpClient.get(
@@ -514,7 +513,7 @@ void main() {
       expect(result, equals(contestModel));
     });
 
-     test(
+    test(
         'should throw a RequestOverloadException when the response code is 429',
         () async {
       // arrange
@@ -525,7 +524,8 @@ void main() {
       // act
       final call = remoteDatasource.fetchUpcomingUserContest;
       // assert
-      expect(() => call(), throwsA(const TypeMatcher<RequestOverloadException>()));
+      expect(
+          () => call(), throwsA(const TypeMatcher<RequestOverloadException>()));
     });
 
     test(
@@ -588,7 +588,7 @@ void main() {
       expect(result, equals(registerToContest));
     });
 
-test(
+    test(
         'should throw a RequestoverloadException when the response code is 429',
         () async {
       // arrange
@@ -723,7 +723,7 @@ test(
       expect(result, equals(getContestRanking));
     });
 
- test(
+    test(
         'should throw a RequestOverloadException when the response code is 429',
         () async {
       // arrange
@@ -792,7 +792,7 @@ test(
       // assert
       expect(result, equals(fetchContestQuestionByCategory));
     });
- test(
+    test(
         'should throw a RequestOverloadException when the response code is 429',
         () async {
       // arrange
@@ -864,7 +864,7 @@ test(
       );
     });
 
-  test(
+    test(
         'should throw a RequestOverloadException when the response code is 429',
         () async {
       // arrange

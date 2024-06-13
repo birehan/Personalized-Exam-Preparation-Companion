@@ -139,7 +139,7 @@ class _ExpandableWidgetState extends State<CourseExpandableWidget> {
                               decoration: BoxDecoration(
                                 color: Color(
                                         departmentCourses[index].isNewCurriculum
-                                            ? 0xff18786a
+                                            ? 0xFF0072FF
                                             : 0xffFEA800)
                                     .withOpacity(.2),
                                 borderRadius: BorderRadius.circular(5),
@@ -151,7 +151,7 @@ class _ExpandableWidgetState extends State<CourseExpandableWidget> {
                                 style: TextStyle(
                                   color: Color(
                                       departmentCourses[index].isNewCurriculum
-                                          ? 0xff18786a
+                                          ? 0xFF0072FF
                                           : 0xffFEA800 //0xffFEA800
                                       ),
                                 ),

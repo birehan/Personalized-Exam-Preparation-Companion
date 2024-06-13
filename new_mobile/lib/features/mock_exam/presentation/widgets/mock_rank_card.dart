@@ -16,8 +16,7 @@ class MockRankCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:
-          const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(
@@ -26,8 +25,7 @@ class MockRankCard extends StatelessWidget {
         ),
       ),
       child: Row(
-        mainAxisAlignment:
-            MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             '${userRank.rank}',
@@ -47,14 +45,10 @@ class MockRankCard extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context)
-                            .size
-                            .width *
-                        0.5,
+                    width: MediaQuery.of(context).size.width * 0.5,
                     child: Text(
                       '${userRank.firstName} ${userRank.lastName}',
                       style: GoogleFonts.poppins(
@@ -62,25 +56,19 @@ class MockRankCard extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                       ),
                       maxLines: 1,
-                      overflow:
-                          TextOverflow.ellipsis,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context)
-                            .size
-                            .width *
-                        0.5,
+                    width: MediaQuery.of(context).size.width * 0.5,
                     child: Text(
                       'Haile Selassie School',
                       style: GoogleFonts.poppins(
-                        color:
-                            const Color(0xFF1A7A6C),
+                        color: const Color(0xFF0072FF),
                         fontWeight: FontWeight.w500,
                       ),
                       maxLines: 1,
-                      overflow:
-                          TextOverflow.ellipsis,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ],
@@ -111,4 +99,3 @@ class MockRankCard extends StatelessWidget {
     );
   }
 }
-

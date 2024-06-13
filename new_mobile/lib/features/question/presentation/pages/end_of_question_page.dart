@@ -36,7 +36,7 @@ class EndOfQuestionPage extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: const Color(0xFF18786A),
+                      backgroundColor: const Color(0xFF0072FF),
                       padding: const EdgeInsets.symmetric(vertical: 16),
                     ),
                     onPressed: () {

@@ -20,13 +20,13 @@ class ContentFinalPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-             Text(
+            Text(
               AppLocalizations.of(context)!.lesson_completed,
               style: const TextStyle(
                   fontSize: 22,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w600,
-                  color: Color(0xff18786A)),
+                  color: Color(0xFF0072FF)),
             ),
             SizedBox(height: 10.h),
             Image(
@@ -35,7 +35,7 @@ class ContentFinalPage extends StatelessWidget {
               width: 50.w,
             ),
             SizedBox(height: 10.h),
-             Text(
+            Text(
               AppLocalizations.of(context)!.congratulations,
               style: const TextStyle(
                   fontSize: 26,
@@ -46,7 +46,8 @@ class ContentFinalPage extends StatelessWidget {
             SizedBox(
               width: 60.w,
               child: Text(
-                AppLocalizations.of(context)!.you_have_just_completed_your_first_lesson,
+                AppLocalizations.of(context)!
+                    .you_have_just_completed_your_first_lesson,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                     fontSize: 18, fontFamily: 'Poppins', color: Colors.black54),
@@ -70,7 +71,7 @@ class ContentFinalPage extends StatelessWidget {
                 height: 8.h,
                 width: 45.w,
                 decoration: BoxDecoration(
-                  color: const Color(0xff18786A),
+                  color: const Color(0xFF0072FF),
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: Text(

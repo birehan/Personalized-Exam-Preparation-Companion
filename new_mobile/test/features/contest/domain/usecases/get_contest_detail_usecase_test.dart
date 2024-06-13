@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:skill_bridge_mobile/features/features.dart';
+import 'package:prep_genie/features/features.dart';
 
-import 'package:skill_bridge_mobile/features/contest/domain/usecases/get_contest_detail_usecase.dart';
+import 'package:prep_genie/features/contest/domain/usecases/get_contest_detail_usecase.dart';
 import 'fetch_upcoming_user_contest_usecase_test.mocks.dart';
 
 void main() {
@@ -50,13 +50,13 @@ void main() {
     isLive: false,
   );
 
-  test('should get contesDetail by calling GetContestDetailUsecase',
-      () async {
+  test('should get contesDetail by calling GetContestDetailUsecase', () async {
     // arrange
     when(mockContestRepository.getContestDetail('659e4f5d1b78560507eadd9d'))
         .thenAnswer((_) async => Right(contestDetail));
     // act
-    final result = await usecase(ContestDetailParams(contestId: '659e4f5d1b78560507eadd9d'));
+    final result = await usecase(
+        ContestDetailParams(contestId: '659e4f5d1b78560507eadd9d'));
     // assert
     expect(result, Right(contestDetail));
     verify(mockContestRepository.getContestDetail('659e4f5d1b78560507eadd9d'));
