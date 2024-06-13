@@ -10,7 +10,7 @@ import 'package:prep_genie/core/utils/connectivity_service.dart';
 import 'package:prep_genie/core/widgets/coming_soon_page.dart';
 import 'package:prep_genie/core/widgets/doubleback.dart';
 import 'package:prep_genie/core/widgets/dragable.dart';
-import 'package:prep_genie/features/contest/presentation/pages/contests_main_page.dart';
+// import 'package:prep_genie/features/contest/presentation/pages/contests_main_page.dart';
 import '../../features/features.dart';
 import '../core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -112,7 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 const DynamicHomePage(),
                 MyCoursesPage(tabIndex: tabIndex),
                 const ExamsPage(),
-                const ContestsMainPage(),
+                const ExamsPage(),
+                // const ContestsMainPage(),
                 // const UserLeaderboardPage(),
               ],
             ),

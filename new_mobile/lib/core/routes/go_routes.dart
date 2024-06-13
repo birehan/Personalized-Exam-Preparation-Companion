@@ -1142,33 +1142,33 @@ class ContestDetailPageRoute extends GoRouteData {
 
   final String id;
 
-  @override
-  Widget build(context, state) => ContestDetailPage(
-        contestId: id,
-      );
+  // @override
+  // Widget build(context, state) => ContestDetailPage(
+  //       contestId: id,
+  //     );
 }
 
 class ContestQuestionByCategoryPageRoute extends GoRouteData {
   final String id;
-  final ContestQuestionByCategoryPageParams $extra;
+  // final ContestQuestionByCategoryPageParams $extra;
 
   ContestQuestionByCategoryPageRoute({
     required this.id,
-    required this.$extra,
+    // required this.$extra,
   });
 
-  @override
-  Widget build(context, state) => ContestQuestionsByCategoryPage(
-        contestQuestionByCategoryPageparams:
-            ContestQuestionByCategoryPageParams(
-          categoryId: $extra.categoryId,
-          timeLeft: $extra.timeLeft,
-          contestCategories: $extra.contestCategories,
-          contestId: $extra.contestId,
-          updateSubmittedCategories: $extra.updateSubmittedCategories,
-          hasEnded: $extra.hasEnded,
-        ),
-      );
+  // @override
+  // Widget build(context, state) => ContestQuestionsByCategoryPage(
+  //       contestQuestionByCategoryPageparams:
+  //           ContestQuestionByCategoryPageParams(
+  //         categoryId: $extra.categoryId,
+  //         timeLeft: $extra.timeLeft,
+  //         contestCategories: $extra.contestCategories,
+  //         contestId: $extra.contestId,
+  //         updateSubmittedCategories: $extra.updateSubmittedCategories,
+  //         hasEnded: $extra.hasEnded,
+  //       ),
+  //     );
 }
 
 class ContestQuestionByCategoryChatWithAIPageRoute extends GoRouteData {
@@ -1176,13 +1176,13 @@ class ContestQuestionByCategoryChatWithAIPageRoute extends GoRouteData {
     required this.id,
     required this.questionId,
     required this.question,
-    required this.$extra,
+    // required this.$extra,
   });
 
   final String id;
   final String questionId;
   final String question;
-  final ContestQuestionByCategoryPageParams $extra;
+  // final ContestQuestionByCategoryPageParams $extra;
 
   @override
   Widget build(context, state) => ChatPage(
@@ -1197,12 +1197,12 @@ class ContestToContentPageRoute extends GoRouteData {
   ContestToContentPageRoute({
     required this.id,
     required this.courseId,
-    required this.$extra,
+    // required this.$extra,
   });
 
   final String id;
   final String courseId;
-  final ContestQuestionByCategoryPageParams $extra;
+  // final ContestQuestionByCategoryPageParams $extra;
 
   @override
   Widget build(context, state) => RelatedTopicContentPage(
