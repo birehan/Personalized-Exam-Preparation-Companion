@@ -39,15 +39,6 @@ class MessageWidgetLoading extends StatelessWidget {
               ),
             ),
             child: TypingIndicator(),
-
-            // SelectableText(
-            //   "typing",
-            //   style: GoogleFonts.poppins(
-            //     fontSize: 16,
-            //     fontWeight: FontWeight.w500,
-            //     color: isMyMessage ? const Color(0xFF616161) : Colors.white,
-            //   ),
-            // ),
           ),
           const SizedBox(height: 6),
         ],

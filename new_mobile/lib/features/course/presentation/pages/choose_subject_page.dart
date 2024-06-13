@@ -108,17 +108,6 @@ class _ChooseSubjectPageState extends State<ChooseSubjectPage> {
                         state.status == DepartmentCourseStatus.loaded) {
                       final courseMap = [
                         ['Biology', state.departmentCourse!.biology],
-                        // ['Chemistry', state.departmentCourse!.chemistry],
-                        // ['Civics', state.departmentCourse!.civics],
-                        // ['English', state.departmentCourse!.english],
-                        // ['Mathematics', state.departmentCourse!.maths],
-                        // ['Physics', state.departmentCourse!.physics],
-                        // ['SAT', state.departmentCourse!.sat],
-                        // ['Economics', state.departmentCourse!.economics],
-                        // ['History', state.departmentCourse!.history],
-                        // ['Geography', state.departmentCourse!.geography],
-                        // ['Business', state.departmentCourse!.business],
-                        // ['Others', state.departmentCourse!.others],
                       ];
 
                       return ListView.separated(

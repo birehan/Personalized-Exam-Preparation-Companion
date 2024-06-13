@@ -2,11 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-/// DoubleBack, wrap a widget to use it
-/// child : widget
-/// message : to show on toast
-/// waitToSecondPressed (optional) if you want to wait longer
-/// condition and conditionFail, if you want show at spesific condition
 class DoubleBack extends StatefulWidget {
   final Widget child;
   final String message;

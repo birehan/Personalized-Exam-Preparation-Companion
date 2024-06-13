@@ -103,19 +103,6 @@ class DownloadedCourseDetailTab extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 1.h),
-                // ClipRRect(
-                //   borderRadius: BorderRadius.circular(7),
-                //   child: LinearProgressIndicator(
-                //     semanticsValue:
-                //         '${((widget.completedChapters / widget.allChapters) * 100).round()}%',
-                //     value: widget.completedChapters / widget.allChapters,
-                //     minHeight: 14,
-                //     backgroundColor: const Color(0xffDCE8F7),
-                //     valueColor: const AlwaysStoppedAnimation<Color>(
-                //       Color(0xff3DB861),
-                //     ),
-                //   ),
-                // ),
               ],
             ),
           ),

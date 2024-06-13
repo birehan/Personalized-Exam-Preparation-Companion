@@ -8,7 +8,6 @@ class UserCourseAnalysisModel extends UserCourseAnalysis {
 
   factory UserCourseAnalysisModel.fromJson(Map<String, dynamic> json) {
     List<dynamic> analysisList = json['userChapterAnalysis'];
-    // print(analysisList);
     List<UserChapterAnalysis> userChaptersAnalysis = analysisList
         .map(
           (course) => UserChapterAnalysisModel.fromJson(course),

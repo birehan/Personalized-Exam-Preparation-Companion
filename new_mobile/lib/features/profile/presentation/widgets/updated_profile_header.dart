@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import 'package:prep_genie/core/constants/app_images.dart';
 import '../../../features.dart';
 import 'package:prep_genie/core/core.dart';
 
@@ -117,13 +116,6 @@ class ProfileHeader extends StatelessWidget {
   }
 
   Future<void> _showConfirmationDialog(BuildContext context) async {
-    // return showDialog<void>(
-    //   context: context,
-    //   barrierDismissible: true,
-    //   builder: (BuildContext context) {
-    //     return const ConfirmationDialog();
-    //   },
-    // );
     showGeneralDialog(
       transitionDuration: const Duration(milliseconds: 200),
       context: context,

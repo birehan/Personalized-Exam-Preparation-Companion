@@ -81,13 +81,6 @@ class LessonBookmarkCard extends StatelessWidget {
                 ),
               ),
             ),
-            // Text(
-            //   bookmarkedContent.content.content,
-            //   style:
-            //       TextStyle(color: Colors.black.withOpacity(.5), height: 1.5),
-            //   maxLines: 3,
-            //   overflow: TextOverflow.ellipsis,
-            // )
           ],
         ),
       ),

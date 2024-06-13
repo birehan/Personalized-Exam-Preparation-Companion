@@ -17,13 +17,3 @@ class DeleteDeviceTokenUsecase extends UseCase<void, NoParams> {
   }
 }
 
-// class DeleteDeviceTokenParams extends Equatable {
-//   const DeleteDeviceTokenParams({
-//     required this.userId,
-//   });
-
-//   final String userId;
-
-//   @override
-//   List<Object?> get props => [userId];
-// }

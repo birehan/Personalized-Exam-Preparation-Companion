@@ -22,9 +22,6 @@ class ConnectivityService with ChangeNotifier {
       }
     });
 
-    // Check the current connectivity status
-    // var connectivityResult = await _connectivity.checkConnectivity();
-    // _isOnline = !connectivityResult.contains(ConnectivityResult.none);
     _isOnline = await _connectivity.hasConnection;
   }
 }

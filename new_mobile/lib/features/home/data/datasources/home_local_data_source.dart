@@ -8,10 +8,6 @@ import 'package:prep_genie/core/error/exception.dart';
 import '../../../features.dart';
 
 abstract class HomeLocalDatasource {
-  // Future<List<UserCourse>> getMyCourses();
-  // Future<ExamDateModel> getExamDate();
-  // Future<void> cacheMyCourses(List<UserCourse> courses);
-  // Future<void> cacheExamDate(ExamDate examDate);
   Future<HomeModel?> getCachedHomeState();
   Future<void> saveData(rawData);
   Future<void> cacheDailyStreak(
@@ -30,7 +26,6 @@ class HomeLocalDatasourceImpl implements HomeLocalDatasource {
   @override
   Future<HomeModel?> getCachedHomeState() async {
     try {
-      // await Hive.openBox('homeBox');
       final rawData = await _homeBox.get('homeData');
       if (rawData != null) {
         final data = json.decode(rawData)['data'];
@@ -46,7 +41,6 @@ class HomeLocalDatasourceImpl implements HomeLocalDatasource {
 
   @override
   Future<void> saveData(dynamic rawData) async {
-    // await Hive.openBox('homeBox');
     await _homeBox.put('homeData', rawData);
   }
 

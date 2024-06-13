@@ -46,20 +46,6 @@ class _DownloadedCoursesPageState extends State<DownloadedCoursesPage> {
             itemCount: state.courses.length,
             itemBuilder: (context, index) => DownloadedCourseCard(
               course: state.courses[index],
-              // course: Course(
-              //   id: '$index',
-              //   name: 'Maths',
-              //   description: 'A maths textbook',
-              //   grade: 9 + index,
-              //   numberOfChapters: 5,
-              //   isNewCurriculum: true,
-              //   departmentId: '$index+1',
-              //   ects: '7',
-              //   image: const CourseImage(
-              //     imageAddress:
-              //         'https://res.cloudinary.com/djrfgfo08/image/upload/v1697788701/SkillBridge/mobile_team_icons/j4byd2jp9sqqc4ypxb5d.png',
-              //   ),
-              // ),
             ),
           );
         } else if (state is FetchDownloadedCoursesFailed) {

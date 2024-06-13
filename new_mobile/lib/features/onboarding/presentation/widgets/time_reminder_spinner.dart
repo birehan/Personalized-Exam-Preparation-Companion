@@ -3,20 +3,9 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-
-/// This allows a value of type T or T?
-/// to be treated as a value of type T?.
-///
-/// We use this so that APIs that have become
-/// non-nullable can still be used with `!` and `?`
-/// to support older versions of the API as well.
-/// We can remove this and use the regular API when you no longer
-/// need to support versions of Flutter before 3.0.0,
 T? _ambiguate<T>(T? value) => value;
 
 class ItemScrollPhysics extends ScrollPhysics {
-  /// Creates physics for snapping to item.
-  /// Based on PageScrollPhysics
   final double? itemHeight;
   final double targetPixelsLimit;
 
@@ -403,9 +392,6 @@ class _TimePickerSpinnerState extends State<TimePickerSpinner> {
               alignment: _getAlignment(),
               child: Text(
                 text,
-                // style: selectedIndex == index
-                //     ? Theme.of(context).textTheme.headlineSmall
-                //     : Theme.of(context).textTheme.bodyLarge,
                 style: selectedIndex == index
                     ? const TextStyle(
                         fontFamily: 'Poppins',

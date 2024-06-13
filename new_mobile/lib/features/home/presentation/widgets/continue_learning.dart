@@ -80,16 +80,6 @@ class ContinueLearningWidget extends StatelessWidget {
             },
           ),
         ),
-
-        // SizedBox(
-        //   height: 200,
-        //   child: ListView.separated(
-        //     scrollDirection: Axis.horizontal,
-        //     itemBuilder: (context, index) => const CourseCard(),
-        //     separatorBuilder: (context, index) => const SizedBox(width: 12),
-        //     itemCount: 4,
-        //   ),
-        // )
       ],
     );
   }

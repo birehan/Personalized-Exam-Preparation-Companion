@@ -19,16 +19,3 @@ class StoreDeviceTokenUsecase extends UseCase<void, NoParams> {
     return await repository.storeDeviceToken();
   }
 }
-
-// class StoreDeviceTokenParams extends Equatable {
-//   const StoreDeviceTokenParams({
-//     required this.userId,
-//     required this.deviceToken,
-//   });
-
-//   final String userId;
-//   final String deviceToken;
-
-//   @override
-//   List<Object?> get props => [userId, deviceToken];
-// }

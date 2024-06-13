@@ -5,8 +5,6 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:prep_genie/core/core.dart';
 import 'package:prep_genie/features/authentication/authentication.dart';
 import 'package:prep_genie/features/profile/presentation/bloc/logout/logout_bloc.dart';
-import 'package:prep_genie/features/profile/presentation/widgets/changePassword.dart';
-import 'package:prep_genie/features/profile/presentation/widgets/changeUsername.dart';
 
 class AccountComponent extends StatelessWidget {
   final String imageAssetPath;
@@ -40,7 +38,6 @@ class AccountComponent extends StatelessWidget {
               builder: (BuildContext context) => customWidget,
             );
           } else {
-            //  BlocProvider.of<LogoutBloc>(context).add(DispatchLogoutEvent());
             context
                 .read<DeleteDeviceTokenBloc>()
                 .add(const DeleteDeviceTokenEvent());

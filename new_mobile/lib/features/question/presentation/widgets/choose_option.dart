@@ -42,32 +42,6 @@ class ChooseOption extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Expanded(
-              //   child: RichText(
-              //     text: TextSpan(
-              //       text: '$label ',
-              //       style: GoogleFonts.poppins(
-              //         fontSize: 14,
-              //         fontWeight: FontWeight.w700,
-              //         color: isSelected || isWrongAnswer
-              //             ? Colors.white
-              //             : const Color(0xFF333333),
-              //       ),
-              // children: [
-              // TextSpan(
-              //   text: choice,
-              //   style: GoogleFonts.poppins(
-              //     fontSize: 14,
-              //     fontWeight: FontWeight.w400,
-              //     color: isSelected || isWrongAnswer
-              //         ? Colors.white
-              //         : const Color(0xFF333333),
-              //   ),
-              // )
-              // ],
-              //     ),
-              //   ),
-              // ),
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -105,35 +79,6 @@ class ChooseOption extends StatelessWidget {
                   ),
                 ],
               ),
-              // Row(
-              //   children: [
-              //     Text(
-              //       label,
-              //       style: GoogleFonts.poppins(
-              //         fontSize: 14,
-              //         fontWeight: FontWeight.w600,
-              //       ),
-              //     ),
-              //     const SizedBox(width: 4),
-              // SizedBox(
-              //   width: 60.w,
-              //   child: TeXView(
-              //     // loadingWidgetBuilder: (context) => ,
-              //     child: TeXViewMarkdown(
-              //       """<p>$choice</p>""",
-              //       style: TeXViewStyle(
-              //         fontStyle: TeXViewFontStyle(
-              //           fontFamily: 'Poppins',
-              //           fontSize: 14,
-              //           fontWeight: TeXViewFontWeight.w400,
-              //         ),
-              //         contentColor: const Color(0xFF212121),
-              //       ),
-              //     ),
-              // ),
-              //     ),
-              //   ],
-              // ),
               Container(
                 width: 20,
                 height: 20,

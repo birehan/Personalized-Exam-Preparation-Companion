@@ -197,20 +197,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                     ),
                     Row(
                       children: [
-                        // FlagButton(onPressed: () {
-                        //   var originalContext = context;
-                        //   showDialog(
-                        //     context: context,
-                        //     builder: (BuildContext context) {
-                        //       return FlagDialog(
-                        //         originalContext: originalContext,
-                        //         index: 0,
-                        //         id: widget.question.id,
-                        //         feedbackType: FeedbackType.questionFeedback,
-                        //       );
-                        //     },
-                        //   );
-                        // }),
                         IconButton(
                             onPressed: () {
                               if (bookmarked) {
@@ -235,10 +221,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                   ],
                 ),
                 const SizedBox(height: 12),
-                // Container(
-                //   constraints: const BoxConstraints(minHeight: 10),
-                //   child: Column(
-                //     children: [
                 MarkdownWidget(
                   shrinkWrap: true,
                   data: widget.question.description,
@@ -256,44 +238,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                     ),
                   ),
                 ),
-                // GestureDetector(
-                //   onTap: () {
-                //     setState(() {
-                //       isExpanded = !isExpanded;
-                //     });
-                //   },
-                //   child: Container(
-                //     alignment: Alignment.centerRight,
-                //     child: Text(
-                //       isExpanded ? 'Show less' : 'Show more',
-                //       style: GoogleFonts.poppins(),
-                //     ),
-                //   ),
-                // ),
-                //     ],
-                //   ),
-                // ),
-                // Text(
-                //   widget.question.description,
-                //   style: GoogleFonts.poppins(
-                //     fontSize: 16,
-                //     fontWeight: FontWeight.w600,
-                //     color: const Color(0xFF363636),
-                //   ),
-                // ),
-                // TeXView(
-                //   child: TeXViewMarkdown(
-                //     """<p>${widget.question.description}</p>""",
-                //     style: TeXViewStyle(
-                //       fontStyle: TeXViewFontStyle(
-                //         fontFamily: 'Poppins',
-                //         fontSize: 16,
-                //         fontWeight: TeXViewFontWeight.w500,
-                //       ),
-                //       contentColor: const Color(0xFF212121),
-                //     ),
-                //   ),
-                // ),
                 const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -457,26 +401,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                 ),
               ],
             ),
-            // if (!widget.isQuizMode)
-            //   Column(
-            //     children: [
-            //       const SizedBox(height: 24),
-            //       Padding(
-            //         padding: const EdgeInsets.symmetric(
-            //           vertical: 2.0,
-            //           horizontal: 24,
-            //         ),
-            //         child: Text(
-            //           widget.question.explanation,
-            //           textAlign: TextAlign.justify,
-            //           style: GoogleFonts.poppins(
-            //             fontSize: 16,
-            //             fontWeight: FontWeight.w500,
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
             const SizedBox(height: 120),
           ],
         ),

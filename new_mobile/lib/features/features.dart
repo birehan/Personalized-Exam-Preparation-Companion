@@ -24,7 +24,6 @@ export 'course/domain/usecases/register_sub_chapter_usecase.dart';
 export 'course/presentation/bloc/subChapterRegstration/sub_chapter_regstration_bloc.dart';
 // export 'feedback/presentation/bloc/feedbackBloc/feedback_bloc.dart';
 export 'profile/domain/repositories/profile_repository.dart.dart';
-export 'profile/domain/usecases/update_profile_usecase.dart';
 export 'search/data/repositories/search_repository_impl.dart';
 export 'chapter/data/datasources/chapter_remote_data_source.dart';
 export 'chapter/presentation/bloc/subChapterBloc/sub_chapter_bloc.dart';

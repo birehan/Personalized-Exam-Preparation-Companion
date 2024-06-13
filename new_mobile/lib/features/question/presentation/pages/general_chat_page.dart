@@ -79,10 +79,6 @@ class _GeneralChatPageState extends State<GeneralChatPage> {
           chatMessages.removeAt(chatMessages.length - 1);
           onAIChatResponse('An unkown error has occured, please try again...');
         }
-        // else if (state is SendChatState &&
-        //     state.status == ChatStatus.loading) {
-        //   onAIChatResponse(state.chatResponse!.messageResponse);
-        // }
       },
       child: buildWidget(onUserChatSubmit),
     );

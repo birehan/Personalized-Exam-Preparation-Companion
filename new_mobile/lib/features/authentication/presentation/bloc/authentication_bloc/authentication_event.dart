@@ -8,7 +8,6 @@ abstract class AuthenticationEvent extends Equatable {
 }
 
 class SignupEvent extends AuthenticationEvent {
-  // final UserCredential userCredential;
   final String emailOrPhoneNumber;
   final String firstName;
   final String lastName;

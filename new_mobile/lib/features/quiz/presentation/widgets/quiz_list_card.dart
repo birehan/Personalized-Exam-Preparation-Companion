@@ -35,15 +35,6 @@ class QuizListCard extends StatelessWidget {
               .showSnackBar(snackBar(state.failure!.errorMessage));
         } else if (state is GetQuizByIdState &&
             state.status == QuizQuestionStatus.loaded) {
-          // TODO: Navigation
-          // context.push(
-          //   AppRoutes.quizExamPage,
-          //   extra: QuizExamQuestionPageParams(
-          //     quizQuestion: state.quizQuestion!,
-          //     isQuizMode: true,
-          //     stackHeight: 1,
-          //   ),
-          // );
         }
       },
       child: buildWidget(context),

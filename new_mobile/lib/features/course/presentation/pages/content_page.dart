@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown_widget/markdown_widget.dart';
-// import 'package:flutter_tex/flutter_tex.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:share_plus/share_plus.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:prep_genie/core/utils/create_links.dart';
-import 'package:prep_genie/core/widgets/flag_button.dart';
-import 'package:prep_genie/core/widgets/share.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
 import '../../../../core/core.dart';
@@ -19,8 +14,6 @@ import '../../../../core/widgets/progress_indicator2.dart';
 import '../../../chapter/domain/domain.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../chapter/presentation/bloc/subChapterBloc/sub_chapter_bloc.dart';
-// import '../../../feedback/presentation/bloc/feedbackBloc/feedback_bloc.dart';
-// import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
 import '../bloc/course/course_bloc.dart';
 import '../bloc/courseWithuserAnalysis/course_with_user_analysis_bloc.dart';
 import '../bloc/subChapterRegstration/sub_chapter_regstration_bloc.dart';
@@ -91,10 +84,6 @@ class _ContentPageState extends State<ContentPage>
             listener: (context, state) {
           if (state is SubChapterRegstrationFailedState &&
               state.failure is RequestOverloadFailure) {
-            // showDialog(
-            //   context: context,
-            //   builder: (context) => RequestOverloadPopUp(state.failure.errorMessage)
-            // );
             ScaffoldMessenger.of(context)
                 .showSnackBar(snackBar(state.failure.errorMessage));
           }
@@ -110,46 +99,6 @@ class _ContentPageState extends State<ContentPage>
                 .go(context);
           } //! add message for the failed state and push
         }),
-        // BlocListener<FeedbackBloc, FeedbackState>(
-        //   listener: (context, state) {
-        //     if (state is FeedbackSubmisionFailedState &&
-        //         state.failure is RequestOverloadFailure) {
-        //       ScaffoldMessenger.of(context)
-        //           .showSnackBar(snackBar(state.failure.errorMessage));
-        //     }
-        //     if (state is FeedbackSubmitedState) {
-        //       final snackBar = SnackBar(
-        //         backgroundColor: Colors.transparent,
-        //         elevation: 0,
-        //         content: Container(
-        //           padding:
-        //               const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-        //           decoration: BoxDecoration(
-        //             color: Colors.green,
-        //             borderRadius: BorderRadius.circular(8),
-        //             boxShadow: const [
-        //               BoxShadow(color: Colors.black26, blurRadius: 4)
-        //             ],
-        //           ),
-        //           child: Row(
-        //             mainAxisSize: MainAxisSize.min,
-        //             children: [
-        //               const Icon(Icons.check, color: Colors.white),
-        //               const SizedBox(width: 8),
-        //               Text(
-        //                   '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
-        //                   style: TextStyle(color: Colors.white)),
-        //             ],
-        //           ),
-        //         ),
-        //         duration: const Duration(seconds: 3),
-        //         behavior: SnackBarBehavior.floating,
-        //       );
-
-        //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        //     }
-        //   },
-        // )
       ],
       child: Scaffold(
         floatingActionButton: InkWell(
@@ -207,12 +156,6 @@ class _ContentPageState extends State<ContentPage>
               },
             ),
           ),
-          // actions: [
-          //   ShareButton(
-          //     route: GoRouter.of(context).location,
-          //     subject: 'PrepGenie content',
-          //   ),
-          // ],
         ),
         body: BlocListener<SubChapterBloc, SubChapterState>(
           listener: (context, state) {
@@ -276,22 +219,6 @@ class _ContentPageState extends State<ContentPage>
                                         ),
                                       ),
                                     ),
-                                    // FlagButton(onPressed: () {
-                                    //   final originalContext = context;
-
-                                    //   showDialog(
-                                    //     context: context,
-                                    //     builder: (BuildContext context) {
-                                    //       return FlagDialog(
-                                    //         originalContext: originalContext,
-                                    //         index: 0,
-                                    //         id: contentId,
-                                    //         feedbackType:
-                                    //             FeedbackType.contentFeedback,
-                                    //       );
-                                    //     },
-                                    //   );
-                                    // }),
                                     IconButton(
                                       icon: isBookmarked.contains(index)
                                           ? const Icon(Icons.bookmark,
@@ -326,18 +253,6 @@ class _ContentPageState extends State<ContentPage>
                                   ],
                                 ),
                               ),
-                              // LaTexT(
-                              //   delimiter: r'**',
-                              //   laTeXCode: Text(
-                              //     contents[currentPageIndex].content,
-                              //     // style: Theme.of(context)
-                              //     //     .textTheme
-                              //     //     .labelMedium!
-                              //     //     .copyWith(
-                              //     //       color: Color(),
-                              //     //     ),
-                              //   ),
-                              // )
 
                               Expanded(
                                 child: MarkdownWidget(

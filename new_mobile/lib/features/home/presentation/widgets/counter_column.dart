@@ -45,30 +45,6 @@ class CounterColumn extends StatelessWidget {
             ),
           ),
         ),
-        // SizedBox(
-        //   height: 50,
-        //   width: countDownList.length == 2 ? 75 : 100,
-        //   child: ListView.separated(
-        //     scrollDirection: Axis.horizontal,
-        //     itemBuilder: (context, index) => Container(
-        //       decoration: BoxDecoration(
-        //         color: const Color.fromRGBO(255, 255, 255, 0.3),
-        //         borderRadius: BorderRadius.circular(6),
-        //       ),
-        //       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-        //       child: Text(
-        //         countDownList[index],
-        //         style: GoogleFonts.poppins(
-        //           color: Colors.white,
-        //           fontSize: 28,
-        //           fontWeight: FontWeight.w600,
-        //         ),
-        //       ),
-        //     ),
-        //     separatorBuilder: (context, index) => const SizedBox(width: 8),
-        //     itemCount: countDownList.length,
-        //   ),
-        // ),
         const SizedBox(height: 8),
         Text(
           label,

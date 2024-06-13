@@ -101,14 +101,6 @@ class _QuestionsPageState extends State<QuestionsPage> {
   void onSubmit() {
     // _timer.cancel();
     bool hasUnansweredQuestion = false;
-    // for (int index = 0; index < userAnswers.length; index++) {
-    //   if (userAnswers[index] == 'choice_E') {
-    //     hasUnansweredQuestion = true;
-    //     _showErrorSnackbar('Please answer all questions');
-    //     goTo(index);
-    //     break;
-    //   }
-    // }
 
     if (!hasUnansweredQuestion) {
       final questionUserAnswers = List.generate(
@@ -188,9 +180,6 @@ class _QuestionsPageState extends State<QuestionsPage> {
           actions: [
             TextButton(
               onPressed: () {
-                // onSubmit();
-                // onSaveScore();
-                // context.read<PopupMenuBloc>().add(QuitExamEvent());
                 Navigator.of(context).pop();
               },
               child: Text(
@@ -271,41 +260,6 @@ class _QuestionsPageState extends State<QuestionsPage> {
             }
           },
         ),
-        // BlocListener<FeedbackBloc, FeedbackState>(
-        //   listener: (context, state) {
-        //     if (state is FeedbackSubmitedState) {
-        //       final snackBar = SnackBar(
-        //         backgroundColor: Colors.transparent,
-        //         elevation: 0,
-        //         content: Container(
-        //           padding:
-        //               const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-        //           decoration: BoxDecoration(
-        //             color: Colors.green,
-        //             borderRadius: BorderRadius.circular(8),
-        //             boxShadow: const [
-        //               BoxShadow(color: Colors.black26, blurRadius: 4)
-        //             ],
-        //           ),
-        //           child: const Row(
-        //             mainAxisSize: MainAxisSize.min,
-        //             children: [
-        //               Icon(Icons.check, color: Colors.white),
-        //               SizedBox(width: 8),
-        //               Text(
-        //                   'Thank you for your feedback 🙏', //! this has to be changed
-        //                   style: TextStyle(color: Colors.white)),
-        //             ],
-        //           ),
-        //         ),
-        //         duration: const Duration(seconds: 3),
-        //         behavior: SnackBarBehavior.floating,
-        //       );
-
-        //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        //     }
-        //   },
-        // )
       ],
       child: buildWidget(context, hours, minutes, seconds, goTo),
     );
@@ -372,9 +326,6 @@ class _QuestionsPageState extends State<QuestionsPage> {
                       InkWell(
                         onTap: () {
                           showPopupOnQuitButtonPressed();
-                          // context
-                          //     .read<PopupMenuBloc>()
-                          //     .add(const GoToPageEvent());
                         },
                         child: Text(
                           'Quit',
@@ -409,33 +360,6 @@ class _QuestionsPageState extends State<QuestionsPage> {
                       ),
                     ),
         ),
-        // floatingActionButton: FloatingOptions(
-        //   hideChat: widget.questionMode == QuestionMode.quiz,
-        //   chatCallback: () {
-        // if (widget.examType == ExamType.quiz) {
-        //   QuizChatWithAIPageRoute(
-        //     courseId: widget.questions[currentIndex].courseId,
-        //     quizId: widget.questionId,
-        //     questionId: widget.questions[currentIndex].id,
-        //     question:
-        //         '${widget.questions[currentIndex].description}\nA) ${widget.questions[currentIndex].choiceA}\nB) ${widget.questions[currentIndex].choiceB}\nC) ${widget.questions[currentIndex].choiceC}\nD) ${widget.questions[currentIndex].choiceD}',
-        //     $extra: widget.questionMode,
-        //   ).go(context);
-        // }
-        //   },
-        //   flagCallback: () {
-        // showDialog(
-        //   context: context,
-        //   builder: (BuildContext context) {
-        //     return FlagDialog(
-        //       index: 0,
-        //       id: widget.questions[currentIndex].id,
-        //       feedbackType: FeedbackType.questionFeedback,
-        //     );
-        //   },
-        // );
-        //   },
-        // ),
         floatingActionButton: widget.questionMode == QuestionMode.quiz
             ? null
             : InkWell(

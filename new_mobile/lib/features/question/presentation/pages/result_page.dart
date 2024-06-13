@@ -106,52 +106,6 @@ class _ResultPageState extends State<ResultPage> {
         ),
       ).go(context);
     }
-    // switch (mockType) {
-    //   case MockType.recommendedMocks:
-    //     // RecommendedMockPageRoute(
-    //     //   mockId: widget.resultPageParams.id,
-    //     //   $extra: QuestionMode.analysis,
-    //     // ).go(context);
-    //     MockQuestionPageRoute(
-    //         $extra: MockExamQustionPageParams(
-    //       completed: false,
-    //       mockId: widget.resultPageParams.id,
-    //       mockType: MockType.recommendedMocks,
-    //       questionMode: QuestionMode.analysis,
-    //       questionNumber: widget.resultPageParams.totalQuestions,
-    //       courseImage: widget.resultPageParams.courseImage,
-    //       courseName: widget.resultPageParams.courseName,
-    //       isStandard: true,
-    //     )).go(context);
-    //     break;
-    //   case MockType.standardMocks:
-    //     StandardMockExamsPageRoute(
-    //       courseImage: widget.resultPageParams.courseImage!,
-    //       courseName: widget.resultPageParams.courseName!,
-    //       isStandard: true,
-    //       mockId: widget.resultPageParams.id,
-    //       $extra: QuestionMode.analysis,
-    //     ).go(context);
-    //     break;
-    //   case MockType.myStandardMocks:
-    //     MyMockExamPageRoute(
-    //       // isStandard: true,
-    //       mockId: widget.resultPageParams.id,
-    //       $extra: QuestionMode.analysis,
-    //     ).go(context);
-    //     break;
-    //   case MockType.myAIGeneratedMocks:
-    //     StandardMockExamsPageRoute(
-    //       courseImage: widget.resultPageParams.courseImage!,
-    //       courseName: widget.resultPageParams.courseName!,
-    //       isStandard: true,
-    //       mockId: widget.resultPageParams.id,
-    //       $extra: QuestionMode.analysis,
-    //     ).go(context);
-    //     break;
-    //   default:
-    //     break;
-    // }
   }
 
   @override
@@ -200,12 +154,6 @@ class _ResultPageState extends State<ResultPage> {
                     InkWell(
                       onTap: () {
                         context.pop();
-                        // for (int index = 0;
-                        //     index < resultPageParams.stackHeight;
-                        //     index++) {
-                        //   context.pop();
-                        // }
-                        // context.read<PopupMenuBloc>().add(const GoToPageEvent());
                       },
                       child: const XIcon(
                         color: Color(0xFF363636),
@@ -306,22 +254,6 @@ class _ResultPageState extends State<ResultPage> {
                                               ),
                                             ),
                                           ),
-                                          // Text(
-                                          //   '${((resultPageParams.score / resultPageParams.totalQuestions) * 100).toStringAsFixed(0)}%',
-                                          //   style: GoogleFonts.poppins(
-                                          //     fontSize: 34,
-                                          //     fontWeight: FontWeight.w700,
-                                          //     color: const Color(0xFF363636),
-                                          //   ),
-                                          // ),
-                                          // Text(
-                                          //   '${resultPageParams.score} of ${resultPageParams.totalQuestions}',
-                                          //   style: GoogleFonts.poppins(
-                                          //     fontSize: 18,
-                                          //     fontWeight: FontWeight.w500,
-                                          //     color: const Color(0xFF717171),
-                                          //   ),
-                                          // ),
                                         ],
                                       ),
                                     ),

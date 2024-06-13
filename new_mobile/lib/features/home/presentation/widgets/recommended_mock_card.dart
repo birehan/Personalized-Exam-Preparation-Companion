@@ -36,11 +36,6 @@ class RecommendedMockCard extends StatelessWidget {
           context
               .read<UserMockBloc>()
               .add(AddMockToUserMockEvent(mockId: state.examId!));
-
-          // RecommendedMockPageRoute(
-          //   mockId: state.examId!,
-          //   $extra: state.questionMode!,
-          // ).go(context);
           MyExamsMockQuestionPageRoute(
                   mockId: state.examId ?? '',
                   $extra: MockExamQuestionPageParams(

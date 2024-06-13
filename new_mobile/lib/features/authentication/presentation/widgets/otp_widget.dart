@@ -176,14 +176,6 @@ class OtpWidget extends StatelessWidget {
                     debugPrint('onChanged: $value');
                   },
                   cursor: cursor,
-                  // focusedPinTheme: defaultPinTheme.copyWith(
-                  //   decoration: defaultPinTheme.decoration!.copyWith(
-                  //     borderRadius: BorderRadius.circular(8),
-                  //     border: Border.all(
-                  //         // color: focusedBorderColor,
-                  //         ),
-                  //   ),
-                  // ),
                   submittedPinTheme: defaultPinTheme.copyWith(
                     decoration: defaultPinTheme.decoration!.copyWith(
                       // color: fillColor,

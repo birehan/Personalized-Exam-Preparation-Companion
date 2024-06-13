@@ -53,7 +53,6 @@ class NewPasswordConfirmedPage extends StatelessWidget {
                     ),
                     onPressed: () {
                       LoginPageRoute().go(context);
-                      // context.go(AppRoutes.login);
                     },
                     child: Text(
                       AppLocalizations.of(context)!.okay,

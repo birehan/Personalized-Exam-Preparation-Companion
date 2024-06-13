@@ -5,7 +5,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
@@ -152,8 +151,6 @@ class _ProfilePageState extends State<ProfilePage> {
                               color: Colors.white, fontFamily: 'Poppins'),
                         ),
                         onPressed: () {
-                          // context.read<UsernameBloc>().add(
-                          //     UpdateProfileEvent(imagePath: uploadedImage));
                           Navigator.pop(context);
                         },
                       ),
@@ -409,22 +406,6 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                                 child: InkWell(
                                   onTap: () {
-                                    // context
-                                    //     .read<UsersLeaderboardBloc>()
-                                    //     .add(GetTopUsersEvent(pageNumber: 1));
-                                    // UserLeaderboardPageRoute(
-                                    //         UserLeaderboardEntity(
-                                    //             firstName:
-                                    //                 state.userProfile.firstName,
-                                    //             lastName:
-                                    //                 state.userProfile.lastName,
-                                    //             overallRank:
-                                    //                 state.userProfile.rank,
-                                    //             overallPoints: state
-                                    //                 .userProfile.totalScore,
-                                    //             userAvatar: state
-                                    //                 .userProfile.profileImage))
-                                    //     .go(context);
                                   },
                                   child: Container(
                                     padding: EdgeInsets.symmetric(

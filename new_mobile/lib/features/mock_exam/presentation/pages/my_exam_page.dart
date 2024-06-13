@@ -16,9 +16,6 @@ class _MyExamsPageState extends State<MyExamsPage> {
   void initState() {
     super.initState();
     context.read<MyMocksBloc>().add(const GetMyMocksEvent(isRefreshed: true));
-    //! This bloc call is going to be replaced with University and Generated Mocks,
-    //! let's leave it like this for now...
-    // context.read<QuizBloc>().add(const GetUserQuizEvent(courseId: ''));
   }
 
   @override

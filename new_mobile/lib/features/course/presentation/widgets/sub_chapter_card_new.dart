@@ -34,10 +34,6 @@ class SubChapterCardNew extends StatelessWidget {
               InkWell(
                 onTap: () {
                   if (content) {
-                    // context.read<SubChapterBloc>().add(
-                    //       GetSubChapterContentsEvent(
-                    //           subChapterId: subChapterOrChapterId),
-                    //     );
                     ContentPageRoute(
                             courseId: courseId,
                             readOnly: false,
@@ -96,10 +92,6 @@ class SubChapterCardNew extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 if (content) {
-                  // context.read<SubChapterBloc>().add(
-                  //       GetSubChapterContentsEvent(
-                  //           subChapterId: subChapterOrChapterId),
-                  //     );
                   ContentPageRoute(
                           courseId: courseId,
                           readOnly: false,
@@ -128,10 +120,6 @@ class SubChapterCardNew extends StatelessWidget {
           InkWell(
             onTap: () {
               if (content) {
-                // context.read<SubChapterBloc>().add(
-                //       GetSubChapterContentsEvent(
-                //           subChapterId: subChapterOrChapterId),
-                //     );
                 ContentPageRoute(
                         courseId: courseId,
                         readOnly: false,

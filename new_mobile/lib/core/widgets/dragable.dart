@@ -25,8 +25,6 @@ class DraggableWidget extends StatelessWidget {
         child: InkWell(
           onTap: () {
             final locationInfo = router.location.split('/');
-            // print(
-            //     'location zero ${locationInfo[0]} locationOne ${locationInfo[1]}');
             final routeName = locationNames[locationInfo[1]] ?? '';
             context.read<GeneralChatBloc>().add(
                   GeneralChatSendEvent(

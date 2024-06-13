@@ -76,9 +76,6 @@ class QuestionsPageSeven extends StatelessWidget {
                 SizedBox(height: 1.h),
                 TextButton(
                     onPressed: () {
-                      //! if the user has not set the reminder time set it null
-                      // context.read<OnboardingBloc>().add(
-                      //      ReminderTimeChangedEvent(reminderTime: null));
                       context.read<OnboardingBloc>().add(
                             OnboardingQuestionsResponseSubmittedEvent(),
                           );

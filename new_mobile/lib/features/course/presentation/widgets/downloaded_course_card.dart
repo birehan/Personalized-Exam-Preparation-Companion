@@ -103,37 +103,6 @@ class DownloadedCourseCard extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     Expanded(
-                  //       child: SizedBox(
-                  //         height: 8,
-                  //         child: ClipRRect(
-                  //           borderRadius: BorderRadius.circular(8),
-                  //           child: LinearProgressIndicator(
-                  //             value: (course.completedChapters /
-                  //                 course.course.numberOfChapters),
-                  //             backgroundColor:
-                  //                 const Color.fromRGBO(24, 120, 106, 0.1),
-                  //             valueColor: const AlwaysStoppedAnimation<Color>(
-                  //               Color(0xFF0072FF),
-                  //             ),
-                  //           ),
-                  //         ),
-                  //       ),
-                  //     ),
-                  //     const SizedBox(width: 10),
-                  //     Text(
-                  //       '${((course.completedChapters / course.course.numberOfChapters) * 100).toInt().toStringAsFixed(0)} %',
-                  //       style: GoogleFonts.poppins(
-                  //         fontSize: 16,
-                  //         fontWeight: FontWeight.w500,
-                  //         color: const Color(0xFF363636),
-                  //       ),
-                  //     )
-                  //   ],
-                  // ),
                 ],
               ),
             )

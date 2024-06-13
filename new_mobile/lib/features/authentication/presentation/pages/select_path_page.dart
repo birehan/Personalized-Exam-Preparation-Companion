@@ -68,35 +68,6 @@ class SelectPathPage extends StatelessWidget {
                 return Container();
               },
             )
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     Expanded(
-            //       child: InkWell(
-            //         onTap: () {
-            //           //! direct to exit exam change
-            //           // What the heck
-            //         },
-            //         child: const PreparationCard(
-            //           image: 'assets/images/u_exit.png',
-            //           text: 'University Exit Exam',
-            //         ),
-            //       ),
-            //     ),
-            //     SizedBox(width: 5.w),
-            //     Expanded(
-            //       child: InkWell(
-            //         onTap: () {
-            //           //! direct to enterance impl
-            //         },
-            //         child: const PreparationCard(
-            //           image: 'assets/images/u_enterance.png',
-            //           text: 'University Enterance Exam',
-            //         ),
-            //       ),
-            //     ),
-            //   ],
-            // )
           ],
         ),
       ),

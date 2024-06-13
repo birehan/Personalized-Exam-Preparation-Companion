@@ -9,25 +9,6 @@ class GeneralChatState extends Equatable {
 
 class GeneralChatInitial extends GeneralChatState {}
 
-// class GeneralChatLoadedState extends GeneralChatState {
-//   final GeneralChatEntity generalChatEntity;
-
-//   const GeneralChatLoadedState({required this.generalChatEntity});
-//   @override
-//   List<Object> get props => [
-//         generalChatEntity,
-//       ];
-// }
-
-// class GeneralChatLoadingState extends GeneralChatState {
-//   final GeneralChatEntity generalChatEntity;
-
-//   const GeneralChatLoadingState({required this.generalChatEntity});
-// @override
-// List<Object> get props => [
-//       generalChatEntity,
-//     ];
-// }
 class GeneralChatLoadingState extends GeneralChatState {}
 
 class GeneralChatLoadedState extends GeneralChatState {

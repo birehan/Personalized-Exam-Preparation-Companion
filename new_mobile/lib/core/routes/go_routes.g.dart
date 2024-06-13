@@ -1696,16 +1696,6 @@ extension $ContestQuestionByCategoryPageRouteExtension
         '/contest/${Uri.encodeComponent(id)}/categoryQuestions',
       );
 
-  // void go(BuildContext context) => context.go(location, extra: $extra);
-
-  // Future<T?> push<T>(BuildContext context) =>
-  //     context.push<T>(location, extra: $extra);
-
-  // void pushReplacement(BuildContext context) =>
-  //     context.pushReplacement(location, extra: $extra);
-
-  // void replace(BuildContext context) =>
-  //     context.replace(location, extra: $extra);
 }
 
 extension $ContestToContentPageRouteExtension on ContestToContentPageRoute {
@@ -1713,7 +1703,6 @@ extension $ContestToContentPageRouteExtension on ContestToContentPageRoute {
       ContestToContentPageRoute(
         id: state.pathParameters['id']!,
         courseId: state.queryParameters['course-id']!,
-        // $extra: state.extra as ContestQuestionByCategoryPageParams,
       );
 
   String get location => GoRouteData.$location(
@@ -1723,16 +1712,6 @@ extension $ContestToContentPageRouteExtension on ContestToContentPageRoute {
         },
       );
 
-  // void go(BuildContext context) => context.go(location, extra: $extra);
-
-  // Future<T?> push<T>(BuildContext context) =>
-  //     context.push<T>(location, extra: $extra);
-
-  // void pushReplacement(BuildContext context) =>
-  //     context.pushReplacement(location, extra: $extra);
-
-  // void replace(BuildContext context) =>
-  //     context.replace(location, extra: $extra);
 }
 
 extension $ContestQuestionByCategoryChatWithAIPageRouteExtension
@@ -1743,7 +1722,6 @@ extension $ContestQuestionByCategoryChatWithAIPageRouteExtension
         id: state.pathParameters['id']!,
         questionId: state.queryParameters['question-id']!,
         question: state.queryParameters['question']!,
-        // $extra: state.extra as ContestQuestionByCategoryPageParams,
       );
 
   String get location => GoRouteData.$location(
@@ -1754,16 +1732,6 @@ extension $ContestQuestionByCategoryChatWithAIPageRouteExtension
         },
       );
 
-  // void go(BuildContext context) => context.go(location, extra: $extra);
-
-  // Future<T?> push<T>(BuildContext context) =>
-  //     context.push<T>(location, extra: $extra);
-
-  // void pushReplacement(BuildContext context) =>
-  //     context.pushReplacement(location, extra: $extra);
-
-  // void replace(BuildContext context) =>
-  //     context.replace(location, extra: $extra);
 }
 
 extension $DailyQuizQuestionPageRouteExtension on DailyQuizQuestionPageRoute {

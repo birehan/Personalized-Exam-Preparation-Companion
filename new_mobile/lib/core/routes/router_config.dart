@@ -31,16 +31,13 @@ class AppRouter extends StatelessWidget {
     var isLoggedIn = true;
     var isAppInitialized = true;
     var isDepartmentSelected = true;
-    // return OnboardingQuestionPagesRoute().location;
     try {
-      // await localDatasource.getUserCredential();
       var userCredential = await localDatasource.getUserCredential();
       isDepartmentSelected =
           userCredential.department != '' && userCredential.departmentId != '';
     } on CacheException {
       isLoggedIn = false;
     }
-    // print(isLoggedIn);
     try {
       await localDatasource.getAppInitialization();
     } on CacheException {
@@ -59,7 +56,6 @@ class AppRouter extends StatelessWidget {
         return LoginPageRoute().location;
       }
       return state.location;
-      // return AppRoutes.onboardingPages;
     } else {
       return null;
     }
@@ -82,14 +78,10 @@ class AppRouter extends StatelessWidget {
         ),
       ],
     );
-    // print(AppLocalizations.of(context)!.name);
-    // print(context.toString());
     handleDeepLink();
     context.read<RouterBloc>().add(PopulateRouterBloc(router: _router));
   }
-  // Handle Firebase Dynamic Links
   Future<void> handleDeepLink() async {
-    // Check if the app was launched from a Dynamic Link
     final PendingDynamicLinkData? initialLink =
         await FirebaseDynamicLinks.instance.getInitialLink();
     if (initialLink != null) {
@@ -106,7 +98,6 @@ class AppRouter extends StatelessWidget {
   // Handle the deep link data
   void handleDeepLinkData(PendingDynamicLinkData dynamicLink) async {
     final Uri deepLink = dynamicLink.link;
-    // final String route = deepLink.pathSegments.first;
     Map<String, String> queryParams = deepLink.queryParameters;
     try {
       // check if the user already signed in
@@ -197,12 +188,4 @@ class GoRouterObserver extends NavigatorObserver {
     }
   }
 
-  // @override
-  // void didReplace({Route<dynamic>? newRoute, Route<dynamic>? oldRoute}) {
-  //   if (newRoute.settings.name != null) {
-  //     context
-  //         .read<RouterBloc>()
-  //         .add(PageChangedEvent(pageName: route.settings.name!));
-  //   }
-  // }
 }

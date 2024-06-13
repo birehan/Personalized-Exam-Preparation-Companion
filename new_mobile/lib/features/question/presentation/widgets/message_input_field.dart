@@ -92,10 +92,6 @@ class _MessageInputFieldState extends State<MessageInputField> {
           const SizedBox(width: 24),
           InkWell(
             onTap:
-                //! I have no idea why this code used
-                // widget.chatMessages.length % 2 == 1
-                //     ? null
-                //     :
                 () {
               if (widget.isChatWithContent) {
                 context.read<ChatWithContentBloc>().add(

@@ -10,7 +10,6 @@ import 'package:prep_genie/core/utils/connectivity_service.dart';
 import 'package:prep_genie/core/widgets/coming_soon_page.dart';
 import 'package:prep_genie/core/widgets/doubleback.dart';
 import 'package:prep_genie/core/widgets/dragable.dart';
-// import 'package:prep_genie/features/contest/presentation/pages/contests_main_page.dart';
 import '../../features/features.dart';
 import '../core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -112,9 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const DynamicHomePage(),
                 MyCoursesPage(tabIndex: tabIndex),
                 const ExamsPage(),
-                const ExamsPage(),
-                // const ContestsMainPage(),
-                // const UserLeaderboardPage(),
+                const ExamsPage(), // to be replaced with recommended page
               ],
             ),
             if ((isOfflineWidgetShown == isOffline) && isOffline)
@@ -136,7 +133,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ActiveBttomNavWidget(icon: courseIcon),
             ActiveBttomNavWidget(icon: examsIcon),
             ActiveBttomNavWidget(icon: contestIcon),
-            // ActiveBttomNavWidget(icon: leaderboardIcon),
           ],
           inactiveIcons: [
             BottomNavCard(
@@ -146,10 +142,6 @@ class _MyHomePageState extends State<MyHomePage> {
             BottomNavCard(
                 icon: examsIcon, text: AppLocalizations.of(context)!.exams),
             const BottomNavCard(icon: contestIcon, text: "Recommended"),
-            // AppLocalizations.of(context)!.contest),
-            // BottomNavCard(
-            //     icon: leaderboardIcon,
-            //     text: AppLocalizations.of(context)!.leaderboard),
           ],
           color: Colors.white,
           height: 8.h,
@@ -163,9 +155,6 @@ class _MyHomePageState extends State<MyHomePage> {
             topLeft: Radius.circular(8),
             topRight: Radius.circular(8),
           ),
-          // shadowColor: const Color(0xFF0072FF),
-
-          // elevation: 1,
           circleColor: const Color(0xFF0072FF),
           circleShadowColor: const Color(0xFF0072FF).withOpacity(.5),
         ),

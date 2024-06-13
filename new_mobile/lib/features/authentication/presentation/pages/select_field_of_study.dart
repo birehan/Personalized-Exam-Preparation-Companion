@@ -79,38 +79,6 @@ class _SelectFieldOfStudyPageState extends State<SelectFieldOfStudyPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Align(
-            //   alignment: Alignment.centerRight,
-            //   child: BlocBuilder<SignupFormBloc, SignupForm>(
-            //     builder: (context, state) {
-            //       return InkWell(
-            //         onTap: () {
-            //           context.read<AuthenticationBloc>().add(
-            //                 SignupEvent(
-            //                   userCredential: UserCredential(
-            //                     email: state.email,
-            //                     firstName: state.firstName,
-            //                     lastName: state.lastName,
-            //                     password: state.password,
-            //                     department: state.department,
-            //                     major: state.major,
-            //                     otp: state.otp,
-            //                   ),
-            //                 ),
-            //               );
-            //         },
-            //         child: Text(
-            //           'Skip',
-            //           style: GoogleFonts.poppins(
-            //             color: const Color(0xFF363636),
-            //             fontSize: 18,
-            //             fontWeight: FontWeight.w600,
-            //           ),
-            //         ),
-            //       );
-            //     },
-            //   ),
-            // ),
             const SizedBox(height: 24),
             Text(
               AppLocalizations.of(context)!.what_is_your_major_or_field_of_study,
@@ -145,20 +113,6 @@ class _SelectFieldOfStudyPageState extends State<SelectFieldOfStudyPage> {
                               setState(
                                 () {
                                   selectedChipIndex = index;
-                                  // context.read<AuthenticationBloc>().add(
-                                  //       SignupEvent(
-                                  //         userCredential: UserCredential(
-                                  //           email: state.email,
-                                  //           firstName: state.firstName,
-                                  //           lastName: state.lastName,
-                                  //           password: state.password,
-                                  //           generalDepartment: state.department,
-                                  //           departmentId:
-                                  //               widget.departments[index].id,
-                                  //           otp: state.otp,
-                                  //         ), 
-                                  //       ),
-                                  //     );
                                 },
                               );
                             },

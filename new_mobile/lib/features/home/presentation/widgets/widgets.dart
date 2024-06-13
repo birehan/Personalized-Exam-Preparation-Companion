@@ -1,10 +1,8 @@
 export 'continue_learning.dart';
-export 'continue_mock_exam.dart';
 export 'count_down_card.dart';
 export 'counter_column.dart';
 export 'course_card.dart';
 export 'header_widget.dart';
-export 'mock_exams.dart';
 export 'recommended_mock_card.dart';
 export 'recommended_mocks_widget.dart';
 export 'search_course.dart';

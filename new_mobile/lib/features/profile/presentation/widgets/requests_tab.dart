@@ -69,10 +69,6 @@ class _RequestsTabState extends State<RequestsTab> {
         SizedBox(height: 1.h),
         // Lessons Tab Content
         if (_tabIndex == 0)
-          // contents.isEmpty
-          //     ? EmptyListWidget(
-          //         message: AppLocalizations.of(context)!.no_bookmark)
-          //     :
           Expanded(
             child: RefreshIndicator(
               onRefresh: () async {
@@ -92,10 +88,6 @@ class _RequestsTabState extends State<RequestsTab> {
           ),
         // Quizzes Tab Content
         if (_tabIndex == 1)
-          // questions.isEmpty
-          //     ? EmptyListWidget(
-          //         message: AppLocalizations.of(context)!.no_bookmark)
-          //     :
           Expanded(
             child: RefreshIndicator(
               onRefresh: () async {

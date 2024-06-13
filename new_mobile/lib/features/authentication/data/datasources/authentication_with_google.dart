@@ -24,54 +24,6 @@ class AuthenticationWithGoogle {
       throw SignInWithGoogleException(errorMessage: e.toString());
     }
   }
-  // if (googleSignInAccount != null) {
-  //   final GoogleSignInAuthentication googleSignInAuthentication =
-  //       await googleSignInAccount.authentication;
-
-  //   final AuthCredential credential = GoogleAuthProvider.credential(
-  //     accessToken: googleSignInAuthentication.accessToken,
-  //     idToken: googleSignInAuthentication.idToken,
-  //   );
-
-  //   print('googleIdToken: ${googleSignInAuthentication.idToken}');
-
-  //   try {
-  //     final UserCredential userCredential =
-  //         await auth.signInWithCredential(credential);
-
-  //     print('userCredential: ${userCredential}');
-
-  //     user = userCredential.user;
-  //     if (user != null) {
-  //       print('token: ${await user.getIdToken()}');
-  //     }
-  //   } on FirebaseAuthException catch (e) {
-  //     if (e.code == 'account-exists-with-different-credential') {
-  //       throw SignInWithGoogleException(
-  //         errorMessage: 'Account exists with different credential',
-  //       );
-  //       // ScaffoldMessenger.of(context).showSnackBar(
-  //       //   customSnackBar(
-  //       //     content: 'The account already exists with a different credential',
-  //       //   ),
-  //       // );
-  //     } else if (e.code == 'invalid-credential') {
-  //       throw SignInWithGoogleException(errorMessage: 'Invalid credential');
-  //       // ScaffoldMessenger.of(context).showSnackBar(
-  //       //   customSnackBar(
-  //       //     content: 'Error occurred while accessing credentials. Try again.',
-  //       //   ),
-  //       // );
-  //     }
-  //   } catch (e) {
-  //     throw SignInWithGoogleException(errorMessage: e.toString());
-  //     // ScaffoldMessenger.of(context).showSnackBar(
-  //     //   customSnackBar(
-  //     //     content: 'Error occurred using Google Sign In. Try again.',
-  //     //   ),
-  //     // );
-  //   }
-  // }
 
   static Future<bool> isAuthenticatedWithGoogle() async {
     final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -94,24 +46,7 @@ class AuthenticationWithGoogle {
       await FirebaseAuth.instance.signOut();
     } catch (e) {
       throw SignInWithGoogleException(errorMessage: e.toString());
-      // ScaffoldMessenger.of(context).showSnackBar(
-      //   customSnackBar(
-      //     content: 'Error signing out. Try again.',
-      //   ),
-      // );
     }
   }
 
-  // static SnackBar customSnackBar({required String content}) {
-  //   return SnackBar(
-  //     backgroundColor: Colors.black,
-  //     content: Text(
-  //       content,
-  //       style: GoogleFonts.poppins(
-  //         color: Colors.redAccent,
-  //         letterSpacing: 0.5,
-  //       ),
-  //     ),
-  //   );
-  // }
 }

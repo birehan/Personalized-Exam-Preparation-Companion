@@ -105,21 +105,6 @@ class MyMocksTab extends StatelessWidget {
     );
   }
 
-  // _shimmerMyMockCard() {
-  //   return Shimmer.fromColors(
-  //     direction: ShimmerDirection.ttb,
-  //     baseColor: const Color.fromARGB(255, 236, 235, 235),
-  //     highlightColor: const Color(0xffF9F8F8),
-  //     child: Container(
-  //       height: 15.h,
-  //       decoration: BoxDecoration(
-  //         color: Colors.white,
-  //         borderRadius: BorderRadius.circular(20),
-  //       ),
-  //     ),
-  //   );
-  // }
-
   _shimmerMyMockCard() {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),

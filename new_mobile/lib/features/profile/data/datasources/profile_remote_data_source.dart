@@ -353,10 +353,6 @@ class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource {
         final data = json.decode(response.body)['data'];
 
         return LeaderboardModel.fromJson(data);
-        // List<dynamic> leaderboard = data['leaderboard'];
-        // return leaderboard
-        //     .map((item) => UserLeaderboardModel.fromJson(item))
-        //     .toList();
       } else if (response.statusCode == 401 || response.statusCode == 400) {
         throw AuthenticationException(
             errorMessage: 'Expired or invalid token used');

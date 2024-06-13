@@ -118,11 +118,7 @@ class TakeLessonCard extends StatelessWidget {
                                     if (state.lastStartedChapter == null) {
                                       ChooseSubjectPageRoute($extra: false)
                                           .go(context);
-                                      // context.push(AppRoutes.chooseSubjectPage,
-                                      //     extra: false);
                                     } else {
-                                      // ChooseSubjectPageRoute($extra: false)
-                                      //     .go(context);
                                       CourseDetailPageRoute(
                                         courseId:
                                             state.lastStartedChapter!.courseId,

@@ -41,29 +41,6 @@ class _BookmarksPageState extends State<BookmarksPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Padding(
-          //   padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 6.h),
-          //   child: const Text(
-          //     'Bookmarks',
-          //     style: TextStyle(
-          //         fontFamily: 'Poppins',
-          //         fontSize: 24,
-          //         fontWeight: FontWeight.bold),
-          //   ),
-          // ),
-          // SizedBox(height: 1.h),
-          // Padding(
-          //   padding: EdgeInsets.only(left: 10.w, right: 10.w),
-          //   child: Text(
-          //     'Here you can find the questions and lessons you bookmarked',
-          //     style: TextStyle(
-          //         fontFamily: 'Poppins',
-          //         fontSize: 16,
-          //         color: Colors.black.withOpacity(.5)),
-          //   ),
-          // ),
-          // SizedBox(height: 2.h),
-
           Expanded(
             child: BlocListener<BookmarksBlocBloc, BookmarksBlocState>(
               listener: (context, state) {

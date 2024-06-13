@@ -52,20 +52,6 @@ class _QuestionBookmarkQuizSectionCardState
                         ),
                       ),
                     ),
-                    // FlagButton(onPressed: () {
-                    //   var originalContext = context;
-                    //   showDialog(
-                    //     context: context,
-                    //     builder: (BuildContext context) {
-                    //       return FlagDialog(
-                    //         originalContext: originalContext,
-                    //         index: 0,
-                    //         id: widget.question.id,
-                    //         feedbackType: FeedbackType.questionFeedback,
-                    //       );
-                    //     },
-                    //   );
-                    // }),
                     IconButton(
                       onPressed: () {
                         if (bookmarked) {

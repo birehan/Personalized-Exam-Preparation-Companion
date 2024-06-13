@@ -23,42 +23,10 @@ class _CountDownCardForNationalExamsState
   late Timer _timer;
   late final int _countDownDuration = 1800000;
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _countDownDuration = widget.timeLeft;
-  //   if (_countDownDuration < 0) {
-  //     _countDownDuration = 0;
-  //   }
-
-  //   _timer = Timer.periodic(
-  //     const Duration(seconds: 1),
-  //     (timer) {
-  //       if (_countDownDuration > 0) {
-  //         setState(() {
-  //           _countDownDuration--;
-  //         });
-  //       } else {
-  //         _timer.cancel();
-  //       }
-  //     },
-  //   );
-  // }
-
-  // @override
-  // void dispose() {
-  //   _timer.cancel();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
     final months = (_countDownDuration ~/ 2628000).toString().padLeft(2, '0');
     final days = (_countDownDuration ~/ 86400).toString().padLeft(2, '0');
-    // final hours = ((timeLeft ~/ 3600) % 24).toString().padLeft(2, '0');
-    // final minutes = ((timeLeft ~/ 60) % 60).toString().padLeft(2, '0');
-
-    // final seconds = (timeLeft % 60).toString().padLeft(2, '0');
 
     return Row(
       children: [

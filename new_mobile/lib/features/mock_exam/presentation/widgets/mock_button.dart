@@ -47,7 +47,6 @@ class MockButton extends StatelessWidget {
           Text(
             buttonText,
             style: GoogleFonts.poppins(
-              // color: Colors.white,
               color: textColor,
               fontWeight: FontWeight.w500,
             ),

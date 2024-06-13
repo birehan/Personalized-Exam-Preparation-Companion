@@ -8,8 +8,6 @@ import 'package:prep_genie/features/bookmarks/presentation/bloc/addQuestionBookm
 import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteQuestionBookmarkBloc/delete_question_bookmark_bloc.dart';
-// import 'package:prep_genie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
-// import 'package:prep_genie/features/contest/presentation/bloc/registerContest/register_contest_bloc.dart';
 import 'package:prep_genie/features/course/presentation/bloc/changeVideoStatus/change_video_status_bloc.dart';
 import 'package:prep_genie/features/course/presentation/bloc/course/course_bloc.dart';
 import 'package:prep_genie/features/profile/presentation/bloc/barChartBloc/bar_chart_bloc.dart';
@@ -125,12 +123,6 @@ List<BlocProvider> registedBlocs() {
     BlocProvider<ChatBloc>(
       create: (_) => serviceLocator<ChatBloc>(),
     ),
-    // BlocProvider<FeedbackBloc>(
-    //   create: (_) => serviceLocator<FeedbackBloc>(),
-    // ),
-    // BlocProvider<QuestionVoteBloc>(
-    //   create: (_) => serviceLocator<QuestionVoteBloc>(),
-    // ),
     BlocProvider<OnboardingBloc>(
       create: (_) => serviceLocator<OnboardingBloc>(),
     ),
@@ -173,33 +165,6 @@ List<BlocProvider> registedBlocs() {
     BlocProvider<DeleteDeviceTokenBloc>(
       create: (_) => serviceLocator<DeleteDeviceTokenBloc>(),
     ),
-    // BlocProvider<FetchPreviousContestsBloc>(
-    //   create: (_) => serviceLocator<FetchPreviousContestsBloc>(),
-    // ),
-    // BlocProvider<FetchPreviousUserContestsBloc>(
-    //   create: (_) => serviceLocator<FetchPreviousUserContestsBloc>(),
-    // ),
-    // BlocProvider<FetchContestByIdBloc>(
-    //   create: (_) => serviceLocator<FetchContestByIdBloc>(),
-    // ),
-    // BlocProvider<FetchUpcomingUserContestBloc>(
-    //   create: (_) => serviceLocator<FetchUpcomingUserContestBloc>(),
-    // ),
-    // BlocProvider<ContestDetailBloc>(
-    //   create: (_) => serviceLocator<ContestDetailBloc>(),
-    // ),
-    // BlocProvider<RegisterContestBloc>(
-    //   create: (_) => serviceLocator<RegisterContestBloc>(),
-    // ),
-    // BlocProvider<ContestRankingBloc>(
-    //   create: (_) => serviceLocator<ContestRankingBloc>(),
-    // ),
-    // BlocProvider<FetchContestQuestionsByCategoryBloc>(
-    //   create: (_) => serviceLocator<FetchContestQuestionsByCategoryBloc>(),
-    // ),
-    // BlocProvider<ContestSubmitUserAnswerBloc>(
-    //   create: (_) => serviceLocator<ContestSubmitUserAnswerBloc>(),
-    // ),
     BlocProvider<FetchDailyStreakBloc>(
       create: (_) => serviceLocator<FetchDailyStreakBloc>(),
     ),
@@ -221,9 +186,6 @@ List<BlocProvider> registedBlocs() {
     BlocProvider<SchoolBloc>(
       create: (_) => serviceLocator<SchoolBloc>(),
     ),
-    // BlocProvider<FetchContestAnalysisByCategoryBloc>(
-    //   create: (_) => serviceLocator<FetchContestAnalysisByCategoryBloc>(),
-    // ),
     BlocProvider<RetakeMockBloc>(
       create: (_) => serviceLocator<RetakeMockBloc>(),
     ),

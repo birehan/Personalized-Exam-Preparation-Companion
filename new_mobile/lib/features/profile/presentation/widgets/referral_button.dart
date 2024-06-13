@@ -37,11 +37,6 @@ class _ReferalButtonState extends State<ReferalButton> {
               builder: (context) {
                 return AlertDialog(
                   alignment: Alignment.centerLeft,
-                  // semanticLabel:
-                  //     'Scan QR code or share it manually by copying the link',
-
-                  // contentPadding:
-                  //     EdgeInsets.symmetric(horizontal: 4.w, vertical: 1.h),
                   elevation: 2,
                   backgroundColor: Colors.white,
                   title: const Text(

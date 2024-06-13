@@ -1,6 +1,4 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
-// import 'package:flutter/foundation.dart';
-// import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NotificationService {
@@ -16,9 +14,6 @@ class NotificationService {
       sound: true,
     );
 
-    // FirebaseMessaging.instance.getInitialMessage().then((value) => null);
-    // FirebaseMessaging.onMessageOpenedApp.listen((event) {});
-    // FirebaseMessaging.instance.onMessage.listen((RemoteMessage message) {});
     FirebaseMessaging.onBackgroundMessage(handleBackgroundMessage);
   }
 
@@ -54,7 +49,6 @@ class NotificationService {
     await _flutterLocalNotificationsPlugin.initialize(
       initializationSetting,
       onDidReceiveNotificationResponse: (payload) {
-        // handleMessage(context, message);
       },
     );
   }
@@ -66,7 +60,6 @@ class NotificationService {
       importance: Importance.max,
       showBadge: true,
       playSound: true,
-      // sound: const RawResourceAndroidNotificationSound('jetsons_doorbell'),
     );
 
     AndroidNotificationDetails androidNotificationDetails =
@@ -78,7 +71,6 @@ class NotificationService {
       priority: Priority.high,
       playSound: true,
       ticker: 'ticker',
-      // sound: channel.sound,
     );
 
     const DarwinNotificationDetails darwinNotificationDetails =

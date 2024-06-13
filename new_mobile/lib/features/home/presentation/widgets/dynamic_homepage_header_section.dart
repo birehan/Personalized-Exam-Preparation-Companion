@@ -75,36 +75,6 @@ class DynamicHomepageProfileHeader extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                // BlocBuilder<FetchDailyStreakBloc, FetchDailyStreakState>(
-                //     builder: (context, state) {
-                //   if (state is FetchDailyStreakLoading) {
-                //     return _maxStreakShimmer();
-                //   } else if (state is FetchDailyStreakLoaded) {
-                //     // return _maxStreakShimmer();
-                //     return Row(
-                //       crossAxisAlignment: CrossAxisAlignment.end,
-                //       children: [
-                //         const Image(
-                //           image: AssetImage('assets/images/fireRed.png'),
-                //           height: 30,
-                //           width: 30,
-                //         ),
-                //         Text(
-                //           '${state.dailyStreak.totalStreak.maxStreak}',
-                //           style: const TextStyle(
-                //             fontFamily: 'Poppins',
-                //             fontWeight: FontWeight.w600,
-                //             fontSize: 18,
-                //             color: Color(0xffF53A04),
-                //           ),
-                //         ),
-                //         // Here add small dropdown to select language. there are two languages available
-                //       ],
-                //     );
-                //   } else {
-                //     return Container();
-                //   }
-                // }),
                 SizedBox(width: 3.w),
                 BlocBuilder<LocaleBloc, LocaleState>(
                   builder: (context, state) {

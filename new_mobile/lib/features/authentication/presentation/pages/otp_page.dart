@@ -46,9 +46,6 @@ class _OTPPageState extends State<OTPPage> {
 
   void dispatchOtp(String emailOrPhoneNumber) {
     String otp = pinController.text;
-    // for (TextEditingController controller in controllers) {
-    //   otp += controller.text;
-    // }
 
     if (widget.from == ForgotPasswordPageRoute().location) {
       context
@@ -116,7 +113,6 @@ class _OTPPageState extends State<OTPPage> {
           showErrorMessage(state.errorMessage);
         } else if (state is SignupState && state.status == AuthStatus.loaded) {
           OnboardingQuestionPagesRoute().go(context);
-          // context.go(AppRoutes.questionOnboardingPages);
         }
       },
       child: Stack(

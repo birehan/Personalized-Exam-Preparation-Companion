@@ -234,20 +234,6 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
               }
             },
           ),
-          // BlocListener<PasswordBloc, PasswordState>(
-          //   listener: (context, state) {
-          //     if (state is PasswordChangedState) {
-          //       // BlocProvider.of<UserProfileBloc>(context).add(
-          //       //   GetUserProfile(isRefreshed: true),
-          //       // );
-          //       // context.read<GetUserBloc>().add(GetUserCredentialEvent());
-          //       // Navigator.pop(context);
-          //     } else if (state is PasswordChangeFailedState) {
-          //       showErrorMessage('Password change not successful.');
-          //       // Navigator.pop(context);
-          //     }
-          //   },
-          // )
         ],
         child: SingleChildScrollView(
             physics: const AlwaysScrollableScrollPhysics(),

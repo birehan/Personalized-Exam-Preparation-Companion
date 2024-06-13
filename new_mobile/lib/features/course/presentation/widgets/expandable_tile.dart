@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../core/core.dart';
-// import '../bloc/selectCourseBloc/select_course_bloc.dart';
 import '../../../features.dart';
 
 class ExpandableWidget extends StatefulWidget {

@@ -41,10 +41,6 @@ class LeaderboardListCard extends StatelessWidget {
               : index % 2 == 0
                   ? const Color(0xffF7F7F7)
                   : Colors.white,
-          // borderRadius: const BorderRadius.only(
-          //   topLeft: Radius.circular(15),
-          //   topRight: Radius.circular(15),
-          // ),
         ),
         // selectedTileColor: const Color(0xffD1DFDD),
         padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 2.h),

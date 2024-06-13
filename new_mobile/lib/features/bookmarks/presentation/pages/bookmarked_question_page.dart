@@ -37,13 +37,6 @@ class _QuestionBookmarkPageState extends State<QuestionBookmarkPage>
     super.dispose();
   }
 
-  // void onTap(int index) {
-  //   setState(() {
-  //     _tabController.index =
-  //         widget.questionMode == QuestionMode.quiz ? 0 : index;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

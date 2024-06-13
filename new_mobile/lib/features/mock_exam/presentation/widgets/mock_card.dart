@@ -30,40 +30,7 @@ class MockCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-        // BlocListener<AlertDialogBloc, AlertDialogState>(
-        // listener: (context, state) {
-        //   if (state is LearningQuizModeState &&
-        //       state.status == AlertDialogStatus.loaded) {
-        //     context
-        //         .read<UserMockBloc>()
-        //         .add(AddMockToUserMockEvent(mockId: state.examId!));
-        //     // StandardMockExamsPageRoute(
-        //     //   courseImage: imageUrl,
-        //     //   courseName: courseName,
-        //     //   isStandard: isStandard,
-        //     //   mockId: state.examId!,
-        //     //   $extra: state.questionMode!,
-        //     // ).go(context);
-        //     UniversityMockExamsQuestionPageRoute(
-        //       courseImage: imageUrl,
-        //       courseName: courseName,
-        //       isStandard: isStandard,
-        //       $extra: MockExamQuestionPageParams(
-        //         completed: true,
-        //         mockId: state.examId!,
-        //         questionMode: state.questionMode!,
-        //         mockType: MockType.recommendedMocks,
-        //         questionNumber: state.questionNumber!,
-        //         courseImage: imageUrl,
-        //         courseName: courseName,
-        //         isStandard: isStandard,
-        //       ),
-        //     ).go(context);
-        //   }
-        // },
-        // child:
-        InkWell(
+    return InkWell(
       onTap: () {
         UniversityMockExamDetailPage(
           mockId: examId,
@@ -71,13 +38,6 @@ class MockCard extends StatelessWidget {
           courseName: courseName,
           isStandard: isStandard,
         ).go(context);
-        // showDialog(
-        //   context: context,
-        //   builder: (BuildContext context) => LearningQuizModeDialog(
-        //     examId: examId,
-        //     questionNumber: numberOfQuestions,
-        //   ),
-        // );
       },
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),
@@ -182,23 +142,6 @@ class MockCard extends StatelessWidget {
                         courseName: courseName,
                         isStandard: isStandard,
                       ).go(context);
-                      // showDialog(
-                      //   context: context,
-                      //   builder: (BuildContext context) =>
-                      //       LearningQuizModeDialog(
-                      //     examId: examId,
-                      //     questionNumber: numberOfQuestions,
-                      //   ),
-                      // );
-                      // context.read<MockQuestionBloc>().add(
-                      //       GetMockByIdEvent(
-                      //         id: examId,
-                      //       ),
-                      //     );
-
-                      // context.read<MockExamBloc>().add(
-                      //       AddMockToUserMockEvent(mockId: examId),
-                      //     );
                     },
                     child: Container(
                       padding: const EdgeInsets.all(12),

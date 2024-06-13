@@ -11,19 +11,6 @@ class BookmarksModel extends Bookmarks {
     List<dynamic> bookmarkedQuestionsjson = json['bookmarkedQuestions'];
     List<dynamic> bookmarkedContentsjson = json['bookmarkedContents'];
 
-    // List<BookmarkedContentsModel> bookmarkedContent = [];
-    // List<BookmarkedQuestionsModel> bookmarkedQuestions = [];
-
-    // for (int i = 0; i < bookmarkedQuestionsjson.length; i++) {
-    //   BookmarkedQuestionsModel bq =
-    //       BookmarkedQuestionsModel.fromJson(bookmarkedQuestionsjson[i]);
-    //   bookmarkedQuestions.add(bq);
-    // }
-    // for (int i = 0; i < bookmarkedContentsjson.length; i++) {
-    //   BookmarkedContentsModel cnt =
-    //       BookmarkedContentsModel.fromJson(bookmarkedContentsjson[i]);
-    //   bookmarkedContent.add(cnt);
-    // }
 
     List<BookmarkedContent> bookmarkedContent = bookmarkedContentsjson
         .map(

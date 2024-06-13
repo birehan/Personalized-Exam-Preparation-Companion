@@ -16,13 +16,6 @@ void showPopupWhenCountdownEnds({
           child: IconButton(
             icon: const Icon(Icons.close, color: Colors.black),
             onPressed: () {
-              // context.read<ContestDetailBloc>().add(GetContestdetailEvent(
-              //     contestId: widget
-              //         .contestQuestionByCategoryPageparams.contestId));
-              // context.read<ContestRankingBloc>().add(GetContestRankingEvent(
-              //     contestId: widget
-              //         .contestQuestionByCategoryPageparams.contestId));
-              // context.read<PopupMenuBloc>().add(TimesUpEvent());
               Navigator.of(context).pop();
               onPressed();
             },
@@ -43,24 +36,6 @@ void showPopupWhenCountdownEnds({
             ),
           ],
         ),
-        // content: Text(
-        //   'You have run out of time to answer the question.',
-        //   style: GoogleFonts.poppins(),
-        // ),
-        // actions: [
-        //   TextButton(
-        //     onPressed: () {
-        //       onSubmit();
-        //       onSaveScore();
-
-        //       Navigator.of(context).pop();
-        //     },
-        //     child: Text(
-        //       'OK',
-        //       style: GoogleFonts.poppins(),
-        //     ),
-        //   ),
-        // ],
       );
     },
   );
@@ -95,11 +70,6 @@ void showPopupOnQuitButtonPressed({
           ),
           TextButton(
             onPressed: () {
-              // onSubmit();
-              // context.read<ContestDetailBloc>().add(GetContestdetailEvent(
-              //     contestId:
-              //         widget.contestQuestionByCategoryPageparams.contestId));
-              // context.read<PopupMenuBloc>().add(QuitExamEvent());
               onQuitPressed();
               Navigator.of(context).pop();
             },
@@ -131,12 +101,6 @@ void showPopupOnCompletingContest({
           child: IconButton(
             icon: const Icon(Icons.close, color: Colors.black),
             onPressed: () {
-              // onSubmit();
-              // onSaveScore();
-              // context.read<ContestDetailBloc>().add(GetContestdetailEvent(
-              //     contestId: widget
-              //         .contestQuestionByCategoryPageparams.contestId));
-              // context.read<PopupMenuBloc>().add(QuitExamEvent());
               Navigator.of(context).pop();
               onCompleted();
             },
@@ -163,32 +127,6 @@ void showPopupOnCompletingContest({
             ),
           ],
         ),
-        // content: Text(
-        //   ' Are you sure you want to leave? Your unsaved changes may be lost.',
-        //   style: GoogleFonts.poppins(),
-        // ),
-        // actions: [
-        //   TextButton(
-        //     onPressed: () {
-        //       Navigator.of(context).pop();
-        //     },
-        //     child: Text(
-        //       'Cancel',
-        //       style: GoogleFonts.poppins(),
-        //     ),
-        //   ),
-        //   TextButton(
-        //     onPressed: () {
-        //       onSubmit();
-        //       context.read<PopupMenuBloc>().add(QuitExamEvent());
-        //       Navigator.of(context).pop();
-        //     },
-        //     child: Text(
-        //       'Quit',
-        //       style: GoogleFonts.poppins(color: Colors.red),
-        //     ),
-        //   ),
-        // ],
       );
     },
   );
@@ -211,12 +149,6 @@ void showPopupOnCompletingContestAnalysis({
           child: IconButton(
             icon: const Icon(Icons.close, color: Colors.black),
             onPressed: () {
-              // onSubmit();
-              // onSaveScore();
-              // context.read<ContestDetailBloc>().add(GetContestdetailEvent(
-              //     contestId: widget
-              //         .contestQuestionByCategoryPageparams.contestId));
-              // context.read<PopupMenuBloc>().add(QuitExamEvent());
               Navigator.of(context).pop();
               onCompleted();
             },
@@ -243,32 +175,6 @@ void showPopupOnCompletingContestAnalysis({
             ),
           ],
         ),
-        // content: Text(
-        //   ' Are you sure you want to leave? Your unsaved changes may be lost.',
-        //   style: GoogleFonts.poppins(),
-        // ),
-        // actions: [
-        //   TextButton(
-        //     onPressed: () {
-        //       Navigator.of(context).pop();
-        //     },
-        //     child: Text(
-        //       'Cancel',
-        //       style: GoogleFonts.poppins(),
-        //     ),
-        //   ),
-        //   TextButton(
-        //     onPressed: () {
-        //       onSubmit();
-        //       context.read<PopupMenuBloc>().add(QuitExamEvent());
-        //       Navigator.of(context).pop();
-        //     },
-        //     child: Text(
-        //       'Quit',
-        //       style: GoogleFonts.poppins(color: Colors.red),
-        //     ),
-        //   ),
-        // ],
       );
     },
   );

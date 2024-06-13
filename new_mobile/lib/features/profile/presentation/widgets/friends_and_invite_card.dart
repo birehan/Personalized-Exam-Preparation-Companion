@@ -59,14 +59,6 @@ class FriendsAndInviteCard extends StatelessWidget {
                     textAlign: TextAlign.center,
                     TextSpan(
                       children: [
-                        // TextSpan(
-                        //   text: '32 ',
-                        //   style: TextStyle(
-                        //     fontWeight: FontWeight.w600,
-                        //     fontFamily: 'Poppins',
-                        //     fontSize: 20,
-                        //   ),
-                        // ),
                         TextSpan(
                           text: 'FRIENDS',
                           style: TextStyle(
@@ -86,10 +78,6 @@ class FriendsAndInviteCard extends StatelessWidget {
             width: 1,
             color: Colors.black38,
           ),
-          // const VerticalDivider(
-          //   color: Colors.black,
-          //   thickness: 2,
-          // ),
           SizedBox(width: 2.w),
           Expanded(
             child: ReferalButton(userId: userId),

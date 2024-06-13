@@ -10,7 +10,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../authentication.dart';
-// import '../../../../core/routes/app_routes.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -89,10 +88,6 @@ class _SignupPageState extends State<SignupPage> {
           SignupOtpPageRoute(
             emailOrPhoneNumber: _emailOrPhoneNumberController.text,
           ).go(context);
-          // context.push(
-          //   AppRoutes.otpPage,
-          //   extra: AppRoutes.signup,
-          // );
         } else if (state is SendOtpVerificationState &&
             state.status == AuthStatus.error) {
           showErrorMessage(state.errorMessage);
@@ -185,14 +180,6 @@ class _SignupPageState extends State<SignupPage> {
                         color: const Color(0xFF0072FF),
                       ),
                     ),
-                    // Text(
-                    //   'Start Learning today!',
-                    //   style: GoogleFonts.poppins(
-                    //     fontSize: 13,
-                    //     fontWeight: FontWeight.w500,
-                    //     color: const Color(0xFFA3A2B1),
-                    //   ),
-                    // ),
                     const SizedBox(height: 32),
                     Text(
                       AppLocalizations.of(context)!.email_or_phone_number,
@@ -311,34 +298,6 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    // GestureDetector(
-                    //   onTap: () {
-                    //     setState(() {
-                    //       _isChecked = !_isChecked;
-                    //     });
-                    //   },
-                    //   child: Row(
-                    //     children: [
-                    //       CustomCheckBox(
-                    //         isChecked: _isChecked,
-                    //         onTap: () {
-                    //           setState(() {
-                    //             _isChecked = !_isChecked;
-                    //           });
-                    //         },
-                    //       ),
-                    //       const SizedBox(width: 8),
-                    //       Text(
-                    //         'I agree to the terms and conditions',
-                    //         style: GoogleFonts.poppins(
-                    //           fontSize: 14,
-                    //           fontWeight: FontWeight.w500,
-                    //           color: const Color(0xFF363636),
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
                     const SizedBox(height: 24),
                     Row(
                       children: [
@@ -378,71 +337,6 @@ class _SignupPageState extends State<SignupPage> {
                     SignInWithGoogleWidget(
                       text: AppLocalizations.of(context)!.sign_in_with_google,
                     ),
-                    //? This comment is intentional, it is needed for the next MVP
-                    // const SizedBox(height: 24),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //   children: [
-                    //     Container(
-                    //       width: 100,
-                    //       height: 1,
-                    //       color: const Color(0xFFC5C5C5),
-                    //     ),
-                    //     Text(
-                    //       'or Sign Up With',
-                    //       style: GoogleFonts.poppins(
-                    //         fontSize: 14,
-                    //         fontWeight: FontWeight.w500,
-                    //         color: const Color(0xFF363636),
-                    //       ),
-                    //     ),
-                    //     Container(
-                    //       width: 100,
-                    //       height: 1,
-                    //       color: const Color(0xFFC5C5C5),
-                    //     ),
-                    //   ],
-                    // ),
-                    // const SizedBox(height: 24),
-                    // Row(
-                    //   children: [
-                    //     Expanded(
-                    //       child: OutlinedButton(
-                    //         onPressed: () {
-                    //           context
-                    //               .read<AuthenticationBloc>()
-                    //               .add(SignInWithGoogleEvent());
-                    //         },
-                    //         style: OutlinedButton.styleFrom(
-                    //           padding: const EdgeInsets.symmetric(
-                    //               horizontal: 16, vertical: 12),
-                    //           shape: RoundedRectangleBorder(
-                    //             borderRadius: BorderRadius.circular(12),
-                    //           ),
-                    //         ),
-                    //         child: Row(
-                    //           mainAxisAlignment: MainAxisAlignment.center,
-                    //           children: [
-                    //             Image.asset(
-                    //               'assets/images/google_icon.png',
-                    //               width: 20,
-                    //               height: 20,
-                    //             ),
-                    //             const SizedBox(width: 14),
-                    //             Text(
-                    //               'Google',
-                    //               style: GoogleFonts.poppins(
-                    //                 fontSize: 14,
-                    //                 fontWeight: FontWeight.w500,
-                    //                 color: const Color(0xFF363636),
-                    //               ),
-                    //             ),
-                    //           ],
-                    //         ),
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
                   ],
                 ),
               ),
@@ -460,7 +354,6 @@ class _SignupPageState extends State<SignupPage> {
                   const SizedBox(width: 4),
                   TextButton(
                     onPressed: () {
-                      // context.go(AppRoutes.login);
                       LoginPageRoute().go(context);
                     },
                     child: Text(

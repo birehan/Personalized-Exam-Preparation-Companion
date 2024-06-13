@@ -24,18 +24,11 @@ class HomeRepositoryImpl extends HomeRepository {
     if (await networkInfo.isConnected) {
       try {
         final examDate = await remoteDatasource.getExamDate();
-        // await localDatasource.cacheExamDate(examDate);
         return Right(examDate);
       } catch (e) {
         return Left(await mapExceptionToFailure(e));
       }
     } else {
-      // try {
-      //   final examDate = await localDatasource.getExamDate();
-      //   return Right(examDate);
-      // } on CacheException {
-      //   return Left(CacheFailure());
-      // }
       return Left(NetworkFailure());
     }
   }

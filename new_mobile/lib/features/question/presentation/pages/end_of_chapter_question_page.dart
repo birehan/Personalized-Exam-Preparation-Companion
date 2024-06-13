@@ -31,9 +31,6 @@ class _EndOfChapterQuestionsPageState extends State<EndOfChapterQuestionsPage> {
   @override
   void initState() {
     super.initState();
-    // context
-    //     .read<QuestionBloc>()
-    //     .add(EndSubtopicQuestionAnswerEvent(subtopicId: widget.chapterId));
   }
 
   @override

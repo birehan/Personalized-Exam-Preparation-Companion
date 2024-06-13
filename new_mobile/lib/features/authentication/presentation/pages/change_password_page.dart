@@ -36,7 +36,6 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
       listener: (context, state) {
         if (state is ChangePasswordState && state.status == AuthStatus.loaded) {
           NewPasswordConfirmedPageRoute().go(context);
-          // context.go(AppRoutes.newPasswordConfirmedPage);
         } else if (state is ChangePasswordState &&
             state.status == AuthStatus.error) {
           ScaffoldMessenger.of(context)

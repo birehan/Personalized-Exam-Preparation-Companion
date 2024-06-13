@@ -121,10 +121,6 @@ class MyMockCard extends StatelessWidget {
                 onTap: () {
                   if (isDownloadedMocks) {
                     if (isCompleted) {
-                      // Todo: retake mock exam
-                      // context
-                      //     .read<RetakeMockBloc>()
-                      //     .add(RetakeMockEvent(mockId: examId));
                     }
                     showDialog(
                       context: context,
@@ -153,7 +149,6 @@ class MyMockCard extends StatelessWidget {
                       ),
                       const SizedBox(width: 4),
                       Text(
-                        // isCompleted ? 'Analysis' : 'Resume',
                         isCompleted ? 'RETAKE' : 'RESUME',
                         style: GoogleFonts.poppins(
                           color: const Color(0xFF0072FF),

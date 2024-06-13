@@ -60,10 +60,6 @@ class ChatAppBarWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                // const Icon(
-                //   Icons.info_outline_rounded,
-                //   color: Colors.white,
-                // ),
               ],
             )
           ],

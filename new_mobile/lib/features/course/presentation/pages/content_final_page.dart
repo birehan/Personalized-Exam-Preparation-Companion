@@ -60,10 +60,6 @@ class ContentFinalPage extends StatelessWidget {
                 context.read<UserCoursesBloc>().add(
                       const GetUsercoursesEvent(refresh: true),
                     );
-
-                // for (int index = 0; index < 2; index++) {
-                //   context.pop();
-                // }
                 context.pop();
               },
               child: Container(

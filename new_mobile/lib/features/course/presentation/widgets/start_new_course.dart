@@ -13,7 +13,6 @@ class StartNewCourse extends StatelessWidget {
     return InkWell(
       onTap: () {
         ChooseSubjectPageRoute($extra: false).go(context);
-        // context.push(AppRoutes.chooseSubjectPage, extra: false);
       },
       child: Container(
         padding: EdgeInsets.all(2.5.h),

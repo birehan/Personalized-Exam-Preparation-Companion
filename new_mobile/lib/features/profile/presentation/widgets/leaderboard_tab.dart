@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:loading_indicator/loading_indicator.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:prep_genie/core/bloc/tokenSession/token_session_bloc.dart';
 import 'package:prep_genie/core/core.dart';
 import 'package:prep_genie/core/widgets/noInternet.dart';
-import 'package:prep_genie/features/features.dart';
 import 'package:prep_genie/features/profile/presentation/widgets/leaderboardtabs.dart';
 import 'package:prep_genie/features/profile/presentation/widgets/nested_scrollLederboard_widget.dart';
-import 'package:prep_genie/features/profile/presentation/widgets/top_ranked_detail_card.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../../../core/utils/snack_bar.dart';
 import '../../domain/entities/user_leaderboard_entity.dart';
 import '../bloc/usersLeaderboard/users_leaderboard_bloc.dart';
-import 'leaderboard_list_card.dart';
 
 class LeaderboardTab extends StatefulWidget {
   const LeaderboardTab({super.key});

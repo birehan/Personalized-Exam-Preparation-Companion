@@ -89,10 +89,6 @@ class _ChatPageState extends State<ChatPage> {
               onAIChatResponse(
                   'An unkown error has occured, please try again...');
             }
-            // else if (state is SendChatState &&
-            //     state.status == ChatStatus.loading) {
-            //   onAIChatResponse(state.chatResponse!.messageResponse);
-            // }
           },
         ),
         BlocListener<ChatWithContentBloc, ChatWithContentState>(

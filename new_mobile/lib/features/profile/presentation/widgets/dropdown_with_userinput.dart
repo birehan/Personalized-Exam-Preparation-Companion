@@ -105,17 +105,6 @@ class _DropDownWithUserInputState extends State<DropDownWithUserInput> {
               return const SizedBox.shrink();
             },
           ),
-        // if (textController.text.isNotEmpty &&
-        //     widget.items.every((item) => !item
-        //         .toLowerCase()
-        //         .contains(textController.text.toLowerCase())))
-        //   ElevatedButton(
-        //     onPressed: () {
-        //       widget.selectedCallback(textController.text);
-        //       textController.clear();
-        //     },
-        //     child: const Text('Submit'),
-        //   ),
       ],
     );
   }

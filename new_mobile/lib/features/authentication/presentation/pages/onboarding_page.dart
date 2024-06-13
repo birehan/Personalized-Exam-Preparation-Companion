@@ -138,7 +138,6 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                                     .read<AuthenticationBloc>()
                                     .add(InitializeAppEvent());
                                 SignupPageRoute().go(context);
-                                // context.go(AppRoutes.signup);
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFFFEA800),
@@ -207,7 +206,6 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                               .read<AuthenticationBloc>()
                               .add(InitializeAppEvent());
                           SignupPageRoute().go(context);
-                          // context.go(AppRoutes.signup);
                         },
                         child: RichText(
                           text: TextSpan(

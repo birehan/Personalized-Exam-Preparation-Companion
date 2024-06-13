@@ -59,7 +59,6 @@ class CourseRemoteDataSourceImpl implements CourseRemoteDataSource {
           'authorization': 'Bearer $token'
         },
       );
-      // print('response $response ${response.statusCode} ${response.body}');
       if (response.statusCode == 200) {
         await coursesLocalDatasource.saveUserCourses(response.body);
         var data = json.decode(response.body)['data'];
@@ -108,7 +107,6 @@ class CourseRemoteDataSourceImpl implements CourseRemoteDataSource {
         );
 
         final jsonData = json.decode(response.body)['data'];
-        // CourseModel course = CourseModel.fromJson(jsonData['course']);
 
         final UserCourseAnalysis course =
             UserCourseAnalysisModel.fromJson(jsonData);
@@ -255,7 +253,6 @@ class CourseRemoteDataSourceImpl implements CourseRemoteDataSource {
           'authorization': 'Bearer $token'
         },
       );
-      // print('status , ${response.statusCode}');
       if (response.statusCode == 200) {
         var data = json.decode(response.body)['data']['departmentCourses'];
 

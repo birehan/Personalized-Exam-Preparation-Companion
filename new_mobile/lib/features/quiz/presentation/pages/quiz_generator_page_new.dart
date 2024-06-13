@@ -70,11 +70,6 @@ class _CreateQuizPageState extends State<CreateQuizPage> {
                 quizId: state.examId!,
                 $extra: state.questionMode!,
               ).go(context);
-
-              // CreatedQuizQuestionPageRoute(
-              //   courseId: widget.courseId,
-              //   quizId: widget.quizId,
-              // );
             }
           },
         ),

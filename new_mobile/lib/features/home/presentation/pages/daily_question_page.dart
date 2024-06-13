@@ -9,7 +9,6 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../../../features/features.dart';
-// import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DailyQuestionPageParams extends Equatable {
@@ -101,17 +100,7 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
 
   void onSubmit() {
     _timer.cancel();
-    // bool hasUnansweredQuestion = false;
-    // for (int index = 0; index < userAnswers.length; index++) {
-    //   if (userAnswers[index] == 'choice_E') {
-    //     hasUnansweredQuestion = true;
-    //     _showErrorSnackbar('Please answer all questions');
-    //     goTo(index);
-    //     break;
-    //   }
-    // }
 
-    // if (!hasUnansweredQuestion) {
     final userAnswer = List.generate(
       userChoices.length,
       (index) => DailyQuizUserAnswer(
@@ -147,8 +136,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
               child: IconButton(
                 icon: const Icon(Icons.close, color: Colors.black),
                 onPressed: () {
-                  // onSubmit();
-                  // onSaveScore();
                   context
                       .read<FetchDailyQuizForAnalysisBloc>()
                       .add(FetchDailyQuizForAnalysisInitialEvent());
@@ -164,7 +151,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                       .read<FetchDailyQuestBloc>()
                       .add(const FetchDailyQuestEvent());
 
-                  //  context.read<PopupMenuBloc>().add(QuitExamEvent());
                   Navigator.of(context).pop();
                 },
               ),
@@ -174,7 +160,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Icon(Icons.task_alt, color: Color(0xFF0072FF), size: 48),
-                // Image.asset('assets/images/time_machine.png'),
                 const SizedBox(height: 12),
                 Text(
                   // 'Completed successfully!',
@@ -194,18 +179,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                     child: BlocConsumer<FetchDailyQuizForAnalysisBloc,
                         FetchDailyQuizForAnalysisState>(
                       builder: (context, state) {
-                        // if (state is FetchDailyQuizForAnalysisLoading) {
-
-                        //    return const  SizedBox(
-                        //                 height: 15,
-                        //                 width: 15,
-                        //                 child:
-                        //                     CircularProgressIndicator(
-                        //                   color: Colors.black,
-                        //                   strokeWidth: 1,
-                        //                 ),
-                        //               );
-                        // }
 
                         return InkWell(
                           child: Container(
@@ -253,10 +226,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                                       id: widget.dailyQuestionPageParams
                                           .dailyQuiz.id),
                                 );
-
-                            //  context.read<PopupMenuBloc>().add(QuitExamEvent());
-                            // if (!analysisPageLoading)
-                            // Navigator.of(context).pop();
                           },
                         );
                       },
@@ -280,83 +249,10 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                     )),
               ],
             ),
-            // content: Text(
-            //   ' Are you sure you want to leave? Your unsaved changes may be lost.',
-            //   style: GoogleFonts.poppins(),
-            // ),
-            // actions: [
-            //   TextButton(
-            //     onPressed: () {
-            //       Navigator.of(context).pop();
-            //     },
-            //     child: Text(
-            //       'Cancel',
-            //       style: GoogleFonts.poppins(),
-            //     ),
-            //   ),
-            //   TextButton(
-            //     onPressed: () {
-            //       onSubmit();
-            //       context.read<PopupMenuBloc>().add(QuitExamEvent());
-            //       Navigator.of(context).pop();
-            //     },
-            //     child: Text(
-            //       'Quit',
-            //       style: GoogleFonts.poppins(color: Colors.red),
-            //     ),
-            //   ),
-            // ],
           );
         });
   }
 
-  // void onSaveScore() {
-  //   int score = 0;
-  // for (int index = 0; index < userChoices.length; index++) {
-  //   if (userChoices[index].toLowerCase() ==
-  //       widget.questions[index].answer.toLowerCase()) {
-  //     score++;
-  //   }
-  // }
-  // widget.onSaveScore(score);
-  // }
-
-  // void onSaveScore() {
-  //   bool hasUnansweredQuestion = false;
-  //   int score = 0;
-  //   for (int index = 0; index < userChoices.length; index++) {
-  //     // if (userAnswers[index] == 'choice_E') {
-  //     //   hasUnansweredQuestion = false;
-  //     //   _showErrorSnackbar('Please answer all questions');
-  //     //   break;
-  //     // }
-  //     if (userChoices[index] == widget.questions[index].answer) {
-  //       score++;
-  //     }
-  //   }
-
-  //     if (widget.examType == ExamType.standardMock) {
-  //       context.read<MockExamBloc>().add(
-  //             UpsertMockScoreEvent(
-  //               mockId: widget.questionId,
-  //               score: int.parse(
-  //                   ((score / userChoices.length) * 100).toStringAsFixed(0)),
-  //             ),
-  //           );
-
-  //       RecommendedMockResultPageRoute(
-  //         $extra: ResultPageParams(
-  //           score: score,
-  //           totalQuestions: userChoices.length,
-  //           id: widget.questionId,
-  //           examType: ExamType.standardMock,
-  //         ),
-  //       ).go(context);
-  //     } else {
-  //       widget.onSaveScore();
-  //     }
-  //   }
-  // }
 
   void showPopupWhenCountdownEnds(BuildContext originalContext) {
     showDialog(
@@ -472,42 +368,7 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
             }
           },
         ),
-        // BlocListener<FeedbackBloc, FeedbackState>(
-        //   listener: (context, state) {
-        //     if (state is FeedbackSubmitedState) {
-        //       final snackBar = SnackBar(
-        //         backgroundColor: Colors.transparent,
-        //         elevation: 0,
-        //         content: Container(
-        //           padding:
-        //               const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-        //           decoration: BoxDecoration(
-        //             color: Colors.green,
-        //             borderRadius: BorderRadius.circular(8),
-        //             boxShadow: const [
-        //               BoxShadow(color: Colors.black26, blurRadius: 4)
-        //             ],
-        //           ),
-        //           child: Row(
-        //             mainAxisSize: MainAxisSize.min,
-        //             children: [
-        //               Icon(Icons.check, color: Colors.white),
-        //               SizedBox(width: 8),
-        //               // Text('Thank you for your feedback 🙏',
-        //               Text(
-        //                   '${AppLocalizations.of(context)!.thank_you_for_your_feedback} 🙏',
-        //                   style: TextStyle(color: Colors.white)),
-        //             ],
-        //           ),
-        //         ),
-        //         duration: const Duration(seconds: 3),
-        //         behavior: SnackBarBehavior.floating,
-        //       );
 
-        //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        //     }
-        //   },
-        // )
       ],
       child: buildWidget(context, hours, minutes, seconds, goTo),
     );
@@ -566,9 +427,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                           InkWell(
                             onTap: () {
                               showPopupOnQuitButtonPressed(context);
-                              // context
-                              //     .read<PopupMenuBloc>()
-                              //     .add(const GoToPageEvent());
                             },
                             child: Text(
                               // 'Quit',
@@ -597,45 +455,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                         )
                       : Container(),
         ),
-        // floatingActionButton: FloatingOptions(
-        //   hideChat:
-        //       widget.dailyQuestionPageParams.questionMode == QuestionMode.quiz,
-        //   chatCallback: () {
-        // context
-        //     .read<FetchDailyQuizForAnalysisBloc>()
-        //     .add(FetchDailyQuizForAnalysisInitialEvent());
-        // DailyQuizQuestionChatWithAIPageRoute(
-        //   questionId: widget.dailyQuestionPageParams.dailyQuiz
-        //       .dailyQuizQuestions[currentIndex].id,
-        //   question:
-        //       '${widget.dailyQuestionPageParams.dailyQuiz.dailyQuizQuestions[currentIndex].description}\nA) ${widget.dailyQuestionPageParams.dailyQuiz.dailyQuizQuestions[currentIndex].choiceA}\nB) ${widget.dailyQuestionPageParams.dailyQuiz.dailyQuizQuestions[currentIndex].choiceB}\nC) ${widget.dailyQuestionPageParams.dailyQuiz.dailyQuizQuestions[currentIndex].choiceC}\nD) ${widget.dailyQuestionPageParams.dailyQuiz.dailyQuizQuestions[currentIndex].choiceD}',
-        //   $extra: widget.dailyQuestionPageParams,
-        // ).go(context);
-        //     // QuizChatWithAIPageRoute(
-        //     //   courseId:
-        //     //       'widget.dailyQuestionPageParams.dailyQuiz!.dailyQuizQuestions[currentIndex].courseId',
-        //     //   quizId: widget.dailyQuestionPageParams.dailyQuiz!.id,
-        //     //   questionId: widget.dailyQuestionPageParams.dailyQuiz!
-        //     //       .dailyQuizQuestions[currentIndex].id,
-        //     //   question:
-        //     //       '${widget.dailyQuestionPageParams.dailyQuiz!.dailyQuizQuestions[currentIndex].description}\nA) ${widget.dailyQuestionPageParams.dailyQuiz!.dailyQuizQuestions[currentIndex].choiceA}\nB) ${widget.dailyQuestionPageParams.dailyQuiz!.dailyQuizQuestions[currentIndex].choiceB}\nC) ${widget.dailyQuestionPageParams.dailyQuiz!.dailyQuizQuestions[currentIndex].choiceC}\nD) ${widget.dailyQuestionPageParams.dailyQuiz!.dailyQuizQuestions[currentIndex].choiceD}',
-        //     //   $extra: widget.dailyQuestionPageParams.questionMode,
-        //     // ).go(context);
-        //   },
-        //   flagCallback: () {
-        // showDialog(
-        //   context: context,
-        //   builder: (BuildContext context) {
-        //     return FlagDialog(
-        //       index: 0,
-        //       id: widget.dailyQuestionPageParams.dailyQuiz!
-        //           .dailyQuizQuestions[currentIndex].id,
-        //       feedbackType: FeedbackType.questionFeedback,
-        //     );
-        //   },
-        // );
-        //   },
-        // ),
         floatingActionButton:
             widget.dailyQuestionPageParams.questionMode == QuestionMode.quiz
                 ? null
@@ -689,17 +508,6 @@ class _DailyQuestionPageState extends State<DailyQuestionPage> {
                         .dailyQuizQuestions.length,
                     controller: _pageController,
                     itemBuilder: (context, index) {
-                      //! here check if the item is dummy or real question
-
-                      // if item is dummy
-                      // if (widget.questions[index].description == 'dummyData') {
-                      //   context.read<MockQuestionBloc>().add(LoadMockPageEvent(
-                      //       id: widget.mockId!, pageNumber: index ~/ 10 + 1));
-                      //   return const CustomProgressIndicator();
-                      // }
-                      // return progress indicator
-                      // trigger event to load that page (the page is question number/10)
-                      // go to that section
 
                       return DailyQuizQuestionSection(
                         examType: ExamType.quiz,

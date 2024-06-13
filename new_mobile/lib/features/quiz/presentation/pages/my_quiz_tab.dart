@@ -83,9 +83,6 @@ class _MyQuizTabState extends State<MyQuizTab> {
               if (state.quizzes!.isEmpty) {
                 return EmptyListWidget(
                     message: AppLocalizations.of(context)!.no_quizzes);
-                // return Center(
-                //   child: Image.asset('assets/images/no_data_image.png'),
-                // );
               }
               return Stack(
                 children: [
@@ -143,22 +140,6 @@ class _MyQuizTabState extends State<MyQuizTab> {
       ),
     );
   }
-
-  // Shimmer _quizLoadingShimmer() {
-  //   return Shimmer.fromColors(
-  //     direction: ShimmerDirection.ttb,
-  //     baseColor: const Color.fromARGB(255, 236, 235, 235),
-  //     highlightColor: const Color(0xffF9F8F8),
-  //     child: Container(
-  //       height: 15.h,
-  //       margin: EdgeInsets.symmetric(vertical: 1.h),
-  //       decoration: BoxDecoration(
-  //         color: Colors.white,
-  //         borderRadius: BorderRadius.circular(20),
-  //       ),
-  //     ),
-  //   );
-  // }
 
   _shimmerMyMockCard() {
     return Container(

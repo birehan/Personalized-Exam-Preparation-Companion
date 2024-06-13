@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../core/core.dart';
 
-// import '../bloc/selectCourseBloc/select_course_bloc.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../../../core/widgets/progress_indicator2.dart';
 import '../../../features.dart';
@@ -44,26 +43,6 @@ class _ExpandableWidgetState extends State<CourseExpandableWidget> {
             style: const TextStyle(
                 fontSize: 18, color: Color.fromARGB(255, 88, 88, 88)),
           ),
-          // trailing: SizedBox(
-          //   width: 15.w,
-          //   child: Row(
-          //     mainAxisSize: MainAxisSize.min,
-          //     children: [
-          //       Text(
-          //         '${widget.courses.length}',
-          //         style: const TextStyle(
-          //             fontSize: 18, color: Color.fromARGB(255, 88, 88, 88)),
-          //       ),
-          //       const SizedBox(width: 4),
-          //       Icon(
-          //         isExpanded
-          //             ? Icons.keyboard_arrow_down
-          //             : Icons.keyboard_arrow_right,
-          //         size: 30,
-          //       ),
-          //     ],
-          //   ),
-          // ),
           title: Text(
             widget.courseName.toUpperCase(),
             style: const TextStyle(
@@ -94,15 +73,6 @@ class _ExpandableWidgetState extends State<CourseExpandableWidget> {
                       ScaffoldMessenger.of(context)
                           .showSnackBar(snackBar(state.failure!.errorMessage));
                     } else if (state.status == ChapterStatus.loaded) {
-                      // TODO: Take to quizGeneratorPage
-
-                      // context.push(
-                      //   AppRoutes.quizGeneratorPage,
-                      //   extra: QuizGeneratorPageParams(
-                      //     courseId,
-                      //     state.chapters!,
-                      //   ),
-                      // );
                     }
                   }
                 },
@@ -189,7 +159,6 @@ class _ExpandableWidgetState extends State<CourseExpandableWidget> {
               );
             },
           ),
-        // const SizedBox(height: 4),
         isExpanded
             ? const Divider(
                 indent: 10,

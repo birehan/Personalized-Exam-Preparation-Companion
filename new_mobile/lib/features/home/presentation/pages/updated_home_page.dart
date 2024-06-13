@@ -33,7 +33,6 @@ class _UpdatedHomePageState extends State<UpdatedHomePage> {
   void initState() {
     super.initState();
     context.read<GetUserBloc>().add(GetUserCredentialEvent());
-    // context.read<MyMocksBloc>().add(GetMyMocksEvent());
     context.read<HomeBloc>().add(GetHomeEvent(refresh: false));
   }
 
@@ -105,13 +104,6 @@ class _UpdatedHomePageState extends State<UpdatedHomePage> {
                               );
                             } else if (state.failure is AuthenticationFailure) {
                               return SessionExpireAlert();
-                              // WidgetsBinding.instance.addPostFrameCallback((_) {
-                              // Future.microtask(() {
-                              //   showDialog(
-                              //       context: context,
-                              //       builder: (context) => SessionExpireAlert());
-                              // });
-                              // });
                             }
                             return Center(
                                 child: Text(AppLocalizations.of(context)!

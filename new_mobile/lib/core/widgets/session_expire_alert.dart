@@ -48,19 +48,6 @@ class SessionExpireAlert extends StatelessWidget {
             ),
           ),
         )
-        // AlertDialog(
-        //   title: const Text('Session Expired'),
-        //   content: const Text('Your session has expired. Please log in again.'),
-        //   actions: [
-        // TextButton(
-        //   onPressed: () {
-        //     Navigator.pop(context);
-        //     context.read<TokenSessionBloc>().add(TokenSessionExpiredEvent());
-        //   },
-        //   child: const Text('OK'),
-        // ),
-        //   ],
-        // ),
         );
   }
 }

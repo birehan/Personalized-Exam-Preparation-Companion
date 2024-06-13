@@ -51,12 +51,6 @@ class _EndofQuestionsResultPageState extends State<EndofQuestionsResultPage> {
                   InkWell(
                     onTap: () {
                       context.pop();
-                      // for (int index = 0;
-                      //     index < resultPageParams.stackHeight;
-                      //     index++) {
-                      //   context.pop();
-                      // }
-                      // context.read<PopupMenuBloc>().add(const GoToPageEvent());
                     },
                     child: const XIcon(
                       color: Color(0xFF363636),
@@ -157,22 +151,6 @@ class _EndofQuestionsResultPageState extends State<EndofQuestionsResultPage> {
                                             ),
                                           ),
                                         ),
-                                        // Text(
-                                        //   '${((resultPageParams.score / resultPageParams.totalQuestions) * 100).toStringAsFixed(0)}%',
-                                        //   style: GoogleFonts.poppins(
-                                        //     fontSize: 34,
-                                        //     fontWeight: FontWeight.w700,
-                                        //     color: const Color(0xFF363636),
-                                        //   ),
-                                        // ),
-                                        // Text(
-                                        //   '${resultPageParams.score} of ${resultPageParams.totalQuestions}',
-                                        //   style: GoogleFonts.poppins(
-                                        //     fontSize: 18,
-                                        //     fontWeight: FontWeight.w500,
-                                        //     color: const Color(0xFF717171),
-                                        //   ),
-                                        // ),
                                       ],
                                     ),
                                   ),

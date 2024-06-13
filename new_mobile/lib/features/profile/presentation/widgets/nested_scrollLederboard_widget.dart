@@ -72,15 +72,11 @@ class _NestedScrollableLeaderboardWidgetState
     return NotificationListener(
       onNotification: onNotification,
       child: NestedScrollView(
-        // controller: scrollContoller,
-        // physics: const BouncingScrollPhysics(parent: FixedExtentScrollPhysics()),
 
         headerSliverBuilder: (context, innerBoxIsScrolled) {
           return [
             SliverAppBar(
               backgroundColor: const Color(0xFF18786C),
-              // pinned: true,
-              // centerTitle: true,
               expandedHeight: 35.h,
               flexibleSpace: FlexibleSpaceBar(
                 background: Container(
@@ -146,7 +142,6 @@ class _NestedScrollableLeaderboardWidgetState
                 collapsedHeight: 10.h,
                 flexibleSpace: Stack(
                   children: [
-                    // const FlexibleSpaceBar(),
                     Positioned(
                       left: 0,
                       right: 0,
@@ -171,8 +166,6 @@ class _NestedScrollableLeaderboardWidgetState
           ];
         },
         body: CustomScrollView(
-          // physics: const NeverScrollableScrollPhysics(),
-          // controller: scrollContoller,
           shrinkWrap: true,
           slivers: [
             SliverList(

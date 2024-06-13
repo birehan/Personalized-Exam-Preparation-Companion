@@ -49,7 +49,6 @@ class CoursesLocalDatasourceImpl implements CoursesLocalDatasource {
 
   @override
   Future<void> saveUserCourses(dynamic userCourses) async {
-    // await Hive.openBox('homeBox');
     await _courseBox.put('userCourses', userCourses);
   }
 

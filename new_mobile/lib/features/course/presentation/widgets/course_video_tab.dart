@@ -71,7 +71,6 @@ class _CourseVideoTabState extends State<CourseVideoTab> {
                   (index) => Padding(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     child: Container(),
-                    // child: ChapterVideoWidget(chapterVideo: ,),
                   ),
                 ),
               );

@@ -118,19 +118,6 @@ class AuthenticationBloc
     );
   }
 
-  // String _mapLoginFailureToMessage(Failure failure) {
-  //   switch (failure.runtimeType) {
-  //     case ServerFailure:
-  //       return loginFailureMessage;
-  //     case NetworkFailure:
-  //       return networkFailureMessage;
-  //     case CacheFailure:
-  //       return loginCacheFailureMessage;
-  //     default:
-  //       return unknownFailureMessage;
-  //   }
-  // }
-
   void _onLogout(LogoutEvent event, Emitter<AuthenticationState> emit) async {}
 
   void _onForgetPassword(
@@ -230,18 +217,6 @@ class AuthenticationBloc
     );
   }
 
-  // String _mapSignupFailureToMessage(Failure failure) {
-  //   switch (failure.runtimeType) {
-  //     case ServerFailure:
-  //       return signupFailureMessage;
-  //     case CacheFailure:
-  //       return signupCacheFailureMessage;
-  //     case NetworkFailure:
-  //       return networkFailureMessage;
-  //     default:
-  //       return unknownFailureMessage;
-  //   }
-  // }
 
   void _onResendOtpVerification(
     ResendOtpVerificationEvent event,

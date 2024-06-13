@@ -21,13 +21,6 @@ class _CarouselSliderForUpcommingEventsState
   @override
   void initState() {
     super.initState();
-    //add contest card if available
-    // final state = context.read<FetchUpcomingUserContestBloc>().state;
-    // if (state is UpcomingContestFetchedState &&
-    //     state.upcomingContes != null &&
-    //     state.upcomingContes!.hasRegistered == false) {
-    //   _carouselItems.add(contestCard(contestId: state.upcomingContes!.id));
-    // }
 
     //add national exam card
     _carouselItems.add(nationalExamsCard());

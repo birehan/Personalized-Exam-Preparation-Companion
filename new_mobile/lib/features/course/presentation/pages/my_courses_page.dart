@@ -81,22 +81,6 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  // InkWell(
-                  //   onTap: () {
-                  //     SearchCoursesPageRoute().go(context);
-                  //   },
-                  //   child: Container(
-                  //     height: 2.75.h,
-                  //     padding: const EdgeInsets.all(1),
-                  //     child: SvgPicture.asset(
-                  //       searchIcon,
-                  //       // height: .3.h,
-                  //       fit: BoxFit.scaleDown,
-                  //       // width: 1.w,
-                  //       color: Colors.black.withOpacity(.7),
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
               SizedBox(height: 3.h),
@@ -239,7 +223,6 @@ class _MyCoursesPageState extends State<MyCoursesPage>
                                             icon: const Icon(
                                               Icons.refresh,
                                               color: Colors.white,
-                                              // size: 18,
                                             ),
                                             onPressed: () {
                                               context

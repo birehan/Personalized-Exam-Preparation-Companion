@@ -111,12 +111,6 @@ class _ChapterVideoWidgetState extends State<ChapterVideoWidget> {
                 },
               ),
             ),
-          // ListView.separated(
-          //   physics: const NeverScrollableScrollPhysics(),
-          //   itemBuilder: (context, index) => const SubChapterVideoCard(),
-          //   separatorBuilder: (context, index) => Container(),
-          //   itemCount: 4,
-          // ),
         ],
       ),
     );

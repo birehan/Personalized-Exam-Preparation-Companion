@@ -58,37 +58,6 @@ class SearchEnrolledCoursesCard extends StatelessWidget {
                   Text('${course.numberOfChapters} chapters')
                 ],
               ),
-              // SizedBox(
-              //   height: 2.h,
-              // ),
-              // Row(
-              //   children: [
-              //     Expanded(
-              //       child: ClipRRect(
-              //         borderRadius: BorderRadius.circular(7),
-              //         child: const LinearProgressIndicator(
-              //           value:
-              //               0.3, // userProgress should be a double between 0.0 and 1.0
-              //           minHeight: 10,
-              //           backgroundColor: Color(0xffE7F0EF),
-              //           valueColor: AlwaysStoppedAnimation<Color>(
-              //             Color(0xFF0072FF),
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     SizedBox(
-              //       width: 3.w,
-              //     ),
-              //     const Text(
-              //       '34%',
-              //       style: TextStyle(
-              //         color: Colors.black,
-              //         fontWeight: FontWeight.bold,
-              //       ),
-              //     )
-              //   ],
-              // )
             ],
           ),
         ),

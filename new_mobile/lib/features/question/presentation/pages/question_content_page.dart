@@ -109,36 +109,6 @@ class _RelatedTopicContentPageState extends State<RelatedTopicContentPage>
           ),
         ),
       ),
-      // floatingActionButton: FloatingOptions(
-      //   hideChat: false,
-      //   flagCallback: () {
-      //     showDialog(
-      //       context: context,
-      //       builder: (BuildContext context) {
-      //         return FlagDialog(
-      //           index: 0,
-      //           id: contentId,
-      //           feedbackType: FeedbackType.contentFeedback,
-      //         );
-      //       },
-      //     );
-      //   },
-      //   chatCallback: () {
-      // final subChapterState = context.read<SubChapterBloc>().state;
-      // List<Content> contents = [];
-
-      // if (subChapterState is SubChapterLoadedState) {
-      //   setState(() {
-      //     contents = subChapterState.subChapter.contents;
-      //   });
-      // }
-      // ChatWithContentPageRoute(
-      //   courseId: widget.courseId,
-      //   subChapterId: contents[currentPageIndex].id,
-      //   readOnly: true,
-      // ).go(context);
-      //   },
-      // ),
       floatingActionButton: InkWell(
         splashColor: Colors.transparent,
         onTap: () {
@@ -226,21 +196,6 @@ class _RelatedTopicContentPageState extends State<RelatedTopicContentPage>
                                       ),
                                     ),
                                   ),
-                                  // FlagButton(onPressed: () {
-                                  //   var originalContext = context;
-                                  //   showDialog(
-                                  //     context: context,
-                                  //     builder: (BuildContext context) {
-                                  //       return FlagDialog(
-                                  //         originalContext: originalContext,
-                                  //         index: 0,
-                                  //         id: contents[currentPageIndex].id,
-                                  //         feedbackType:
-                                  //             FeedbackType.contentFeedback,
-                                  //       );
-                                  //     },
-                                  //   );
-                                  // }),
                                   IconButton(
                                     icon: isBookmarked.contains(index)
                                         ? const Icon(Icons.bookmark,

@@ -19,19 +19,4 @@ class ImageUploader {
     return null;
   }
 
-  // this is for image cropper
-  // Future<File?> _cropImage({required File imageFile}) async {
-  //   CroppedFile? croppedImage = await ImageCropper().cropImage(
-  //       compressFormat: ImageCompressFormat.png,
-  //       sourcePath: imageFile.path,
-  //       aspectRatio: const CropAspectRatio(
-  //         ratioX: 1,
-  //         ratioY: 1,
-  //       ));
-  //   if (croppedImage == null) {
-  //     print('cropped image is null');
-  //     return null;
-  //   }
-  //   return File(croppedImage.path);
-  // }
 }

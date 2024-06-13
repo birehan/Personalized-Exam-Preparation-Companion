@@ -11,7 +11,6 @@ export 'user_progress_indicator_widget.dart';
 export 'session_expire_alert.dart';
 export 'coming_soon_page.dart';
 export 'popup_widgets/popup_widgets.dart';
-export 'network_failure_widget.dart';
 export 'floating_button.dart';
 export 'flag_button.dart';
 export 'go_to_downloads_widget.dart';

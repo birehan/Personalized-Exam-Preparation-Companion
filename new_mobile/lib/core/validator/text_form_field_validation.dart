@@ -59,13 +59,6 @@ String? validatePassword(String? password, BuildContext context) {
     return AppLocalizations.of(localizedContext)!
         .password_must_be_at_least_6_characters_long;
   }
-  // else if (!RegExp(r'[A-Z]').hasMatch(password)) {
-  //   return 'Password must contain at least one uppercase letter';
-  // } else if (!RegExp(r'[a-z]').hasMatch(password)) {
-  //   return 'Password must contain at least one lowercase letter';
-  // } else if (!RegExp(r'\d').hasMatch(password)) {
-  //   return 'Password must contain at least one digit';
-  // }
 
   return null;
 }

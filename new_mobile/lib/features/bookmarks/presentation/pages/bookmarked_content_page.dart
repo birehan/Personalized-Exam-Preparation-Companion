@@ -107,13 +107,6 @@ class _BookmarkedContentPageState extends State<BookmarkedContentPage> {
                   ],
                 ),
               ),
-              // SelectableText(
-              //   widget.bookmarkedContent.content.content,
-              //   style: TextStyle(
-              //     fontSize: 18.sp,
-              //     height: 1.7,
-              //   ),
-              // ),
               SizedBox(
                 height: MediaQuery.of(context).size.height,
                 child: MarkdownWidget(
@@ -130,20 +123,6 @@ class _BookmarkedContentPageState extends State<BookmarkedContentPage> {
                   ),
                 ),
               ),
-              // TeXView(
-              //   loadingWidgetBuilder: (context) => _shimmerBookmarkedContent(),
-              //   child: TeXViewMarkdown(
-              //     widget.bookmarkedContent.content.content,
-              //     style: TeXViewStyle(
-              //       fontStyle: TeXViewFontStyle(
-              //         fontFamily: 'Poppins',
-              //         fontSize: 20,
-              //         fontWeight: TeXViewFontWeight.w400,
-              //       ),
-              //       contentColor: const Color(0xFF212121),
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),

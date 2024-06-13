@@ -96,13 +96,7 @@ class _DownloadedContentPageState extends State<DownloadedContentPage>
           ),
         ),
       ),
-      body:
-          //         if (contents.isEmpty) {
-          //           return const Center(
-          //             child: Text('No content available'),
-          //           );
-          //         }
-          Stack(
+      body: Stack(
         children: [
           Padding(
             padding:

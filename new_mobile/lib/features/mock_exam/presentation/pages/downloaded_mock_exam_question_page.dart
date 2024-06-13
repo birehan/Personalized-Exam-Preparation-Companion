@@ -14,7 +14,6 @@ import '../../../../core/core.dart';
 import '../../../../core/utils/snack_bar.dart';
 import '../../../../core/widgets/questions_shimmer.dart';
 import '../../../features.dart';
-// import '../../../feedback/presentation/widgets/flag_dialogue_box.dart';
 
 class DownloadedMockExamQuestionPageParams {
   final DownloadedUserMock downloadedUserMock;
@@ -71,10 +70,6 @@ class _DownloadedMockExamQuestionsPageState
         }
       });
     }
-    // context.read<MockQuestionBloc>().add(GetMockByIdEvent(
-    //     id: widget.mockExamQuestionPageParams.downloadedUserMock.id,
-    //     numberOfQuestions: widget
-    //         .mockExamQuestionPageParams.downloadedUserMock.questions.length));
     userChoices = List.generate(
         widget.mockExamQuestionPageParams.downloadedUserMock.questions.length,
         (index) => 'choice_E');
@@ -154,10 +149,6 @@ class _DownloadedMockExamQuestionsPageState
           centerTitle: true,
           leading: InkWell(
             onTap: () {
-              // Todo: Fetch Downloaded User Mocks
-              // context
-              //     .read<MyMocksBloc>()
-              //     .add(const GetMyMocksEvent(isRefreshed: false));
               if (widget.mockExamQuestionPageParams.questionMode ==
                   QuestionMode.quiz) {
                 showPopupOnQuitButtonPressed();
@@ -400,15 +391,6 @@ class _DownloadedMockExamQuestionsPageState
         mockType: MockType.downloadedMock,
       ),
     ).go(context);
-    // RecommendedMockResultPageRoute(
-    //   $extra: ResultPageParams(
-    //       score: score,
-    //       totalQuestions: loadedMock.mockQuestions.length,
-    //       id: loadedMock.id,
-    //       examType: ExamType.standardMock,
-    //       mockType: MockType.standardMocks,
-    //       questionMode: widget.mockExamQuestionPageParams.questionMode),
-    // ).go(context);
   }
 
   void showPopupWhenCountdownEnds() {
@@ -430,7 +412,6 @@ class _DownloadedMockExamQuestionsPageState
               onPressed: () {
                 onSubmit();
                 onSaveScore();
-                // context.read<PopupMenuBloc>().add(const GoToPageEvent());
                 Navigator.of(context).pop();
               },
               child: Text(

@@ -37,16 +37,6 @@ class CounrDownItemCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6),
                     ),
                     padding: EdgeInsets.symmetric(vertical: 1.h),
-                    // child: Center(
-                    //   child: Text(
-                    //     countDownList[index],
-                    //     style: GoogleFonts.poppins(
-                    //       color: Colors.white,
-                    //       fontSize: 14,
-                    //       fontWeight: FontWeight.w600,
-                    //     ),
-                    //   ),
-                    // ),
                   ),
                   Container(
                     width: 5.w,

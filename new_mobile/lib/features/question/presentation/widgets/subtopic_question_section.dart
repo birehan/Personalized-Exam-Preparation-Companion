@@ -56,31 +56,9 @@ class _SubtopicQuestionSectionState extends State<SubtopicQuestionSection> {
                   ),
                 ),
               ),
-              // FlagButton(onPressed: () {
-              //   var originalContext = context;
-              //   showDialog(
-              //     context: context,
-              //     builder: (BuildContext context) {
-              //       return FlagDialog(
-              //         originalContext: originalContext,
-              //         index: 0,
-              //         id: widget.question.id,
-              //         feedbackType: FeedbackType.questionFeedback,
-              //       );
-              //     },
-              //   );
-              // }),
             ],
           ),
           const SizedBox(height: 12),
-          //  Text(
-          //    widget.question.description,
-          //    style: GoogleFonts.poppins(
-          //      fontSize: 18,
-          //      fontWeight: FontWeight.w600,
-          //      color: const Color(0xFF363636),
-          //    ),
-          //  ),
           MarkdownWidget(
             shrinkWrap: true,
             data: widget.question.description,

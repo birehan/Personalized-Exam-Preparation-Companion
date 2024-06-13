@@ -20,11 +20,7 @@ class _TimeReminderCardState extends State<TimeReminderCard> {
       time: DateTime.now(),
       amText: localizations.anteMeridiemAbbreviation,
       pmText: localizations.postMeridiemAbbreviation,
-      // isShowSeconds: false,
       is24HourMode: false,
-      // minutesInterval: 1,
-      // secondsInterval: 1,
-      // isForce2Digits: false,
       onTimeChange: (value) {
         DateTime tempDateTime = DateTime(
           selectedDateTime.year,

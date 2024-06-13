@@ -125,7 +125,6 @@ class _CubeAnimationPageState extends State<CubeAnimationPage>
 
               _rotationValue = -_rotationController.value * 2 * pi;
 
-              //  100 * _growController.value
               return Center(
                 child: Transform.rotate(
                   angle: _rotationValue,
@@ -137,9 +136,6 @@ class _CubeAnimationPageState extends State<CubeAnimationPage>
                     width: growSize,
                     height: growSize,
                     child: const SizedBox.shrink(),
-                    // child: _fillController.isCompleted
-                    //     ? lessonContentWidget()
-                    //     : const SizedBox.shrink(),
                   ),
                 ),
               );

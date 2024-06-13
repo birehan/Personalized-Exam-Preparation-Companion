@@ -36,10 +36,6 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           ForgotPasswordOtpPageRoute(
             emailOrPhoneNumber: _emailOrPhoneNumberController.text,
           ).go(context);
-          // context.push(
-          //   AppRoutes.otpPage,
-          //   extra: AppRoutes.forgotPassword,
-          // );
         } else if (state is SendOtpVerificationState &&
             state.status == AuthStatus.error) {
           ScaffoldMessenger.of(context)

@@ -77,16 +77,8 @@ class ConsistencyTrackingCalenderWidget extends StatelessWidget {
                         text: todaysConsistency.overallPoint.toString(),
                         style: const TextStyle(
                             fontFamily: 'Poppins', color: Colors.black)),
-                    // TextSpan(
-                    //   text:
-                    //       'Mocks completed: ${todaysConsistency.mockCompleted}, Topics read: ${todaysConsistency.subChapterCopleted}, Quiz completed: ${todaysConsistency.quizCompleted}, Overall Point: ${todaysConsistency.overallPoint}',
-                    //   style: const TextStyle(
-                    //       fontFamily: 'Poppins', color: Colors.black),
-                    // ),
                   ], style: const TextStyle()),
 
-                  // textStyle: const TextStyle(
-                  //     fontFamily: 'Poppins', color: Colors.black),
                   showDuration: const Duration(seconds: 30),
                   verticalOffset: 1.5.h,
                   decoration: BoxDecoration(

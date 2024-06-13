@@ -56,12 +56,6 @@ class _TimeCountDownWidgetState extends State<TimeCountDownWidget> {
         ((_countDownDuration % 2628000) ~/ 604800).toString().padLeft(2, '0');
     final days =
         ((_countDownDuration % 604800) ~/ 86400).toString().padLeft(2, '0');
-    // final hours =
-    //     ((_countDownDuration ~/ 3600) % 24).toString().padLeft(2, '0');
-    // final minutes =
-    //     ((_countDownDuration ~/ 60) % 60).toString().padLeft(2, '0');
-
-    // final seconds = (_countDownDuration % 60).toString().padLeft(2, '0');
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
@@ -104,10 +98,6 @@ class _TimeCountDownWidgetState extends State<TimeCountDownWidget> {
                     ? AppLocalizations.of(context)!.days
                     : AppLocalizations.of(context)!.day,
               ),
-              // TimeCounterWidget(
-              //   countDownTime: seconds,
-              //   timeFormat: 'Seconds',
-              // ),
             ],
           )
         ],

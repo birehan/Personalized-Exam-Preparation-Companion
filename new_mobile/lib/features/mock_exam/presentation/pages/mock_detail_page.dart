@@ -303,19 +303,10 @@ class _MockDetailPageState extends State<MockDetailPage> {
                           },
                         ),
                         const SizedBox(height: 16),
-                        // UserMockRank(
-                        //   isCompleted: mockDetail.userRank != null,
-                        //   numberOfCorrectAnswers: mockDetail.userRank?.score,
-                        //   rank: mockDetail.userRank?.rank,
-                        // ),
                       ],
                     ),
                   ),
                   const SizedBox(height: 24),
-                  // MockRanking(
-                  //   mockUserRanks: mockDetail.mockUserRanks,
-                  //   numberOfQuestions: mockDetail.numberOfQuestions,
-                  // ),
                 ],
               );
             }

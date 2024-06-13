@@ -13,45 +13,6 @@ class GeneralChatBloc extends Bloc<GeneralChatEvent, GeneralChatState> {
   final GeneralChatUsecase generalChatUsecase;
   GeneralChatBloc({required this.generalChatUsecase})
       : super(GeneralChatLoadingState()) {
-    // on<GeneralChatSendEvent>((event, emit) async {
-    //   late List<ChatHistory> chatHistory = [];
-    //   // if there is chat
-    //   if (!event.isFirstChat) {
-    //     if (state is GeneralChatLoadedState) {
-    //       chatHistory =
-    //           (state as GeneralChatLoadedState).generalChatEntity.chatHistory;
-    //     }
-    //   }
-    //   emit(GeneralChatLoadingState(
-    //       generalChatEntity: GeneralChatEntity(chatHistory: chatHistory)));
-    //   // the message to the
-    // final chat = GeneralChatEntity(
-    //     chatHistory: chatHistory, userQuestion: event.message);
-    //   // send chat
-    //   final chatResponse =
-    //       await generalChatUsecase(GeneralChatParams(generalChatEntity: chat));
-    //   // apend the reponse to the current chat history
-    //   chatResponse.fold(
-    //     (failure) => emit(GeneralChatFailedState(failure: failure)),
-    //     (response) {
-    //       final previousChatHistory =
-    //           (state as GeneralChatLoadingState).generalChatEntity.chatHistory;
-    //       final updatedChatHistory = [
-    //         ...previousChatHistory,
-    //         ChatHistory(
-    //           human: event.message,
-    //           ai: response.messageResponse,
-    //         ),
-    //       ];
-    //       return emit(GeneralChatLoadedState(
-    //         generalChatEntity: GeneralChatEntity(
-    //           chatHistory: updatedChatHistory,
-    //         ),
-    //       ));
-    //     },
-    //   );
-    //   // emit
-    // });
     on<GeneralChatSendEvent>((event, emit) async {
       emit(GeneralChatLoadingState());
       final chat = GeneralChatEntity(

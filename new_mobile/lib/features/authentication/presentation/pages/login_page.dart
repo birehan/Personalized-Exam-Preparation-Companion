@@ -152,14 +152,6 @@ class _LoginPageState extends State<LoginPage> {
                         color: const Color(0xFF0072FF),
                       ),
                     ),
-                    // Text(
-                    //   'Hello again, you\'ve been missed!',
-                    //   style: GoogleFonts.poppins(
-                    //     fontSize: 13,
-                    //     fontWeight: FontWeight.w500,
-                    //     color: const Color(0xFFA3A2B1),
-                    //   ),
-                    // ),
                     const SizedBox(height: 32),
                     Text(
                       AppLocalizations.of(context)!.email_or_phone_number,
@@ -260,29 +252,11 @@ class _LoginPageState extends State<LoginPage> {
                       child: Row(
                         children: [
                           Container(),
-                          // CustomCheckBox(
-                          //   isChecked: _rememberMe,
-                          //   onTap: () {
-                          //     setState(() {
-                          //       _rememberMe = !_rememberMe;
-                          //     });
-                          //   },
-                          // ),
-                          // const SizedBox(width: 8),
-                          // Text(
-                          //   'Remember Me',
-                          //   style: GoogleFonts.poppins(
-                          //     fontSize: 14,
-                          //     fontWeight: FontWeight.w500,
-                          //     color: const Color(0xFF363636),
-                          //   ),
-                          // ),
                           const Spacer(),
 
                           InkWell(
                             onTap: () {
                               ForgotPasswordPageRoute().go(context);
-                              // context.push(AppRoutes.forgotPassword);
                             },
                             child: Text(
                               AppLocalizations.of(context)!.forgot_password,

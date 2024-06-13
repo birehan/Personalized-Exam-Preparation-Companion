@@ -41,32 +41,6 @@ class SubtopicChooseOption extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Expanded(
-              //   child: RichText(
-              //     text: TextSpan(
-              //       text: '$label ',
-              //       style: GoogleFonts.poppins(
-              //         fontSize: 14,
-              //         fontWeight: FontWeight.w700,
-              //         color: isSelected || isWrongAnswer
-              //             ? Colors.white
-              //             : const Color(0xFF333333),
-              //       ),
-              //       children: [
-              //         TextSpan(
-              //           text: choice,
-              //           style: GoogleFonts.poppins(
-              //             fontSize: 14,
-              //             fontWeight: FontWeight.w400,
-              //             color: isSelected || isWrongAnswer
-              //                 ? Colors.white
-              //                 : const Color(0xFF333333),
-              //           ),
-              //         )
-              //       ],
-              //     ),
-              //   ),
-              // ),
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [

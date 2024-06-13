@@ -32,12 +32,6 @@ class DailyQuizExplanationWidget extends StatelessWidget {
           ),
           child: Column(
             children: [
-              // Text(
-              //   question.explanation ?? '',
-              //   style: GoogleFonts.poppins(
-              //     fontSize: 15,
-              //   ),
-              // ),
               MarkdownWidget(
                 shrinkWrap: true,
                 data: question.explanation ?? '',
@@ -80,15 +74,6 @@ class DailyQuizExplanationWidget extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(height: 8),
-                              // Text(
-                              //   question.relatedTopic!,
-                              //   style: GoogleFonts.poppins(
-                              //     color: Colors.white,
-                              //     fontSize: 17,
-                              //     fontWeight: FontWeight.w500,
-                              //   ),
-                              //   textAlign: TextAlign.center,
-                              // ),
                               MarkdownWidget(
                                 shrinkWrap: true,
                                 data: question.relatedTopic!,
@@ -194,7 +179,6 @@ class DailyQuizExplanationWidget extends StatelessWidget {
                                   border: Border.all(
                                     color: Colors.white.withOpacity(.15),
                                   ),
-                                  // color: Colors.white.withOpacity(.15),
                                 ),
                               ),
                             ),

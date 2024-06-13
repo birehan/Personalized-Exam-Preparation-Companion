@@ -33,14 +33,6 @@ class UserScoreIndicatorWidget extends StatelessWidget {
               ),
             ),
           ),
-          // child: Text(
-          //   '${progress.toInt()}%',
-          //   style: GoogleFonts.poppins(
-          //     fontSize: 16,
-          //     fontWeight: FontWeight.w600,
-          //     color: const Color(0xFF3A3A3A),
-          //   ),
-          // ),
         ),
       ],
     );

@@ -58,32 +58,6 @@ class EmptyListWidget extends StatelessWidget {
                 },
               ),
 
-        // InkWell(
-        //     onTap: () {
-        //       reloadCallBack!();
-        //     },
-        //     child: Container(
-        //       padding:
-        //           const EdgeInsets.symmetric(vertical: 4, horizontal: 6),
-        //       decoration: BoxDecoration(
-        //         color: const Color(0xFF0072FF),
-        //         borderRadius: BorderRadius.circular(4),
-        //       ),
-        //       child: Row(
-        //         mainAxisSize: MainAxisSize.min,
-        //         children: [
-        //           const Icon(Icons.refresh, color: Colors.white, size: 18),
-        //           // const SizedBox(width: 6),
-        //           // Text(
-        //           //   'Refresh',
-        //           //   style: GoogleFonts.poppins(
-        //           //     color: Colors.white,
-        //           //   ),
-        //           // ),
-        //         ],
-        //       ),
-        //     ),
-        //   ),
         const SizedBox(height: 8),
         Text(
           message,

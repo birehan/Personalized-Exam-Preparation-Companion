@@ -150,7 +150,6 @@ class DailyQuestWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 2.w),
-              // Text('$completedTask of $totalTask $taskDesciption'),
               Container(
                 width: 40.w,
                 height: 1.5.h,
@@ -205,7 +204,6 @@ class DailyQuestWidget extends StatelessWidget {
                 ],
               ),
               SizedBox(width: 3.w),
-              // Text('${totalTask * 10}xp')
               Container(
                 width: 10.w,
                 height: 1.5.h,

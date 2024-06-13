@@ -4,8 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:prep_genie/core/core.dart';
 import 'package:prep_genie/features/course/presentation/bloc/changeVideoStatus/change_video_status_bloc.dart';
-// import 'package:youtube_player_iframe/youtube_player_iframe.dart';
-// import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
 
 import '../../../features.dart';
 
@@ -41,16 +40,6 @@ class _SubChapterVideoCardState extends State<SubChapterVideoCard> {
   Widget build(BuildContext context) {
     return BlocListener<ChangeVideoStatusBloc, ChangeVideoStatusState>(
       listener: (context, state) {
-        // if (state is ChangeVideoStatusFailed) {
-        //   //revert if not successful
-        //   context.read<FetchCourseVideosBloc>().add(ChangeVideoStatusLocally(
-        //       chapterIndex: widget.chapterIndex,
-        //       subchapterindex: widget.subChapterIndex));
-        //   // setState(() {
-        //   //   isSelected = !isSelected;
-        //   // });
-        // }
-        //! handle if not successfull. The issue is it is updating all cards if not
       },
       child: InkWell(
         onTap: () {
@@ -110,9 +99,6 @@ class _SubChapterVideoCardState extends State<SubChapterVideoCard> {
                   Checkbox(
                     value: widget.subchapterVideo.isCompleted,
                     onChanged: (value) {
-                      // setState(() {
-                      //   isSelected = value!;
-                      // });
                       context.read<FetchCourseVideosBloc>().add(
                           ChangeVideoStatusLocally(
                               chapterIndex: widget.chapterIndex,
