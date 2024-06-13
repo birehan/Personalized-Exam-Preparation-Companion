@@ -190,7 +190,7 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                             SizedBox(height: 2.h),
                             OverviewWidget(
                               chapterNum: user.chaptersCompleted,
-                              points: user.points.toDouble(),
+                              // points: user.points.toDouble(),
                               questionsNum: user.questionsSolved,
                               topicsNum: user.topicsCompleted,
                             ),
@@ -539,11 +539,18 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                   SizedBox(width: 2.w),
                   const Expanded(
                     child: UpdatedSingleRecordCard(
-                        imageColor: Colors.purple,
-                        imagePath: 'assets/images/Star.png',
+                        imageColor: Colors.green,
+                        imagePath: 'assets/images/askQuestion.png',
                         number: 12,
-                        text: 'Points'),
+                        text: 'Questions Solved'),
                   ),
+                  // const Expanded(
+                  //   child: UpdatedSingleRecordCard(
+                  //       imageColor: Colors.purple,
+                  //       imagePath: 'assets/images/Star.png',
+                  //       number: 12,
+                  //       text: 'Points'),
+                  // ),
                 ],
               ),
               SizedBox(height: 3.h),
@@ -558,13 +565,13 @@ class _UpdatedProfilePageState extends State<UpdatedProfilePage> {
                         text: 'Topics Completed'),
                   ),
                   SizedBox(width: 2.w),
-                  const Expanded(
-                    child: UpdatedSingleRecordCard(
-                        imageColor: Colors.green,
-                        imagePath: 'assets/images/askQuestion.png',
-                        number: 12,
-                        text: 'Questions Solved'),
-                  ),
+                  // const Expanded(
+                  //   child: UpdatedSingleRecordCard(
+                  //       imageColor: Colors.green,
+                  //       imagePath: 'assets/images/askQuestion.png',
+                  //       number: 12,
+                  //       text: 'Questions Solved'),
+                  // ),
                 ],
               ),
             ],

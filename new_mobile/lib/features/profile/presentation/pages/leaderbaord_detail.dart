@@ -127,7 +127,7 @@ class _LeaderboardDetailPageState extends State<LeaderboardDetailPage> {
                         SizedBox(height: 2.h),
                         OverviewWidget(
                           chapterNum: user.chaptersCompleted,
-                          points: user.points.toDouble(),
+                          // points: user.points.toDouble(),
                           questionsNum: user.questionsSolved,
                           topicsNum: user.topicsCompleted,
                         ),
