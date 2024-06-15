@@ -169,10 +169,10 @@ class _DynamicHomePageState extends State<DynamicHomePage> {
                     //   ),
                     // ),
                     SizedBox(height: 2.5.h),
-                    SizedBox(
-                      height: 14.h,
-                      child: const CarouselSliderForUpcommingEvents(),
-                    ),
+                    // SizedBox(
+                    //   height: 14.h,
+                    //   child: const CarouselSliderForUpcommingEvents(),
+                    // ),
                     SizedBox(height: 2.5.h),
                     IntrinsicHeight(
                       child: Row(

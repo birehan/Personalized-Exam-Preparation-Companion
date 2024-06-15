@@ -180,7 +180,7 @@ class _CourseDetailPageNewState extends State<CourseDetailPageNew>
                     lastStartedSubChapterId: widget.lastStartedSubChapterId,
                   ),
                   CourseVideoTab(courseId: widget.courseId),
-                  MyQuizTab(courseId: course.id),
+                  // MyQuizTab(courseId: course.id),
                 ],
               ),
               floatingActionButton: _tabIndex == 2

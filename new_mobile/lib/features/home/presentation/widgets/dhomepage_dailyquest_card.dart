@@ -105,46 +105,46 @@ class DailyQuestCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
-                      right: 0,
-                      top: 0,
-                      bottom: 0,
-                      child: Container(
-                        height: double.infinity,
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.all(2),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Container(
-                          padding: const EdgeInsets.all(7),
-                          decoration: BoxDecoration(
-                              color: completedTask == totalTask
-                                  ? const Color(0xFF0072FF)
-                                  : const Color.fromRGBO(24, 120, 106, 0.1),
-                              shape: BoxShape.circle),
-                          child: Icon(
-                            Icons.card_giftcard_outlined,
-                            color: completedTask == totalTask
-                                ? Colors.white
-                                : const Color(0xFF0072FF),
-                            size: 18,
-                          ),
-                        ),
-                      ),
-                    )
+                    // Positioned(
+                    //   right: 0,
+                    //   top: 0,
+                    //   bottom: 0,
+                    //   child: Container(
+                    //     height: double.infinity,
+                    //     alignment: Alignment.center,
+                    //     padding: const EdgeInsets.all(2),
+                    //     decoration: const BoxDecoration(
+                    //       color: Colors.white,
+                    //       shape: BoxShape.circle,
+                    //     ),
+                    //     child: Container(
+                    //       padding: const EdgeInsets.all(7),
+                    //       decoration: BoxDecoration(
+                    //           color: completedTask == totalTask
+                    //               ? const Color(0xFF0072FF)
+                    //               : const Color.fromRGBO(24, 120, 106, 0.1),
+                    //           shape: BoxShape.circle),
+                    //       child: Icon(
+                    //         Icons.card_giftcard_outlined,
+                    //         color: completedTask == totalTask
+                    //             ? Colors.white
+                    //             : const Color(0xFF0072FF),
+                    //         size: 18,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // )
                   ],
                 ),
               ),
               SizedBox(width: 1.w),
-              Text(
-                '${totalTask * 10}xp',
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13,
-                ),
-              )
+              // Text(
+              //   '${totalTask * 10}xp',
+              //   style: GoogleFonts.poppins(
+              //     fontWeight: FontWeight.w500,
+              //     fontSize: 13,
+              //   ),
+              // )
             ],
           ),
         ],
