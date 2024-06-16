@@ -1,0 +1,45 @@
+{
+    "data": {
+        "mock": {
+            "_id": "6538db5f48753d97e4ea2459",
+            "name": "Civics Entrance Exam",
+            "userId": "6538f952957a801dfb5e9c52"
+        },
+        "mockQuestions": [
+            {
+                "question": {
+                    "_id": "6538b7b48a99822eeb9e9521",
+                    "description": "Among the agencies of justice, the ones where elders play a vital role are",
+                    "choiceA": "supreme courts",
+                    "choiceB": "traditional courts",
+                    "choiceC": "conventional courts",
+                    "choiceD": "international courts",
+                    "answer": "choice_B",
+                    "explanation": "The correct answer is choice B, traditional courts. Traditional courts often involve elders who play a vital role in the administration of justice within their communities. Supreme courts, conventional courts, and international courts do not typically have elders playing a significant role.",
+                    "difficulty": 6,
+                    "isForQuiz": false,
+                    "chapterId": "6530de97128c1e08e946df3c",
+                    "courseId": "6530d7be128c1e08e946deef",
+                    "subChapterId": "6530e4b2128c1e08e946e082",
+                    "createdAt": "2023-10-25T06:35:20.000Z",
+                    "updatedAt": "2024-02-14T15:00:05.732Z",
+                    "isForMock": true,
+                    "departmentId": "64c24df185876fbb3f8dd6c7",
+                    "relatedTopic": "Grade 12 Civics Justice Justice and the Judiciary",
+                    "adminApproval": true,
+                    "isLiked": false
+                },
+                "userAnswer": {
+                    "userId": "6538f952957a801dfb5e9c52",
+                    "questionId": "6538b7b48a99822eeb9e9521",
+                    "userAnswer": "choice_E"
+                }
+            }
+        ]
+    },
+    "success": true,
+    "message": "Mock retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

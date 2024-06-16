@@ -1,0 +1,36 @@
+{
+    "success": true,
+    "message": "Leaderboard fetched successfully",
+    "data": {
+        "leaderboard": [
+            {
+                "_id": "6538d9e548753d97e4ea23ce",
+                "firstName": "Grbremariam",
+                "lastName": "Abdulrezak",
+                "avatar": "https://res.cloudinary.com/djrfgfo08/image/upload/v1706270951/SkillBridge/ntgfvaz4oh5yxsqxukhl.jpg",
+                "points": 121.43518518518519,
+                "maxStreak": 6,
+                "contestAttended": 1
+            },
+            {
+                "_id": "653f7ab56573ad474f150261",
+                "firstName": "Daniel",
+                "lastName": "Tefera",
+                "avatar": "https://res.cloudinary.com/djrfgfo08/image/upload/v1706123138/SkillBridge/ms2zgj7ns1ewseblwdjs.jpg",
+                "points": 59,
+                "maxStreak": 5,
+                "contestAttended": 1
+            }
+        ],
+        "userRank": {
+            "_id": "653f7ab56573ad474f150261",
+            "rank": 1,
+            "avatar": "https://res.cloudinary.com/djrfgfo08/image/upload/v1706123138/SkillBridge/ms2zgj7ns1ewseblwdjs.jpg",
+            "firstName": "Daniel",
+            "lastName": "Tefera",
+            "points": 59,
+            "maxStreak": 5,
+            "contestAttended": 1
+        }
+    }
+}

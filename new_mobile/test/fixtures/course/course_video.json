@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "chapter": {
+                "_id": "65a0f6a3938f09b54fca2b1c",
+                "name": "Application of physics in other fields",
+                "description": "NONE",
+                "summary": "NONE",
+                "order": 1,
+                "courseId": "65a0f2a1938f09b54fca2b11",
+                "noOfSubChapters": 5
+            },
+            "videoContents": [
+                {
+                    "_id": "65e196cad8f0965397904bba",
+                    "link": "https://www.youtube.com/watch?v=V15jkBeg9B8",
+                    "title": "Grade 12 Physics Unit 1: Unit Introduction  Part 1",
+                    "thumbnail": "https://i.ytimg.com/vi/V15jkBeg9B8/default.jpg",
+                    "duration": "1:00:07",
+                    "order": 1,
+                    "chapterId": "65a0f6a3938f09b54fca2b1c",
+                    "courseId": "65a0f2a1938f09b54fca2b11"
+                }
+            ]
+        }
+    ],
+    "success": true,
+    "message": "Video contents retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

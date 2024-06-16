@@ -1,0 +1,45 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+const  DB_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/skill_bridge"
+const SERVER_URL = process.env.SERVER_URL || 'http://localhost:'
+const PORT = process.env.PORT || 3000
+const EMAIL = process.env.EMAIL 
+const PASSWORD = process.env.PASSWORD 
+const JWT_SECRET = process.env.JWT_SECRET || 'tempSeceret' 
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+const AUTH_TOKEN_EXP_DAY = Number(process.env.AUTH_TOKEN_EXP_DAY) || 30
+const SOCIAL_SCIENCE_DEPARTMENT_ID = process.env.SOCIAL_SCIENCE_DEPARTMENT_ID;
+const NATURAL_SCIENCE_DEPARTMENT_ID = process.env.NATURAL_SCIENCE_DEPARTMENT_ID;
+const GRADE_9_AND_10_DEPARTMENT_ID = process.env.GRADE_9_AND_10_DEPARTMENT_ID;
+const REFERRAL_INCENTIVE= process.env.REFERRAL_INCENTIVE
+const COIN_ENCRIPTION_KEY= process.env.COIN_ENCRIPTION_KEY
+const CONTEST_COIN= process.env.CONTEST_COIN
+const OAUTH_CLIENT_ID = process.env.OAUTH_CLIENT_ID;
+const OAUTH_CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET;
+const OAUTH_REFRESH_TOKEN = process.env.OAUTH_REFRESH_TOKEN;
+const OAUTH_ACCESS_TOKEN = process.env.OAUTH_ACCESS_TOKEN;
+
+const configs = {
+  DB_URI,
+  SERVER_URL,
+  PORT,
+  EMAIL,
+  PASSWORD,
+  JWT_SECRET,
+  OPENAI_API_KEY,
+  AUTH_TOKEN_EXP_DAY,
+  SOCIAL_SCIENCE_DEPARTMENT_ID,
+  NATURAL_SCIENCE_DEPARTMENT_ID,
+  GRADE_9_AND_10_DEPARTMENT_ID,
+  REFERRAL_INCENTIVE,
+  COIN_ENCRIPTION_KEY,
+  CONTEST_COIN,
+  OAUTH_CLIENT_ID,
+  OAUTH_CLIENT_SECRET,
+  OAUTH_REFRESH_TOKEN,
+  OAUTH_ACCESS_TOKEN,
+}
+
+export default configs
+

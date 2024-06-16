@@ -1,0 +1,25 @@
+{
+    "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJlbWFpbCI6InRlc2ZheWVmb3Jkb3dubG9hZDExMjJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiRGFuaWVsIiwibGFzdE5hbWUiOiJUZWZlcmEiLCJwYXNzd29yZCI6IiQyYiQxMCRneEdzMUtxRzh2Mzh1czdaR1FVR2RlNUlkenBwb3IyRWx0M2dFc1pSRGZWNFRMQTEyQUNlYSIsImRlcGFydG1lbnQiOm51bGwsImF2YXRhciI6bnVsbCwicmVzZXRUb2tlbiI6IiIsImhvd1ByZXBhcmVkIjoiIiwicHJlZmVycmVkTWV0aG9kIjoiIiwic3R1ZHlUaW1lUGVyRGF5IjoiIiwibW90aXZhdGlvbiI6IiIsImNoYWxsZW5naW5nU3ViamVjdHMiOltdLCJyZW1pbmRlciI6IiIsIl9pZCI6IjY0ZWU2MjkzOThlMjMyNTZhNWVjZTc4MSIsImNyZWF0ZWRBdCI6IjIwMjMtMDgtMjlUMjE6MjY6NDMuOTY0WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDgtMjlUMjE6MjY6NDMuOTY0WiIsIl9fdiI6MH0sImlhdCI6MTY5MzM0NDQwNCwiZXhwIjoxNjk1OTM2NDA0fQ.32P0hhoJQ7o8eDGcwoO8o6Wny1nXxVubDOj2UkdL_yQ",
+        "curUser": {
+            "_id": "64ee629398e23256a5ece781",
+            "email_phone": "test@gmail.com",
+            "firstName": "test",
+            "lastName": "test",
+            "department": null,
+            "avatar": null,
+            "howPrepared": "",
+            "preferredMethod": "",
+            "studyTimePerDay": "",
+            "motivation": "",
+            "challengingSubjects": [],
+            "reminder": ""
+        },
+        "examType": "University Entrance Exam"
+    },
+    "success": true,
+    "message": "User registered in successfully",
+    "errors": [
+        null
+    ]
+}

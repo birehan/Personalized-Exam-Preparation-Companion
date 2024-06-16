@@ -1,0 +1,30 @@
+{
+    "data": {
+        "userCourses": [
+            {
+                "_id": "65c63c5dcaff47b59f698dc4",
+                "userId": "6538f952957a801dfb5e9c52",
+                "course": {
+                    "_id": "65a0f2a1938f09b54fca2b11",
+                    "name": "Physics",
+                    "grade": 12,
+                    "description": "This course explores Grade 12 Physics , offering concise subtopic summaries for each chapter. You'll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.",
+                    "ECTS": 10,
+                    "referenceBook": "Grade 12 Physics",
+                    "noOfChapters": 8,
+                    "departmentId": "64c24df185876fbb3f8dd6c7",
+                    "createdAt": "2024-01-12T08:03:26.000Z",
+                    "updatedAt": "2024-01-12T08:03:26.000Z",
+                    "image": null,
+                    "curriculum": true
+                },
+                "completedChapters": 0
+            }
+        ]
+    },
+    "success": true,
+    "message": "UserCourses retrieved successfully!",
+    "errors": [
+        null
+    ]
+}

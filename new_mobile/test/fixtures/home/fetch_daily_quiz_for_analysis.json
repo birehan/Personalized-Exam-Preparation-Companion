@@ -1,0 +1,40 @@
+{
+    "data": {
+        "dailyQuiz": {
+            "_id": "660b658cde5f27e4c2fdb15a",
+            "description": "Complete daily quiz to earn points!",
+            "userId": "6538f952957a801dfb5e9c52",
+            "userScore": 0
+        },
+        "quizQuestions": [
+            {
+                "question": {
+                    "_id": "65bb4a18f7f7405c3317e6d4",
+                    "description": "Choose the alternative that is most appropriate to complete the dialogue.\n\nYou: Are you married, Zahara?\nZahara:________________",
+                    "choiceA": "Before three years",
+                    "choiceB": "My husband's name is Jemal",
+                    "choiceC": "I'm 30",
+                    "choiceD": "No, I'm not",
+                    "year": "2006",
+                    "answer": "choice_D",
+                    "explanation": "The correct answer is choice D, 'No, I'm not'. This is an appropriate response to the question about marital status as it indicates being unmarried. Choice A, 'Before three years', is unrelated to the question and provides a time frame. Choice B, 'My husband's name is Jemal', is unrelated to the question and provides information about a spouse. Choice C, 'I'm 30', is unrelated to the question and provides information about age.",
+                    "subChapterId": "635981f6e40f61599e000273",
+                    "chapterId": "635981f6e40f61599e000273",
+                    "courseId": "635981f6e40f61599e000273",
+                    "relatedTopic": "No Related Topic For Now",
+                    "subject": "English",
+                    "isLiked": false
+                },
+                "userAnswer": {
+                    "userId": "6538f952957a801dfb5e9c52",
+                    "questionId": "65bb4a18f7f7405c3317e6d4",
+                    "userAnswer": "choice_E"
+                }
+            }       ]
+    },
+    "success": true,
+    "message": "Quiz retrieved successfully!",
+    "errors": [
+        null
+    ]
+}
