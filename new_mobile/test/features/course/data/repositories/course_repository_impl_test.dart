@@ -82,8 +82,9 @@ void main() {
         completedSubChapters: 2,
         subchapters: tSubChapters)
   ];
-  const subChapterVideos = [
+  final subChapterVideos = [
     SubchapterVideoModel(
+        isCompleted: true,
         id: 'id',
         courseId: "courseId",
         chapterId: 'chapterId',
@@ -94,7 +95,7 @@ void main() {
         duration: "30 min",
         thumbnailUrl: "thumbnailUrl")
   ];
-  const chapterVideos = [
+  final chapterVideos = [
     ChapterVideoModel(
         id: "id",
         description: "description",
@@ -396,7 +397,7 @@ void main() {
         final result = await repositoryImpl.fetchCourseVideos(tId);
         // assert
         verify(remoteDataSource.fetchCourseVideos(tId));
-        expect(result, equals(const Right(chapterVideos)));
+        expect(result, equals(Right(chapterVideos)));
       });
     });
 

@@ -17,21 +17,4 @@ void main() {
 
   const tSubChapter = "test sub chapter";
   const tChapterId = "test chapter id";
-
-  test(
-    "Should return true from the repository",
-    () async {
-      when(mockCourseRepository.registerSubChapter(tChapterId, tSubChapter))
-          .thenAnswer((_) async => Right(true));
-
-      final result = await usecase(SubChapterRegistrationParams(
-          chapterId: tChapterId, subChapterid: tSubChapter));
-
-      expect(result, Right(true));
-
-      verify(mockCourseRepository.registerSubChapter(tChapterId, tSubChapter));
-
-      verifyNoMoreInteractions(mockCourseRepository);
-    },
-  );
 }

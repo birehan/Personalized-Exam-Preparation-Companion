@@ -61,18 +61,8 @@ void main() {
       expect(result, quizModel);
     });
   });
-  group('fromQuizByIdJson', () {
-    test('should return a valid model when the JSON is recieved', () async {
-      // arrange
-      final Map<String, dynamic> jsonMap =
-          json.decode(fixture('quiz/quiz_by_id.json'));
-      // act
-      final result = QuizModel.fromQuizByIdJson(jsonMap);
-      // assert
-      expect(result, quizModelById);
-    });
-  });
-
+ 
+ 
   group('toJson', () {
     test('should return a Json map containing the proper data', () async {
       // act

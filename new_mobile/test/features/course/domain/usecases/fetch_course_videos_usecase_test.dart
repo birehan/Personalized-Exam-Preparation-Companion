@@ -17,8 +17,9 @@ void main() {
   });
 
   const courseId = "id";
-  const subChapterVideos = [
+  final subChapterVideos = [
     SubchapterVideo(
+        isCompleted: true,
         id: 'id',
         courseId: "courseId",
         chapterId: 'chapterId',
@@ -29,7 +30,7 @@ void main() {
         duration: "30 min",
         thumbnailUrl: "test thumbnail")
   ];
-  const chapterVideos = [
+  final chapterVideos = [
     ChapterVideo(
         id: "id",
         description: "description",
@@ -45,12 +46,12 @@ void main() {
     "Should get list of chapter videos from repository",
     () async {
       when(mockCourseRepository.fetchCourseVideos(courseId))
-          .thenAnswer((_) async => const Right(chapterVideos));
+          .thenAnswer((_) async => Right(chapterVideos));
 
       final result =
           await usecase.call(const FetchCourseVideoParams(courseId: courseId));
 
-      expect(result, const Right(chapterVideos));
+      expect(result, Right(chapterVideos));
 
       verify(mockCourseRepository.fetchCourseVideos(courseId));
 

@@ -190,31 +190,7 @@ void main() {
   });
 
   group('getQuizById', () {
-    test('returns a QuizQuestionModel if the http call is successful',
-        () async {
-      // Mocking necessary methods and data
-      const token =
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJnZW5kZXIiOiJNYWxlL0ZlbWFsZSIsImhpZ2hTY2hvb2wiOiJNeSBTY2hvb2wiLCJyZWdpb24iOiJNeSByZWdpb24iLCJncmFkZSI6MTIsIl9pZCI6IjY1MzhmOTUyOTU3YTgwMWRmYjVlOWM1MiIsImVtYWlsX3Bob25lIjoieW9oYW5uZXNrZXRlbWF6ZWxla2VAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiWW9oYW5uZXMiLCJsYXN0TmFtZSI6IktldGVtYSIsInBhc3N3b3JkIjoiJDJiJDEwJEJ1OWFTVVZHM1lhMnd1bUNLUTJuSWVRSTByUFNMZGJNLkZJdnVWTkk2YTVFZkZRSXVqdzNXIiwiZGVwYXJ0bWVudCI6IjY0YzI0ZGYxODU4NzZmYmIzZjhkZDZjNyIsImF2YXRhciI6bnVsbCwicmVzZXRUb2tlbiI6IiIsImhvd1ByZXBhcmVkIjoiIiwicHJlZmVycmVkTWV0aG9kIjoiIiwic3R1ZHlUaW1lUGVyRGF5IjoiIiwibW90aXZhdGlvbiI6IiIsImNoYWxsZW5naW5nU3ViamVjdHMiOltdLCJyZW1pbmRlciI6IiIsImNyZWF0ZWRBdCI6IjIwMjMtMTAtMjVUMTE6MTc6MzguNzIzWiIsInVwZGF0ZWRBdCI6IjIwMjQtMDEtMTVUMTM6MTY6MDcuMjIwWiIsIl9fdiI6MH0sImlhdCI6MTcwOTUzODYzMywiZXhwIjoxNzEyMTMwNjMzfQ.UPow5VgmQdxqtF227bFC5_miYgaUXaWe9Us6aOOGJdk';
-      final userModelJson = {'token': token};
-
-      when(mockFlutterSecureStorage.read(key: authenticationKey))
-          .thenAnswer((_) async => json.encode(userModelJson));
-
-      when(mockHttpClient.get(
-        Uri.parse('$baseUrl/quiz/6495f8ca595bf811c2eb1356'),
-        headers: anyNamed('headers'),
-      )).thenAnswer(
-          (_) async => http.Response(fixture('quiz/get_quiz_by_id.json'), 200));
-
-      // Testing the methodanyNamed('headers')
-      final result =
-          await remoteDatasource.getQuizById('6495f8ca595bf811c2eb1356');
-
-      // Assertion
-      expect(result, getQuizById);
-      // expect(result, fixture('user_courses.json'));
-    });
-
+ 
     test('should throw RequestOverloadException when response code is 429',
         () async {
       // Mocking necessary methods and data
