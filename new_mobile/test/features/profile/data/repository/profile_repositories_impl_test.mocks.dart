@@ -6,13 +6,13 @@
 import 'dart:async' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
-<<<<<<< HEAD
-import 'package:prep_genie/core/core.dart' as _i9;
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/core/network/network.dart';
+import 'package:prep_genie/core/network/network.dart';
+import 'package:prep_genie/core/network/network.dart';
 import 'package:prep_genie/core/utils/hive_boxes.dart' as _i10;
-=======
-import 'package:prep_genie/core/network/network.dart' as _i10;
-import 'package:prep_genie/core/utils/hive_boxes.dart' as _i11;
->>>>>>> routes added for friends related pages
+import 'package:prep_genie/core/utils/hive_boxes.dart';
 import 'package:prep_genie/features/features.dart' as _i2;
 import 'package:prep_genie/features/profile/data/models/all_barchart_categories_model.dart'
     as _i5;
@@ -377,7 +377,7 @@ class MockProfileRemoteDataSource extends _i1.Mock
 /// A class which mocks [NetworkInfo].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNetworkInfo extends _i1.Mock implements _i10.NetworkInfo {
+class MockNetworkInfo extends _i1.Mock implements NetworkInfo {
   @override
   _i6.Future<bool> get isConnected => (super.noSuchMethod(
         Invocation.getter(#isConnected),
@@ -478,7 +478,7 @@ class MockProfileLocalDataSource extends _i1.Mock
 /// A class which mocks [HiveBoxes].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockHiveBoxes extends _i1.Mock implements _i11.HiveBoxes {
+class MockHiveBoxes extends _i1.Mock implements HiveBoxes {
   @override
   _i6.Future<void> initializeHive() => (super.noSuchMethod(
         Invocation.method(

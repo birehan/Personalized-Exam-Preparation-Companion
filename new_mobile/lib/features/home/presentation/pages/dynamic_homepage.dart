@@ -48,9 +48,9 @@ class _DynamicHomePageState extends State<DynamicHomePage> {
     context.read<FetchDailyQuizBloc>().add(const FetchDailyQuizEvent());
     context.read<GetUserBloc>().add(GetUserCredentialEvent());
     context.read<FetchDailyQuestBloc>().add(const FetchDailyQuestEvent());
-    context
-        .read<FetchUpcomingUserContestBloc>()
-        .add(FetchUpcomingContestEvent());
+    // context
+    //     .read<FetchUpcomingUserContestBloc>()
+    //     .add(FetchUpcomingContestEvent());
   }
 
   @override
@@ -169,10 +169,10 @@ class _DynamicHomePageState extends State<DynamicHomePage> {
                     //   ),
                     // ),
                     SizedBox(height: 2.5.h),
-                    SizedBox(
-                      height: 14.h,
-                      child: const CarouselSliderForUpcommingEvents(),
-                    ),
+                    // SizedBox(
+                    //   height: 14.h,
+                    //   child: const CarouselSliderForUpcommingEvents(),
+                    // ),
                     SizedBox(height: 2.5.h),
                     IntrinsicHeight(
                       child: Row(

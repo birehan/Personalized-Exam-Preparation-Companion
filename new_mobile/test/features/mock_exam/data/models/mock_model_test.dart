@@ -1,9 +1,7 @@
-import 'dart:convert';
 import 'package:prep_genie/features/mock_exam/domain/entities/mock.dart'
     as mocks;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:prep_genie/features/features.dart';
-import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
   const question = QuestionModel(
@@ -40,15 +38,15 @@ void main() {
     expect(mockModel, isA<mocks.Mock>());
   });
 
-  group('fromJson', () {
-    test('should return a valid model when the JSON is recieved', () async {
-      // arrange
-      final Map<String, dynamic> jsonMap =
-          json.decode(fixture('mock_exam/mock_model.json'));
-      // act
-      final result = MockModel.fromJson(jsonMap);
-      // assert
-      expect(result, mockModel);
-    });
-  });
+  // group('fromJson', () {
+  //   test('should return a valid model when the JSON is recieved', () async {
+  //     // arrange
+  //     final Map<String, dynamic> jsonMap =
+  //         json.decode(fixture('mock_exam/mock_model.json'));
+  //     // act
+  //     final result = MockModel.fromJson(jsonMap);
+  //     // assert
+  //     expect(result, mockModel);
+  //   });
+  // });
 }

@@ -1,8 +1,10 @@
+
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:prep_genie/core/core.dart';
+import 'package:prep_genie/features/authentication/authentication.dart';
 import 'package:prep_genie/features/features.dart';
 
 import 'authentication_bloc_test.mocks.dart';
@@ -159,95 +161,6 @@ void main() {
     });
   });
 
-  group('_onLogin', () {
-    test('should get data from login usecase and return userCredential',
-        () async {
-      // arrange
-      when(loginUsecase(const LoginParams(
-              emailOrPhoneNumber: validEmail,
-              password: validPassword,
-              rememberMe: true)))
-          .thenAnswer((_) async => const Right(userCredential));
-      // act
-      bloc.add(const LoginEvent(
-          emailOrPhoneNumber: validEmail,
-          rememberMe: true,
-          password: validPassword));
-
-      await untilCalled(loginUsecase(const LoginParams(
-          emailOrPhoneNumber: validEmail,
-          password: validPassword,
-          rememberMe: true)));
-      // assert
-      verify(loginUsecase(const LoginParams(
-          emailOrPhoneNumber: validEmail,
-          password: validPassword,
-          rememberMe: true)));
-    });
-
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(loginUsecase(const LoginParams(
-              emailOrPhoneNumber: validEmail,
-              password: validPassword,
-              rememberMe: true)))
-          .thenAnswer((_) async => const Right(userCredential));
-      // assert later
-      final expected = [
-        const LoggedInState(status: AuthStatus.loading),
-        const LoggedInState(
-            status: AuthStatus.loaded, userCredential: userCredential)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const LoginEvent(
-          emailOrPhoneNumber: validEmail,
-          rememberMe: true,
-          password: validPassword));
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(loginUsecase(const LoginParams(
-              emailOrPhoneNumber: validEmail,
-              password: validPassword,
-              rememberMe: true)))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const LoggedInState(status: AuthStatus.loading),
-        const LoggedInState(
-            status: AuthStatus.error, errorMessage: "Server failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const LoginEvent(
-          emailOrPhoneNumber: validEmail,
-          rememberMe: true,
-          password: validPassword));
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(loginUsecase(const LoginParams(
-              emailOrPhoneNumber: validEmail,
-              password: validPassword,
-              rememberMe: true)))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const LoggedInState(status: AuthStatus.loading),
-        const LoggedInState(
-            status: AuthStatus.error, errorMessage: "Cache failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const LoginEvent(
-          emailOrPhoneNumber: validEmail,
-          rememberMe: true,
-          password: validPassword));
-    });
-  });
 
   group('_onForgetPassword', () {
     test('should get data from forget password usecase ', () async {
@@ -317,513 +230,429 @@ void main() {
     });
   });
 
-  group('_onChangePassword', () {
-    test('should get data from change password is called ', () async {
-      // arrange
-      when(changePasswordUsecase(const ChangePasswordParams(
-              confirmPassword: validPassword,
-              emailOrPhoneNumber: validEmail,
-              newPassword: validPassword,
-              otp: validOtp)))
-          .thenAnswer((_) async => const Right(unit));
-      // act
-      bloc.add(const ChangePasswordEvent(
-          confirmPassword: validPassword,
-          emailOrPhoneNumber: validEmail,
-          newPassword: validPassword,
-          otp: validOtp));
 
-      await untilCalled(changePasswordUsecase(const ChangePasswordParams(
-          confirmPassword: validPassword,
-          emailOrPhoneNumber: validEmail,
-          newPassword: validPassword,
-          otp: validOtp)));
-      // assert
-      verify(changePasswordUsecase(const ChangePasswordParams(
-          confirmPassword: validPassword,
-          emailOrPhoneNumber: validEmail,
-          newPassword: validPassword,
-          otp: validOtp)));
-    });
+    group('_onSendOtpVerification', () {
+      test('should get data from on send otp verification ', () async {
+        // arrange
+        when(sendOtpVerificationUsecase(const SendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail, isForForgotPassword: true)))
+            .thenAnswer((_) async => const Right(unit));
+        // act
+        bloc.add(const SendOtpVerficationEvent(
+            emailOrPhoneNumber: validEmail, isForForgotPassword: true));
 
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(changePasswordUsecase(const ChangePasswordParams(
-              confirmPassword: validPassword,
-              emailOrPhoneNumber: validEmail,
-              newPassword: validPassword,
-              otp: validOtp)))
-          .thenAnswer((_) async => const Right(unit));
-      // assert later
-      final expected = [
-        const ChangePasswordState(status: AuthStatus.loading),
-        const ChangePasswordState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const ChangePasswordEvent(
-          confirmPassword: validPassword,
-          emailOrPhoneNumber: validEmail,
-          newPassword: validPassword,
-          otp: validOtp));
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(changePasswordUsecase(const ChangePasswordParams(
-              confirmPassword: validPassword,
-              emailOrPhoneNumber: validEmail,
-              newPassword: validPassword,
-              otp: validOtp)))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const ChangePasswordState(status: AuthStatus.loading),
-        const ChangePasswordState(
-            status: AuthStatus.error, errorMessage: "Server failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const ChangePasswordEvent(
-          confirmPassword: validPassword,
-          emailOrPhoneNumber: validEmail,
-          newPassword: validPassword,
-          otp: validOtp));
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(changePasswordUsecase(const ChangePasswordParams(
-              confirmPassword: validPassword,
-              emailOrPhoneNumber: validEmail,
-              newPassword: validPassword,
-              otp: validOtp)))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const ChangePasswordState(status: AuthStatus.loading),
-        const ChangePasswordState(
-            status: AuthStatus.error, errorMessage: "Cache failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const ChangePasswordEvent(
-          confirmPassword: validPassword,
-          emailOrPhoneNumber: validEmail,
-          newPassword: validPassword,
-          otp: validOtp));
-    });
-  });
+        await untilCalled(sendOtpVerificationUsecase(
+            const SendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail, isForForgotPassword: true)));
+        // assert
+        verify(sendOtpVerificationUsecase(const SendOtpVerificationParams(
+            emailOrPhoneNumber: validEmail, isForForgotPassword: true)));
+      });
 
-  group('_onSendOtpVerification', () {
-    test('should get data from on send otp verification ', () async {
-      // arrange
-      when(sendOtpVerificationUsecase(
-              const SendOtpVerificationParams(emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => const Right(unit));
-      // act
-      bloc.add(const SendOtpVerficationEvent(emailOrPhoneNumber: validEmail));
-
-      await untilCalled(sendOtpVerificationUsecase(
-          const SendOtpVerificationParams(emailOrPhoneNumber: validEmail)));
-      // assert
-      verify(sendOtpVerificationUsecase(
-          const SendOtpVerificationParams(emailOrPhoneNumber: validEmail)));
+      test('should emit [Loading, Loaded] when data is gotten successfully',
+          () {
+        // arrange
+        when(sendOtpVerificationUsecase(const SendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail, isForForgotPassword: true)))
+            .thenAnswer((_) async => const Right(unit));
+        // assert later
+        final expected = [
+          const SendOtpVerificationState(status: AuthStatus.loading),
+          const SendOtpVerificationState(status: AuthStatus.loaded)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(const SendOtpVerficationEvent(
+            emailOrPhoneNumber: validEmail, isForForgotPassword: true));
+      });
+      test('should emit [Loading, Error] when getting data fails', () async {
+        // arrange
+        when(sendOtpVerificationUsecase(const SendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail, isForForgotPassword: true)))
+            .thenAnswer((_) async => Left(ServerFailure()));
+        // assert later
+        final expected = [
+          const SendOtpVerificationState(status: AuthStatus.loading),
+          const SendOtpVerificationState(
+              status: AuthStatus.error, errorMessage: "Server failure")
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(const SendOtpVerficationEvent(
+            emailOrPhoneNumber: validEmail, isForForgotPassword: false));
+      });
+      test(
+          'should emit [Loading, Error] with a proper message for the error when getting data fails',
+          () async {
+        // arrange
+        when(sendOtpVerificationUsecase(const SendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail, isForForgotPassword: true)))
+            .thenAnswer((_) async => Left(CacheFailure()));
+        // assert later
+        final expected = [
+          const SendOtpVerificationState(status: AuthStatus.loading),
+          const SendOtpVerificationState(
+              status: AuthStatus.error, errorMessage: "Cache failure")
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(const SendOtpVerficationEvent(
+            emailOrPhoneNumber: validEmail, isForForgotPassword: true));
+      });
     });
 
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(sendOtpVerificationUsecase(
-              const SendOtpVerificationParams(emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => const Right(unit));
-      // assert later
-      final expected = [
-        const SendOtpVerificationState(status: AuthStatus.loading),
-        const SendOtpVerificationState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const SendOtpVerficationEvent(emailOrPhoneNumber: validEmail));
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(sendOtpVerificationUsecase(
-              const SendOtpVerificationParams(emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const SendOtpVerificationState(status: AuthStatus.loading),
-        const SendOtpVerificationState(
-            status: AuthStatus.error, errorMessage: "Server failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const SendOtpVerficationEvent(emailOrPhoneNumber: validEmail));
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(sendOtpVerificationUsecase(
-              const SendOtpVerificationParams(emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const SendOtpVerificationState(status: AuthStatus.loading),
-        const SendOtpVerificationState(
-            status: AuthStatus.error, errorMessage: "Cache failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(const SendOtpVerficationEvent(emailOrPhoneNumber: validEmail));
-    });
-  });
+    group('_onResendOtpVerification', () {
+      test('should get data from on resend otp verification ', () async {
+        // arrange
+        when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail)))
+            .thenAnswer((_) async => const Right(unit));
+        // act
+        bloc.add(
+            const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
 
-  group('_onResendOtpVerification', () {
-    test('should get data from on resend otp verification ', () async {
-      // arrange
-      when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
-              emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => const Right(unit));
-      // act
-      bloc.add(
-          const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
+        await untilCalled(resendOtpVerificationUsecase(
+            const ResendOtpVerificationParams(emailOrPhoneNumber: validEmail)));
+        // assert
+        verify(resendOtpVerificationUsecase(
+            const ResendOtpVerificationParams(emailOrPhoneNumber: validEmail)));
+      });
 
-      await untilCalled(resendOtpVerificationUsecase(
-          const ResendOtpVerificationParams(emailOrPhoneNumber: validEmail)));
-      // assert
-      verify(resendOtpVerificationUsecase(
-          const ResendOtpVerificationParams(emailOrPhoneNumber: validEmail)));
-    });
-
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
-              emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => const Right(unit));
-      // assert later
-      final expected = [
-        const ResendOtpVerificationState(status: AuthStatus.loading),
-        const SendOtpVerificationState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(
-          const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
-              emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const ResendOtpVerificationState(status: AuthStatus.loading),
-        const SendOtpVerificationState(
-            status: AuthStatus.error, errorMessage: "Server failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(
-          const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
-              emailOrPhoneNumber: validEmail)))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const ResendOtpVerificationState(status: AuthStatus.loading),
-        const SendOtpVerificationState(
-            status: AuthStatus.error, errorMessage: "Cache failure")
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(
-          const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
-    });
-  });
-
-  group('_onInitializeApp', () {
-    test('should get data from on resend otp verification ', () async {
-      // arrange
-      when(initializeAppUsecase((NoParams())))
-          .thenAnswer((_) async => const Right(unit));
-      // act
-      bloc.add(InitializeAppEvent());
-
-      await untilCalled(initializeAppUsecase((NoParams())));
-      // assert
-      verify(initializeAppUsecase((NoParams())));
+      test('should emit [Loading, Loaded] when data is gotten successfully',
+          () {
+        // arrange
+        when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail)))
+            .thenAnswer((_) async => const Right(unit));
+        // assert later
+        final expected = [
+          const ResendOtpVerificationState(status: AuthStatus.loading),
+          const SendOtpVerificationState(status: AuthStatus.loaded)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(
+            const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
+      });
+      test('should emit [Loading, Error] when getting data fails', () async {
+        // arrange
+        when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail)))
+            .thenAnswer((_) async => Left(ServerFailure()));
+        // assert later
+        final expected = [
+          const ResendOtpVerificationState(status: AuthStatus.loading),
+          const SendOtpVerificationState(
+              status: AuthStatus.error, errorMessage: "Server failure")
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(
+            const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
+      });
+      test(
+          'should emit [Loading, Error] with a proper message for the error when getting data fails',
+          () async {
+        // arrange
+        when(resendOtpVerificationUsecase(const ResendOtpVerificationParams(
+                emailOrPhoneNumber: validEmail)))
+            .thenAnswer((_) async => Left(CacheFailure()));
+        // assert later
+        final expected = [
+          const ResendOtpVerificationState(status: AuthStatus.loading),
+          const SendOtpVerificationState(
+              status: AuthStatus.error, errorMessage: "Cache failure")
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(
+            const ResendOtpVerificationEvent(emailOrPhoneNumber: validEmail));
+      });
     });
 
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(initializeAppUsecase(((NoParams()))))
-          .thenAnswer((_) async => const Right(unit));
-      // assert later
-      final expected = [
-        const InitializeAppState(status: AuthStatus.loading),
-        const InitializeAppState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(InitializeAppEvent());
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(initializeAppUsecase(NoParams()))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const InitializeAppState(status: AuthStatus.loading),
-        const InitializeAppState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(InitializeAppEvent());
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(initializeAppUsecase(NoParams()))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const InitializeAppState(status: AuthStatus.loading),
-        const InitializeAppState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(InitializeAppEvent());
-    });
-  });
+    group('_onInitializeApp', () {
+      test('should get data from on resend otp verification ', () async {
+        // arrange
+        when(initializeAppUsecase((NoParams())))
+            .thenAnswer((_) async => const Right(unit));
+        // act
+        bloc.add(InitializeAppEvent());
 
-  group('_onGetAppInitialization', () {
-    test('should get data from on get app initialization ', () async {
-      // arrange
-      when(getAppInitializationUsecase((NoParams())))
-          .thenAnswer((_) async => const Right(true));
-      // act
-      bloc.add(GetAppInitializationEvent());
+        await untilCalled(initializeAppUsecase((NoParams())));
+        // assert
+        verify(initializeAppUsecase((NoParams())));
+      });
 
-      await untilCalled(getAppInitializationUsecase((NoParams())));
-      // assert
-      verify(getAppInitializationUsecase((NoParams())));
-    });
-
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(getAppInitializationUsecase(((NoParams()))))
-          .thenAnswer((_) async => const Right(true));
-      // assert later
-      final expected = [
-        const GetAppInitializationState(status: AuthStatus.loading),
-        const GetAppInitializationState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(GetAppInitializationEvent());
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(getAppInitializationUsecase(NoParams()))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const GetAppInitializationState(status: AuthStatus.loading),
-        const GetAppInitializationState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(GetAppInitializationEvent());
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(getAppInitializationUsecase(NoParams()))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const GetAppInitializationState(status: AuthStatus.loading),
-        const GetAppInitializationState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(GetAppInitializationEvent());
-    });
-  });
-
-  group('_onSignInWithGoogle', () {
-    test('should get data from on signin with google', () async {
-      // arrange
-      when(signInWithGoogleUsecase((NoParams())))
-          .thenAnswer((_) async => const Right(userCredential));
-      // act
-      bloc.add(SignInWithGoogleEvent());
-
-      await untilCalled(signInWithGoogleUsecase((NoParams())));
-      // assert
-      verify(signInWithGoogleUsecase((NoParams())));
+      test('should emit [Loading, Loaded] when data is gotten successfully',
+          () {
+        // arrange
+        when(initializeAppUsecase(((NoParams()))))
+            .thenAnswer((_) async => const Right(unit));
+        // assert later
+        final expected = [
+          const InitializeAppState(status: AuthStatus.loading),
+          const InitializeAppState(status: AuthStatus.loaded)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(InitializeAppEvent());
+      });
+      test('should emit [Loading, Error] when getting data fails', () async {
+        // arrange
+        when(initializeAppUsecase(NoParams()))
+            .thenAnswer((_) async => Left(ServerFailure()));
+        // assert later
+        final expected = [
+          const InitializeAppState(status: AuthStatus.loading),
+          const InitializeAppState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(InitializeAppEvent());
+      });
+      test(
+          'should emit [Loading, Error] with a proper message for the error when getting data fails',
+          () async {
+        // arrange
+        when(initializeAppUsecase(NoParams()))
+            .thenAnswer((_) async => Left(CacheFailure()));
+        // assert later
+        final expected = [
+          const InitializeAppState(status: AuthStatus.loading),
+          const InitializeAppState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(InitializeAppEvent());
+      });
     });
 
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(signInWithGoogleUsecase(((NoParams()))))
-          .thenAnswer((_) async => const Right(userCredential));
-      // assert later
-      final expected = [
-        const SignInWithGoogleState(status: AuthStatus.loading),
-        const SignInWithGoogleState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(SignInWithGoogleEvent());
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(signInWithGoogleUsecase(NoParams()))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const SignInWithGoogleState(status: AuthStatus.loading),
-        const SignInWithGoogleState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(SignInWithGoogleEvent());
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(signInWithGoogleUsecase(NoParams()))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const SignInWithGoogleState(status: AuthStatus.loading),
-        const SignInWithGoogleState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(SignInWithGoogleEvent());
-    });
-  });
+    group('_onGetAppInitialization', () {
+      test('should get data from on get app initialization ', () async {
+        // arrange
+        when(getAppInitializationUsecase((NoParams())))
+            .thenAnswer((_) async => const Right(true));
+        // act
+        bloc.add(GetAppInitializationEvent());
 
-  group('_onSignOutWithGoogle', () {
-    test('should get data from on signout in with google', () async {
-      // arrange
-      when(signOutWithGoogleUsecase((NoParams())))
-          .thenAnswer((_) async => const Right(null));
-      // act
-      bloc.add(SignOutWithGoogleEvent());
+        await untilCalled(getAppInitializationUsecase((NoParams())));
+        // assert
+        verify(getAppInitializationUsecase((NoParams())));
+      });
 
-      await untilCalled(signOutWithGoogleUsecase((NoParams())));
-      // assert
-      verify(signOutWithGoogleUsecase((NoParams())));
-    });
-
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(signOutWithGoogleUsecase(((NoParams()))))
-          .thenAnswer((_) async => const Right(null));
-      // assert later
-      final expected = [
-        const SignInWithGoogleState(status: AuthStatus.loading),
-        const SignOutWithGoogleState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(SignOutWithGoogleEvent());
-    });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(signOutWithGoogleUsecase(NoParams()))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const SignInWithGoogleState(status: AuthStatus.loading),
-        const SignOutWithGoogleState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(SignOutWithGoogleEvent());
-    });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(signOutWithGoogleUsecase(NoParams()))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const SignInWithGoogleState(status: AuthStatus.loading),
-        const SignOutWithGoogleState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(SignOutWithGoogleEvent());
-    });
-  });
-
-  group('_onAuthenticatedWithGoogle', () {
-    test('should get data from on authenticated in with google', () async {
-      // arrange
-      when(getSignInWithGoogleUsecase((NoParams())))
-          .thenAnswer((_) async => const Right(true));
-      // act
-      bloc.add(AuthenticatedWithGoogleEvent());
-
-      await untilCalled(getSignInWithGoogleUsecase((NoParams())));
-      // assert
-      verify(getSignInWithGoogleUsecase((NoParams())));
+      test('should emit [Loading, Loaded] when data is gotten successfully',
+          () {
+        // arrange
+        when(getAppInitializationUsecase(((NoParams()))))
+            .thenAnswer((_) async => const Right(true));
+        // assert later
+        final expected = [
+          const GetAppInitializationState(status: AuthStatus.loading),
+          const GetAppInitializationState(status: AuthStatus.loaded)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(GetAppInitializationEvent());
+      });
+      test('should emit [Loading, Error] when getting data fails', () async {
+        // arrange
+        when(getAppInitializationUsecase(NoParams()))
+            .thenAnswer((_) async => Left(ServerFailure()));
+        // assert later
+        final expected = [
+          const GetAppInitializationState(status: AuthStatus.loading),
+          const GetAppInitializationState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(GetAppInitializationEvent());
+      });
+      test(
+          'should emit [Loading, Error] with a proper message for the error when getting data fails',
+          () async {
+        // arrange
+        when(getAppInitializationUsecase(NoParams()))
+            .thenAnswer((_) async => Left(CacheFailure()));
+        // assert later
+        final expected = [
+          const GetAppInitializationState(status: AuthStatus.loading),
+          const GetAppInitializationState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(GetAppInitializationEvent());
+      });
     });
 
-    test('should emit [Loading, Loaded] when data is gotten successfully', () {
-      // arrange
-      when(getSignInWithGoogleUsecase(((NoParams()))))
-          .thenAnswer((_) async => const Right(true));
-      // assert later
-      final expected = [
-        const AuthenticatedWithGoogleState(status: AuthStatus.loading),
-        const AuthenticatedWithGoogleState(status: AuthStatus.loaded)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(AuthenticatedWithGoogleEvent());
+    group('_onSignInWithGoogle', () {
+      test('should get data from on signin with google', () async {
+        // arrange
+        when(signInWithGoogleUsecase((NoParams())))
+            .thenAnswer((_) async => const Right(userCredential));
+        // act
+        bloc.add(SignInWithGoogleEvent());
+
+        await untilCalled(signInWithGoogleUsecase((NoParams())));
+        // assert
+        verify(signInWithGoogleUsecase((NoParams())));
+      });
+
+      test('should emit [Loading, Loaded] when data is gotten successfully',
+          () {
+        // arrange
+        when(signInWithGoogleUsecase(((NoParams()))))
+            .thenAnswer((_) async => const Right(userCredential));
+        // assert later
+        final expected = [
+          const SignInWithGoogleState(status: AuthStatus.loading),
+          const SignInWithGoogleState(status: AuthStatus.loaded)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(SignInWithGoogleEvent());
+      });
+      test('should emit [Loading, Error] when getting data fails', () async {
+        // arrange
+        when(signInWithGoogleUsecase(NoParams()))
+            .thenAnswer((_) async => Left(ServerFailure()));
+        // assert later
+        final expected = [
+          const SignInWithGoogleState(status: AuthStatus.loading),
+          const SignInWithGoogleState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(SignInWithGoogleEvent());
+      });
+      test(
+          'should emit [Loading, Error] with a proper message for the error when getting data fails',
+          () async {
+        // arrange
+        when(signInWithGoogleUsecase(NoParams()))
+            .thenAnswer((_) async => Left(CacheFailure()));
+        // assert later
+        final expected = [
+          const SignInWithGoogleState(status: AuthStatus.loading),
+          const SignInWithGoogleState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(SignInWithGoogleEvent());
+      });
     });
-    test('should emit [Loading, Error] when getting data fails', () async {
-      // arrange
-      when(getSignInWithGoogleUsecase(NoParams()))
-          .thenAnswer((_) async => Left(ServerFailure()));
-      // assert later
-      final expected = [
-        const AuthenticatedWithGoogleState(status: AuthStatus.loading),
-        const AuthenticatedWithGoogleState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(AuthenticatedWithGoogleEvent());
+
+    group('_onSignOutWithGoogle', () {
+      test('should get data from on signout in with google', () async {
+        // arrange
+        when(signOutWithGoogleUsecase((NoParams())))
+            .thenAnswer((_) async => const Right(null));
+        // act
+        bloc.add(SignOutWithGoogleEvent());
+
+        await untilCalled(signOutWithGoogleUsecase((NoParams())));
+        // assert
+        verify(signOutWithGoogleUsecase((NoParams())));
+      });
+
+      test('should emit [Loading, Loaded] when data is gotten successfully',
+          () {
+        // arrange
+        when(signOutWithGoogleUsecase(((NoParams()))))
+            .thenAnswer((_) async => const Right(null));
+        // assert later
+        final expected = [
+          const SignInWithGoogleState(status: AuthStatus.loading),
+          const SignOutWithGoogleState(status: AuthStatus.loaded)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(SignOutWithGoogleEvent());
+      });
+      test('should emit [Loading, Error] when getting data fails', () async {
+        // arrange
+        when(signOutWithGoogleUsecase(NoParams()))
+            .thenAnswer((_) async => Left(ServerFailure()));
+        // assert later
+        final expected = [
+          const SignInWithGoogleState(status: AuthStatus.loading),
+          const SignOutWithGoogleState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(SignOutWithGoogleEvent());
+      });
+      test(
+          'should emit [Loading, Error] with a proper message for the error when getting data fails',
+          () async {
+        // arrange
+        when(signOutWithGoogleUsecase(NoParams()))
+            .thenAnswer((_) async => Left(CacheFailure()));
+        // assert later
+        final expected = [
+          const SignInWithGoogleState(status: AuthStatus.loading),
+          const SignOutWithGoogleState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(SignOutWithGoogleEvent());
+      });
     });
-    test(
-        'should emit [Loading, Error] with a proper message for the error when getting data fails',
-        () async {
-      // arrange
-      when(getSignInWithGoogleUsecase(NoParams()))
-          .thenAnswer((_) async => Left(CacheFailure()));
-      // assert later
-      final expected = [
-        const AuthenticatedWithGoogleState(status: AuthStatus.loading),
-        const AuthenticatedWithGoogleState(status: AuthStatus.error)
-      ];
-      expectLater(bloc.stream, emitsInOrder(expected));
-      // act
-      bloc.add(AuthenticatedWithGoogleEvent());
+
+    group('_onAuthenticatedWithGoogle', () {
+      test('should get data from on authenticated in with google', () async {
+        // arrange
+        when(getSignInWithGoogleUsecase((NoParams())))
+            .thenAnswer((_) async => const Right(true));
+        // act
+        bloc.add(AuthenticatedWithGoogleEvent());
+
+        await untilCalled(getSignInWithGoogleUsecase((NoParams())));
+        // assert
+        verify(getSignInWithGoogleUsecase((NoParams())));
+      });
+
+      test('should emit [Loading, Loaded] when data is gotten successfully',
+          () {
+        // arrange
+        when(getSignInWithGoogleUsecase(((NoParams()))))
+            .thenAnswer((_) async => const Right(true));
+        // assert later
+        final expected = [
+          const AuthenticatedWithGoogleState(status: AuthStatus.loading),
+          const AuthenticatedWithGoogleState(status: AuthStatus.loaded)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(AuthenticatedWithGoogleEvent());
+      });
+      test('should emit [Loading, Error] when getting data fails', () async {
+        // arrange
+        when(getSignInWithGoogleUsecase(NoParams()))
+            .thenAnswer((_) async => Left(ServerFailure()));
+        // assert later
+        final expected = [
+          const AuthenticatedWithGoogleState(status: AuthStatus.loading),
+          const AuthenticatedWithGoogleState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(AuthenticatedWithGoogleEvent());
+      });
+      test(
+          'should emit [Loading, Error] with a proper message for the error when getting data fails',
+          () async {
+        // arrange
+        when(getSignInWithGoogleUsecase(NoParams()))
+            .thenAnswer((_) async => Left(CacheFailure()));
+        // assert later
+        final expected = [
+          const AuthenticatedWithGoogleState(status: AuthStatus.loading),
+          const AuthenticatedWithGoogleState(status: AuthStatus.error)
+        ];
+        expectLater(bloc.stream, emitsInOrder(expected));
+        // act
+        bloc.add(AuthenticatedWithGoogleEvent());
+      });
     });
-  });
-}
+  }
+

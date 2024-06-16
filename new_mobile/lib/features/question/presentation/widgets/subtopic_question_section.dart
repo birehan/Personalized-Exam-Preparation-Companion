@@ -56,20 +56,20 @@ class _SubtopicQuestionSectionState extends State<SubtopicQuestionSection> {
                   ),
                 ),
               ),
-              FlagButton(onPressed: () {
-                var originalContext = context;
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return FlagDialog(
-                      originalContext: originalContext,
-                      index: 0,
-                      id: widget.question.id,
-                      feedbackType: FeedbackType.questionFeedback,
-                    );
-                  },
-                );
-              }),
+              // FlagButton(onPressed: () {
+              //   var originalContext = context;
+              //   showDialog(
+              //     context: context,
+              //     builder: (BuildContext context) {
+              //       return FlagDialog(
+              //         originalContext: originalContext,
+              //         index: 0,
+              //         id: widget.question.id,
+              //         feedbackType: FeedbackType.questionFeedback,
+              //       );
+              //     },
+              //   );
+              // }),
             ],
           ),
           const SizedBox(height: 12),

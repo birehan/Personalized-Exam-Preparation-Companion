@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:prep_genie/core/routes/go_routes.dart';
-import 'package:prep_genie/features/contest/presentation/bloc/fetch_upcoming_user_contest/fetch_upcoming_user_contest_bloc.dart';
+// import 'package:prep_genie/features/contest/presentation/bloc/fetch_upcoming_user_contest/fetch_upcoming_user_contest_bloc.dart';
 import 'package:prep_genie/features/home/presentation/widgets/time_count_down_for_national_exams.dart';
 
 class CarouselSliderForUpcommingEvents extends StatefulWidget {
@@ -22,12 +22,12 @@ class _CarouselSliderForUpcommingEventsState
   void initState() {
     super.initState();
     //add contest card if available
-    final state = context.read<FetchUpcomingUserContestBloc>().state;
-    if (state is UpcomingContestFetchedState &&
-        state.upcomingContes != null &&
-        state.upcomingContes!.hasRegistered == false) {
-      _carouselItems.add(contestCard(contestId: state.upcomingContes!.id));
-    }
+    // final state = context.read<FetchUpcomingUserContestBloc>().state;
+    // if (state is UpcomingContestFetchedState &&
+    //     state.upcomingContes != null &&
+    //     state.upcomingContes!.hasRegistered == false) {
+    //   _carouselItems.add(contestCard(contestId: state.upcomingContes!.id));
+    // }
 
     //add national exam card
     _carouselItems.add(nationalExamsCard());

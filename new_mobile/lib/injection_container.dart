@@ -12,13 +12,13 @@ import 'package:prep_genie/features/bookmarks/domain/usecases/delete_bookmarked_
 import 'package:prep_genie/features/bookmarks/presentation/bloc/addContentBookmarkBloc/add_content_bookmark_bloc_bloc.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/bookmarksBoc/bookmarks_bloc_bloc.dart';
 import 'package:prep_genie/features/bookmarks/presentation/bloc/deleteContentBookmark/delete_content_bookmark_bloc.dart';
-import 'package:prep_genie/features/contest/domain/usecases/contest_ranking_usercase.dart';
-import 'package:prep_genie/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
-import 'package:prep_genie/features/contest/domain/usecases/get_contest_detail_usecase.dart';
-import 'package:prep_genie/features/contest/domain/usecases/regster_to_contest.dart';
-import 'package:prep_genie/features/contest/presentation/bloc/fetch_contest_question_by_category/fetch_contest_questions_by_category_bloc.dart';
-import 'package:prep_genie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
-import 'package:prep_genie/features/contest/presentation/bloc/registerContest/register_contest_bloc.dart';
+// import 'package:prep_genie/features/contest/domain/usecases/contest_ranking_usercase.dart';
+// import 'package:prep_genie/features/contest/domain/usecases/fetch_contest_questions_by_category_usecase.dart';
+// import 'package:prep_genie/features/contest/domain/usecases/get_contest_detail_usecase.dart';
+// import 'package:prep_genie/features/contest/domain/usecases/regster_to_contest.dart';
+// import 'package:prep_genie/features/contest/presentation/bloc/fetch_contest_question_by_category/fetch_contest_questions_by_category_bloc.dart';
+// import 'package:prep_genie/features/contest/presentation/bloc/contest_ranking_bloc/contest_ranking_bloc.dart';
+// import 'package:prep_genie/features/contest/presentation/bloc/registerContest/register_contest_bloc.dart';
 import 'package:prep_genie/features/course/data/datasources/courses_local_data_sources.dart';
 import 'package:prep_genie/features/course/domain/usecases/update_video_status_usecase.dart';
 import 'package:prep_genie/features/course/presentation/bloc/changeVideoStatus/change_video_status_bloc.dart';
@@ -963,93 +963,93 @@ Future<void> init() async {
   );
   //! Feature Contest
   // Bloc
-  serviceLocator.registerFactory(
-    () => FetchPreviousContestsBloc(fetchAllContestsUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => FetchPreviousUserContestsBloc(
-        fetchUserContestsUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => FetchContestByIdBloc(fetchContestByIdUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => FetchUpcomingUserContestBloc(
-        fetchUpcomingUserContestUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => ContestDetailBloc(getContestDetailUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => FetchContestQuestionsByCategoryBloc(
-        fetchContestQuestionsByCategoryUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => RegisterContestBloc(contestRegstrationUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => ContestRankingBloc(getContestRankingUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => ContestSubmitUserAnswerBloc(
-        contestSubmitUserAnswerUsecase: serviceLocator()),
-  );
-  serviceLocator.registerFactory(
-    () => FetchContestAnalysisByCategoryBloc(
-        fetchContestAnalysisByCategoryUsecase: serviceLocator()),
-  );
+  // serviceLocator.registerFactory(
+  //   () => FetchPreviousContestsBloc(fetchAllContestsUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => FetchPreviousUserContestsBloc(
+  //       fetchUserContestsUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => FetchContestByIdBloc(fetchContestByIdUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => FetchUpcomingUserContestBloc(
+  //       fetchUpcomingUserContestUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => ContestDetailBloc(getContestDetailUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => FetchContestQuestionsByCategoryBloc(
+  //       fetchContestQuestionsByCategoryUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => RegisterContestBloc(contestRegstrationUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => ContestRankingBloc(getContestRankingUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => ContestSubmitUserAnswerBloc(
+  //       contestSubmitUserAnswerUsecase: serviceLocator()),
+  // );
+  // serviceLocator.registerFactory(
+  //   () => FetchContestAnalysisByCategoryBloc(
+  //       fetchContestAnalysisByCategoryUsecase: serviceLocator()),
+  // );
 
-  // Usecase
-  serviceLocator.registerLazySingleton(
-    () => FetchPreviousContestsUsecase(repository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => FetchPreviousUserContestsUsecase(repository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => FetchContestByIdUsecase(repository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => GetContestDetailUsecase(contestRepository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => ContestRegstrationUsecase(repository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => FetchUpcomingUserContestUsecase(repository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => GetContestRankingUsecase(contestRepository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => FetchContestQuestionsByCategoryUsecase(repository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => SubmitContestUserAnswerUsecase(repository: serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => FetchContestAnalysisByCategoryUsecase(repository: serviceLocator()),
-  );
-  // Repository
-  serviceLocator.registerLazySingleton<ContestRepository>(
-    () => ContestRepositoryImpl(
-      remoteDatasource: serviceLocator(),
-      networkInfo: serviceLocator(),
-      localDatasource: serviceLocator(),
-    ),
-  );
+  // // Usecase
+  // serviceLocator.registerLazySingleton(
+  //   () => FetchPreviousContestsUsecase(repository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => FetchPreviousUserContestsUsecase(repository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => FetchContestByIdUsecase(repository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => GetContestDetailUsecase(contestRepository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => ContestRegstrationUsecase(repository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => FetchUpcomingUserContestUsecase(repository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => GetContestRankingUsecase(contestRepository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => FetchContestQuestionsByCategoryUsecase(repository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => SubmitContestUserAnswerUsecase(repository: serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => FetchContestAnalysisByCategoryUsecase(repository: serviceLocator()),
+  // );
+  // // Repository
+  // serviceLocator.registerLazySingleton<ContestRepository>(
+  //   () => ContestRepositoryImpl(
+  //     remoteDatasource: serviceLocator(),
+  //     networkInfo: serviceLocator(),
+  //     localDatasource: serviceLocator(),
+  //   ),
+  // );
 
-  // Datasource
-  serviceLocator.registerLazySingleton<ContestRemoteDatasource>(
-    () => ContestRemoteDatasourceImpl(
-      client: serviceLocator(),
-      flutterSecureStorage: serviceLocator(),
-      contestLocalDatasource: serviceLocator(),
-    ),
-  );
-  serviceLocator.registerLazySingleton<ContestLocalDatasource>(
-    () => ContestLocalDatasourceImpl(),
-  );
+  // // Datasource
+  // serviceLocator.registerLazySingleton<ContestRemoteDatasource>(
+  //   () => ContestRemoteDatasourceImpl(
+  //     client: serviceLocator(),
+  //     flutterSecureStorage: serviceLocator(),
+  //     contestLocalDatasource: serviceLocator(),
+  //   ),
+  // );
+  // serviceLocator.registerLazySingleton<ContestLocalDatasource>(
+  //   () => ContestLocalDatasourceImpl(),
+  // );
 
   //! Feature AlertDialog
   serviceLocator.registerFactory(

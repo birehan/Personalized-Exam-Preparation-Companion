@@ -10,7 +10,6 @@ export 'search/search.dart';
 export 'onboarding/onboarding.dart';
 export 'profile/profile.dart';
 export 'bookmarks/bookmarks.dart';
-export 'contest/contest.dart';
 export 'profile/profile.dart';
 
 // TODO: make sure to export files where they belong to

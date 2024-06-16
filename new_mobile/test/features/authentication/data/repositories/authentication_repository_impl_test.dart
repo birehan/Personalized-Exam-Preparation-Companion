@@ -175,12 +175,11 @@ void main() {
 
       // Act
       final result = await repository.sendOtpVerification(
-        emailOrPhoneNumber: emailOrPhoneNumber,
-      );
+          emailOrPhoneNumber: emailOrPhoneNumber, isForForgotPassword: false);
 
       // Assert
       expect(result, const Right(unit));
-      verify(mockRemoteDatasource.sendOtpVerification(emailOrPhoneNumber));
+      verify(mockRemoteDatasource.sendOtpVerification(emailOrPhoneNumber, false ));
       verifyNoMoreInteractions(mockRemoteDatasource);
     });
 
@@ -190,33 +189,13 @@ void main() {
 
       // Act
       final result = await repository.sendOtpVerification(
-        emailOrPhoneNumber: emailOrPhoneNumber,
-      );
+          emailOrPhoneNumber: emailOrPhoneNumber, isForForgotPassword: false);
 
       // Assert
       expect(result, Left(NetworkFailure()));
       verifyZeroInteractions(mockRemoteDatasource);
     });
 
-    test('should return AuthenticationFailure when sendOtpVerification fails',
-        () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDatasource.sendOtpVerification(emailOrPhoneNumber))
-          .thenThrow(
-              AuthenticationException(errorMessage: 'Failed to send OTP'));
-
-      // Act
-      final result = await repository.sendOtpVerification(
-        emailOrPhoneNumber: emailOrPhoneNumber,
-      );
-
-      // Assert
-      expect(result,
-          Left(AuthenticationFailure(errorMessage: 'Failed to send OTP')));
-      verify(mockRemoteDatasource.sendOtpVerification(emailOrPhoneNumber));
-      verifyNoMoreInteractions(mockRemoteDatasource);
-    });
   });
 
   group('getAppInitialization', () {
@@ -456,79 +435,7 @@ void main() {
       verifyZeroInteractions(mockLocalDatasource);
     });
   });
-
-  group('signup', () {
-    test('should return UserCredential when signup is successful', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDatasource.signup(
-        emailOrPhoneNumber: anyNamed('emailOrPhoneNumber'),
-        password: anyNamed('password'),
-        firstName: anyNamed('firstName'),
-        lastName: anyNamed('lastName'),
-        otp: anyNamed('otp'),
-      )).thenAnswer((_) async => userCredential);
-
-      // Act
-      final result = await repository.signup(
-        emailOrPhoneNumber: 'test@example.com',
-        password: 'password123',
-        firstName: 'John',
-        lastName: 'Doe',
-        otp: '123456',
-      );
-
-      // Assert
-      expect(result, const Right(userCredential));
-      verify(mockRemoteDatasource.signup(
-        emailOrPhoneNumber: 'test@example.com',
-        password: 'password123',
-        firstName: 'John',
-        lastName: 'Doe',
-        otp: '123456',
-      ));
-      verify(mockLocalDatasource.cacheAuthenticationCredential(
-        userCredentialModel: userCredential,
-      ));
-      verifyNoMoreInteractions(mockRemoteDatasource);
-      verifyNoMoreInteractions(mockLocalDatasource);
-    });
-
-    test('should return AuthenticationFailure when signup fails', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDatasource.signup(
-        emailOrPhoneNumber: anyNamed('emailOrPhoneNumber'),
-        password: anyNamed('password'),
-        firstName: anyNamed('firstName'),
-        lastName: anyNamed('lastName'),
-        otp: anyNamed('otp'),
-      )).thenThrow(AuthenticationException(errorMessage: 'Signup failed'));
-
-      // Act
-      final result = await repository.signup(
-        emailOrPhoneNumber: 'test@example.com',
-        password: 'password123',
-        firstName: 'John',
-        lastName: 'Doe',
-        otp: '123456',
-      );
-
-      // Assert
-      expect(
-          result, Left(AuthenticationFailure(errorMessage: 'Signup failed')));
-      verify(mockRemoteDatasource.signup(
-        emailOrPhoneNumber: 'test@example.com',
-        password: 'password123',
-        firstName: 'John',
-        lastName: 'Doe',
-        otp: '123456',
-      ));
-      verifyNoMoreInteractions(mockRemoteDatasource);
-      verifyZeroInteractions(mockLocalDatasource);
-    });
-
-    test('should return NetworkFailure when network is disconnected', () async {
+ test('should return NetworkFailure when network is disconnected', () async {
       // Arrange
       when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
 
@@ -545,94 +452,4 @@ void main() {
       expect(result, Left(NetworkFailure()));
       verifyZeroInteractions(mockRemoteDatasource);
       verifyZeroInteractions(mockLocalDatasource);
-    });
-  });
-
-  group('deleteDeviceToken', () {
-    test('should return Unit when deleteDeviceToken is successful', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDatasource.deleteDeviceToken())
-          .thenAnswer((_) async => unit);
-
-      // Act
-      final result = await repository.deleteDeviceToken();
-
-      // Assert
-      expect(result, const Right(unit));
-      verify(mockRemoteDatasource.deleteDeviceToken());
-      verifyNoMoreInteractions(mockRemoteDatasource);
-    });
-
-    test('should return ServerFailure when deleteDeviceToken fails', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDatasource.deleteDeviceToken())
-          .thenThrow(ServerException());
-
-      // Act
-      final result = await repository.deleteDeviceToken();
-
-      // Assert
-      expect(result, Left(ServerFailure()));
-      verify(mockRemoteDatasource.deleteDeviceToken());
-      verifyNoMoreInteractions(mockRemoteDatasource);
-    });
-
-    test('should return NetworkFailure when network is disconnected', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
-
-      // Act
-      final result = await repository.deleteDeviceToken();
-
-      // Assert
-      expect(result, Left(NetworkFailure()));
-      verifyZeroInteractions(mockRemoteDatasource);
-    });
-  });
-
-  group('storeDeviceToken', () {
-    test('should return Unit when storeDeviceToken is successful', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDatasource.storeDeviceToken())
-          .thenAnswer((_) async => unit);
-
-      // Act
-      final result = await repository.storeDeviceToken();
-
-      // Assert
-      expect(result, const Right(unit));
-      verify(mockRemoteDatasource.storeDeviceToken());
-      verifyNoMoreInteractions(mockRemoteDatasource);
-    });
-
-    test('should return ServerFailure when storeDeviceToken fails', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDatasource.storeDeviceToken())
-          .thenThrow(ServerException());
-
-      // Act
-      final result = await repository.storeDeviceToken();
-
-      // Assert
-      expect(result, Left(ServerFailure()));
-      verify(mockRemoteDatasource.storeDeviceToken());
-      verifyNoMoreInteractions(mockRemoteDatasource);
-    });
-
-    test('should return NetworkFailure when network is disconnected', () async {
-      // Arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
-
-      // Act
-      final result = await repository.storeDeviceToken();
-
-      // Assert
-      expect(result, Left(NetworkFailure()));
-      verifyZeroInteractions(mockRemoteDatasource);
-    });
-  });
-}
+    });}

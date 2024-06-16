@@ -331,7 +331,6 @@ class MockCourseRepositories extends _i1.Mock
       ) as _i4.Future<_i2.Either<_i5.Failure, List<_i3.ChapterVideo>>>);
 
   @override
-<<<<<<< HEAD
   _i4.Future<_i2.Either<_i5.Failure, _i2.Unit>> downloadCourseById(
           String? courseId) =>
       (super.noSuchMethod(
@@ -440,8 +439,6 @@ class MockCourseRepositories extends _i1.Mock
       ) as _i4.Future<_i2.Either<_i5.Failure, bool>>);
 
   @override
-=======
->>>>>>> routes added for friends related pages
   _i4.Future<_i2.Either<_i5.Failure, bool>> updateVideoStatus({
     required String? videoId,
     required bool? isCompleted,

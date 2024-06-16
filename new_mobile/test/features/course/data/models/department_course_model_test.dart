@@ -1,12 +1,16 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:prep_genie/features/chapter/domain/entities/chapter.dart';
 import 'package:prep_genie/features/course/course.dart';
 import 'package:prep_genie/features/course/data/models/department_course_model.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  const courseDepartment = [
+  List<Chapter> chapters = [];
+  final courseDepartment = [
     CourseModel(
+        isNewCurriculum: false,
+        chapters: chapters,
         id: "6589685d52f4ffeace920fec",
         name: "Biology",
         grade: 9,
@@ -19,10 +23,10 @@ void main() {
         image: CourseImageModel(
             imageAddress:
                 "https://res.cloudinary.com/djrfgfo08/image/upload/v1698237821/SkillBridge/hixwf8xe7kugefiniy1m.png"),
-        cariculumIsNew: false)
+       )
   ];
 
-  const departmentCourse = DepartmentCourseModel(
+  final departmentCourse = DepartmentCourseModel(
       biology: courseDepartment,
       chemistry: [],
       civics: [],
@@ -45,7 +49,7 @@ void main() {
     test('should return a valid model when the JSON is recieved', () async {
       // arrange
       final Map<String, dynamic> jsonMap =
-          json.decode(fixture('department_course.json'));
+          json.decode(fixture('course/department_course.json'));
       // act
       final result = DepartmentCourseModel.fromJson(jsonMap);
       // assert
