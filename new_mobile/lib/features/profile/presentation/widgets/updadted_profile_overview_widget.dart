@@ -35,11 +35,19 @@ class OverviewWidget extends StatelessWidget {
               SizedBox(
                 width: 40.w,
                 child: UpdatedSingleRecordCard(
-                    imageColor: const Color(0xffd876aa),
-                    imagePath: 'assets/images/Star.png',
-                    number: points,
-                    text: 'Points'),
+                    imageColor: const Color(0xff84abf4),
+                    imagePath: 'assets/images/askQuestion.png',
+                    number: questionsNum.toDouble(),
+                    text: 'Questions Solved'),
               ),
+              // SizedBox(
+              //   width: 40.w,
+              //   child: UpdatedSingleRecordCard(
+              //       imageColor: const Color(0xffd876aa),
+              //       imagePath: 'assets/images/Star.png',
+              //       number: points,
+              //       text: 'Points'),
+              // ),
             ],
           ),
         ),
@@ -56,14 +64,14 @@ class OverviewWidget extends StatelessWidget {
                     text: 'Topics Completed'),
               ),
               SizedBox(width: 2.w),
-              SizedBox(
-                width: 40.w,
-                child: UpdatedSingleRecordCard(
-                    imageColor: const Color(0xff84abf4),
-                    imagePath: 'assets/images/askQuestion.png',
-                    number: questionsNum.toDouble(),
-                    text: 'Questions Solved'),
-              ),
+              // SizedBox(
+              //   width: 40.w,
+              //   child: UpdatedSingleRecordCard(
+              //       imageColor: const Color(0xff84abf4),
+              //       imagePath: 'assets/images/askQuestion.png',
+              //       number: questionsNum.toDouble(),
+              //       text: 'Questions Solved'),
+              // ),
             ],
           ),
         ),
