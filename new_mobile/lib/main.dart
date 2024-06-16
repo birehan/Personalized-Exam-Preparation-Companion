@@ -68,8 +68,6 @@ class MyApp extends StatelessWidget {
               child: ResponsiveSizer(
                 builder: (context, orientation, screenType) {
                   return const TransitionWithDragableIcon();
-                  // return const FriendsMainPage();
-                  // const UpdatedProfilePage();
                 },
               ),
             ),
