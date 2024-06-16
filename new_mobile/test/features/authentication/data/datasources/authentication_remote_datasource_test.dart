@@ -8,8 +8,9 @@ import 'package:prep_genie/core/error/exception.dart';
 import 'package:prep_genie/features/authentication/authentication.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
-import '../../../contest/data/datasources/contest_remote_datasources_test.mocks.dart'
-    hide MockFlutterSecureStorage;
+// import '../../../contest/data/datasources/contest_remote_datasources_test.mocks.dart'
+//     hide MockFlutterSecureStorage;
+import '../../../course/data/datasources/course_remote_datasource_test.mocks.dart';
 
 void main() {
   late AuthenticationRemoteDatasource remoteDatasource;

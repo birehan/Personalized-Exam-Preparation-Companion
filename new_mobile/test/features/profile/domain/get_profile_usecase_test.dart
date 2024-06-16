@@ -15,13 +15,15 @@ import 'get_profile_usecase_test.mocks.dart';
 void main() {
   late GetProfileUsecase usecase;
   late MockProfileRepositories mockProfileRepository;
+  int coins = 0;
 
   setUp(() {
     mockProfileRepository = MockProfileRepositories();
     usecase = GetProfileUsecase(profileRepositories: mockProfileRepository);
   });
 
-  const userProfile = UserProfile(
+  final userProfile = UserProfile(
+      coins: coins,
       id: 'id',
       firstName: 'abe',
       lastName: 'kebe',
@@ -49,7 +51,7 @@ void main() {
     // Arrange
     when(mockProfileRepository.getUserProfile(
             isRefreshed: anyNamed('isRefreshed'), userId: anyNamed('userId')))
-        .thenAnswer((_) async => const Right(userProfile));
+        .thenAnswer((_) async => Right(userProfile));
 
     // Act
     final result = await usecase(
@@ -57,7 +59,7 @@ void main() {
     );
 
     // Assert
-    expect(result, const Right(userProfile));
+    expect(result,  Right(userProfile));
 
     verify(mockProfileRepository.getUserProfile(
       isRefreshed: true,

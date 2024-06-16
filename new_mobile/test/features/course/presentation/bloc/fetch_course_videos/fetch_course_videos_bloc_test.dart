@@ -18,11 +18,12 @@ void main() {
         fetchCourseVideosUsecase: mockFetchCourseVideosUsecase);
   });
 
-  const courseId = "test course id";
-  const subChapterVideos = [
+  const courseId = "courseId";
+  final subChapterVideos = [
     SubchapterVideo(
+        isCompleted: true,
         id: 'id',
-        courseId: "courseId",
+        courseId: courseId,
         chapterId: 'chapterId',
         subChapterId: 'subChapterId',
         order: 1,
@@ -31,7 +32,7 @@ void main() {
         duration: "30 min",
         thumbnailUrl: "test thumbnail")
   ];
-  const chapterVideos = [
+  final chapterVideos = [
     ChapterVideo(
         id: "id",
         description: "description",
@@ -47,9 +48,9 @@ void main() {
     test('should get data from the fetch course videos usecase', () async {
       // arrange
       when(mockFetchCourseVideosUsecase(any))
-          .thenAnswer((_) async => const Right(chapterVideos));
+          .thenAnswer((_) async => Right(chapterVideos));
       // act
-      bloc.add(const FetchCourseVideosEvent(courseId: courseId));
+      bloc.add(FetchSingleCourseVideosEvent(courseId: courseId));
 
       await untilCalled(mockFetchCourseVideosUsecase(any));
       // assert
@@ -59,15 +60,15 @@ void main() {
     test('should emit [Loading, Loaded] when data is gotten successfully', () {
       // arrange
       when(mockFetchCourseVideosUsecase(any))
-          .thenAnswer((_) async => const Right(chapterVideos));
+          .thenAnswer((_) async => Right(chapterVideos));
       // assert later
       final expected = [
         FetchCourseVideosLoading(),
         FetchCourseVideosLoaded(chapterVideos: chapterVideos)
       ];
+      bloc.add(FetchSingleCourseVideosEvent(courseId: courseId));
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
-      bloc.add(FetchCourseVideosEvent(courseId: courseId));
     });
     test('should emit [Loading, Error] when getting data fails', () async {
       // arrange
@@ -80,9 +81,9 @@ void main() {
             errorMessage: "Server failure",
             failure: ServerFailure(errorMessage: 'Server failure'))
       ];
+      bloc.add(FetchSingleCourseVideosEvent(courseId: courseId));
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
-      bloc.add(FetchCourseVideosEvent(courseId: courseId));
     });
     test(
         'should emit [Loading, Error] with a proper message for the error when getting data fails',
@@ -97,9 +98,9 @@ void main() {
             errorMessage: 'Cache failure',
             failure: CacheFailure(errorMessage: 'Cache failure'))
       ];
+      bloc.add(FetchSingleCourseVideosEvent(courseId: courseId));
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
-      bloc.add(FetchCourseVideosEvent(courseId: courseId));
     });
   });
 }

@@ -17,7 +17,8 @@ void main() {
   setUp(() {
     mockGetProfileUsecase = MockGetProfileUsecase();
   });
-  const userProfile = UserProfile(
+  int coins = 5;
+  final userProfile = UserProfile(
       id: 'id',
       firstName: 'abe',
       lastName: 'kebe',
@@ -39,16 +40,17 @@ void main() {
       motivation: 'motivation',
       reminder: 'reminder',
       departmentId: 'departmentId',
-      departmentName: 'departmentName');
+      departmentName: 'departmentName',
+      coins: coins);
   blocTest<UserProfileBloc, UserProfileState>(
     'emits [ProfileLoading, ProfileLoaded] GetProfileUsecase when  called for first page',
     build: () => UserProfileBloc(getProfileUsecase: mockGetProfileUsecase),
     act: (bloc) => bloc.add(GetUserProfile(isRefreshed: false, userId: '111')),
     setUp: () => when(mockGetProfileUsecase(any))
-        .thenAnswer((_) async => const Right(userProfile)),
+        .thenAnswer((_) async =>  Right(userProfile)),
     expect: () => [
       ProfileLoading(),
-      const ProfileLoaded(userProfile: userProfile),
+       ProfileLoaded(userProfile: userProfile),
     ],
     verify: (_) {
       verify(mockGetProfileUsecase(any)).called(1);

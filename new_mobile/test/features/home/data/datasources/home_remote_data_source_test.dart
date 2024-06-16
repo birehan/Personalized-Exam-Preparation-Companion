@@ -53,12 +53,14 @@ void main() {
       date: DateFormat('dd/MM/yyyy').parse('10/7/2023'),
     ),
   ];
-
-  const getMyCourses = [
+  List<Chapter> chapters = [];
+  final getMyCourses = [
     UserCourseModel(
       id: '65c63c5dcaff47b59f698dc4',
       userId: '6538f952957a801dfb5e9c52',
       course: CourseModel(
+        chapters: chapters,
+        isNewCurriculum: true,
         id: '65a0f2a1938f09b54fca2b11',
         name: 'Physics',
         departmentId: '64c24df185876fbb3f8dd6c7',
@@ -66,11 +68,10 @@ void main() {
             'This course explores Grade 12 Physics , offering concise subtopic summaries for each chapter. You\'ll also find quizzes to test your understanding, with the freedom to choose the chapters you want to focus on. The End of Chapter section includes National Exam questions and similar questions, neatly organized within corresponding chapters for your convenience.',
         numberOfChapters: 8,
         ects: '10',
-        image: CourseImageModel(
+        image: const CourseImageModel(
             imageAddress:
                 'https://res.cloudinary.com/djrfgfo08/image/upload/v1697788701/SkillBridge/mobile_team_icons/j4byd2jp9sqqc4ypxb5d.png'),
         grade: 12,
-        cariculumIsNew: true,
       ),
       completedChapters: 0,
     ),

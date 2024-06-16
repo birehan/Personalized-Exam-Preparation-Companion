@@ -68,7 +68,7 @@ void main() {
       ];
       expectLater(bloc.stream, emitsInOrder(expected));
       // act
-      bloc.add(RegisterUserToACourse(courseId: id));
+      bloc.add(const RegisterUserToACourse(courseId: id));
     });
   });
 }
