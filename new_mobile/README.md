@@ -1,5 +1,3 @@
-https://github.com/RealEskalate/SkillBridge/tree/main/skill_bridge_mobile# skill_bridge_mobile
-
 A new Flutter project.
 
 ## Getting Started
@@ -17,5 +15,5 @@ samples, guidance on mobile development, and a full API reference.
 
 # To run the mobile app
 - clone the repository
-- cd skill_bridge_mobile
+- cd new_mobile
 - terminal command "flutter run"
