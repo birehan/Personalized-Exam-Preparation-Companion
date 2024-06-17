@@ -106,47 +106,47 @@ class DynamicHomepageProfileHeader extends StatelessWidget {
                 //   }
                 // }),
                 SizedBox(width: 3.w),
-                BlocBuilder<LocaleBloc, LocaleState>(
-                  builder: (context, state) {
-                    return Container(
-                      padding: EdgeInsets.only(top: 1.3.h),
-                      child: DropdownButtonHideUnderline(
-                        child: DropdownButton<String>(
-                          // icon: const Icon(Icons.language),
-                          elevation: 0,
-                          value: state.currentLocale == 'en' ? 'En' : 'አማ',
-                          alignment: Alignment.centerLeft,
-                          isDense: true,
-                          borderRadius: BorderRadius.circular(10),
-                          style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
-                          ),
-                          items: <String>['En', 'አማ'].map((String value) {
-                            return DropdownMenuItem<String>(
-                              alignment: Alignment.center,
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
-                          onChanged: (val) {
-                            if (val == 'En') {
-                              context
-                                  .read<LocaleBloc>()
-                                  .add(const ChangeLocaleEvent(locale: 'en'));
-                            } else if (val == 'አማ') {
-                              context
-                                  .read<LocaleBloc>()
-                                  .add(const ChangeLocaleEvent(locale: 'am'));
-                            }
-                          },
-                        ),
-                      ),
-                    );
-                  },
-                ),
+                // BlocBuilder<LocaleBloc, LocaleState>(
+                //   builder: (context, state) {
+                //     return Container(
+                //       padding: EdgeInsets.only(top: 1.3.h),
+                //       child: DropdownButtonHideUnderline(
+                //         child: DropdownButton<String>(
+                //           // icon: const Icon(Icons.language),
+                //           elevation: 0,
+                //           value: state.currentLocale == 'en' ? 'En' : 'አማ',
+                //           alignment: Alignment.centerLeft,
+                //           isDense: true,
+                //           borderRadius: BorderRadius.circular(10),
+                //           style: const TextStyle(
+                //             color: Colors.black,
+                //             fontSize: 14,
+                //             fontFamily: 'Poppins',
+                //             fontWeight: FontWeight.w600,
+                //           ),
+                //           items: <String>['En', 'አማ'].map((String value) {
+                //             return DropdownMenuItem<String>(
+                //               alignment: Alignment.center,
+                //               value: value,
+                //               child: Text(value),
+                //             );
+                //           }).toList(),
+                //           onChanged: (val) {
+                //             if (val == 'En') {
+                //               context
+                //                   .read<LocaleBloc>()
+                //                   .add(const ChangeLocaleEvent(locale: 'en'));
+                //             } else if (val == 'አማ') {
+                //               context
+                //                   .read<LocaleBloc>()
+                //                   .add(const ChangeLocaleEvent(locale: 'am'));
+                //             }
+                //           },
+                //         ),
+                //       ),
+                //     );
+                //   },
+                // ),
               ],
             ),
           );

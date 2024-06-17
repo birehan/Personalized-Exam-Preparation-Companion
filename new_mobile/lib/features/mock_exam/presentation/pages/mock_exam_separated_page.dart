@@ -300,14 +300,14 @@ class _MockExamQuestionsPageState extends State<MockExamQuestionsPage> {
                         color: const Color(0xFF363636),
                       ),
                     ),
-          actions: [
-            if (loadedMock.id != 'id')
-              ShareButton(
-                route:
-                    '/shared-question-page/${loadedMock.mockQuestions[currentIndex].question.id}',
-                subject: 'SkillBridge question',
-              ),
-          ],
+          // actions: [
+          //   if (loadedMock.id != 'id')
+          //     ShareButton(
+          //       route:
+          //           '/shared-question-page/${loadedMock.mockQuestions[currentIndex].question.id}',
+          //       subject: 'SkillBridge question',
+          //     ),
+          // ],
         ),
         body: BlocConsumer<MockQuestionBloc, MockQuestionState>(
           listener: (context, state) {
