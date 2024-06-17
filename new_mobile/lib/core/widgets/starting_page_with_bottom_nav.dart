@@ -10,7 +10,6 @@ import 'package:prep_genie/core/utils/connectivity_service.dart';
 import 'package:prep_genie/core/widgets/coming_soon_page.dart';
 import 'package:prep_genie/core/widgets/doubleback.dart';
 import 'package:prep_genie/core/widgets/dragable.dart';
-// import 'package:prep_genie/features/contest/presentation/pages/contests_main_page.dart';
 import '../../features/features.dart';
 import '../core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -112,9 +111,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 const DynamicHomePage(),
                 MyCoursesPage(tabIndex: tabIndex),
                 const ExamsPage(),
-                const ExamsPage(),
-                // const ContestsMainPage(),
-                // const UserLeaderboardPage(),
+                // const ExamsPage(),
+
+                // const RecommendedPage(),
+                const UserLeaderboardPage(),
               ],
             ),
             if ((isOfflineWidgetShown == isOffline) && isOffline)
@@ -145,11 +145,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: courseIcon, text: AppLocalizations.of(context)!.courses),
             BottomNavCard(
                 icon: examsIcon, text: AppLocalizations.of(context)!.exams),
-            const BottomNavCard(icon: contestIcon, text: "Recommended"),
-            // AppLocalizations.of(context)!.contest),
-            // BottomNavCard(
-            //     icon: leaderboardIcon,
-            //     text: AppLocalizations.of(context)!.leaderboard),
+            BottomNavCard(icon: contestIcon, text:  AppLocalizations.of(context)!.recommended),
+           
           ],
           color: Colors.white,
           height: 8.h,

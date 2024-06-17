@@ -11,7 +11,6 @@ class ExamsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    // final height = MediaQuery.of(context).size.height;
 
     var examCardParams = <ExamCardParams>[
       ExamCardParams(
@@ -72,14 +71,7 @@ class ExamsPage extends StatelessWidget {
                   ),
                 ],
               ),
-              // Text(
-              //   'Explore model exams from different resources',
-              //   style: GoogleFonts.poppins(
-              //     color: const Color(0xFF4D4B4B),
-              //     fontSize: 14,
-              //     fontWeight: FontWeight.w500,
-              //   ),
-              // ),
+            
               const SizedBox(height: 32),
               ListView.separated(
                 shrinkWrap: true,
@@ -98,57 +90,7 @@ class ExamsPage extends StatelessWidget {
                     const SizedBox(height: 16),
                 itemCount: examCardParams.length,
               ),
-              // ExamCard(
-              //   width: width,
-              //   cardBackgroundColor: const Color(0xFFB4F1E8),
-              //   title: AppLocalizations.of(context)!.previous_year_exams,
-              //   description:
-              //       AppLocalizations.of(context)!.previous_year_exams_text,
-              //   imageAddress: 'assets/images/education.png',
-              //   onPressed: () {
-              //     ChooseMockSubjectPageRoute(isStandard: true).go(context);
-              //     // UniversityMockExamPageRoute().go(context);
-              //     // context.push(AppRoutes.universityMockExamPage);
-              //   },
-              // ),
-              // const SizedBox(height: 16),
-              // ExamCard(
-              //   width: width,
-              //   cardBackgroundColor: const Color(0xFFE5EFFF),
-              //   title: AppLocalizations.of(context)!.ai_generated_exams,
-              //   description:
-              //       AppLocalizations.of(context)!.ai_generated_exams_text,
-              //   imageAddress: 'assets/images/chatbot_ai.png',
-              //   onPressed: () {
-              //     ChooseMockSubjectPageRoute(isStandard: false).go(context);
-              //     // ChooseSubjectPageRoute($extra: true).go(context);
-              //     // context.push(AppRoutes.chooseSubjectPage, extra: true);
-              //   },
-              // ),
-              // const SizedBox(height: 16),
-              // ExamCard(
-              //   width: width,
-              //   cardBackgroundColor: const Color(0xFFFDF7E5),
-              //   title: AppLocalizations.of(context)!.my_exams,
-              //   description: AppLocalizations.of(context)!.my_exams_text,
-              //   imageAddress: 'assets/images/school_supplies.png',
-              //   onPressed: () {
-              //     MyExamsPageRoute().go(context);
-              //     // context.push(AppRoutes.myExamPage);
-              //   },
-              // ),
-              // const SizedBox(height: 16),
-              // ExamCard(
-              //   width: width,
-              //   cardBackgroundColor: const Color(0xFFFDF7E5),
-              //   title: 'Downloaded Mocks',
-              //   description: 'Get access to downloaded mocks',
-              //   imageAddress: 'assets/images/school_supplies.png',
-              //   onPressed: () {
-              //     MyExamsPageRoute().go(context);
-              //     // context.push(AppRoutes.myExamPage);
-              //   },
-              // ),
+           
             ],
           ),
         ),
